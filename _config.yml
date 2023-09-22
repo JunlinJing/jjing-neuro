@@ -1,14 +1,14 @@
 # main text of home
-title: John Doe
-bio: A Person who travels the world eating noodles
+title: Jim Jing
+bio: Explore the world, adventure life, and finally become the light 
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: A blog about brain science and ai technology
 
 # if it's an external image, update below for true
 # better with square images
-external-image: false
-picture: assets/images/profile.jpg
+external-image: true
+picture: assets/images/self_picture.jpg
 
 # your site color theme, true for dark theme, 
 # false to light theme, auto to switch with system.
@@ -34,12 +34,12 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
+#facebook: myfacebook
 twitter: mytwitter
-instagram: myinstagram
+#instagram: myinstagram
 linkedin: mylinkedin
-github: mygithub
-email: myemail@gmail.com
+github: https://github.com/WalkJim197
+email: jjunlin197@163.com
 
 authors:
   johndoe:
