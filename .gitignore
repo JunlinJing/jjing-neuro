@@ -1,6 +1,10 @@
+node_modules/
 .DS_Store
-_site
-.sass-cache
-Gemfile.lock
-.bundle
-vendor/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+build/
+dist/
+*.log
