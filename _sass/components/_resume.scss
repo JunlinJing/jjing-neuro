@@ -1,0 +1,57 @@
+.resume-tabs {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  
+  .tab-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    
+    .tab-link {
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: var(--border-color);
+      }
+    }
+  }
+
+  .content {
+    text-align: justify;
+    
+    h1, h2 {
+      margin: 2rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    ul, ol {
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+        text-align: justify;
+      }
+    }
+
+    .project-description {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: var(--background-color);
+      border-radius: 4px;
+      text-align: justify;
+    }
+  }
+}
