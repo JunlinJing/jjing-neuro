@@ -20,7 +20,10 @@ resume: true
 resume-external: false
 resume-url: /resume
 
-url: https://jjunlin.github.io
+# 修改这两行
+url: https://walkjim197.github.io
+baseurl: /jjing-neuro
+
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
