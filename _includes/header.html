@@ -21,6 +21,20 @@
 
         {% include social-links.html %}
     </header>
+    <header class="header-home {% if site.animation %}animated{% endif %}">
+        {% if site.about %}
+            <a class="link" href="{{ site.baseurl }}/about">
+        {% else %}
+            <a class="link" href="{{ site.baseurl }}/">
+        {% endif %}
+            <img class="selfie" alt="{{ site.name }}" src="{{ site.baseurl }}/{{ site.picture }}" />
+        </a>
+    
+        <h1 class="title">{{ site.name }}</h1>
+        <h2 class="description">{{ site.bio }}</h2>
+    
+        {% include social-links.html %}
+    </header>
 {% endif %}
 
 {% include nav.html %}
