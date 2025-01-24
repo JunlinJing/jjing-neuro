@@ -119,4 +119,3 @@ permalink: /resume-en/
 # Interests
 
 Reading, Fitness, Cycling, Technical Blogging
-</div>

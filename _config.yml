@@ -116,9 +116,9 @@ compress_html:
       - development
       - stage
 
-# 添加 _pages 目录到包含列表
+# 确保包含以下配置
 include:
-  - _pages
+    - _pages
 
 exclude:
   [
