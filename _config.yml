@@ -8,7 +8,7 @@ description: A blog about brain science and ai technology
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/self_picture.jpg   # 移除开头的斜杠
+picture: assets/images/self_picture.jpg  
 
 # your site color theme, true for dark theme, 
 # false to light theme, auto to switch with system.
@@ -17,8 +17,8 @@ dark-theme: auto
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
-resume-external: false
-resume-url: /jjing-neuro/resume
+resume-external: true
+resume-url: https://walkjim197.github.io/resume-en
 
 # 本地开发时将这些注释掉或修改为本地地址
 url: https://walkjim197.github.io
