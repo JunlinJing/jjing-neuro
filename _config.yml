@@ -30,6 +30,16 @@ highlighter: rouge
 permalink: /blog/:year/:month/:title
 future: true
 
+# Posts directory
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:title
+
+# Posts location
+source: .
+posts_dir: blog/_posts
+
 # GitHub Pages settings
 github: [metadata]
 lsi: false
