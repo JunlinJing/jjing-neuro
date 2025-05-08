@@ -1,0 +1,43 @@
+// Colors
+$dark-background: #1a1a1a;
+$dark-text: #e4e4e4;
+$dark-link: #4a9eff;
+$dark-link-hover: #66b3ff;
+$dark-code-background: #2d2d2d;
+$dark-code-text: #f8f8f2;
+$dark-border: #333;
+$dark-selection: rgba(74, 158, 255, 0.2);
+
+// Dark theme specific variables
+:root[class="dark"] {
+    --background-color: #{$dark-background};
+    --text-color: #{$dark-text};
+    --link-color: #{$dark-link};
+    --link-color-hover: #{$dark-link-hover};
+    --code-background: #{$dark-code-background};
+    --code-color: #{$dark-code-text};
+    --border-color: #{$dark-border};
+    --selection-background: #{$dark-selection};
+    
+    // Header and navigation
+    --header-background: #{darken($dark-background, 3%)};
+    --nav-background: #{darken($dark-background, 5%)};
+    --nav-link-color: #{$dark-text};
+    --nav-link-hover: #{$dark-link};
+    
+    // Cards and containers
+    --card-background: #{lighten($dark-background, 5%)};
+    --card-border: #{$dark-border};
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+    // Buttons and interactive elements
+    --button-background: #{$dark-link};
+    --button-color: #{$dark-text};
+    --button-hover: #{darken($dark-link, 10%)};
+    
+    // Form elements
+    --input-background: #{lighten($dark-background, 10%)};
+    --input-border: #{$dark-border};
+    --input-color: #{$dark-text};
+    --input-placeholder: #{darken($dark-text, 30%)};
+} 
