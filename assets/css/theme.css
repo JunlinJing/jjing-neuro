@@ -1,0 +1,87 @@
+:root {
+    /* Light theme variables */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #0066cc;
+    --border-color: #e0e0e0;
+    --heading-color: #222222;
+    --nav-bg: #ffffff;
+    --nav-text: #333333;
+    --footer-bg: #f8f8f8;
+    --footer-text: #666666;
+    --code-bg: #f5f5f5;
+    --code-text: #333333;
+}
+
+:root[class="dark"] {
+    /* Dark theme variables */
+    --background-color: #1a1a1a;
+    --text-color: #e4e4e4;
+    --link-color: #66b3ff;
+    --border-color: #404040;
+    --heading-color: #ffffff;
+    --nav-bg: #1a1a1a;
+    --nav-text: #e4e4e4;
+    --footer-bg: #242424;
+    --footer-text: #b3b3b3;
+    --code-bg: #2d2d2d;
+    --code-text: #e4e4e4;
+}
+
+/* Theme transitions */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background: var(--background-color);
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Theme-specific styles */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+pre, code {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+}
+
+.site-nav {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+} 

@@ -3,6 +3,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .home {
@@ -13,9 +15,10 @@ body {
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
+    color: var(--heading-color);
 }
 
 .bio {
     font-size: 24px;
-    color: #666;
+    color: var(--text-color);
 }

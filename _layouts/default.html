@@ -10,6 +10,7 @@ layout: compress
     {% include seo.html %}
     
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
@@ -22,27 +23,46 @@ layout: compress
     
     <!-- Dark Mode -->
     <script>
+        // Initialize dark mode
+        function initDarkMode() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedDarkMode = localStorage.getItem('darkMode');
+            const shouldBeDark = storedDarkMode === null ? prefersDark : storedDarkMode === 'true';
+            
+            setDarkMode(shouldBeDark);
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (localStorage.getItem('darkMode') === null) {
+                    setDarkMode(e.matches);
+                }
+            });
+        }
+
         function setDarkMode(isDark) {
             document.documentElement.classList.toggle('dark', isDark);
+            document.body.classList.toggle('dark', isDark);
             localStorage.setItem('darkMode', isDark);
             
             // Update button icon
             const icon = document.querySelector('#dark-mode-toggle i');
-            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            if (icon) {
+                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
         }
 
-        // Check for saved dark mode preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const storedDarkMode = localStorage.getItem('darkMode');
-        const shouldBeDark = storedDarkMode === null ? prefersDark : storedDarkMode === 'true';
-        
-        setDarkMode(shouldBeDark);
+        // Run initialization when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDarkMode);
+        } else {
+            initDarkMode();
+        }
     </script>
     
     <!-- Scripts -->
     <script defer src="{{ '/assets/js/optimization.js' | relative_url }}"></script>
 </head>
-<body class="{% if site.dark-theme %}dark{% endif %}">
+<body>
     <!-- Navigation -->
     {% include nav.html %}
     
