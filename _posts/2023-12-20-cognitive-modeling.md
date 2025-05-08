@@ -3,10 +3,6 @@ layout: post
 title: "Cognitive Modeling: From Theory to Practice"
 date: 2023-12-20
 description: "Introduction to basic concepts, common methods, and practical applications of cognitive modeling, helping readers understand how to formalize cognitive processes."
-categories: 
-  - blog
-  - Cognitive Science
-  - Computational Models
 tags: 
   - Cognitive Modeling
   - Neural Networks

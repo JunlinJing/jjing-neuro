@@ -3,10 +3,6 @@ layout: post
 title: "Applications of Deep Learning in EEG Signal Processing"
 date: 2024-01-15
 description: "Exploring how to use deep learning models to process and analyze EEG signal data, including signal preprocessing, feature extraction, and classification methods."
-categories: 
-  - blog
-  - Neuroscience
-  - Machine Learning
 tags: 
   - Deep Learning
   - EEG

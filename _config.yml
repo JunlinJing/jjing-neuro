@@ -27,7 +27,7 @@ baseurl: /jjing-neuro
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:year/:title/
+permalink: /:year/:month/:title
 future: true
 
 # GitHub Pages settings
