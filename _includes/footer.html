@@ -1,37 +1,67 @@
-<footer class="footer">
+<!-- Site Footer -->
+<footer class="site-footer">
     <div class="footer-content">
-        <span class="copyright">© {{ site.time | date: '%Y' }} {{ site.title }}</span>
-        <a href="{{ site.baseurl }}/feed.xml" target="_blank" class="rss-link" aria-label="RSS Feed">
-            <i class="fa-solid fa-rss"></i>
-        </a>
+        <div class="footer-left">
+            <span class="copyright">© {{ site.time | date: '%Y' }} {{ site.title }}</span>
+        </div>
+        <div class="footer-right">
+            <a href="{{ site.baseurl }}/feed.xml" target="_blank" class="rss-link" aria-label="RSS Feed">
+                <i class="fa-solid fa-rss"></i>
+            </a>
+        </div>
     </div>
 </footer>
 
 <style>
-.footer {
-    margin-top: 2rem;
-    padding: 1rem;
-    text-align: center;
+.site-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--background-color);
     border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
 }
 
 .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
 }
 
 .copyright {
     color: var(--text-color);
+    font-size: 0.9rem;
 }
 
 .rss-link {
     color: var(--text-color);
+    font-size: 1.1rem;
     transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rss-link:hover {
     color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
 }
 </style>
