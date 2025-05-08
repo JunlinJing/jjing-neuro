@@ -21,7 +21,7 @@ resume-external: false
 resume-url: resume
 
 # GitHub Pages 部署配置
-url: https://walkjim197.github.io
+url: https://junlinjing.github.io
 baseurl: /jjing-neuro
 
 # 本地开发配置（需要时取消注释）
@@ -48,9 +48,9 @@ linkedin: jjunlin/
 github: WalkJim197
 email: jjunlin197@163.com
 # 添加学术相关链接
-googlescholar: # 您的Google Scholar ID
-researchgate: # 您的ResearchGate用户名
-orcid: # 您的ORCID ID
+googlescholar: citations?user=YOUR_SCHOLAR_ID
+researchgate: Junlin_Jing
+orcid: 0000-0000-0000-0000
 
 # 网站作者信息
 authors:

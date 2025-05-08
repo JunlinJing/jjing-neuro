@@ -2,29 +2,44 @@
 layout: page
 title: Publications
 ---
-<section>
-    <h2>期刊论文</h2>
+<section class="publications-section">
+    <div class="section-header">
+        <h2>期刊论文</h2>
+        <div class="header-line"></div>
+    </div>
 
-    <h3>2023</h3>
-    <ul class="publications">
-        <li>
-            <strong>Jing, J.</strong>, Wang, X., & Zhang, Y. (2023). A computational model of attention allocation in dynamic visual environments. <em>Journal of Cognitive Neuroscience</em>, 35(4), 580-595.
-            <div class="publication-links">
-                <a href="#" target="_blank">[PDF]</a>
-                <a href="#" target="_blank">[代码]</a>
-                <a href="#" target="_blank">[数据]</a>
-                <a href="https://doi.org/xx.xxxx/xxxxx" target="_blank">[DOI]</a>
-            </div>
-        </li>
-        <li>
-            <strong>Jing, J.</strong> & Li, H. (2023). Neuroscience-inspired meta-learning algorithms for continuous adaptation. <em>Trends in Cognitive Sciences</em>, 27(2), 112-125.
-            <div class="publication-links">
-                <a href="#" target="_blank">[PDF]</a>
-                <a href="#" target="_blank">[代码]</a>
-                <a href="https://doi.org/xx.xxxx/xxxxx" target="_blank">[DOI]</a>
-            </div>
-        </li>
-    </ul>
+    <div class="year-section">
+        <h3>2023</h3>
+        <ul class="publications">
+            <li class="publication-item">
+                <div class="publication-content">
+                    <div class="authors">
+                        <strong>Jing, J.</strong>, Wang, X., & Zhang, Y.
+                    </div>
+                    <div class="title">
+                        A computational model of attention allocation in dynamic visual environments
+                    </div>
+                    <div class="journal">
+                        <em>Journal of Cognitive Neuroscience</em>, 35(4), 580-595
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link pdf" target="_blank">[PDF]</a>
+                        <a href="#" class="pub-link code" target="_blank">[代码]</a>
+                        <a href="#" class="pub-link data" target="_blank">[数据]</a>
+                        <a href="https://doi.org/xx.xxxx/xxxxx" class="pub-link doi" target="_blank">[DOI]</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <strong>Jing, J.</strong> & Li, H. (2023). Neuroscience-inspired meta-learning algorithms for continuous adaptation. <em>Trends in Cognitive Sciences</em>, 27(2), 112-125.
+                <div class="publication-links">
+                    <a href="#" target="_blank">[PDF]</a>
+                    <a href="#" target="_blank">[代码]</a>
+                    <a href="https://doi.org/xx.xxxx/xxxxx" target="_blank">[DOI]</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 
     <h3>2022</h3>
     <ul class="publications">
@@ -88,34 +103,159 @@ title: Publications
 </section>
 
 <style>
+    .publications-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .section-header {
+        position: relative;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .section-header h2 {
+        font-size: 2.2em;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
+
+    .header-line {
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, #2b5876, #4e4376);
+        margin: 0 auto;
+        border-radius: 2px;
+    }
+
+    .year-section {
+        margin-bottom: 50px;
+    }
+
+    .year-section h3 {
+        font-size: 1.8em;
+        color: #34495e;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+    }
+
     .publications {
         list-style: none;
         padding-left: 0;
         margin-bottom: 30px;
     }
     
-    .publications li {
-        margin-bottom: 15px;
-        border-left: 3px solid #ddd;
-        padding-left: 15px;
-        transition: border-color 0.3s ease;
+    .publication-item {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border-left: 4px solid transparent;
     }
     
-    .publications li:hover {
-        border-color: #4b5cc4;
+    .publication-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        border-left-color: #4e4376;
+    }
+    
+    .publication-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .authors {
+        color: #2c3e50;
+        font-size: 1.1em;
+    }
+
+    .title {
+        color: #34495e;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    .journal {
+        color: #7f8c8d;
+        font-size: 1em;
     }
     
     .publication-links {
-        margin-top: 5px;
+        margin-top: 12px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .pub-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 20px;
         font-size: 0.9em;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
     }
-    
-    .publication-links a {
-        margin-right: 10px;
-        color: #4b5cc4;
+
+    .pub-link.pdf {
+        background: #e74c3c;
     }
-    
-    .publication-links a:hover {
-        text-decoration: underline;
+
+    .pub-link.code {
+        background: #3498db;
+    }
+
+    .pub-link.data {
+        background: #2ecc71;
+    }
+
+    .pub-link.doi {
+        background: #9b59b6;
+    }
+
+    .pub-link:hover {
+        transform: translateY(-2px);
+        filter: brightness(110%);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+        .publications-section {
+            padding: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8em;
+        }
+
+        .year-section h3 {
+            font-size: 1.5em;
+        }
+
+        .publication-item {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 1.1em;
+        }
+
+        .publication-links {
+            gap: 10px;
+        }
+
+        .pub-link {
+            padding: 5px 10px;
+            font-size: 0.85em;
+        }
     }
 </style> 

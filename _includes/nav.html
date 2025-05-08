@@ -1,55 +1,142 @@
 <nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
-    <ul class="list">
-        {% if page.title != "Home" %}
-            <li class="item">
-                <a class="link" href="{{ site.baseurl }}/">Home</a>
-            </li>
-        {% endif %}
+    <div class="nav-container">
+        <ul class="nav-list">
+            {% if page.title != "Home" %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/">
+                        <i class="fas fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                </li>
+            {% endif %}
 
-        {% if site.about == true %}
-            {% if page.title != "About" %}
-                <li class="item">
-                    <a class="link" href="{{ site.baseurl }}/about">About</a>
-                </li>
+            {% if site.about == true %}
+                {% if page.title != "About" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/about">
+                            <i class="fas fa-user"></i>
+                            <span>关于</span>
+                        </a>
+                    </li>
+                {% endif %}
             {% endif %}
-        {% endif %}
-        
-        {% if site.research == true %}
-            {% if page.title != "Research" %}
-                <li class="item">
-                    <a class="link" href="{{ site.baseurl }}/research">Research</a>
-                </li>
+            
+            {% if site.research == true %}
+                {% if page.title != "Research" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/research">
+                            <i class="fas fa-flask"></i>
+                            <span>研究</span>
+                        </a>
+                    </li>
+                {% endif %}
             {% endif %}
-        {% endif %}
-        
-        {% if site.publications == true %}
-            {% if page.title != "Publications" %}
-                <li class="item">
-                    <a class="link" href="{{ site.baseurl }}/publications">Publications</a>
-                </li>
+            
+            {% if site.publications == true %}
+                {% if page.title != "Publications" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/publications">
+                            <i class="fas fa-book"></i>
+                            <span>论文</span>
+                        </a>
+                    </li>
+                {% endif %}
             {% endif %}
-        {% endif %}
 
-        {% if site.projects == true %}
-            {% if page.title != "Projects" %}
-                <li class="item">
-                    <a class="link" href="{{ site.baseurl }}/projects">Projects</a>
+            {% if site.projects == true %}
+                {% if page.title != "Projects" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/projects">
+                            <i class="fas fa-code-branch"></i>
+                            <span>项目</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endif %}
+
+            {% if site.blog == true %}
+                {% if page.title != "Blog" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/blog">
+                            <i class="fas fa-pen-nib"></i>
+                            <span>博客</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endif %}
+
+            {% if site.resume == true %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.baseurl }}/{{ site.resume-url }}{% endif %}">
+                        <i class="fas fa-file-alt"></i>
+                        <span>简历</span>
+                    </a>
                 </li>
             {% endif %}
-        {% endif %}
-
-        {% if site.blog == true %}
-            {% if page.title != "Blog" %}
-                <li class="item">
-                    <a class="link" href="{{ site.baseurl }}/blog">Blog</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.resume == true %}
-            <li class="item">
-                <a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.baseurl }}/{{ site.resume-url }}{% endif %}">Résumé</a>
-            </li>
-        {% endif %}
-    </ul>
+        </ul>
+    </div>
 </nav>
+
+<style>
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        margin: 0 5px;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        color: #666;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-link i {
+        margin-right: 8px;
+        font-size: 1.1em;
+    }
+
+    .nav-link span {
+        font-size: 1em;
+    }
+
+    .nav-link:hover {
+        background: #4e4376;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .nav-list {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-item {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .nav-link {
+            justify-content: center;
+        }
+    }
+</style>
