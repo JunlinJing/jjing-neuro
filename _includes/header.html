@@ -7,32 +7,18 @@
 {% if showHeader == true %}
     <header class="header-home {% if site.animation %}animated{% endif %}">
         {% if site.about %}
-            <a class="link" href="{{ site.url }}/about">
-                <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+            <a class="link" href="{{ site.baseurl }}/about">
+                <img class="selfie" alt="{{ site.title }}" src="{{ site.baseurl }}/{{ site.picture }}" />
             </a>
         {% else %}
             <span class="link">
-                <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+                <img class="selfie" alt="{{ site.title }}" src="{{ site.baseurl }}/{{ site.picture }}" />
             </span>
         {% endif %}
 
         <h1 class="title">{{ site.title }}</h1>
         <h2 class="description">{{ site.bio }}</h2>
 
-        {% include social-links.html %}
-    </header>
-    <header class="header-home {% if site.animation %}animated{% endif %}">
-        {% if site.about %}
-            <a class="link" href="{{ site.baseurl }}/about">
-        {% else %}
-            <a class="link" href="{{ site.baseurl }}/">
-        {% endif %}
-            <img class="selfie" alt="{{ site.name }}" src="{{ site.baseurl }}/{{ site.picture }}" />
-        </a>
-    
-        <h1 class="title">{{ site.name }}</h1>
-        <h2 class="description">{{ site.bio }}</h2>
-    
         {% include social-links.html %}
     </header>
 {% endif %}
