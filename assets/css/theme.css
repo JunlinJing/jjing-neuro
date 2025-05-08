@@ -38,7 +38,7 @@ body {
 /* Dark mode toggle button */
 .dark-mode-toggle {
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     z-index: 1000;
     width: 40px;
@@ -57,7 +57,7 @@ body {
 }
 
 .dark-mode-toggle:hover {
-    transform: translateY(-2px);
+    transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
