@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4001/jjing-neuro/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/jjing-neuro/" rel="alternate" type="text/html" /><updated>2025-01-24T20:43:15+01:00</updated><id>http://localhost:4001/jjing-neuro/feed.xml</id><title type="html">Jim Jing</title><subtitle>A blog about brain science and ai technology</subtitle><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4001/jjing-neuro/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00+01:00</published><updated>2016-02-24T22:48:00+01:00</updated><id>http://localhost:4001/jjing-neuro/markdown-extra-components</id><content type="html" xml:base="http://localhost:4001/jjing-neuro/markdown-extra-components/"><![CDATA[<h2 id="summary">Summary:</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4004/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4004/" rel="alternate" type="text/html" /><updated>2025-01-24T21:38:27+01:00</updated><id>http://localhost:4004/feed.xml</id><title type="html">Jim Jing</title><subtitle>A blog about brain science and ai technology</subtitle><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4004/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00+01:00</published><updated>2016-02-24T22:48:00+01:00</updated><id>http://localhost:4004/markdown-extra-components</id><content type="html" xml:base="http://localhost:4004/markdown-extra-components/"><![CDATA[<h2 id="summary">Summary:</h2>
 
 <p>You can pick as item to see how to apply in markdown.</p>
 
@@ -39,7 +39,7 @@
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"side-by-side"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toleft"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"http://localhost:4001/assets/images/self_picture.jpg"</span> <span class="na">alt=</span><span class="s">"Alt Text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"http://localhost:4004/assets/images/self_picture.jpg"</span> <span class="na">alt=</span><span class="s">"Alt Text"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Photo by John Doe<span class="nt">&lt;/figcaption&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
@@ -50,7 +50,7 @@
 
 <div class="side-by-side">
     <div class="toleft">
-        <img class="image" src="http://localhost:4001/assets/images/self_picture.jpg" alt="Alt Text" />
+        <img class="image" src="http://localhost:4004/assets/images/self_picture.jpg" alt="Alt Text" />
         <figcaption class="caption">Photo by John Doe</figcaption>
     </div>
 
@@ -67,7 +67,7 @@
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toright"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"http://localhost:4001/assets/images/self_picture.jpg"</span> <span class="na">alt=</span><span class="s">"Alt Text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"http://localhost:4004/assets/images/self_picture.jpg"</span> <span class="na">alt=</span><span class="s">"Alt Text"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Photo by John Doe<span class="nt">&lt;/figcaption&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="toright">
-        <img class="image" src="http://localhost:4001/assets/images/self_picture.jpg" alt="Alt Text" />
+        <img class="image" src="http://localhost:4004/assets/images/self_picture.jpg" alt="Alt Text" />
         <figcaption class="caption">Photo by John Doe</figcaption>
     </div>
 </div>
@@ -155,7 +155,7 @@
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"310"</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/r7XhWUDj-Ts"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
 
-<iframe width="560" height="310" src="https://www.youtube.com/embed/r7XhWUDj-Ts" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>jamesfoster</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html"><![CDATA[Markdown summary with different options]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4001/jjing-neuro/assets/images/markdown.jpg" /><media:content medium="image" url="http://localhost:4001/jjing-neuro/assets/images/markdown.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Markdown Common Elements</title><link href="http://localhost:4001/jjing-neuro/markdown-common-elements/" rel="alternate" type="text/html" title="Markdown Common Elements" /><published>2016-02-24T22:44:00+01:00</published><updated>2016-02-24T22:44:00+01:00</updated><id>http://localhost:4001/jjing-neuro/markdown-common-elements</id><content type="html" xml:base="http://localhost:4001/jjing-neuro/markdown-common-elements/"><![CDATA[<h2 id="basic-formatting">Basic formatting</h2>
+<iframe width="560" height="310" src="https://www.youtube.com/embed/r7XhWUDj-Ts" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>jamesfoster</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html"><![CDATA[Markdown summary with different options]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4004/assets/images/markdown.jpg" /><media:content medium="image" url="http://localhost:4004/assets/images/markdown.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Markdown Common Elements</title><link href="http://localhost:4004/markdown-common-elements/" rel="alternate" type="text/html" title="Markdown Common Elements" /><published>2016-02-24T22:44:00+01:00</published><updated>2016-02-24T22:44:00+01:00</updated><id>http://localhost:4004/markdown-common-elements</id><content type="html" xml:base="http://localhost:4004/markdown-common-elements/"><![CDATA[<h2 id="basic-formatting">Basic formatting</h2>
 
 <p>This note <strong>demonstrates</strong> some of what <a href="https://daringfireball.net/projects/markdown/">Markdown</a> is <em>capable of doing</em>.</p>
 
@@ -318,7 +318,7 @@ It’s sometimes handy for breaking things up.</p>
         <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#hamburguer__open</span><span class="dl">'</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="dl">'</span><span class="s1">fast</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">}</span>
 
-<span class="p">});</span></code></pre></figure>]]></content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html"><![CDATA[Markdown summary with different options]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4001/jjing-neuro/assets/images/markdown.jpg" /><media:content medium="image" url="http://localhost:4001/jjing-neuro/assets/images/markdown.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">:ramen: Indigo, minimalist jekyll theme</title><link href="http://localhost:4001/jjing-neuro/indigo-jekyll-theme/" rel="alternate" type="text/html" title=":ramen: Indigo, minimalist jekyll theme" /><published>2016-01-23T22:10:00+01:00</published><updated>2016-01-23T22:10:00+01:00</updated><id>http://localhost:4001/jjing-neuro/indigo-jekyll-theme</id><content type="html" xml:base="http://localhost:4001/jjing-neuro/indigo-jekyll-theme/"><![CDATA[<p><img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" alt="Screenshot" /></p>
+<span class="p">});</span></code></pre></figure>]]></content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html"><![CDATA[Markdown summary with different options]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4004/assets/images/markdown.jpg" /><media:content medium="image" url="http://localhost:4004/assets/images/markdown.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">:ramen: Indigo, minimalist jekyll theme</title><link href="http://localhost:4004/indigo-jekyll-theme/" rel="alternate" type="text/html" title=":ramen: Indigo, minimalist jekyll theme" /><published>2016-01-23T22:10:00+01:00</published><updated>2016-01-23T22:10:00+01:00</updated><id>http://localhost:4004/indigo-jekyll-theme</id><content type="html" xml:base="http://localhost:4004/indigo-jekyll-theme/"><![CDATA[<p><img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" alt="Screenshot" /></p>
 
 <p>Example of project - Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a>. This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
 

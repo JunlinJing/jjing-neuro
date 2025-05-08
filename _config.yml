@@ -1,9 +1,9 @@
 # main text of home
 title: Jim Jing
-bio: Explore the world, adventure life, and finally become the light 
+bio: 神经科学研究者 | 人工智能爱好者 | 探索大脑与认知的奥秘
 
 # twitter summary info
-description: A blog about brain science and ai technology
+description: 一个关于神经科学研究和人工智能技术的学术网站
 
 # if it's an external image, update below for true
 # better with square images
@@ -18,7 +18,7 @@ dark-theme: auto
 # and specify source (external or local).
 resume: true
 resume-external: false
-resume-url: /resume
+resume-url: resume
 
 # GitHub Pages 部署配置
 url: https://walkjim197.github.io
@@ -47,25 +47,24 @@ twitter: JimJing1997
 linkedin: jjunlin/
 github: WalkJim197
 email: jjunlin197@163.com
+# 添加学术相关链接
+googlescholar: # 您的Google Scholar ID
+researchgate: # 您的ResearchGate用户名
+orcid: # 您的ORCID ID
 
+# 网站作者信息
 authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
+  jimjing:
+    name: Jim Jing
+    bio: 神经科学研究者 | 人工智能爱好者 | 探索大脑与认知的奥秘
     external-image: false
-    picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    picture: assets/images/self_picture.jpg
+    twitter: JimJing1997
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: normal
+width: large
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
 pagination:
@@ -75,8 +74,11 @@ pagination:
   per_page: 5
   permalink: "/:num/" # pagination link that will be appended
 
-# if you don't need projects, comment the *projects* configs below
+# 学术网站需要的页面
 projects: true
+publications: true # 添加出版物页面
+research: true # 添加研究页面
+teaching: false # 如果有教学内容，设为true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
