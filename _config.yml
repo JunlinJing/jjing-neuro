@@ -24,6 +24,23 @@ resume-url: resume
 url: https://junlinjing.github.io
 baseurl: /jjing-neuro
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+future: true
+
+# GitHub Pages settings
+github: [metadata]
+lsi: false
+safe: true
+incremental: false
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
 # Local development configuration (uncomment when needed)
 #url: http://localhost:4000
 #baseurl: ""
