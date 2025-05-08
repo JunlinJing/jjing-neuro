@@ -774,10 +774,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             <div class="header-text">
                 <h1 class="name">Jim Jing</h1>
                 <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition</h2>
-                
-                <div class="research-interests">
-                    <p>研究方向：计算神经科学、认知建模、生物启发人工智能、脑机接口、神经影像数据分析</p>
-                </div>
 
                 <div class="social-links-wrapper">
                     <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
@@ -916,14 +912,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             letter-spacing: 0.02em;
         }
 
-        .research-interests {
-            margin: 2em 0;
-            font-size: 1.2em;
-            color: #555;
-            line-height: 1.8;
-            padding: 0 20px;
-        }
-
         .social-links-wrapper {
             margin: 2em 0;
             display: flex;
@@ -998,11 +986,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
             .tagline {
                 font-size: 1.3em;
-            }
-
-            .research-interests {
-                font-size: 1.1em;
-                padding: 0 15px;
             }
 
             .academic-links {
@@ -1156,39 +1139,10 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 <div class="home-content">
-    <div class="profile-section">
-        <img src="/jjing-neuro/assets/images/self_picture.jpg" alt="Jim Jing" class="profile-image">
-        <h1 class="name">Jim Jing</h1>
-        <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition</h2>
-    </div>
-
     <div class="research-interests">
         <h3>Research Areas</h3>
         <p>Computational Neuroscience, Cognitive Modeling, Bio-inspired AI, Brain-Computer Interfaces, Neural Imaging Data Analysis</p>
         <p>Dedicated to advancing our understanding of the brain and developing intelligent computational systems.</p>
-    </div>
-
-    <div class="social-links">
-        
-            <a href="mailto:jjunlin197@163.com" class="social-link">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-            </a>
-        
-
-        
-            <a href="https://github.com/JunlinJing" class="social-link">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
-        
-
-        
-            <a href="https://linkedin.com/in/jjunlin" class="social-link">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-        
     </div>
 </div>
 
@@ -1197,38 +1151,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         max-width: 800px;
         margin: 0 auto;
         padding: 40px 20px;
-        text-align: center;
-    }
-
-    .profile-section {
-        margin-bottom: 40px;
-    }
-
-    .profile-image {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-
-    .profile-image:hover {
-        transform: scale(1.05);
-    }
-
-    .name {
-        font-size: 2.8em;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        font-weight: 700;
-    }
-
-    .tagline {
-        font-size: 1.4em;
-        color: #7f8c8d;
-        margin-bottom: 30px;
-        font-weight: 400;
     }
 
     .research-interests {
@@ -1251,56 +1173,13 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         margin-bottom: 15px;
     }
 
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .social-link {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        background: #fff;
-        border-radius: 25px;
-        color: #2c3e50;
-        text-decoration: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .social-link i {
-        margin-right: 8px;
-        font-size: 1.2em;
-    }
-
-    .social-link:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        background: #2c3e50;
-        color: #fff;
-    }
-
     @media (max-width: 768px) {
         .home-content {
             padding: 20px;
         }
 
-        .name {
-            font-size: 2.2em;
-        }
-
-        .tagline {
-            font-size: 1.2em;
-        }
-
         .research-interests {
             padding: 20px;
-        }
-
-        .social-link {
-            padding: 8px 16px;
         }
     }
 </style>
