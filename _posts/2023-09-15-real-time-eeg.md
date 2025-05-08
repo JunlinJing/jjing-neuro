@@ -3,8 +3,14 @@ layout: post
 title: "Building Real-time EEG Signal Processing Pipeline"
 date: 2023-09-15
 description: "Detailed guide on building real-time EEG signal processing systems using Python, covering data acquisition, filtering, and feature extraction."
-categories: [Tutorial, Signal Processing]
-tags: [EEG, Python, Signal Processing, Tutorial]
+categories: 
+  - Tutorial
+  - Signal Processing
+tags: 
+  - EEG
+  - Python
+  - Signal Processing
+  - Tutorial
 author: jimjing
 image: /assets/images/blog/real-time-eeg.jpg
 headerImage: true

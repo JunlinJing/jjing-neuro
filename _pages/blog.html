@@ -10,16 +10,25 @@ permalink: /blog/
     <div class="posts">
         {% for post in site.posts %}
             <article class="post-item">
-                <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                     <h2 class="post-title">{{ post.title }}</h2>
                     
                     <div class="post-meta">
                         <time datetime="{{ post.date | date_to_xmlschema }}">
                             {{ post.date | date: "%B %-d, %Y" }}
                         </time>
-                        {% if post.tag %}
+                        {% if post.categories %}
+                            <div class="post-categories">
+                                {% for category in post.categories %}
+                                    <span class="category">
+                                        <i class="fas fa-folder"></i> {{ category }}
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        {% if post.tags %}
                             <div class="post-tags">
-                                {% for tag in post.tag %}
+                                {% for tag in post.tags %}
                                     <span class="tag">
                                         <i class="fas fa-tag"></i> {{ tag }}
                                     </span>
@@ -74,6 +83,21 @@ permalink: /blog/
     color: var(--meta-color);
     font-size: 0.9em;
     margin-bottom: 15px;
+}
+
+.post-categories {
+    display: inline;
+    margin-left: 15px;
+}
+
+.category {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 0 5px;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    border-radius: 12px;
+    font-size: 0.8em;
 }
 
 .post-tags {
