@@ -1,0 +1,109 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="blog-list">
+    <h1>Blog Posts</h1>
+    
+    <div class="posts">
+        {% for post in site.posts %}
+            <article class="post-item">
+                <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                    
+                    <div class="post-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </time>
+                        {% if post.tag %}
+                            <div class="post-tags">
+                                {% for tag in post.tag %}
+                                    <span class="tag">
+                                        <i class="fas fa-tag"></i> {{ tag }}
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <p class="post-description">{{ post.description }}</p>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.blog-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-list h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--heading-color);
+}
+
+.post-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--post-bg);
+    transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+    transform: translateY(-5px);
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title {
+    margin: 0 0 15px;
+    color: var(--heading-color);
+}
+
+.post-meta {
+    color: var(--meta-color);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.post-tags {
+    display: inline;
+    margin-left: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 0 5px;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+.post-description {
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .blog-list {
+        padding: 15px;
+    }
+    
+    .post-item {
+        padding: 15px;
+    }
+}
+</style> 
