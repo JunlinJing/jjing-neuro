@@ -1,69 +1,78 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a></h2>
-</p>
+# Jim Jing's Academic Website
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+这是我的个人学术网站，基于Jekyll构建，专注于展示神经科学研究和人工智能相关工作。
 
-***
+## 网站内容
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside</a></b>
-    |
-    <b><a href="README.md#setup">Setup</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-</p>
+- **关于(About)**: 个人简介、教育背景、研究经历
+- **研究(Research)**: 当前研究项目、研究方法、合作机会
+- **出版物(Publications)**: 期刊文章、会议论文、预印本
+- **项目(Projects)**: 开源项目、技术贡献
+- **博客(Blog)**: 技术教程、研究笔记、学术思考
 
-<p align="center">
-    Light and Dark themes.
-</p>
+## 本地开发
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
-
-## What has inside
-
-- [Jekyll](https://jekyllrb.com/), [Sass](https://sass-lang.com/) ~[RSCSS](https://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/);
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
-- No JS. :sunglasses:
-
-## Setup
-
-0. :star: to the project. :metal:
-1. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-2. Edit `_config.yml` with your data (check <a href="README.md#settings">settings</a> section)
-3. Write some posts :bowtie:
-
-If you want to test locally on your machine, do the following steps also:
-
-1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/).
-2. Clone the forked repo on your machine
-3. Enter the cloned folder via terminal and run `bundle install`
-4. Then run `bundle exec jekyll serve`
-5. Open it in your browser: `http://localhost:4000`
-6. Do you want an admin panel to edit your posts? You can install this plugin [jekyll-admin](https://jekyll.github.io/jekyll-admin/).
-
-## Settings
-
-You must fill some informations on `_config.yml` to customize your site.
-
-```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
-
-and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
+1. 安装依赖:
+```bash
+# 安装 Ruby 和 Bundler
+gem install bundler
+# 安装项目依赖
+bundle install
 ```
 
-## How To?
+2. 本地运行:
+```bash
+bundle exec jekyll serve
+```
 
-Check the [FAQ](./FAQ.md) if you have any doubt or problem.
+3. 访问 `http://localhost:4000/jjing-neuro/`
 
----
-## License
+## 部署
 
-[MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
+网站通过 GitHub Pages 自动部署，访问地址：[https://junlinjing.github.io/jjing-neuro/](https://junlinjing.github.io/jjing-neuro/)
+
+## 技术栈
+
+- [Jekyll](https://jekyllrb.com/) - 静态网站生成器
+- [SASS](https://sass-lang.com/) - CSS预处理器
+- Responsive Design - 适配移动端和桌面端
+- Dark/Light Theme - 支持暗色/亮色主题切换
+
+## 文件结构
+
+```
+.
+├── _includes/          # 可重用的模板组件
+├── _layouts/          # 页面布局模板
+├── _pages/           # 主要页面内容
+├── _posts/           # 博客文章
+├── assets/           # 静态资源（图片、样式等）
+└── _config.yml       # 网站配置文件
+```
+
+## 配置说明
+
+主要配置在 `_config.yml` 文件中：
+
+```yaml
+# 基本信息
+title: Jim Jing
+bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
+
+# 社交媒体链接
+twitter: JimJing1997
+linkedin: jjunlin
+github: JunlinJing
+
+# 学术链接
+researchgate: Junlin-Jing
+orcid: 0009-0006-1290-7445
+```
+
+## 许可
+
+本网站基于 [MIT License](LICENSE) 开源。
+
+## 致谢
+
+网站主题基于 [Indigo](https://github.com/sergiokopplin/indigo) 修改，感谢原作者的工作。
