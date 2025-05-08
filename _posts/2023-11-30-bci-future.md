@@ -4,6 +4,7 @@ title: "Current State and Future of Brain-Computer Interface Technology"
 date: 2023-11-30
 description: "Analysis of current developments in brain-computer interface technology, discussing potential breakthrough directions and application scenarios."
 categories: 
+  - blog
   - BCI
   - Technology Outlook
 tags: 

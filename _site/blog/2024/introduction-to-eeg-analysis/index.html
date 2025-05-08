@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/" />
+    <link rel="canonical" href="https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/" />
 
     
 
@@ -10,22 +10,22 @@
     <meta name=author content="Jim Jing">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Recent Advances in Brain-Computer Interfaces | Jim Jing</title>
+<title>Introduction to EEG Analysis with Python | Jim Jing</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Recent Advances in Brain-Computer Interfaces" />
+<meta property="og:title" content="Introduction to EEG Analysis with Python" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An overview of recent developments in BCI technology and their applications in neuroscience research" />
-<meta property="og:description" content="An overview of recent developments in BCI technology and their applications in neuroscience research" />
-<link rel="canonical" href="https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/" />
-<meta property="og:url" content="https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/" />
+<meta name="description" content="A comprehensive guide to getting started with EEG data analysis using Python and MNE library" />
+<meta property="og:description" content="A comprehensive guide to getting started with EEG data analysis using Python and MNE library" />
+<link rel="canonical" href="https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/" />
+<meta property="og:url" content="https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/" />
 <meta property="og:site_name" content="Jim Jing" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-03-21T00:00:00+01:00" />
+<meta property="article:published_time" content="2024-03-20T00:00:00+01:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Recent Advances in Brain-Computer Interfaces" />
+<meta property="twitter:title" content="Introduction to EEG Analysis with Python" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-21T00:00:00+01:00","datePublished":"2024-03-21T00:00:00+01:00","description":"An overview of recent developments in BCI technology and their applications in neuroscience research","headline":"Recent Advances in Brain-Computer Interfaces","mainEntityOfPage":{"@type":"WebPage","@id":"https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/"},"url":"https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-20T00:00:00+01:00","datePublished":"2024-03-20T00:00:00+01:00","description":"A comprehensive guide to getting started with EEG data analysis using Python and MNE library","headline":"Introduction to EEG Analysis with Python","mainEntityOfPage":{"@type":"WebPage","@id":"https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/"},"url":"https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -51,7 +51,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="https://junlinjing.github.io/2024/brain-computer-interfaces/">
+    <link rel="canonical" href="https://junlinjing.github.io/blog/2024/introduction-to-eeg-analysis/">
     <link rel="alternate" type="application/rss+xml" title="Jim Jing" href="https://junlinjing.github.io/feed.xml" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
@@ -760,11 +760,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     <header class="post-header">
         
         
-        <h1 class="post-title">Recent Advances in Brain-Computer Interfaces</h1>
+        <h1 class="post-title">Introduction to EEG Analysis with Python</h1>
         
         <div class="post-meta">
-            <time datetime="2024-03-21T00:00:00+01:00">
-                March 21, 2024
+            <time datetime="2024-03-20T00:00:00+01:00">
+                March 20, 2024
             </time>
             
         </div>
@@ -772,16 +772,16 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         
             <div class="post-tags">
                 
-                    <a href="/jjing-neuro/tags/#BCI" class="tag">
-                        <i class="fas fa-tag"></i> BCI
+                    <a href="/jjing-neuro/tags/#EEG" class="tag">
+                        <i class="fas fa-tag"></i> EEG
                     </a>
                 
-                    <a href="/jjing-neuro/tags/#Neural Engineering" class="tag">
-                        <i class="fas fa-tag"></i> Neural Engineering
+                    <a href="/jjing-neuro/tags/#Python" class="tag">
+                        <i class="fas fa-tag"></i> Python
                     </a>
                 
-                    <a href="/jjing-neuro/tags/#Machine Learning" class="tag">
-                        <i class="fas fa-tag"></i> Machine Learning
+                    <a href="/jjing-neuro/tags/#Neuroscience" class="tag">
+                        <i class="fas fa-tag"></i> Neuroscience
                     </a>
                 
             </div>
@@ -789,232 +789,148 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     </header>
 
     <div class="post-content">
-        <h1 id="recent-advances-in-brain-computer-interfaces">Recent Advances in Brain-Computer Interfaces</h1>
+        <h1 id="introduction-to-eeg-analysis-with-python">Introduction to EEG Analysis with Python</h1>
 
-<p>Brain-Computer Interfaces (BCIs) represent one of the most exciting frontiers in neuroscience and neural engineering. This post explores recent developments and their implications for research and clinical applications.</p>
+<p>Electroencephalography (EEG) is a powerful tool for studying brain activity. In this tutorial, we’ll explore how to analyze EEG data using Python and the popular MNE library.</p>
 
-<h2 id="modern-bci-architectures">Modern BCI Architectures</h2>
+<h2 id="setting-up-your-environment">Setting Up Your Environment</h2>
 
-<p>Here’s a simple example of a modern BCI classification pipeline using Python:</p>
+<p>First, let’s set up our Python environment with the necessary packages:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="kn">from</span> <span class="nn">sklearn.discriminant_analysis</span> <span class="kn">import</span> <span class="n">LinearDiscriminantAnalysis</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">mne</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="k">def</span> <span class="nf">create_bci_pipeline</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Pipeline</span><span class="p">([</span>
-        <span class="p">(</span><span class="s">'scaler'</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
-        <span class="p">(</span><span class="s">'classifier'</span><span class="p">,</span> <span class="n">LinearDiscriminantAnalysis</span><span class="p">())</span>
-    <span class="p">])</span>
-
-<span class="c1"># Example usage with EEG features
-</span><span class="k">def</span> <span class="nf">process_eeg_data</span><span class="p">(</span><span class="n">eeg_data</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
-    <span class="c1"># Assume eeg_data is a matrix of shape (n_trials, n_channels, n_timepoints)
-</span>    <span class="c1"># Extract features (e.g., band powers)
-</span>    <span class="n">features</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span><span class="n">eeg_data</span><span class="p">)</span>
-    
-    <span class="c1"># Create and train the pipeline
-</span>    <span class="n">bci_pipeline</span> <span class="o">=</span> <span class="n">create_bci_pipeline</span><span class="p">()</span>
-    <span class="n">bci_pipeline</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">bci_pipeline</span>
+<span class="c1"># For data visualization
+</span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 </code></pre></div></div>
 
-<h2 id="deep-learning-in-bci">Deep Learning in BCI</h2>
+<h2 id="loading-and-preprocessing-eeg-data">Loading and Preprocessing EEG Data</h2>
 
-<p>Modern BCIs increasingly utilize deep learning approaches:</p>
+<p>Here’s a basic example of loading and preprocessing EEG data:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load example data
+</span><span class="n">sample_data_folder</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">sample</span><span class="p">.</span><span class="n">data_path</span><span class="p">()</span>
+<span class="n">raw_fname</span> <span class="o">=</span> <span class="n">sample_data_folder</span> <span class="o">+</span> <span class="s">'/MEG/sample/sample_audvis_raw.fif'</span>
+<span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">read_raw_fif</span><span class="p">(</span><span class="n">raw_fname</span><span class="p">,</span> <span class="n">preload</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="k">class</span> <span class="nc">EEGNet</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_channels</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">EEGNet</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="n">n_channels</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">bn</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">pool</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">AvgPool2d</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">32</span> <span class="o">*</span> <span class="mi">61</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">conv2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">bn</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">pool</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">view</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">fc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1"># Basic preprocessing
+</span><span class="n">raw</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>  <span class="c1"># Band-pass filter from 1-40 Hz
+</span><span class="n">raw</span><span class="p">.</span><span class="n">notch_filter</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># Remove power line noise
+</span></code></pre></div></div>
+
+<h2 id="analyzing-eeg-data">Analyzing EEG Data</h2>
+
+<p>Let’s look at some basic analysis techniques:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create epochs
+</span><span class="n">events</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">find_events</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">Epochs</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">event_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">tmin</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Calculate and plot evoked response
+</span><span class="n">evoked</span> <span class="o">=</span> <span class="n">epochs</span><span class="p">.</span><span class="n">average</span><span class="p">()</span>
+<span class="n">evoked</span><span class="p">.</span><span class="n">plot</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h2 id="real-time-signal-processing">Real-time Signal Processing</h2>
+<h2 id="time-frequency-analysis">Time-Frequency Analysis</h2>
 
-<p>Essential components of real-time BCI systems:</p>
+<p>Here’s how to perform time-frequency analysis:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
-
-<span class="k">def</span> <span class="nf">real_time_preprocessing</span><span class="p">(</span><span class="n">eeg_chunk</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="mi">250</span><span class="p">):</span>
-    <span class="s">"""Real-time preprocessing of EEG data"""</span>
-    <span class="c1"># Notch filter
-</span>    <span class="n">notch_freq</span> <span class="o">=</span> <span class="mf">50.0</span>  <span class="c1"># Hz
-</span>    <span class="n">quality_factor</span> <span class="o">=</span> <span class="mf">30.0</span>
-    <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">iirnotch</span><span class="p">(</span><span class="n">notch_freq</span><span class="p">,</span> <span class="n">quality_factor</span><span class="p">,</span> <span class="n">sfreq</span><span class="p">)</span>
-    <span class="n">eeg_notched</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">filtfilt</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">eeg_chunk</span><span class="p">)</span>
-    
-    <span class="c1"># Bandpass filter
-</span>    <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">butter</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="n">btype</span><span class="o">=</span><span class="s">'bandpass'</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">sfreq</span><span class="p">)</span>
-    <span class="n">eeg_filtered</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">filtfilt</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">eeg_notched</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">eeg_filtered</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">frequencies</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">power</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">time_frequency</span><span class="p">.</span><span class="n">tfr_morlet</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">,</span> 
+                                    <span class="n">n_cycles</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">return_itc</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">power</span><span class="p">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div></div>
 
-<h2 id="future-directions">Future Directions</h2>
+<h2 id="eeg-band-analysis">EEG Band Analysis</h2>
 
-<p>The field of BCI is rapidly evolving with new developments in:</p>
-<ul>
-  <li>High-resolution neural interfaces</li>
-  <li>Adaptive learning algorithms</li>
-  <li>Wireless and portable systems</li>
-  <li>Enhanced user feedback mechanisms</li>
-</ul>
+<p>A crucial part of EEG analysis is examining different frequency bands:</p>
 
-<h2 id="clinical-applications">Clinical Applications</h2>
-
-<p>BCIs are increasingly being used in clinical settings for:</p>
-<ul>
-  <li>Motor rehabilitation</li>
-  <li>Communication aids</li>
-  <li>Prosthetic control</li>
-  <li>Neurological disorder treatment</li>
-</ul>
-
-<h2 id="recent-research-breakthroughs">Recent Research Breakthroughs</h2>
-
-<h3 id="closed-loop-systems">Closed-Loop Systems</h3>
-<p>Modern BCIs are moving towards closed-loop systems that provide real-time feedback:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ClosedLoopBCI</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sampling_rate</span><span class="o">=</span><span class="mi">256</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">sampling_rate</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">buffer_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sampling_rate</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 2-second buffer
-</span>        <span class="bp">self</span><span class="p">.</span><span class="n">signal_buffer</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">buffer_size</span><span class="p">))</span>  <span class="c1"># 32 channels
-</span>        <span class="bp">self</span><span class="p">.</span><span class="n">feedback_threshold</span> <span class="o">=</span> <span class="mf">0.75</span>
-        
-    <span class="k">def</span> <span class="nf">process_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_data</span><span class="p">):</span>
-        <span class="s">"""Process new data chunk and provide feedback"""</span>
-        <span class="c1"># Update buffer
-</span>        <span class="bp">self</span><span class="p">.</span><span class="n">signal_buffer</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">roll</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">signal_buffer</span><span class="p">,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">new_data</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">signal_buffer</span><span class="p">[:,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">new_data</span><span class="p">):]</span> <span class="o">=</span> <span class="n">new_data</span>
-        
-        <span class="c1"># Extract features
-</span>        <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">extract_features</span><span class="p">()</span>
-        
-        <span class="c1"># Classify and generate feedback
-</span>        <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">classify</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
-        <span class="n">feedback</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">generate_feedback</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
-        
-        <span class="k">return</span> <span class="n">feedback</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">analyze_frequency_bands</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">picks</span><span class="o">=</span><span class="p">[</span><span class="s">'Fz'</span><span class="p">,</span> <span class="s">'Cz'</span><span class="p">,</span> <span class="s">'Pz'</span><span class="p">]):</span>
+    <span class="s">"""Analyze standard EEG frequency bands"""</span>
+    <span class="c1"># Define frequency bands
+</span>    <span class="n">bands</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'Delta'</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="s">'Theta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+        <span class="s">'Alpha'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+        <span class="s">'Beta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+        <span class="s">'Gamma'</span><span class="p">:</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+    <span class="p">}</span>
     
-    <span class="k">def</span> <span class="nf">extract_features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s">"""Extract relevant features from the buffer"""</span>
-        <span class="c1"># Example feature extraction
-</span>        <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">var</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">signal_buffer</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Calculate power spectral density
+</span>    <span class="n">psds</span><span class="p">,</span> <span class="n">freqs</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">time_frequency</span><span class="p">.</span><span class="n">psd_welch</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> 
+                                              <span class="n">fmin</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                                              <span class="n">fmax</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+                                              <span class="n">picks</span><span class="o">=</span><span class="n">picks</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">classify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
-        <span class="s">"""Classify current state"""</span>
-        <span class="c1"># Example classification
-</span>        <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">features</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">feedback_threshold</span>
+    <span class="c1"># Calculate band power
+</span>    <span class="n">band_powers</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">band</span><span class="p">,</span> <span class="p">(</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="p">)</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">freq_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">fmin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">fmax</span><span class="p">)</span>
+        <span class="n">band_powers</span><span class="p">[</span><span class="n">band</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">psds</span><span class="p">[:,</span> <span class="n">freq_mask</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">generate_feedback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prediction</span><span class="p">):</span>
-        <span class="s">"""Generate appropriate feedback based on classification"""</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="s">'stimulation'</span><span class="p">:</span> <span class="n">prediction</span> <span class="o">*</span> <span class="mf">0.5</span><span class="p">,</span>  <span class="c1"># Example: 50% stimulation if positive
-</span>            <span class="s">'visual_feedback'</span><span class="p">:</span> <span class="s">'green'</span> <span class="k">if</span> <span class="n">prediction</span> <span class="k">else</span> <span class="s">'red'</span><span class="p">,</span>
-            <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">band_powers</span>
+
+<span class="c1"># Example visualization
+</span><span class="k">def</span> <span class="nf">plot_band_powers</span><span class="p">(</span><span class="n">band_powers</span><span class="p">,</span> <span class="n">channel_names</span><span class="p">):</span>
+    <span class="s">"""Plot power in different frequency bands"""</span>
+    <span class="n">bands</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">band_powers</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">channel_names</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bands</span><span class="p">))</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="o">/</span> <span class="n">channels</span>
+    
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">channel</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">channel_names</span><span class="p">):</span>
+        <span class="n">powers</span> <span class="o">=</span> <span class="p">[</span><span class="n">band_powers</span><span class="p">[</span><span class="n">band</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">band</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">]</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">width</span><span class="p">,</span> <span class="n">powers</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Frequency Bands'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Power (µV²/Hz)'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'EEG Band Powers'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">width</span> <span class="o">*</span> <span class="p">(</span><span class="n">channels</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">bands</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h3 id="advanced-decoding-algorithms">Advanced Decoding Algorithms</h3>
+<h2 id="data-quality-assessment">Data Quality Assessment</h2>
 
-<p>Recent advances in deep learning have enabled more sophisticated decoding:</p>
+<p>Before detailed analysis, it’s important to assess data quality:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TransformerBCI</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_channels</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">n_timepoints</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">n_channels</span> <span class="o">=</span> <span class="n">n_channels</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">n_timepoints</span> <span class="o">=</span> <span class="n">n_timepoints</span>
-        
-        <span class="c1"># Temporal embedding
-</span>        <span class="bp">self</span><span class="p">.</span><span class="n">temporal_embed</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_timepoints</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
-        
-        <span class="c1"># Transformer encoder
-</span>        <span class="n">encoder_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">TransformerEncoderLayer</span><span class="p">(</span>
-            <span class="n">d_model</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span>
-            <span class="n">nhead</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-            <span class="n">dim_feedforward</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
-            <span class="n">dropout</span><span class="o">=</span><span class="mf">0.1</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">transformer</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">TransformerEncoder</span><span class="p">(</span><span class="n">encoder_layer</span><span class="p">,</span> <span class="n">num_layers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-        
-        <span class="c1"># Classification head
-</span>        <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">128</span> <span class="o">*</span> <span class="n">n_channels</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span>
-        <span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="c1"># x shape: (batch, channels, timepoints)
-</span>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">temporal_embed</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># (batch, channels, 128)
-</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># (channels, batch, 128)
-</span>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transformer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># (channels, batch, 128)
-</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># (batch, channels, 128)
-</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># (batch, channels * 128)
-</span>        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_data_quality</span><span class="p">(</span><span class="n">raw</span><span class="p">):</span>
+    <span class="s">"""Basic data quality checks"""</span>
+    <span class="c1"># Check for flat signals
+</span>    <span class="n">flat_channels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ch_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">_data</span><span class="p">[</span><span class="n">ch_idx</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">:</span>
+            <span class="n">flat_channels</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span><span class="p">[</span><span class="n">ch_idx</span><span class="p">])</span>
+    
+    <span class="c1"># Check for noisy channels
+</span>    <span class="n">noisy_channels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">zscore_thresh</span> <span class="o">=</span> <span class="mf">4.0</span>
+    <span class="k">for</span> <span class="n">ch_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span><span class="p">)):</span>
+        <span class="n">z_scores</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">stats</span><span class="p">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">_data</span><span class="p">[</span><span class="n">ch_idx</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="n">z_scores</span> <span class="o">&gt;</span> <span class="n">zscore_thresh</span><span class="p">):</span>
+            <span class="n">noisy_channels</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span><span class="p">[</span><span class="n">ch_idx</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'flat_channels'</span><span class="p">:</span> <span class="n">flat_channels</span><span class="p">,</span>
+        <span class="s">'noisy_channels'</span><span class="p">:</span> <span class="n">noisy_channels</span><span class="p">,</span>
+        <span class="s">'total_channels'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span><span class="p">),</span>
+        <span class="s">'duration'</span><span class="p">:</span> <span class="n">raw</span><span class="p">.</span><span class="n">times</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s">'sampling_rate'</span><span class="p">:</span> <span class="n">raw</span><span class="p">.</span><span class="n">info</span><span class="p">[</span><span class="s">'sfreq'</span><span class="p">]</span>
+    <span class="p">}</span>
 </code></pre></div></div>
 
-<h3 id="multimodal-integration">Multimodal Integration</h3>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>Modern BCIs often combine multiple signal types:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MultimodalBCI</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">eeg_model</span> <span class="o">=</span> <span class="n">EEGNet</span><span class="p">(</span><span class="n">n_channels</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">emg_model</span> <span class="o">=</span> <span class="n">EMGNet</span><span class="p">(</span><span class="n">n_channels</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">fusion_model</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">create_fusion_model</span><span class="p">()</span>
-        
-    <span class="k">def</span> <span class="nf">create_fusion_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># 4 classes from each modality
-</span>            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
-            <span class="n">nn</span><span class="p">.</span><span class="n">Softmax</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eeg_data</span><span class="p">,</span> <span class="n">emg_data</span><span class="p">):</span>
-        <span class="n">eeg_pred</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">eeg_model</span><span class="p">(</span><span class="n">eeg_data</span><span class="p">)</span>
-        <span class="n">emg_pred</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">emg_model</span><span class="p">(</span><span class="n">emg_data</span><span class="p">)</span>
-        <span class="n">combined</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">cat</span><span class="p">([</span><span class="n">eeg_pred</span><span class="p">,</span> <span class="n">emg_pred</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">fusion_model</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="future-perspectives">Future Perspectives</h2>
-
-<p>The field continues to evolve with promising developments in:</p>
-<ul>
-  <li>High-density neural interfaces</li>
-  <li>Wireless and miniaturized systems</li>
-  <li>Advanced machine learning algorithms</li>
-  <li>Enhanced user experience and feedback</li>
-  <li>Integration with other assistive technologies</li>
-</ul>
+<p>This introduction covers the basics of EEG analysis with Python. In future posts, we’ll explore more advanced topics like source localization and connectivity analysis.</p>
 
 <h2 id="references">References</h2>
 
 <ol>
-  <li>Wolpaw, J., &amp; Wolpaw, E. W. (Eds.). (2012). Brain-computer interfaces: principles and practice.</li>
-  <li>Craik, A., et al. (2019). Deep learning for electroencephalogram (EEG) classification tasks: a review.</li>
-  <li>Schwemmer, M. A., et al. (2018). Meeting brain–computer interface user performance expectations.</li>
+  <li>Gramfort, A., et al. (2013). MEG and EEG data analysis with MNE-Python. Frontiers in Neuroscience.</li>
+  <li>Cohen, M. X. (2014). Analyzing Neural Time Series Data: Theory and Practice.</li>
 </ol>
 
     </div>
@@ -1023,19 +939,19 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     <h3>Share this:</h3>
     <div class="share-buttons">
         <!-- Twitter -->
-        <a href="https://twitter.com/intent/tweet?text=Recent Advances in Brain-Computer Interfaces&url=https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/"
+        <a href="https://twitter.com/intent/tweet?text=Introduction to EEG Analysis with Python&url=https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fab fa-twitter"></i>
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/&title=Recent Advances in Brain-Computer Interfaces&summary=An overview of recent developments in BCI technology and their applications in neuroscience research&source=Jim Jing"
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/&title=Introduction to EEG Analysis with Python&summary=A comprehensive guide to getting started with EEG data analysis using Python and MNE library&source=Jim Jing"
            onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;">
             <i class="fab fa-linkedin-in"></i>
         </a>
 
         <!-- Email -->
-        <a href="mailto:?subject=Recent Advances in Brain-Computer Interfaces&body=Check out this article: https://junlinjing.github.io/jjing-neuro/2024/brain-computer-interfaces/">
+        <a href="mailto:?subject=Introduction to EEG Analysis with Python&body=Check out this article: https://junlinjing.github.io/jjing-neuro/blog/2024/introduction-to-eeg-analysis/">
             <i class="fas fa-envelope"></i>
         </a>
     </div>
