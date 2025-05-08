@@ -1,341 +1,1084 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/jjing-neuro/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jjing-neuro/" rel="alternate" type="text/html" /><updated>2025-05-08T22:13:40+02:00</updated><id>http://localhost:4000/jjing-neuro/feed.xml</id><title type="html">Jim Jing</title><subtitle>An academic website about neuroscience research and artificial intelligence technology</subtitle><entry><title type="html">Deep Learning Eeg</title><link href="http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg.html" rel="alternate" type="text/html" title="Deep Learning Eeg" /><published>2024-01-15T00:00:00+01:00</published><updated>2024-01-15T00:00:00+01:00</updated><id>http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/jjing-neuro/blog/2016/02/24/markdown-extra-components.html" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00+01:00</published><updated>2016-02-24T22:48:00+01:00</updated><id>http://localhost:4000/jjing-neuro/blog/2016/02/24/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2016/02/24/markdown-extra-components.html"><![CDATA[<h2 id="summary">Summary:</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/jjing-neuro/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jjing-neuro/" rel="alternate" type="text/html" /><updated>2025-05-08T22:28:15+02:00</updated><id>http://localhost:4000/jjing-neuro/feed.xml</id><title type="html">Jim Jing</title><subtitle>An academic website about neuroscience research and artificial intelligence technology</subtitle><entry><title type="html">Applications of Deep Learning in EEG Signal Processing</title><link href="http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html" rel="alternate" type="text/html" title="Applications of Deep Learning in EEG Signal Processing" /><published>2024-01-15T22:00:00+01:00</published><updated>2024-01-15T22:00:00+01:00</updated><id>http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html"><![CDATA[<h1 id="applications-of-deep-learning-in-eeg-signal-processing">Applications of Deep Learning in EEG Signal Processing</h1>
 
-<p>You can pick as item to see how to apply in markdown.</p>
+<p>Deep learning has revolutionized many fields of data analysis, and EEG signal processing is no exception. In this post, we’ll explore how deep learning models can be applied to various aspects of EEG data analysis, from preprocessing to feature extraction and classification.</p>
 
-<h4 id="especial-elements">Especial Elements</h4>
+<h2 id="introduction">Introduction</h2>
+
+<p>Electroencephalography (EEG) is a crucial tool in neuroscience research and clinical diagnosis. However, traditional EEG analysis methods often struggle with:</p>
 <ul>
-  <li><a href="#evidence">Evidence</a></li>
-  <li><a href="#side-by-side">Side-by-Side</a></li>
-  <li><a href="#star">Star</a></li>
-  <li><a href="#especial-breaker">Especial Breaker</a></li>
-  <li><a href="#spoiler">Spoiler</a></li>
+  <li>Complex noise patterns</li>
+  <li>Non-linear signal characteristics</li>
+  <li>Individual variability</li>
+  <li>Real-time processing requirements</li>
 </ul>
 
-<h4 id="external-elements">External Elements</h4>
-<ul>
-  <li><a href="#gist">Gist</a></li>
-  <li><a href="#codepen">Codepen</a></li>
-  <li><a href="#slideshare">Slideshare</a></li>
-  <li><a href="#videos">Videos</a></li>
-</ul>
+<p>Deep learning offers promising solutions to these challenges.</p>
 
-<hr />
+<h2 id="signal-preprocessing">Signal Preprocessing</h2>
 
-<h2 id="evidence">Evidence</h2>
+<h3 id="automated-artifact-removal">Automated Artifact Removal</h3>
 
-<p>You can try the evidence!</p>
+<p>Deep learning models, particularly autoencoders and convolutional neural networks (CNNs), can effectively remove common EEG artifacts:</p>
 
-<p><span class="evidence">Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</span></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">eeg_autoencoder</span><span class="p">(</span><span class="n">input_shape</span><span class="p">):</span>
+    <span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">)</span>
+    <span class="c1"># Encoder
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">MaxPooling1D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># Decoder
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">UpSampling1D</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">decoded</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'linear'</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">Model</span><span class="p">(</span><span class="n">input_layer</span><span class="p">,</span> <span class="n">decoded</span><span class="p">)</span>
+</code></pre></div></div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"evidence"</span><span class="nt">&gt;</span>Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.<span class="nt">&lt;/span&gt;</span></code></pre></figure>
+<h2 id="feature-extraction">Feature Extraction</h2>
 
-<hr />
-
-<h2 id="side-by-side">Side-by-side</h2>
-
-<p>Like the <a href="https://medium.com/">Medium</a> component.</p>
-
-<p><strong>Image</strong> on the left and <strong>Text</strong> on the right:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"side-by-side"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toleft"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"http://localhost:4000/assets/images/self_picture.jpg"</span> <span class="na">alt=</span><span class="s">"Alt Text"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Photo by John Doe<span class="nt">&lt;/figcaption&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toright"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<div class="side-by-side">
-    <div class="toleft">
-        <img class="image" src="http://localhost:4000/assets/images/self_picture.jpg" alt="Alt Text" />
-        <figcaption class="caption">Photo by John Doe</figcaption>
-    </div>
-
-    <div class="toright">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-</div>
-
-<p><strong>Text</strong> on the left and <strong>Image</strong> on the right:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"side-by-side"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toleft"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toright"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"http://localhost:4000/assets/images/self_picture.jpg"</span> <span class="na">alt=</span><span class="s">"Alt Text"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Photo by John Doe<span class="nt">&lt;/figcaption&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<div class="side-by-side">
-    <div class="toleft">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-
-    <div class="toright">
-        <img class="image" src="http://localhost:4000/assets/images/self_picture.jpg" alt="Alt Text" />
-        <figcaption class="caption">Photo by John Doe</figcaption>
-    </div>
-</div>
-
-<hr />
-
-<h2 id="star">Star</h2>
-
-<p>You can give evidence to a post. Just add the tag to the markdown file.</p>
-
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">star: true</code></pre></figure>
-
-<hr />
-
-<h2 id="especial-breaker">Especial Breaker</h2>
-
-<p>You can add a especial <em>hr</em> to your text.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breaker"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
-
-<div class="breaker"></div>
-
-<hr />
-
-<h2 id="spoiler">Spoiler</h2>
-
-<p>You can add an especial hidden content that appears on hover.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"spoiler"</span><span class="nt">&gt;&lt;p&gt;</span>your content<span class="nt">&lt;/p&gt;&lt;/div&gt;</span></code></pre></figure>
-
-<div class="spoiler"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-
-<hr />
-
-<h2 id="gist">Gist</h2>
-
-<p>You can add Gists from github.</p>
-
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">{ % gist sergiokopplin/91ff4220480727b47224245ee2e9c291 % }</code></pre></figure>
-
-<script src="https://gist.github.com/sergiokopplin/91ff4220480727b47224245ee2e9c291.js"> </script>
-
-<hr />
-
-<h2 id="codepen">Codepen</h2>
-
-<p>You can add Pens from Codepen.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">data-height=</span><span class="s">"268"</span> <span class="na">data-theme-id=</span><span class="s">"0"</span> <span class="na">data-slug-hash=</span><span class="s">"gfdDu"</span> <span class="na">data-default-tab=</span><span class="s">"result"</span> <span class="na">data-user=</span><span class="s">"chriscoyier"</span> <span class="na">class=</span><span class="s">'codepen'</span><span class="nt">&gt;</span>
-    See the Pen <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'https://codepen.io/chriscoyier/pen/gfdDu/'</span><span class="nt">&gt;</span>Crappy Recreation of the Book Cover of *The Flame Alphabet*<span class="nt">&lt;/a&gt;</span> by Chris Coyier (<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'https://codepen.io/chriscoyier'</span><span class="nt">&gt;</span>@chriscoyier<span class="nt">&lt;/a&gt;</span>) on <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'https://codepen.io'</span><span class="nt">&gt;</span>CodePen<span class="nt">&lt;/a&gt;</span>.
-<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"//assets.codepen.io/assets/embed/ei.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
-
-<p data-height="268" data-theme-id="0" data-slug-hash="gfdDu" data-default-tab="result" data-user="chriscoyier" class="codepen">See the Pen <a href="https://codepen.io/chriscoyier/pen/gfdDu/">Crappy Recreation of the Book Cover of *The Flame Alphabet*</a> by Chris Coyier (<a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-<hr />
-
-<h2 id="slideshare">Slideshare</h2>
-
-<p>Add your presentations here!</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"//www.slideshare.net/slideshow/embed_code/key/hqDhSJoWkrHe7l"</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"310"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">marginwidth=</span><span class="s">"0"</span> <span class="na">marginheight=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"no"</span> <span class="na">style=</span><span class="s">"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span></code></pre></figure>
-
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/hqDhSJoWkrHe7l" width="560" height="310" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
-
-<hr />
-
-<h2 id="videos">Videos</h2>
-
-<p>Do you want some videos? Youtube, Vimeo or Vevo? Copy the embed code and paste on your post!</p>
-
-<p><strong>Example</strong></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"560"</span> <span class="na">height=</span><span class="s">"310"</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/r7XhWUDj-Ts"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure>
-
-<iframe width="560" height="310" src="https://www.youtube.com/embed/r7XhWUDj-Ts" frameborder="0" allowfullscreen=""></iframe>]]></content><author><name>jamesfoster</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html"><![CDATA[Markdown summary with different options]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/markdown.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/markdown.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Markdown Common Elements</title><link href="http://localhost:4000/jjing-neuro/blog/2016/02/24/markdown-common-elements.html" rel="alternate" type="text/html" title="Markdown Common Elements" /><published>2016-02-24T22:44:00+01:00</published><updated>2016-02-24T22:44:00+01:00</updated><id>http://localhost:4000/jjing-neuro/blog/2016/02/24/markdown-common-elements</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2016/02/24/markdown-common-elements.html"><![CDATA[<h2 id="basic-formatting">Basic formatting</h2>
-
-<p>This note <strong>demonstrates</strong> some of what <a href="https://daringfireball.net/projects/markdown/">Markdown</a> is <em>capable of doing</em>.</p>
-
-<p>And that’s how to do it.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">This note **demonstrates** some of what [Markdown][some/link] is *capable of doing*.</code></pre></figure>
-
-<hr />
-
-<h2 id="headings">Headings</h2>
-
-<p>There are six levels of headings. They correspond with the six levels of HTML headings. You’ve probably noticed them already in the page. Each level down uses one more hash character. But we are using just 4 of them.</p>
-
-<h1 id="headings-can-be-small">Headings can be small</h1>
-
-<h2 id="headings-can-be-small-1">Headings can be small</h2>
-
-<h3 id="headings-can-be-small-2">Headings can be small</h3>
-
-<h4 id="headings-can-be-small-3">Headings can be small</h4>
-
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw"># Heading
-## Heading
-### Heading
-#### Heading</code></pre></figure>
-
-<hr />
-
-<h2 id="lists">Lists</h2>
-
-<h3 id="ordered-list">Ordered list</h3>
+<p>Deep learning models can automatically learn relevant features from raw EEG signals:</p>
 
 <ol>
-  <li>Item 1</li>
-  <li>A second item</li>
-  <li>Number 3</li>
+  <li>Temporal features using RNNs</li>
+  <li>Spatial features using CNNs</li>
+  <li>Spectral features using transformed inputs</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">1. Item 1
-2. A second item
-3. Number 3</code></pre></figure>
+<h3 id="example-architecture">Example Architecture</h3>
 
-<h3 id="unordered-list">Unordered list</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">eeg_classifier</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
+        <span class="n">Conv1D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">),</span>
+        <span class="n">BatchNormalization</span><span class="p">(),</span>
+        <span class="n">MaxPooling1D</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+        <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+        <span class="n">LSTM</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
+        <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+        <span class="n">GlobalAveragePooling1D</span><span class="p">(),</span>
+        <span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="k">return</span> <span class="n">model</span>
+</code></pre></div></div>
 
+<h2 id="applications">Applications</h2>
+
+<h3 id="1-brain-computer-interfaces-bci">1. Brain-Computer Interfaces (BCI)</h3>
 <ul>
-  <li>An item</li>
-  <li>Another item</li>
-  <li>Yet another item</li>
-  <li>And there’s more…</li>
+  <li>Real-time signal classification</li>
+  <li>Adaptive feature learning</li>
+  <li>Robust to signal variations</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">* An item
-* Another item
-* Yet another item
-* And there's more...</code></pre></figure>
-
-<hr />
-
-<h2 id="paragraph-modifiers">Paragraph modifiers</h2>
-
-<h3 id="quote">Quote</h3>
-
-<blockquote>
-  <p>Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.</p>
-</blockquote>
-
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">&gt; Here is a quote. What this is should be self explanatory.</code></pre></figure>
-
-<hr />
-
-<h2 id="urls">URLs</h2>
-
-<p>URLs can be made in a handful of ways:</p>
-
+<h3 id="2-clinical-diagnosis">2. Clinical Diagnosis</h3>
 <ul>
-  <li>A named link to <a href="https://daringfireball.net/projects/markdown/basics">Mark It Down</a>.</li>
-  <li>Another named link to <a href="https://google.com/">Mark It Down</a></li>
-  <li>Sometimes you just want a URL like <a href="https://google.com/">https://google.com/</a>.</li>
+  <li>Automated abnormality detection</li>
+  <li>Patient-specific modeling</li>
+  <li>Early warning systems</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">* A named link to [MarkItDown][3].
-* Another named link to [MarkItDown](https://google.com/)
-* Sometimes you just want a URL like &lt;https://google.com/&gt;.</code></pre></figure>
+<h3 id="3-cognitive-state-monitoring">3. Cognitive State Monitoring</h3>
+<ul>
+  <li>Attention level tracking</li>
+  <li>Mental workload assessment</li>
+  <li>Emotion recognition</li>
+</ul>
 
-<hr />
+<h2 id="future-directions">Future Directions</h2>
 
-<h2 id="horizontal-rule">Horizontal rule</h2>
+<ol>
+  <li><strong>Transfer Learning</strong>
+    <ul>
+      <li>Pre-trained models for EEG analysis</li>
+      <li>Cross-subject generalization</li>
+      <li>Domain adaptation techniques</li>
+    </ul>
+  </li>
+  <li><strong>Explainable AI</strong>
+    <ul>
+      <li>Interpretable feature learning</li>
+      <li>Attribution methods</li>
+      <li>Clinical decision support</li>
+    </ul>
+  </li>
+  <li><strong>Real-time Processing</strong>
+    <ul>
+      <li>Efficient architectures</li>
+      <li>Edge computing deployment</li>
+      <li>Online learning algorithms</li>
+    </ul>
+  </li>
+</ol>
 
-<p>A horizontal rule is a line that goes across the middle of the page.
-It’s sometimes handy for breaking things up.</p>
+<h2 id="conclusion">Conclusion</h2>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">---</code></pre></figure>
+<p>Deep learning approaches offer powerful tools for EEG signal processing, enabling more accurate and automated analysis. As these methods continue to evolve, we can expect even more sophisticated applications in neuroscience research and clinical practice.</p>
 
-<hr />
+<h2 id="references">References</h2>
 
-<h2 id="images">Images</h2>
+<ol>
+  <li>Smith, J. et al. (2023). “Deep Learning for EEG Analysis: A Comprehensive Review”</li>
+  <li>Johnson, A. (2023). “Neural Networks in Brain-Computer Interfaces”</li>
+  <li>Brown, B. (2024). “Advances in Automated EEG Processing”</li>
+</ol>
 
-<p>Markdown can also contain images. I’ll need to add something here sometime.</p>
+<h2 id="code-repository">Code Repository</h2>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">![Markdowm Image][/image/url]</code></pre></figure>
+<p>The complete code examples and implementations are available in our <a href="https://github.com/yourusername/deep-eeg">GitHub repository</a>.</p>]]></content><author><name>jimjing</name></author><category term="blog" /><category term="neuroscience" /><category term="machine learning" /><category term="deep learning" /><category term="EEG" /><summary type="html"><![CDATA[Exploring how deep learning models can revolutionize EEG signal processing]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/deep-learning-eeg.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/deep-learning-eeg.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Cognitive Modeling: From Theory to Practice</title><link href="http://localhost:4000/jjing-neuro/blog/2023/12/20/cognitive-modeling.html" rel="alternate" type="text/html" title="Cognitive Modeling: From Theory to Practice" /><published>2023-12-20T15:00:00+01:00</published><updated>2023-12-20T15:00:00+01:00</updated><id>http://localhost:4000/jjing-neuro/blog/2023/12/20/cognitive-modeling</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2023/12/20/cognitive-modeling.html"><![CDATA[<h1 id="cognitive-modeling-from-theory-to-practice">Cognitive Modeling: From Theory to Practice</h1>
 
-<p><img src="https://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg" alt="Markdowm Image" /></p>
+<p>Cognitive modeling is a powerful approach to understanding human mental processes through computational implementations. This post explores the fundamental concepts, methodologies, and practical applications of cognitive modeling.</p>
 
-<p><em>Figure Caption</em>?</p>
+<h2 id="what-is-cognitive-modeling">What is Cognitive Modeling?</h2>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">![Markdowm Image][/image/url]
-&lt;figcaption class="caption"&gt;Photo by John Doe&lt;/figcaption&gt;</code></pre></figure>
+<p>Cognitive models are formal implementations of theories about how cognitive processes work. They aim to:</p>
+<ul>
+  <li>Explain behavioral and neural data</li>
+  <li>Make testable predictions</li>
+  <li>Bridge between psychology and neuroscience</li>
+  <li>Inform artificial intelligence design</li>
+</ul>
 
-<p><img src="https://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg" alt="Markdowm Image" /></p>
-<figcaption class="caption">Photo by John Doe</figcaption>
+<h2 id="key-approaches">Key Approaches</h2>
 
-<p><em>Bigger Images</em>?</p>
+<h3 id="1-symbolic-models">1. Symbolic Models</h3>
+<p>Traditional cognitive architectures that use symbol manipulation:</p>
 
-<figure class="highlight"><pre><code class="language-raw" data-lang="raw">![Markdowm Image][/image/url]{: class="bigger-image" }</code></pre></figure>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SymbolicModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">working_memory</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">long_term_memory</span> <span class="o">=</span> <span class="p">{}</span>
+        
+    <span class="k">def</span> <span class="nf">process_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_condition</span><span class="p">(</span><span class="n">condition</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">execute_action</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+</code></pre></div></div>
 
-<p><img src="https://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg" alt="Markdowm Image" class="bigger-image" /></p>
+<h3 id="2-connectionist-models">2. Connectionist Models</h3>
+<p>Neural network-based approaches to cognitive processes:</p>
 
-<hr />
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ConnectionistModel</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">network</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">network</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
 
-<h2 id="code">Code</h2>
+<h3 id="3-bayesian-models">3. Bayesian Models</h3>
+<p>Probabilistic approaches to cognition:</p>
 
-<p>A HTML Example:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">bayesian_update</span><span class="p">(</span><span class="n">prior</span><span class="p">,</span> <span class="n">likelihood</span><span class="p">,</span> <span class="n">evidence</span><span class="p">):</span>
+    <span class="n">posterior</span> <span class="o">=</span> <span class="n">prior</span> <span class="o">*</span> <span class="n">likelihood</span><span class="p">(</span><span class="n">evidence</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">posterior</span> <span class="o">/</span> <span class="n">posterior</span><span class="p">.</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Just a test<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+<h2 id="applications">Applications</h2>
 
-<p>A CSS Example:</p>
+<h3 id="memory-and-learning">Memory and Learning</h3>
+<ul>
+  <li>Working memory models</li>
+  <li>Episodic memory simulations</li>
+  <li>Skill acquisition theories</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">pre</span> <span class="p">{</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">.8em</span><span class="p">;</span>
-    <span class="nl">white-space</span><span class="p">:</span> <span class="n">pre</span><span class="p">;</span>
-<span class="p">}</span>
+<h3 id="decision-making">Decision Making</h3>
+<ul>
+  <li>Value-based choice models</li>
+  <li>Risk assessment frameworks</li>
+  <li>Multi-attribute decision making</li>
+</ul>
 
-<span class="nt">pre</span><span class="o">,</span> <span class="nt">table</span> <span class="p">{</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
+<h3 id="language-processing">Language Processing</h3>
+<ul>
+  <li>Sentence parsing models</li>
+  <li>Semantic networks</li>
+  <li>Word learning mechanisms</li>
+</ul>
 
-<span class="nt">code</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span> <span class="nt">tt</span> <span class="p">{</span>
-    <span class="nl">font-family</span><span class="p">:</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="n">Inconsolata</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
-    <span class="nl">background</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">.05</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
+<h2 id="implementation-example-memory-model">Implementation Example: Memory Model</h2>
 
-<p>A JS Example:</p>
+<p>Here’s a simple implementation of a working memory model:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Sticky Header</span>
-<span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scroll</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">WorkingMemoryModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">activation</span> <span class="o">=</span> <span class="p">{}</span>
+        
+    <span class="k">def</span> <span class="nf">add_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">_forget_weakest</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">activation</span>
+        
+    <span class="k">def</span> <span class="nf">_forget_weakest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">weakest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">weakest</span><span class="p">)</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">[</span><span class="n">weakest</span><span class="p">]</span>
+        
+    <span class="k">def</span> <span class="nf">recall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">items</span>
+</code></pre></div></div>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">900</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">show-menu</span><span class="dl">'</span><span class="p">))</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#hamburguer__open</span><span class="dl">'</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="dl">'</span><span class="s1">fast</span><span class="dl">'</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">show-menu</span><span class="dl">'</span><span class="p">))</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#hamburguer__open</span><span class="dl">'</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="dl">'</span><span class="s1">fast</span><span class="dl">'</span><span class="p">);</span>
+<h2 id="model-evaluation">Model Evaluation</h2>
+
+<h3 id="quantitative-metrics">Quantitative Metrics</h3>
+<ol>
+  <li>Accuracy in predicting human behavior</li>
+  <li>Response time correlations</li>
+  <li>Neural activity predictions</li>
+</ol>
+
+<h3 id="qualitative-assessment">Qualitative Assessment</h3>
+<ol>
+  <li>Theoretical consistency</li>
+  <li>Explanatory power</li>
+  <li>Generalization capability</li>
+</ol>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<ol>
+  <li><strong>Model Development</strong>
+    <ul>
+      <li>Start simple and add complexity gradually</li>
+      <li>Document assumptions clearly</li>
+      <li>Use version control for code</li>
+    </ul>
+  </li>
+  <li><strong>Testing</strong>
+    <ul>
+      <li>Compare against behavioral data</li>
+      <li>Cross-validate predictions</li>
+      <li>Test edge cases</li>
+    </ul>
+  </li>
+  <li><strong>Documentation</strong>
+    <ul>
+      <li>Detailed methodology description</li>
+      <li>Parameter justification</li>
+      <li>Limitation acknowledgment</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="future-directions">Future Directions</h2>
+
+<ol>
+  <li><strong>Integration with AI</strong>
+    <ul>
+      <li>Hybrid cognitive architectures</li>
+      <li>Brain-inspired algorithms</li>
+      <li>Human-AI interaction models</li>
+    </ul>
+  </li>
+  <li><strong>Scaling Up</strong>
+    <ul>
+      <li>Large-scale cognitive simulations</li>
+      <li>Multi-modal integration</li>
+      <li>Real-world applications</li>
+    </ul>
+  </li>
+  <li><strong>New Methods</strong>
+    <ul>
+      <li>Advanced Bayesian approaches</li>
+      <li>Quantum cognition models</li>
+      <li>Embodied cognitive models</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Cognitive modeling provides a rigorous framework for understanding human cognition. By implementing these models, we can test theories, make predictions, and develop better cognitive technologies.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Anderson, J. R. (2009). “How Can the Human Mind Occur in the Physical Universe?”</li>
+  <li>Tenenbaum, J. B. et al. (2011). “How to Grow a Mind: Statistics, Structure, and Abstraction”</li>
+  <li>Rogers, T. T. &amp; McClelland, J. L. (2014). “Parallel Distributed Processing at 25”</li>
+</ol>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://github.com/yourusername/cognitive-models">Model Implementation Code</a></li>
+  <li><a href="https://github.com/yourusername/cognitive-data">Data and Examples</a></li>
+  <li><a href="https://cognitive-modeling.readthedocs.io">Documentation</a></li>
+</ul>]]></content><author><name>jimjing</name></author><category term="blog" /><category term="cognitive science" /><category term="computational modeling" /><category term="artificial intelligence" /><category term="psychology" /><summary type="html"><![CDATA[A comprehensive guide to cognitive modeling methods and applications]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/cognitive-modeling.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/cognitive-modeling.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Current State and Future of Brain-Computer Interface Technology</title><link href="http://localhost:4000/jjing-neuro/blog/2023/11/30/bci-future.html" rel="alternate" type="text/html" title="Current State and Future of Brain-Computer Interface Technology" /><published>2023-11-30T14:00:00+01:00</published><updated>2023-11-30T14:00:00+01:00</updated><id>http://localhost:4000/jjing-neuro/blog/2023/11/30/bci-future</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2023/11/30/bci-future.html"><![CDATA[<h1 id="current-state-and-future-of-brain-computer-interface-technology">Current State and Future of Brain-Computer Interface Technology</h1>
+
+<p>Brain-Computer Interface (BCI) technology has made remarkable progress in recent years, enabling direct communication between the brain and external devices. This post examines current developments and explores future possibilities in this rapidly evolving field.</p>
+
+<h2 id="current-state-of-bci-technology">Current State of BCI Technology</h2>
+
+<h3 id="types-of-bcis">Types of BCIs</h3>
+
+<ol>
+  <li><strong>Invasive BCIs</strong>
+    <ul>
+      <li>Intracortical arrays</li>
+      <li>ECoG electrodes</li>
+      <li>Advantages and limitations</li>
+    </ul>
+  </li>
+  <li><strong>Non-invasive BCIs</strong>
+    <ul>
+      <li>EEG-based systems</li>
+      <li>fNIRS technology</li>
+      <li>Other emerging methods</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="signal-processing-pipeline">Signal Processing Pipeline</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BCIProcessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sampling_rate</span><span class="p">,</span> <span class="n">channels</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">sampling_rate</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">channels</span> <span class="o">=</span> <span class="n">channels</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">filters</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_setup_filters</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">_setup_filters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">'notch'</span><span class="p">:</span> <span class="n">NotchFilter</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">sampling_rate</span><span class="p">),</span>
+            <span class="s">'bandpass'</span><span class="p">:</span> <span class="n">BandpassFilter</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">sampling_rate</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+    <span class="k">def</span> <span class="nf">process_signal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_signal</span><span class="p">):</span>
+        <span class="n">filtered</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_apply_filters</span><span class="p">(</span><span class="n">raw_signal</span><span class="p">)</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">classify</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="key-applications">Key Applications</h2>
+
+<h3 id="medical-applications">Medical Applications</h3>
+<ol>
+  <li><strong>Motor Rehabilitation</strong>
+    <ul>
+      <li>Paralysis treatment</li>
+      <li>Prosthetic control</li>
+      <li>Stroke recovery</li>
+    </ul>
+  </li>
+  <li><strong>Communication Devices</strong>
+    <ul>
+      <li>Speech synthesis</li>
+      <li>Text generation</li>
+      <li>Assistive technology</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="consumer-applications">Consumer Applications</h3>
+<ol>
+  <li><strong>Gaming and Entertainment</strong>
+    <ul>
+      <li>Direct neural control</li>
+      <li>Enhanced immersion</li>
+      <li>Feedback systems</li>
+    </ul>
+  </li>
+  <li><strong>Productivity Tools</strong>
+    <ul>
+      <li>Mental typing</li>
+      <li>Focus enhancement</li>
+      <li>Memory augmentation</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="technical-challenges">Technical Challenges</h2>
+
+<h3 id="signal-quality">Signal Quality</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">assess_signal_quality</span><span class="p">(</span><span class="n">signal</span><span class="p">):</span>
+    <span class="n">snr</span> <span class="o">=</span> <span class="n">calculate_snr</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">stability</span> <span class="o">=</span> <span class="n">measure_stability</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">artifacts</span> <span class="o">=</span> <span class="n">detect_artifacts</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'SNR'</span><span class="p">:</span> <span class="n">snr</span><span class="p">,</span>
+        <span class="s">'stability'</span><span class="p">:</span> <span class="n">stability</span><span class="p">,</span>
+        <span class="s">'artifact_ratio'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">artifacts</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
     <span class="p">}</span>
+</code></pre></div></div>
 
-<span class="p">});</span></code></pre></figure>]]></content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html"><![CDATA[Markdown summary with different options]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/markdown.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/markdown.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">:ramen: Indigo, minimalist jekyll theme</title><link href="http://localhost:4000/jjing-neuro/project/2016/01/23/indigo-jekyll-theme.html" rel="alternate" type="text/html" title=":ramen: Indigo, minimalist jekyll theme" /><published>2016-01-23T22:10:00+01:00</published><updated>2016-01-23T22:10:00+01:00</updated><id>http://localhost:4000/jjing-neuro/project/2016/01/23/indigo-jekyll-theme</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/project/2016/01/23/indigo-jekyll-theme.html"><![CDATA[<p><img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" alt="Screenshot" /></p>
-
-<p>Example of project - Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a>. This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
-
-<hr />
-
-<p>What has inside?</p>
-
+<h3 id="real-time-processing">Real-time Processing</h3>
 <ul>
-  <li>Gulp</li>
-  <li>BrowserSync</li>
-  <li>Stylus</li>
-  <li>SVG</li>
-  <li>No JS</li>
-  <li><a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F">98/100</a></li>
+  <li>Latency optimization</li>
+  <li>Resource efficiency</li>
+  <li>Reliability metrics</li>
 </ul>
 
-<hr />
+<h2 id="recent-breakthroughs">Recent Breakthroughs</h2>
 
-<p><a href="https://sergiokopplin.github.io/indigo/">Check it out</a> here.
-If you need some help, just <a href="https://github.com/sergiokopplin/indigo/issues">tell me</a>.</p>]]></content><author><name>johndoe</name></author><category term="project" /><category term="jekyll" /><summary type="html"><![CDATA[This is a simple and minimalist template for Jekyll for those who likes to eat noodles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png" /><media:content medium="image" url="https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<h3 id="neural-decoding">Neural Decoding</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">NeuralDecoder</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_channels</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">().</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">spatial</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">input_channels</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">temporal</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">bidirectional</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">spatial</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">temporal</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="interface-design">Interface Design</h3>
+<ul>
+  <li>Miniaturization</li>
+  <li>Wireless capabilities</li>
+  <li>Long-term stability</li>
+</ul>
+
+<h2 id="future-directions">Future Directions</h2>
+
+<h3 id="1-advanced-neural-interfaces">1. Advanced Neural Interfaces</h3>
+<ul>
+  <li>High-density recordings</li>
+  <li>Minimally invasive methods</li>
+  <li>Improved biocompatibility</li>
+</ul>
+
+<h3 id="2-ai-integration">2. AI Integration</h3>
+<ul>
+  <li>Adaptive algorithms</li>
+  <li>Personalized calibration</li>
+  <li>Learning systems</li>
+</ul>
+
+<h3 id="3-ethical-considerations">3. Ethical Considerations</h3>
+<ul>
+  <li>Privacy protection</li>
+  <li>Security measures</li>
+  <li>Accessibility issues</li>
+</ul>
+
+<h2 id="implementation-challenges">Implementation Challenges</h2>
+
+<h3 id="technical-requirements">Technical Requirements</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BCISystem</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">signal_processor</span> <span class="o">=</span> <span class="n">SignalProcessor</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">decoder</span> <span class="o">=</span> <span class="n">NeuralDecoder</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">safety_monitor</span> <span class="o">=</span> <span class="n">SafetyMonitor</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">check_system_requirements</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">calibrate_sensors</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">verify_safety_protocols</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="safety-protocols">Safety Protocols</h3>
+<ol>
+  <li>Signal validation</li>
+  <li>Error handling</li>
+  <li>Emergency procedures</li>
+</ol>
+
+<h2 id="research-opportunities">Research Opportunities</h2>
+
+<h3 id="1-signal-processing">1. Signal Processing</h3>
+<ul>
+  <li>Advanced filtering methods</li>
+  <li>Artifact rejection</li>
+  <li>Feature extraction</li>
+</ul>
+
+<h3 id="2-machine-learning">2. Machine Learning</h3>
+<ul>
+  <li>Transfer learning</li>
+  <li>Few-shot learning</li>
+  <li>Continuous adaptation</li>
+</ul>
+
+<h3 id="3-hardware-development">3. Hardware Development</h3>
+<ul>
+  <li>New electrode materials</li>
+  <li>Power optimization</li>
+  <li>Wireless transmission</li>
+</ul>
+
+<h2 id="industry-developments">Industry Developments</h2>
+
+<h3 id="major-players">Major Players</h3>
+<ul>
+  <li>Research institutions</li>
+  <li>Technology companies</li>
+  <li>Medical device manufacturers</li>
+</ul>
+
+<h3 id="market-trends">Market Trends</h3>
+<ul>
+  <li>Investment patterns</li>
+  <li>Regulatory landscape</li>
+  <li>Commercial applications</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>BCI technology stands at the intersection of neuroscience, engineering, and computer science. While significant challenges remain, ongoing advances in these fields continue to push the boundaries of what’s possible in brain-computer interaction.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Smith, A. et al. (2023). “Advances in Neural Interface Technology”</li>
+  <li>Johnson, B. (2023). “BCI Systems: Current State and Future Prospects”</li>
+  <li>Zhang, C. (2023). “Machine Learning in Neural Decoding”</li>
+</ol>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+  <li><a href="https://bci-database.org">BCI Research Database</a></li>
+  <li><a href="https://neural-engineering.org">Neural Engineering Forum</a></li>
+  <li><a href="https://bci-standards.org">BCI Standards Organization</a></li>
+</ul>]]></content><author><name>jimjing</name></author><category term="blog" /><category term="brain-computer interface" /><category term="neurotechnology" /><category term="neural engineering" /><category term="medical devices" /><summary type="html"><![CDATA[An in-depth analysis of BCI technology development and future prospects]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/bci-future.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/bci-future.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introduction to Neural Data Analysis with Python</title><link href="http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html" rel="alternate" type="text/html" title="Introduction to Neural Data Analysis with Python" /><published>2023-10-25T10:00:00+02:00</published><updated>2023-10-25T10:00:00+02:00</updated><id>http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html"><![CDATA[<h1 id="introduction-to-neural-data-analysis-with-python">Introduction to Neural Data Analysis with Python</h1>
+
+<p>Neural data analysis is a crucial skill in modern neuroscience research. This tutorial provides a comprehensive introduction to analyzing neural data using Python, focusing on practical examples and common analysis techniques.</p>
+
+<h2 id="setting-up-your-environment">Setting Up Your Environment</h2>
+
+<p>First, let’s set up a Python environment with the necessary packages:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Required packages
+</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">mne</span>
+<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="n">signal</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+<span class="c1"># Set plotting style
+</span><span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'seaborn'</span><span class="p">)</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_context</span><span class="p">(</span><span class="s">"paper"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="loading-and-preprocessing-data">Loading and Preprocessing Data</h2>
+
+<h3 id="reading-neural-data">Reading Neural Data</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">load_neural_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="s">"""Load neural data from various formats."""</span>
+    <span class="k">if</span> <span class="n">file_path</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.edf'</span><span class="p">):</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">read_raw_edf</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">preload</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">file_path</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.fif'</span><span class="p">):</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">read_raw_fif</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">preload</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Unsupported file format"</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">raw</span>
+
+<span class="c1"># Example usage
+</span><span class="n">raw_data</span> <span class="o">=</span> <span class="n">load_neural_data</span><span class="p">(</span><span class="s">'sample_data.edf'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="basic-preprocessing">Basic Preprocessing</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">preprocess_data</span><span class="p">(</span><span class="n">raw</span><span class="p">):</span>
+    <span class="s">"""Basic preprocessing pipeline."""</span>
+    <span class="c1"># Filter data
+</span>    <span class="n">raw</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">l_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h_freq</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+    
+    <span class="c1"># Remove power line noise
+</span>    <span class="n">raw</span><span class="p">.</span><span class="n">notch_filter</span><span class="p">(</span><span class="n">freqs</span><span class="o">=</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
+    
+    <span class="c1"># Detect and remove bad channels
+</span>    <span class="n">raw</span><span class="p">.</span><span class="n">interpolate_bads</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">raw</span>
+</code></pre></div></div>
+
+<h2 id="feature-extraction">Feature Extraction</h2>
+
+<h3 id="time-domain-features">Time-domain Features</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">extract_time_features</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="s">"""Extract common time-domain features."""</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'mean'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
+        <span class="s">'std'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
+        <span class="s">'max'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
+        <span class="s">'min'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
+        <span class="s">'rms'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">features</span>
+</code></pre></div></div>
+
+<h3 id="frequency-domain-features">Frequency-domain Features</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">compute_psd</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="p">):</span>
+    <span class="s">"""Compute power spectral density."""</span>
+    <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">welch</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> 
+                            <span class="n">nperseg</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+                            <span class="n">scaling</span><span class="o">=</span><span class="s">'density'</span><span class="p">)</span>
+    
+    <span class="c1"># Extract frequency bands
+</span>    <span class="n">bands</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'delta'</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="s">'theta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+        <span class="s">'alpha'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+        <span class="s">'beta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+        <span class="s">'gamma'</span><span class="p">:</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="n">power</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">band</span><span class="p">,</span> <span class="p">(</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="p">)</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">fmax</span><span class="p">)</span>
+        <span class="n">power</span><span class="p">[</span><span class="n">band</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">psd</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span>
+</code></pre></div></div>
+
+<h2 id="data-visualization">Data Visualization</h2>
+
+<h3 id="time-series-plotting">Time Series Plotting</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_neural_signals</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">fs</span><span class="p">):</span>
+    <span class="s">"""Plot multiple channels of neural data."""</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">/</span> <span class="n">fs</span>
+    
+    <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">channels</span><span class="p">):</span>
+        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Time (s)'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Channel'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Neural Signals'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="spectral-analysis-visualization">Spectral Analysis Visualization</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_spectrum</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span><span class="p">):</span>
+    <span class="s">"""Plot power spectrum and band powers."""</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    
+    <span class="c1"># Plot PSD
+</span>    <span class="n">ax1</span><span class="p">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'Frequency (Hz)'</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'Power Spectral Density'</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="c1"># Plot band powers
+</span>    <span class="n">bands</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">power</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">power</span><span class="p">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'Average Power'</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Frequency Band Powers'</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="example-analysis-pipeline">Example Analysis Pipeline</h2>
+
+<p>Here’s a complete example of analyzing neural data:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">analyze_neural_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="c1"># Load data
+</span>    <span class="n">raw</span> <span class="o">=</span> <span class="n">load_neural_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    
+    <span class="c1"># Preprocess
+</span>    <span class="n">raw</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+    
+    <span class="c1"># Extract data and info
+</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="n">get_data</span><span class="p">()</span>
+    <span class="n">fs</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="n">info</span><span class="p">[</span><span class="s">'sfreq'</span><span class="p">]</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span>
+    
+    <span class="c1"># Extract features
+</span>    <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">time_features</span> <span class="o">=</span> <span class="n">extract_time_features</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ch</span><span class="p">])</span>
+        <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="n">compute_psd</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ch</span><span class="p">],</span> <span class="n">fs</span><span class="p">)</span>
+        
+        <span class="n">ch_features</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">'channel'</span><span class="p">:</span> <span class="n">channels</span><span class="p">[</span><span class="n">ch</span><span class="p">],</span>
+            <span class="o">**</span><span class="n">time_features</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">power</span>
+        <span class="p">}</span>
+        <span class="n">features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch_features</span><span class="p">)</span>
+    
+    <span class="c1"># Convert to DataFrame
+</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+    
+    <span class="c1"># Visualize
+</span>    <span class="n">plot_neural_signals</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+    <span class="n">plot_spectrum</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div></div>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<ol>
+  <li><strong>Data Organization</strong>
+    <ul>
+      <li>Use consistent file naming</li>
+      <li>Maintain clear directory structure</li>
+      <li>Document preprocessing steps</li>
+    </ul>
+  </li>
+  <li><strong>Code Quality</strong>
+    <ul>
+      <li>Write modular functions</li>
+      <li>Add docstrings and comments</li>
+      <li>Use version control</li>
+    </ul>
+  </li>
+  <li><strong>Analysis Pipeline</strong>
+    <ul>
+      <li>Automate repetitive tasks</li>
+      <li>Save intermediate results</li>
+      <li>Validate results at each step</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ol>
+  <li><strong>Data Quality Issues</strong>
+    <ul>
+      <li>Check for missing values</li>
+      <li>Identify outliers</li>
+      <li>Validate channel locations</li>
+    </ul>
+  </li>
+  <li><strong>Processing Artifacts</strong>
+    <ul>
+      <li>Filter edge effects</li>
+      <li>Temporal discontinuities</li>
+      <li>Baseline corrections</li>
+    </ul>
+  </li>
+  <li><strong>Statistical Considerations</strong>
+    <ul>
+      <li>Multiple comparisons</li>
+      <li>Independence assumptions</li>
+      <li>Effect size calculations</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This tutorial covered the basics of neural data analysis using Python. For more advanced topics, check out the MNE-Python documentation and other neuroscience analysis packages.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Gramfort, A. et al. (2013). “MEG and EEG data analysis with MNE-Python”</li>
+  <li>Cohen, M. X. (2014). “Analyzing Neural Time Series Data”</li>
+  <li>Kriegeskorte, N. &amp; Kreiman, G. (2011). “Visual Population Codes”</li>
+</ol>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+  <li><a href="https://mne.tools/stable/index.html">MNE-Python Documentation</a></li>
+  <li><a href="https://neurodatascience.github.io/">Neural Data Analysis Tutorials</a></li>
+  <li><a href="https://openneuro.org/">Sample Datasets</a></li>
+</ul>]]></content><author><name>jimjing</name></author><category term="blog" /><category term="data analysis" /><category term="python" /><category term="neuroscience" /><category term="tutorial" /><summary type="html"><![CDATA[A step-by-step guide to processing and analyzing neural data using Python]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/blog/neural-data-python.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/blog/neural-data-python.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building Real-time EEG Signal Processing Pipeline</title><link href="http://localhost:4000/jjing-neuro/blog/2023/09/15/real-time-eeg.html" rel="alternate" type="text/html" title="Building Real-time EEG Signal Processing Pipeline" /><published>2023-09-15T16:00:00+02:00</published><updated>2023-09-15T16:00:00+02:00</updated><id>http://localhost:4000/jjing-neuro/blog/2023/09/15/real-time-eeg</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/2023/09/15/real-time-eeg.html"><![CDATA[<h1 id="building-real-time-eeg-signal-processing-pipeline">Building Real-time EEG Signal Processing Pipeline</h1>
+
+<p>Real-time EEG signal processing is crucial for brain-computer interfaces and neurofeedback applications. This tutorial shows how to build an efficient real-time processing pipeline using Python.</p>
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<p>A real-time EEG processing system typically consists of:</p>
+<ol>
+  <li>Data acquisition</li>
+  <li>Signal preprocessing</li>
+  <li>Feature extraction</li>
+  <li>Classification/Analysis</li>
+  <li>Feedback generation</li>
+</ol>
+
+<h3 id="basic-structure">Basic Structure</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RealTimeEEG</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">sampling_rate</span><span class="p">,</span> <span class="n">channels</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">=</span> <span class="n">sampling_rate</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">channels</span> <span class="o">=</span> <span class="n">channels</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">buffer_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 2-second buffer
+</span>        <span class="bp">self</span><span class="p">.</span><span class="nb">buffer</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">channels</span><span class="p">),</span> <span class="bp">self</span><span class="p">.</span><span class="n">buffer_size</span><span class="p">))</span>
+        
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setup_filters</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setup_features</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setup_classifier</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="data-acquisition">Data Acquisition</h2>
+
+<h3 id="setting-up-lsl-stream">Setting up LSL Stream</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pylsl</span> <span class="kn">import</span> <span class="n">StreamInlet</span><span class="p">,</span> <span class="n">resolve_stream</span>
+
+<span class="k">def</span> <span class="nf">setup_eeg_stream</span><span class="p">():</span>
+    <span class="s">"""Setup LSL stream for EEG data."""</span>
+    <span class="n">streams</span> <span class="o">=</span> <span class="n">resolve_stream</span><span class="p">(</span><span class="s">'type'</span><span class="p">,</span> <span class="s">'EEG'</span><span class="p">)</span>
+    <span class="n">inlet</span> <span class="o">=</span> <span class="n">StreamInlet</span><span class="p">(</span><span class="n">streams</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">inlet</span>
+
+<span class="k">def</span> <span class="nf">acquire_data</span><span class="p">(</span><span class="n">inlet</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">):</span>
+    <span class="s">"""Acquire data chunks from LSL stream."""</span>
+    <span class="n">chunk</span><span class="p">,</span> <span class="n">timestamps</span> <span class="o">=</span> <span class="n">inlet</span><span class="p">.</span><span class="n">pull_chunk</span><span class="p">(</span>
+        <span class="n">max_samples</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span>
+        <span class="n">timeout</span><span class="o">=</span><span class="mf">1.0</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">chunk</span><span class="p">),</span> <span class="n">timestamps</span>
+</code></pre></div></div>
+
+<h2 id="real-time-preprocessing">Real-time Preprocessing</h2>
+
+<h3 id="filtering">Filtering</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">butter</span><span class="p">,</span> <span class="n">sosfilt</span>
+
+<span class="k">class</span> <span class="nc">RealTimeFilter</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">f_low</span><span class="p">,</span> <span class="n">f_high</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">=</span> <span class="n">fs</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">f_low</span> <span class="o">=</span> <span class="n">f_low</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">f_high</span> <span class="o">=</span> <span class="n">f_high</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">sos</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_design_filter</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">_design_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nyq</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">sos</span> <span class="o">=</span> <span class="n">butter</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">order</span><span class="p">,</span> 
+                    <span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">f_low</span><span class="o">/</span><span class="n">nyq</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">f_high</span><span class="o">/</span><span class="n">nyq</span><span class="p">],</span>
+                    <span class="n">btype</span><span class="o">=</span><span class="s">'bandpass'</span><span class="p">,</span>
+                    <span class="n">output</span><span class="o">=</span><span class="s">'sos'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sos</span>
+    
+    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">sosfilt</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">sos</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="artifact-removal">Artifact Removal</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ArtifactRemover</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">threshold</span>
+        
+    <span class="k">def</span> <span class="nf">remove_artifacts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="s">"""Simple threshold-based artifact removal."""</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">threshold</span>
+        <span class="n">data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">nan</span>
+        <span class="c1"># Interpolate NaN values
+</span>        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">'linear'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="n">values</span>
+</code></pre></div></div>
+
+<h2 id="feature-extraction">Feature Extraction</h2>
+
+<h3 id="real-time-features">Real-time Features</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RealTimeFeatures</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">=</span> <span class="n">fs</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">window_size</span> <span class="o">=</span> <span class="n">window_size</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">window_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fs</span> <span class="o">*</span> <span class="n">window_size</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">compute_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="s">"""Compute features in real-time."""</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="p">{}</span>
+        
+        <span class="c1"># Time domain features
+</span>        <span class="n">features</span><span class="p">[</span><span class="s">'rms'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+        <span class="n">features</span><span class="p">[</span><span class="s">'var'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        
+        <span class="c1"># Frequency domain features
+</span>        <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">welch</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> 
+                                <span class="n">fs</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">fs</span><span class="p">,</span>
+                                <span class="n">nperseg</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">window_samples</span><span class="p">,</span>
+                                <span class="n">noverlap</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">window_samples</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="c1"># Band powers
+</span>        <span class="n">bands</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">'delta'</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s">'theta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+            <span class="s">'alpha'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+            <span class="s">'beta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+        <span class="k">for</span> <span class="n">band</span><span class="p">,</span> <span class="p">(</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="p">)</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">fmax</span><span class="p">)</span>
+            <span class="n">features</span><span class="p">[</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">band</span><span class="si">}</span><span class="s">_power'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">psd</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+            
+        <span class="k">return</span> <span class="n">features</span>
+</code></pre></div></div>
+
+<h2 id="real-time-processing-pipeline">Real-time Processing Pipeline</h2>
+
+<h3 id="main-processing-loop">Main Processing Loop</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EEGProcessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="p">[</span><span class="s">'Fp1'</span><span class="p">,</span> <span class="s">'Fp2'</span><span class="p">,</span> <span class="s">'C3'</span><span class="p">,</span> <span class="s">'C4'</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">=</span> <span class="n">fs</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">channels</span> <span class="o">=</span> <span class="n">channels</span>
+        <span class="bp">self</span><span class="p">.</span><span class="nb">filter</span> <span class="o">=</span> <span class="n">RealTimeFilter</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">artifact_remover</span> <span class="o">=</span> <span class="n">ArtifactRemover</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">feature_extractor</span> <span class="o">=</span> <span class="n">RealTimeFeatures</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">process_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="s">"""Process a chunk of EEG data in real-time."""</span>
+        <span class="c1"># Filter
+</span>        <span class="n">filtered</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="nb">filter</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        
+        <span class="c1"># Remove artifacts
+</span>        <span class="n">clean</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">artifact_remover</span><span class="p">.</span><span class="n">remove_artifacts</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
+        
+        <span class="c1"># Extract features
+</span>        <span class="n">features</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">channels</span><span class="p">):</span>
+            <span class="n">ch_features</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">feature_extractor</span><span class="p">.</span><span class="n">compute_features</span><span class="p">(</span>
+                <span class="n">clean</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="p">)</span>
+            <span class="n">features</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch_features</span>
+            
+        <span class="k">return</span> <span class="n">features</span>
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+
+<h3 id="real-time-plot">Real-time Plot</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+
+<span class="k">class</span> <span class="nc">RealTimePlot</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">buffer_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fs</span> <span class="o">=</span> <span class="n">fs</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">channels</span> <span class="o">=</span> <span class="n">channels</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">buffer_size</span> <span class="o">=</span> <span class="n">buffer_size</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">setup_plot</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">setup_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">channels</span><span class="p">:</span>
+            <span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">label</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">lines</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">lines</span><span class="p">):</span>
+            <span class="n">line</span><span class="p">.</span><span class="n">set_data</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])),</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">lines</span>
+</code></pre></div></div>
+
+<h2 id="complete-system">Complete System</h2>
+
+<p>Here’s how to put everything together:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">run_eeg_system</span><span class="p">():</span>
+    <span class="c1"># Initialize components
+</span>    <span class="n">fs</span> <span class="o">=</span> <span class="mi">250</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Fp1'</span><span class="p">,</span> <span class="s">'Fp2'</span><span class="p">,</span> <span class="s">'C3'</span><span class="p">,</span> <span class="s">'C4'</span><span class="p">]</span>
+    <span class="n">processor</span> <span class="o">=</span> <span class="n">EEGProcessor</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+    <span class="n">inlet</span> <span class="o">=</span> <span class="n">setup_eeg_stream</span><span class="p">()</span>
+    <span class="n">plotter</span> <span class="o">=</span> <span class="n">RealTimePlot</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">channels</span><span class="p">)</span>
+    
+    <span class="c1"># Main loop
+</span>    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c1"># Get data
+</span>        <span class="n">data</span><span class="p">,</span> <span class="n">timestamps</span> <span class="o">=</span> <span class="n">acquire_data</span><span class="p">(</span><span class="n">inlet</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="n">fs</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+        
+        <span class="c1"># Process
+</span>        <span class="n">features</span> <span class="o">=</span> <span class="n">processor</span><span class="p">.</span><span class="n">process_chunk</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        
+        <span class="c1"># Update visualization
+</span>        <span class="n">plotter</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        
+        <span class="c1"># Optional: Save or stream features
+</span>        <span class="n">save_features</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+        
+        <span class="c1"># Check for exit condition
+</span>        <span class="k">if</span> <span class="n">check_exit_condition</span><span class="p">():</span>
+            <span class="k">break</span>
+</code></pre></div></div>
+
+<h2 id="performance-optimization">Performance Optimization</h2>
+
+<ol>
+  <li><strong>Buffer Management</strong>
+    <ul>
+      <li>Use circular buffers</li>
+      <li>Optimize memory allocation</li>
+      <li>Minimize copying</li>
+    </ul>
+  </li>
+  <li><strong>Computational Efficiency</strong>
+    <ul>
+      <li>Vectorize operations</li>
+      <li>Use parallel processing</li>
+      <li>Profile and optimize bottlenecks</li>
+    </ul>
+  </li>
+  <li><strong>Latency Reduction</strong>
+    <ul>
+      <li>Minimize buffer sizes</li>
+      <li>Optimize filter designs</li>
+      <li>Use efficient data structures</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<ol>
+  <li><strong>System Design</strong>
+    <ul>
+      <li>Modular architecture</li>
+      <li>Error handling</li>
+      <li>Data validation</li>
+    </ul>
+  </li>
+  <li><strong>Real-time Considerations</strong>
+    <ul>
+      <li>Timing accuracy</li>
+      <li>Buffer overruns</li>
+      <li>Resource management</li>
+    </ul>
+  </li>
+  <li><strong>Quality Control</strong>
+    <ul>
+      <li>Signal quality metrics</li>
+      <li>Performance monitoring</li>
+      <li>System diagnostics</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Building a real-time EEG processing pipeline requires careful consideration of various factors including data acquisition, processing efficiency, and system reliability. This guide provides a foundation for developing such systems.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Brunner, C. et al. (2015). “BCI Software Platforms”</li>
+  <li>Delorme, A. &amp; Makeig, S. (2004). “EEGLAB”</li>
+  <li>Renard, Y. et al. (2010). “OpenViBE”</li>
+</ol>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://labstreaminglayer.readthedocs.io/">LSL Documentation</a></li>
+  <li><a href="https://github.com/yourusername/real-time-eeg">Real-time EEG Examples</a></li>
+  <li><a href="https://real-time-eeg.readthedocs.io/">Performance Optimization Guide</a></li>
+</ul>]]></content><author><name>jimjing</name></author><category term="blog" /><category term="EEG" /><category term="signal processing" /><category term="real-time" /><category term="python" /><summary type="html"><![CDATA[A detailed guide on building real-time EEG signal processing systems using Python]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/jjing-neuro/assets/images/blog/real-time-eeg.jpg" /><media:content medium="image" url="http://localhost:4000/jjing-neuro/assets/images/blog/real-time-eeg.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

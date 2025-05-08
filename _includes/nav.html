@@ -64,15 +64,6 @@
                     </li>
                 {% endif %}
             {% endif %}
-
-            {% if site.resume == true %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.baseurl }}/{{ site.resume-url }}{% endif %}">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Resume</span>
-                    </a>
-                </li>
-            {% endif %}
         </ul>
     </div>
 </nav>

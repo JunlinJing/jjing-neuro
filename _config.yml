@@ -3,7 +3,7 @@ title: Jim Jing
 bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
 
 # twitter summary info
-description: An academic website about neuroscience research and artificial intelligence technology
+description: A personal academic website focusing on neuroscience research and artificial intelligence
 
 # if it's an external image, update below for true
 # better with square images
@@ -104,3 +104,13 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
+
+# RSS Feed configuration
+feed:
+  path: feed.xml
+  posts_limit: 20
+  categories:
+    - news
+    - blog
+  tags: true
+  excerpt_only: false

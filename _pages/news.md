@@ -1,0 +1,695 @@
+---
+layout: page
+title: News
+permalink: /news/
+---
+
+<div class="news-page">
+    <div class="stats-panel">
+        <div class="stat-item">
+            <i class="fas fa-newspaper"></i>
+            <span class="stat-value">5</span>
+            <span class="stat-label">Total Updates</span>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="stat-value">2</span>
+            <span class="stat-label">Years Active</span>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-book"></i>
+            <span class="stat-value">2</span>
+            <span class="stat-label">Blog Posts</span>
+        </div>
+    </div>
+
+    <div class="news-header">
+        <div class="view-controls">
+            <button class="view-btn active" data-view="timeline">
+                <i class="fas fa-stream"></i> Timeline
+            </button>
+            <button class="view-btn" data-view="archive">
+                <i class="fas fa-archive"></i> Archive
+            </button>
+        </div>
+        <div class="search-box">
+            <input type="text" id="newsSearch" placeholder="Search news...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </div>
+
+    <div class="news-controls">
+        <div class="news-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Blog">Blog</button>
+            <button class="filter-btn" data-filter="Update">Update</button>
+            <button class="filter-btn" data-filter="Publication">Publication</button>
+        </div>
+        <a href="{{ site.baseurl }}/feed.xml" class="rss-btn" title="Subscribe to RSS feed">
+            <i class="fas fa-rss"></i> Subscribe
+        </a>
+    </div>
+
+    <div id="timelineView" class="news-list active-view">
+        <div class="news-year">
+            <h2>2024</h2>
+            <div class="news-item" data-type="Blog">
+                <span class="date">March 15, 2024</span>
+                <p><a href="{{ site.baseurl }}/2024/01/15/deep-learning-eeg/">New blog post on "Deep Learning Applications in EEG Signal Processing"</a> is now available.</p>
+                <div class="news-tag">Blog</div>
+            </div>
+            <div class="news-item" data-type="Update">
+                <span class="date">February 28, 2024</span>
+                <p>Updated the website with new research focus areas and improved navigation.</p>
+                <div class="news-tag">Update</div>
+            </div>
+            <div class="news-item" data-type="Blog">
+                <span class="date">January 20, 2024</span>
+                <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                <div class="news-tag">Blog</div>
+            </div>
+            <div class="news-item" data-type="Update">
+                <span class="date">January 5, 2024</span>
+                <p>Website redesign completed with improved accessibility and dark mode support.</p>
+                <div class="news-tag">Update</div>
+            </div>
+        </div>
+        
+        <div class="news-year">
+            <h2>2023</h2>
+            <div class="news-item" data-type="Update">
+                <span class="date">December 15, 2023</span>
+                <p>Started the website redesign project.</p>
+                <div class="news-tag">Update</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="archiveView" class="news-archive">
+        <div class="archive-year">
+            <h3>2024 <span>(4)</span></h3>
+            <div class="archive-items">
+                <div class="archive-item">
+                    <span class="date">Mar 15</span>
+                    <a href="{{ site.baseurl }}/2024/01/15/deep-learning-eeg/">Deep Learning Applications in EEG Signal Processing</a>
+                    <span class="tag">Blog</span>
+                </div>
+                <div class="archive-item">
+                    <span class="date">Feb 28</span>
+                    <span>Website Update: Research Areas</span>
+                    <span class="tag">Update</span>
+                </div>
+                <div class="archive-item">
+                    <span class="date">Jan 20</span>
+                    <span>New Technical Blog Posts</span>
+                    <span class="tag">Blog</span>
+                </div>
+                <div class="archive-item">
+                    <span class="date">Jan 05</span>
+                    <span>Website Redesign</span>
+                    <span class="tag">Update</span>
+                </div>
+            </div>
+        </div>
+        <div class="archive-year">
+            <h3>2023 <span>(1)</span></h3>
+            <div class="archive-items">
+                <div class="archive-item">
+                    <span class="date">Dec 15</span>
+                    <span>Website Project Start</span>
+                    <span class="tag">Update</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.news-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.view-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    padding: 8px 16px;
+    border: none;
+    background: var(--bg-color-secondary);
+    color: var(--text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-btn:hover, .view-btn.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+.search-box {
+    position: relative;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 35px 8px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--meta-color);
+}
+
+.news-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+.rss-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.rss-btn:hover {
+    background: var(--accent-color-dark);
+    transform: translateY(-2px);
+}
+
+/* Timeline View Styles */
+.news-list {
+    display: none;
+}
+
+.news-list.active-view {
+    display: block;
+}
+
+.news-year {
+    margin-bottom: 40px;
+}
+
+.news-year h2 {
+    color: var(--heading-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.news-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--accent-color);
+    background: var(--bg-color-secondary);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateX(5px);
+}
+
+.news-item .date {
+    font-size: 0.9em;
+    color: var(--meta-color);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.news-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.news-item a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: var(--link-hover-color);
+}
+
+.news-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 4px 8px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* Archive View Styles */
+.news-archive {
+    display: none;
+}
+
+.news-archive.active-view {
+    display: block;
+}
+
+.archive-year {
+    margin-bottom: 30px;
+}
+
+.archive-year h3 {
+    color: var(--heading-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.archive-year h3 span {
+    font-size: 0.7em;
+    color: var(--meta-color);
+}
+
+.archive-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.archive-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.archive-item:hover {
+    background: var(--bg-color-secondary);
+}
+
+.archive-item .date {
+    font-size: 0.9em;
+    color: var(--meta-color);
+    min-width: 60px;
+}
+
+.archive-item a {
+    color: var(--link-color);
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.archive-item a:hover {
+    color: var(--link-hover-color);
+}
+
+.archive-item span:not(.date):not(.tag) {
+    flex-grow: 1;
+    color: var(--text-color);
+}
+
+.archive-item .tag {
+    font-size: 0.8em;
+    padding: 2px 8px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .news-page {
+        padding: 15px;
+    }
+
+    .news-header, .news-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        max-width: none;
+    }
+
+    .news-filters {
+        justify-content: center;
+    }
+
+    .rss-btn {
+        text-align: center;
+    }
+
+    .news-item {
+        padding: 15px;
+    }
+
+    .news-tag {
+        position: static;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .archive-item {
+        flex-wrap: wrap;
+    }
+
+    .archive-item .date {
+        min-width: auto;
+    }
+}
+
+[data-theme="dark"] .news-item,
+[data-theme="dark"] .archive-item:hover {
+    background: var(--bg-color-darker);
+}
+
+[data-theme="dark"] .filter-btn {
+    border-color: var(--accent-color-dark);
+}
+
+[data-theme="dark"] .filter-btn.active {
+    background: var(--accent-color-dark);
+}
+
+[data-theme="dark"] .rss-btn {
+    background: var(--accent-color-dark);
+}
+
+[data-theme="dark"] .search-box input {
+    background: var(--bg-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+.stats-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.stat-item {
+    background: var(--bg-color-secondary);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-item i {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--heading-color);
+    margin: 5px 0;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    color: var(--meta-color);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-item, .archive-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.news-item:nth-child(1) { animation-delay: 0.1s; }
+.news-item:nth-child(2) { animation-delay: 0.2s; }
+.news-item:nth-child(3) { animation-delay: 0.3s; }
+.news-item:nth-child(4) { animation-delay: 0.4s; }
+.news-item:nth-child(5) { animation-delay: 0.5s; }
+
+.view-btn, .filter-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.view-btn::after, .filter-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(40, 40);
+        opacity: 0;
+    }
+}
+
+.view-btn:active::after, .filter-btn:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+[data-theme="dark"] .stat-item {
+    background: var(--bg-color-darker);
+}
+
+[data-theme="dark"] .stat-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .stat-value {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .stats-panel {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .stat-item {
+        padding: 15px;
+    }
+
+    .stat-value {
+        font-size: 1.5em;
+    }
+}
+</style>
+
+<script>
+function animateNumbers() {
+    const statValues = document.querySelectorAll('.stat-value');
+    
+    statValues.forEach(stat => {
+        const finalValue = parseInt(stat.textContent);
+        let currentValue = 0;
+        const duration = 1500;
+        const steps = 60;
+        const increment = finalValue / steps;
+        const stepTime = duration / steps;
+        
+        const counter = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= finalValue) {
+                stat.textContent = finalValue;
+                clearInterval(counter);
+            } else {
+                stat.textContent = Math.floor(currentValue);
+            }
+        }, stepTime);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(animateNumbers, 500);
+    
+    const viewButtons = document.querySelectorAll('.view-btn');
+    const timelineView = document.getElementById('timelineView');
+    const archiveView = document.getElementById('archiveView');
+
+    viewButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            viewButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const view = button.getAttribute('data-view');
+            if (view === 'timeline') {
+                timelineView.classList.add('active-view');
+                archiveView.classList.remove('active-view');
+            } else {
+                archiveView.classList.add('active-view');
+                timelineView.classList.remove('active-view');
+            }
+
+            const items = document.querySelectorAll('.news-item, .archive-item');
+            items.forEach(item => {
+                item.style.animation = 'none';
+                item.offsetHeight;
+                item.style.animation = null;
+            });
+        });
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const newsItems = document.querySelectorAll('.news-item, .archive-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-filter');
+            newsItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-type') === filter) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    const searchInput = document.getElementById('newsSearch');
+    let searchTimeout;
+
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            newsItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const type = item.getAttribute('data-type');
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                
+                const matchesSearch = text.includes(searchTerm);
+                const matchesFilter = activeFilter === 'all' || type === activeFilter;
+                
+                item.style.display = (matchesSearch && matchesFilter) ? '' : 'none';
+            });
+        }, 300);
+    });
+});
+</script> 

@@ -1,49 +1,157 @@
 ---
-layout: page
+layout: default
 ---
 
-{% if page.image and page.headerImage %}
-    <img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
-{% endif %}
-
-<h1 class="title">{{ page.title }}</h1>
-
-<span class="date">
-    <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-    {% if site.read-time %} - {% include read-time.html %}{% endif %}
-</span>
-
-{% if site.show-tags %}
-    <div class="post-tags">
-        {% for tag in page.tags %}
-            <a class="item" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
-    </div>
-{% endif %}
-
-{{content}}
-
-{% if site.post-advance-links contains page.category %}
-    <div class="blog-navigation">
-        {% if page.previous.hidden == false and page.previous.url %}
-            <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
-        {% else %}
-            <a class="prev"></a>
+<article class="post">
+    <header class="post-header">
+        {% if page.image and page.headerImage %}
+            <div class="post-image">
+                <img src="{{ page.image }}" alt="{{ page.title }}">
+            </div>
         {% endif %}
-        {% if page.next.hidden == false and page.next.url %}
-            <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+        
+        <h1 class="post-title">{{ page.title }}</h1>
+        
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %-d, %Y" }}
+            </time>
+            {% if page.author %}
+                • <span>{{ page.author }}</span>
+            {% endif %}
+        </div>
+
+        {% if page.tag %}
+            <div class="post-tags">
+                {% for tag in page.tag %}
+                    <a href="{{ site.baseurl }}/tags/#{{ tag }}" class="tag">
+                        <i class="fas fa-tag"></i> {{ tag }}
+                    </a>
+                {% endfor %}
+            </div>
         {% endif %}
+    </header>
+
+    <div class="post-content">
+        {{ content }}
     </div>
-{% endif %}
 
-{% if site.related %}
-    {% include related.html %}
-{% endif %}
-
-{% if site.show-author %}
+    {% include share.html %}
     {% include author.html %}
-{% endif %}
+    {% include comments.html %}
+    {% include related.html %}
+</article>
 
-{% if site.disqus.categories contains page.category %}
-    {% include disqus.html %}
-{% endif %}
+<style>
+.post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.post-image {
+    margin: -20px -20px 30px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-title {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: var(--heading-color);
+}
+
+.post-meta {
+    color: var(--meta-color);
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.post-tags {
+    margin: 20px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: var(--tag-bg-hover);
+    transform: translateY(-2px);
+}
+
+.tag i {
+    margin-right: 5px;
+}
+
+.post-content {
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.post-content h2 {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.post-content h3 {
+    margin-top: 30px;
+    color: var(--heading-color);
+}
+
+.post-content p {
+    margin: 20px 0;
+}
+
+.post-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.post-content pre {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.post-content code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .post {
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 2em;
+    }
+
+    .post-content {
+        font-size: 1em;
+    }
+}
+</style>

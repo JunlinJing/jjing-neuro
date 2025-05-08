@@ -1,78 +1,78 @@
 # Jim Jing's Academic Website
 
-这是我的个人学术网站，基于Jekyll构建，专注于展示神经科学研究和人工智能相关工作。
+This is my personal academic website built with Jekyll, focusing on neuroscience research and artificial intelligence work.
 
-## 网站内容
+## Website Content
 
-- **关于(About)**: 个人简介、教育背景、研究经历
-- **研究(Research)**: 当前研究项目、研究方法、合作机会
-- **出版物(Publications)**: 期刊文章、会议论文、预印本
-- **项目(Projects)**: 开源项目、技术贡献
-- **博客(Blog)**: 技术教程、研究笔记、学术思考
+- **About**: Personal introduction, educational background, research experience
+- **Research**: Current research projects, methodologies, collaboration opportunities
+- **Publications**: Journal articles, conference papers, preprints
+- **Projects**: Open source projects, technical contributions
+- **Blog**: Technical tutorials, research notes, academic thoughts
 
-## 本地开发
+## Local Development
 
-1. 安装依赖:
+1. Install dependencies:
 ```bash
-# 安装 Ruby 和 Bundler
+# Install Ruby and Bundler
 gem install bundler
-# 安装项目依赖
+# Install project dependencies
 bundle install
 ```
 
-2. 本地运行:
+2. Run locally:
 ```bash
 bundle exec jekyll serve
 ```
 
-3. 访问 `http://localhost:4000/jjing-neuro/`
+3. Visit `http://localhost:4000/jjing-neuro/`
 
-## 部署
+## Deployment
 
-网站通过 GitHub Pages 自动部署，访问地址：[https://junlinjing.github.io/jjing-neuro/](https://junlinjing.github.io/jjing-neuro/)
+The website is automatically deployed via GitHub Pages, accessible at: [https://junlinjing.github.io/jjing-neuro/](https://junlinjing.github.io/jjing-neuro/)
 
-## 技术栈
+## Tech Stack
 
-- [Jekyll](https://jekyllrb.com/) - 静态网站生成器
-- [SASS](https://sass-lang.com/) - CSS预处理器
-- Responsive Design - 适配移动端和桌面端
-- Dark/Light Theme - 支持暗色/亮色主题切换
+- [Jekyll](https://jekyllrb.com/) - Static site generator
+- [SASS](https://sass-lang.com/) - CSS preprocessor
+- Responsive Design - Mobile and desktop compatible
+- Dark/Light Theme - Supports dark/light theme switching
 
-## 文件结构
+## File Structure
 
 ```
 .
-├── _includes/          # 可重用的模板组件
-├── _layouts/          # 页面布局模板
-├── _pages/           # 主要页面内容
-├── _posts/           # 博客文章
-├── assets/           # 静态资源（图片、样式等）
-└── _config.yml       # 网站配置文件
+├── _includes/          # Reusable template components
+├── _layouts/          # Page layout templates
+├── _pages/           # Main page content
+├── _posts/           # Blog posts
+├── assets/           # Static assets (images, styles, etc.)
+└── _config.yml       # Website configuration file
 ```
 
-## 配置说明
+## Configuration
 
-主要配置在 `_config.yml` 文件中：
+Main configuration in `_config.yml`:
 
 ```yaml
-# 基本信息
+# Basic Information
 title: Jim Jing
 bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
 
-# 社交媒体链接
+# Social Media Links
 twitter: JimJing1997
 linkedin: jjunlin
 github: JunlinJing
 
-# 学术链接
+# Academic Links
 researchgate: Junlin-Jing
 orcid: 0009-0006-1290-7445
 ```
 
-## 许可
+## License
 
-本网站基于 [MIT License](LICENSE) 开源。
+This website is open source under the [MIT License](LICENSE).
 
-## 致谢
+## Acknowledgments
 
-网站主题基于 [Indigo](https://github.com/sergiokopplin/indigo) 修改，感谢原作者的工作。
+The website theme is modified from [Indigo](https://github.com/sergiokopplin/indigo). Thanks to the original author for their work.

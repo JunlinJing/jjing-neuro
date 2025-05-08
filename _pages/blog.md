@@ -8,51 +8,51 @@ permalink: /blog/
 
 ## Featured Posts
 
-### [深度学习在脑电信号处理中的应用](/blog/2024/deep-learning-eeg)
-*2024-01-15* | **神经科学** | **机器学习**
+### [Applications of Deep Learning in EEG Signal Processing](/blog/2024/deep-learning-eeg)
+*2024-01-15* | **Neuroscience** | **Machine Learning**
 
-探讨如何使用深度学习模型处理和分析脑电信号数据，包括信号预处理、特征提取和分类方法。
+Exploring how to use deep learning models to process and analyze EEG signal data, including signal preprocessing, feature extraction, and classification methods.
 
-### [认知建模：从理论到实践](/blog/2023/cognitive-modeling)
-*2023-12-20* | **认知科学** | **计算模型**
+### [Cognitive Modeling: From Theory to Practice](/blog/2023/cognitive-modeling)
+*2023-12-20* | **Cognitive Science** | **Computational Models**
 
-介绍认知建模的基本概念、常用方法和实际应用案例，帮助读者理解如何将认知过程形式化。
+Introduction to basic concepts, common methods, and practical applications of cognitive modeling, helping readers understand how to formalize cognitive processes.
 
-### [脑机接口技术的现状与未来](/blog/2023/bci-future)
-*2023-11-30* | **脑机接口** | **技术展望**
+### [Current State and Future of Brain-Computer Interface Technology](/blog/2023/bci-future)
+*2023-11-30* | **BCI** | **Technology Outlook**
 
-分析当前脑机接口技术的发展现状，探讨未来可能的突破方向和应用场景。
+Analysis of current developments in brain-computer interface technology, discussing potential breakthrough directions and application scenarios.
 
 ## Technical Tutorials
 
-### [Python神经数据分析入门](/blog/2023/neural-data-python)
-*2023-10-25* | **教程** | **数据分析**
+### [Introduction to Neural Data Analysis with Python](/blog/2023/neural-data-python)
+*2023-10-25* | **Tutorial** | **Data Analysis**
 
-手把手教你使用Python进行神经数据的处理和分析，包括数据读取、预处理、可视化等步骤。
+Step-by-step guide to processing and analyzing neural data using Python, including data reading, preprocessing, and visualization.
 
-### [构建实时脑电信号处理流水线](/blog/2023/real-time-eeg)
-*2023-09-15* | **教程** | **信号处理**
+### [Building Real-time EEG Signal Processing Pipeline](/blog/2023/real-time-eeg)
+*2023-09-15* | **Tutorial** | **Signal Processing**
 
-详细介绍如何使用Python搭建实时脑电信号处理系统，包括数据采集、滤波、特征提取等环节。
+Detailed guide on building real-time EEG signal processing systems using Python, covering data acquisition, filtering, and feature extraction.
 
 ## Research Notes
 
-### [注意力机制的神经基础](/blog/2023/attention-mechanism)
-*2023-08-20* | **研究笔记** | **认知神经**
+### [Neural Basis of Attention Mechanisms](/blog/2023/attention-mechanism)
+*2023-08-20* | **Research Notes** | **Cognitive Neuroscience**
 
-总结近期关于注意力机制神经基础的研究发现，探讨其对人工智能设计的启示。
+Summary of recent findings on the neural basis of attention mechanisms and their implications for artificial intelligence design.
 
-### [强化学习在认知控制中的应用](/blog/2023/reinforcement-learning)
-*2023-07-10* | **研究笔记** | **学习理论**
+### [Applications of Reinforcement Learning in Cognitive Control](/blog/2023/reinforcement-learning)
+*2023-07-10* | **Research Notes** | **Learning Theory**
 
-探讨强化学习原理如何解释人类的认知控制过程，以及这一理论框架的局限性。
+Exploring how reinforcement learning principles explain human cognitive control processes and the limitations of this theoretical framework.
 
 ## Categories
-- [神经科学](/blog/category/neuroscience)
-- [机器学习](/blog/category/machine-learning)
-- [认知科学](/blog/category/cognitive-science)
-- [教程](/blog/category/tutorials)
-- [研究笔记](/blog/category/research-notes)
+- [Neuroscience](/blog/category/neuroscience)
+- [Machine Learning](/blog/category/machine-learning)
+- [Cognitive Science](/blog/category/cognitive-science)
+- [Tutorials](/blog/category/tutorials)
+- [Research Notes](/blog/category/research-notes)
 
 <style>
 .page-content {

@@ -1,2 +1,29 @@
-// ... existing imports ...
-@import "components/resume-page";
+// Base styles
+@import "base/variables";
+@import "base/normalize";
+@import "base/syntax";
+@import "base/general";
+@import "base/helpers";
+
+// Components
+@import "components/header";
+@import "components/nav";
+@import "components/footer";
+@import "components/social-links";
+@import "components/pagination";
+@import "components/related";
+@import "components/share";
+@import "components/author";
+@import "components/post";
+@import "components/tags";
+
+// Pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/research";
+@import "pages/publications";
+@import "pages/projects";
+@import "pages/blog";
+
+// Dark mode
+@import "components/dark-mode";
