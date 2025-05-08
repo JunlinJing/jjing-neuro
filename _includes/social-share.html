@@ -1,0 +1,28 @@
+<!-- Social Share Buttons -->
+<div class="social-share">
+    <h4>Share this post</h4>
+    <div class="share-buttons">
+        <!-- Twitter -->
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.url }}"
+           onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+           onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:?subject={{ page.title }}&body=Check out this article: {{ site.url }}{{ page.url }}">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</div> 

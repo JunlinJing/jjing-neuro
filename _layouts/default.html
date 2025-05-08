@@ -4,60 +4,38 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-
-    {% if site.analytics-google %}
-        {% include analytics-google.html %}
-    {% endif %}
-
     <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name=author content="{{ site.title }}">
-
-    {% seo %}
-
-    {% include favicon.html %}
-
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
-
-    <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
-
-    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include seo.html %}
     
-    {% if site.dark-theme == "auto" %}
-        {% capture scss_sheet %}
-            {% include style.scss %}
-            @media (prefers-color-scheme: dark) {
-                {% include style-dark.scss %}
-            }
-        {% endcapture %}
-    {% elsif site.dark-theme %}
-        {% capture scss_sheet %}{% include style-dark.scss %}{% endcapture %}
-    {% else %}
-        {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
-    {% endif %}
-
-    {{ scss_sheet | scssify }}
-    </style>
-
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+    
+    <!-- RSS -->
+    {% feed_meta %}
+    
+    <!-- Scripts -->
+    <script defer src="{{ '/assets/js/optimization.js' | relative_url }}"></script>
 </head>
-<body>
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
-        {% if page.layout == "post" %}
-            <div class="post">
-        {% else %}
-            {% if showHeader != true %}
-                <div class="page {{ page.title | downcase }}">
-            {% else %}
-                <div class="{{ page.title | downcase }}">
-            {% endif %}
-        {% endif %}
-
-            {{ content }}
-            </div>
-                </div>
-            </div>
+<body class="{% if site.dark-theme %}dark{% endif %}">
+    <!-- Navigation -->
+    {% include nav.html %}
+    
+    <!-- Main Content -->
+    <main class="content">
+        {{ content }}
+    </main>
+    
+    <!-- Footer -->
+    {% include footer.html %}
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
     </div>
 </body>
 </html>

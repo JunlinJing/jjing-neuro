@@ -142,3 +142,48 @@ feed:
     - blog
   tags: true
   excerpt_only: false
+
+# Additional features
+features:
+  toc: true
+  image_zoom: true
+  code_highlight: true
+  reading_time: true
+  progress_bar: true
+  back_to_top: true
+  related_posts: true
+  social_share: true
+  dark_mode: true
+
+# SEO settings
+seo:
+  enable: true
+  twitter_card: summary_large_image
+  facebook_insights: false
+  google_analytics: false
+  bing_verify: false
+
+# Performance settings
+performance:
+  lazy_loading: true
+  image_optimization: true
+  minify_html: true
+  preload_posts: true
+
+# Archive settings
+archive:
+  enable: true
+  permalink: /archive/
+  layout: archive
+  title: Blog Archive
+
+# Comments settings (choose one)
+comments:
+  provider: disqus # false (default), "disqus", "giscus"
+  disqus:
+    shortname: # your shortname
+  giscus:
+    repo: # your repo
+    repo_id: # your repo id
+    category: # your category
+    category_id: # your category id
