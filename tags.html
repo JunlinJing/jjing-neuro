@@ -1,0 +1,164 @@
+---
+layout: default
+title: 标签
+permalink: /tags/
+---
+
+<div class="tags-page">
+    <h1 class="page-title">标签云</h1>
+    
+    <div class="tag-cloud">
+        {% assign tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+        {% for tag in tags %}
+            <a href="#{{ tag | slugify }}" class="tag-item" data-weight="{{ site.tags[tag].size }}">
+                {{ tag }} <span class="count">({{ site.tags[tag].size }})</span>
+            </a>
+        {% endfor %}
+    </div>
+
+    <div class="tag-sections">
+        {% for tag in tags %}
+            <section id="{{ tag | slugify }}" class="tag-section">
+                <h2 class="tag-title">{{ tag }}</h2>
+                <ul class="post-list">
+                    {% for post in site.posts %}
+                        {% if post.tags contains tag %}
+                            <li class="post-item">
+                                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                                <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.tags-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--heading-color);
+}
+
+.tag-cloud {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 20px;
+    background: var(--tag-cloud-bg, #f5f5f5);
+    border-radius: 12px;
+}
+
+.tag-item {
+    display: inline-block;
+    margin: 8px;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 20px;
+    background: var(--tag-bg, #fff);
+    color: var(--tag-color, #333);
+    transition: all 0.3s ease;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tag-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.tag-item .count {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.tag-sections {
+    margin-top: 40px;
+}
+
+.tag-section {
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+}
+
+.tag-title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color, #eee);
+    color: var(--heading-color);
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.post-item {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.post-item:hover {
+    background-color: var(--item-hover-bg, #f8f8f8);
+}
+
+.post-date {
+    color: var(--meta-color, #666);
+    font-size: 0.9em;
+    margin-right: 15px;
+}
+
+.post-link {
+    color: var(--link-color, #2196f3);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .tags-page {
+        padding: 15px;
+    }
+
+    .tag-item {
+        margin: 5px;
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 根据标签数量设置字体大小
+    const tagItems = document.querySelectorAll('.tag-item');
+    const weights = Array.from(tagItems).map(item => 
+        parseInt(item.getAttribute('data-weight'))
+    );
+    const maxWeight = Math.max(...weights);
+    const minWeight = Math.min(...weights);
+    
+    tagItems.forEach(item => {
+        const weight = parseInt(item.getAttribute('data-weight'));
+        const fontSize = 14 + ((weight - minWeight) / (maxWeight - minWeight)) * 16;
+        item.style.fontSize = `${fontSize}px`;
+    });
+});
+</script> 

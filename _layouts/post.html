@@ -14,11 +14,17 @@ layout: default
         
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%B %-d, %Y" }}
+                <i class="far fa-calendar-alt"></i> {{ page.date | date: "%Y-%m-%d" }}
             </time>
             {% if page.author %}
-                • <span>{{ page.author }}</span>
+                • <span><i class="far fa-user"></i> {{ page.author }}</span>
             {% endif %}
+            • <span class="reading-time" title="预计阅读时间">
+                <i class="far fa-clock"></i>
+                {% assign words = content | strip_html | number_of_words %}
+                {% assign reading_time = words | divided_by: 350 | plus: 1 %}
+                {{ reading_time }} 分钟阅读
+            </span>
         </div>
 
         {% if page.tag %}
@@ -32,11 +38,69 @@ layout: default
         {% endif %}
     </header>
 
-    <div class="post-content">
-        {{ content }}
+    <div class="post-wrapper">
+        <aside class="table-of-contents" id="toc">
+            <div class="toc-title">目录</div>
+            <div id="toc-content"></div>
+        </aside>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
     </div>
 
-    {% include share.html %}
+    <div class="social-share">
+        <div class="share-title">分享文章</div>
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" 
+               target="_blank" class="share-button twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+               target="_blank" class="share-button facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+               target="_blank" class="share-button linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="related-posts">
+        <h3>相关文章</h3>
+        <ul>
+            {% assign maxRelated = 4 %}
+            {% assign minCommonTags =  1 %}
+            {% assign maxRelatedCounter = 0 %}
+            
+            {% for post in site.posts %}
+                {% assign sameTagCount = 0 %}
+                {% assign commonTags = '' %}
+                
+                {% for tag in post.tags %}
+                    {% if post.url != page.url %}
+                        {% if page.tags contains tag %}
+                            {% assign sameTagCount = sameTagCount | plus: 1 %}
+                            {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+                            {% assign commonTags = commonTags | append: tagmarkup %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                
+                {% if sameTagCount >= minCommonTags and maxRelatedCounter < maxRelated %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ post.url }}">
+                            {{ post.title }}
+                            <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+                        </a>
+                    </li>
+                    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
     {% if site.disqus %}
         {% include comments.html %}
     {% endif %}
@@ -44,7 +108,7 @@ layout: default
 
 <style>
 .post {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -78,6 +142,10 @@ layout: default
     margin-bottom: 20px;
 }
 
+.post-meta i {
+    margin-right: 5px;
+}
+
 .post-tags {
     margin: 20px 0;
 }
@@ -99,46 +167,122 @@ layout: default
     transform: translateY(-2px);
 }
 
-.tag i {
-    margin-right: 5px;
+.post-wrapper {
+    display: flex;
+    gap: 40px;
+    position: relative;
+}
+
+.table-of-contents {
+    position: sticky;
+    top: 20px;
+    width: 250px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 20px;
+    background: var(--toc-bg, #f8f8f8);
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+.toc-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .post-content {
+    flex: 1;
+    min-width: 0;
     line-height: 1.8;
     font-size: 1.1em;
 }
 
-.post-content h2 {
+.social-share {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.share-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.share-button:hover {
+    transform: translateY(-3px);
+}
+
+.twitter { background: #1DA1F2; }
+.facebook { background: #4267B2; }
+.linkedin { background: #0077B5; }
+
+.related-posts {
     margin-top: 40px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
 }
 
-.post-content h3 {
-    margin-top: 30px;
-    color: var(--heading-color);
+.related-posts h3 {
+    margin-bottom: 20px;
 }
 
-.post-content p {
-    margin: 20px 0;
+.related-posts ul {
+    list-style: none;
+    padding: 0;
 }
 
-.post-content img {
-    max-width: 100%;
+.related-posts li {
+    margin: 15px 0;
+}
+
+.related-posts a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     border-radius: 8px;
-    margin: 20px 0;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
 }
 
-.post-content pre {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    overflow-x: auto;
+.related-posts a:hover {
+    background-color: var(--hover-bg, #f5f5f5);
 }
 
-.post-content code {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9em;
+.related-posts small {
+    color: var(--meta-color);
+}
+
+@media (max-width: 1024px) {
+    .post-wrapper {
+        flex-direction: column;
+    }
+
+    .table-of-contents {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -155,3 +299,41 @@ layout: default
     }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 生成目录
+    const content = document.querySelector('.post-content');
+    const toc = document.getElementById('toc-content');
+    const headings = content.querySelectorAll('h2, h3, h4');
+    
+    if (headings.length > 0) {
+        const tocList = document.createElement('ul');
+        
+        headings.forEach((heading, index) => {
+            // 添加ID用于锚点链接
+            heading.id = `heading-${index}`;
+            
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            
+            a.href = `#${heading.id}`;
+            a.textContent = heading.textContent;
+            a.style.paddingLeft = `${(heading.tagName.charAt(1) - 2) * 15}px`;
+            
+            li.appendChild(a);
+            tocList.appendChild(li);
+            
+            // 点击目录项时平滑滚动
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                heading.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        toc.appendChild(tocList);
+    } else {
+        document.getElementById('toc').style.display = 'none';
+    }
+});
+</script>
