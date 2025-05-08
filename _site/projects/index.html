@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4000/projects/" />
+<meta property="og:url" content="http://localhost:4002/projects/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,16 +31,17 @@
     "@type": "BlogPosting",
     "headline": "Projects",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "http://localhost:4000/projects/",
+    "url": "http://localhost:4002/projects/",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4000"
+        "url": "http://localhost:4002"
     }
 }</script> 
     
     <!-- Styles -->
+    <link rel="stylesheet" href="/jjing-neuro/assets/css/theme.css">
     <link rel="stylesheet" href="/jjing-neuro/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
@@ -49,22 +50,9 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
-    
-    <!-- Dark Mode -->
-    <script>
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'true' || 
-            (localStorage.getItem('darkMode') === null && 
-             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
-    
-    <!-- Scripts -->
-    <script defer src="/jjing-neuro/assets/js/optimization.js"></script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4002/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
-<body class="dark">
+<body>
     <!-- Navigation -->
     <nav class="nav">
     <div class="nav-container">
@@ -251,7 +239,7 @@
 
                 <div class="academic-links">
                     
-                    <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" class="academic-link">
+                    <a href="https://scholar.google.com/citations?user=XXXXX" target="_blank" class="academic-link">
                         <i class="ai ai-google-scholar"></i> Google Scholar
                     </a>
                     
@@ -439,136 +427,9 @@
     </style>
 
 
-<nav class="nav">
-    <div class="nav-container">
-        <ul class="nav-list">
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="/jjing-neuro/">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-            
 
-            
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jjing-neuro/about">
-                            <i class="fas fa-user"></i>
-                            <span>About</span>
-                        </a>
-                    </li>
-                
-            
-            
-            
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jjing-neuro/research">
-                            <i class="fas fa-flask"></i>
-                            <span>Research</span>
-                        </a>
-                    </li>
-                
-            
-            
-            
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jjing-neuro/publications">
-                            <i class="fas fa-book"></i>
-                            <span>Publications</span>
-                        </a>
-                    </li>
-                
-            
-
-            
-                
-            
-
-            
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jjing-neuro/blog">
-                            <i class="fas fa-pen-nib"></i>
-                            <span>Blog</span>
-                        </a>
-                    </li>
-                
-            
-        </ul>
-    </div>
-</nav>
-
-<style>
-    .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .nav-list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-wrap: wrap;
-    }
-
-    .nav-item {
-        margin: 0 5px;
-    }
-
-    .nav-link {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        color: #666;
-        text-decoration: none;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .nav-link i {
-        margin-right: 8px;
-        font-size: 1.1em;
-    }
-
-    .nav-link span {
-        font-size: 1em;
-    }
-
-    .nav-link:hover {
-        background: #4e4376;
-        color: white;
-        transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-        .nav-list {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .nav-item {
-            width: 100%;
-            margin: 5px 0;
-        }
-
-        .nav-link {
-            justify-content: center;
-        }
-    }
-</style>
-
-
-
-<h1 id="projects">Projects</h1>
+<div class="page-content">
+    <h1 id="projects">Projects</h1>
 
 <h2 id="featured-projects">Featured Projects</h2>
 
@@ -736,26 +597,84 @@ a:hover {
 </style>
 
 
+</div>
 
-<footer class="footer-main">
-     © 2025
-
-    <a class="link" href="/jjing-neuro/feed.xml" target="_blank">
-        <i class="fa-solid fa-rss"></i>
-    </a>
-</footer>
-
+<style>
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+</style>
 
     </main>
     
     <!-- Footer -->
-    <footer class="footer-main">
-     © 2025
-
-    <a class="link" href="/jjing-neuro/feed.xml" target="_blank">
-        <i class="fa-solid fa-rss"></i>
-    </a>
+    <!-- Site Footer -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-center">
+            <span class="copyright">© 2025 Jim Jing</span>
+            <a href="/jjing-neuro/feed.xml" target="_blank" class="rss-link" aria-label="RSS Feed">
+                <i class="fa-solid fa-rss"></i>
+            </a>
+        </div>
+    </div>
 </footer>
+
+<style>
+.site-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.rss-link {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rss-link:hover {
+    color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+    .footer-center {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+</style>
 
     
     <!-- Back to Top Button -->
@@ -768,12 +687,53 @@ a:hover {
         <i class="fas fa-moon"></i>
     </button>
     
+    <!-- Scripts -->
+    <script defer src="/jjing-neuro/assets/js/optimization.js"></script>
+    
+    <!-- Theme Switching -->
     <script>
-        // Dark mode toggle functionality
-        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
-        });
+        function setDarkMode(isDark) {
+            document.documentElement.classList.toggle('dark', isDark);
+            document.body.classList.toggle('dark', isDark);
+            localStorage.setItem('darkMode', isDark);
+            
+            // Update button icon
+            const icon = document.querySelector('#dark-mode-toggle i');
+            if (icon) {
+                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+
+        function initDarkMode() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedDarkMode = localStorage.getItem('darkMode');
+            const shouldBeDark = storedDarkMode === null ? prefersDark : storedDarkMode === 'true';
+            
+            setDarkMode(shouldBeDark);
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (localStorage.getItem('darkMode') === null) {
+                    setDarkMode(e.matches);
+                }
+            });
+
+            // Add click event listener to toggle button
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function() {
+                    const isDark = !document.documentElement.classList.contains('dark');
+                    setDarkMode(isDark);
+                });
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDarkMode);
+        } else {
+            initDarkMode();
+        }
     </script>
 </body>
 </html>

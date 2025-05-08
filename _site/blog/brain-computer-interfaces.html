@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4000/blog/brain-computer-interfaces" />
+<meta property="og:url" content="http://localhost:4002/blog/brain-computer-interfaces" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,7 +31,7 @@
     "@type": "BlogPosting",
     "headline": "Recent Advances in Brain-Computer Interfaces",
     "description": "An overview of recent developments in BCI technology and their applications in neuroscience research",
-    "url": "http://localhost:4000/blog/brain-computer-interfaces",
+    "url": "http://localhost:4002/blog/brain-computer-interfaces",
     
     "datePublished": "2024-03-21T00:00:00+01:00",
     "dateModified": "2024-03-21T00:00:00+01:00",
@@ -39,11 +39,12 @@
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4000"
+        "url": "http://localhost:4002"
     }
 }</script> 
     
     <!-- Styles -->
+    <link rel="stylesheet" href="/jjing-neuro/assets/css/theme.css">
     <link rel="stylesheet" href="/jjing-neuro/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
@@ -52,22 +53,9 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
-    
-    <!-- Dark Mode -->
-    <script>
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'true' || 
-            (localStorage.getItem('darkMode') === null && 
-             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
-    
-    <!-- Scripts -->
-    <script defer src="/jjing-neuro/assets/js/optimization.js"></script>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4002/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
-<body class="dark">
+<body>
     <!-- Navigation -->
     <nav class="nav">
     <div class="nav-container">
@@ -221,7 +209,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4000/blog/brain-computer-interfaces" />
+<meta property="og:url" content="http://localhost:4002/blog/brain-computer-interfaces" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -234,7 +222,7 @@
     "@type": "BlogPosting",
     "headline": "Recent Advances in Brain-Computer Interfaces",
     "description": "An overview of recent developments in BCI technology and their applications in neuroscience research",
-    "url": "http://localhost:4000/blog/brain-computer-interfaces",
+    "url": "http://localhost:4002/blog/brain-computer-interfaces",
     
     "datePublished": "2024-03-21T00:00:00+01:00",
     "dateModified": "2024-03-21T00:00:00+01:00",
@@ -242,7 +230,7 @@
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4000"
+        "url": "http://localhost:4002"
     }
 }</script> 
     
@@ -546,15 +534,15 @@
     <div class="social-share">
         <div class="share-title">Share this post</div>
         <div class="share-buttons">
-            <a href="https://twitter.com/intent/tweet?text=Recent Advances in Brain-Computer Interfaces&url=http://localhost:4000/blog/brain-computer-interfaces" 
+            <a href="https://twitter.com/intent/tweet?text=Recent Advances in Brain-Computer Interfaces&url=http://localhost:4002/blog/brain-computer-interfaces" 
                target="_blank" class="share-button twitter" title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/brain-computer-interfaces"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4002/blog/brain-computer-interfaces"
                target="_blank" class="share-button facebook" title="Share on Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/brain-computer-interfaces&title=Recent Advances in Brain-Computer Interfaces"
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4002/blog/brain-computer-interfaces&title=Recent Advances in Brain-Computer Interfaces"
                target="_blank" class="share-button linkedin" title="Share on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
@@ -910,13 +898,71 @@ document.addEventListener('DOMContentLoaded', function() {
     </main>
     
     <!-- Footer -->
-    <footer class="footer-main">
-     © 2025
-
-    <a class="link" href="/jjing-neuro/feed.xml" target="_blank">
-        <i class="fa-solid fa-rss"></i>
-    </a>
+    <!-- Site Footer -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-center">
+            <span class="copyright">© 2025 Jim Jing</span>
+            <a href="/jjing-neuro/feed.xml" target="_blank" class="rss-link" aria-label="RSS Feed">
+                <i class="fa-solid fa-rss"></i>
+            </a>
+        </div>
+    </div>
 </footer>
+
+<style>
+.site-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.rss-link {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rss-link:hover {
+    color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+    .footer-center {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+</style>
 
     
     <!-- Back to Top Button -->
@@ -929,12 +975,53 @@ document.addEventListener('DOMContentLoaded', function() {
         <i class="fas fa-moon"></i>
     </button>
     
+    <!-- Scripts -->
+    <script defer src="/jjing-neuro/assets/js/optimization.js"></script>
+    
+    <!-- Theme Switching -->
     <script>
-        // Dark mode toggle functionality
-        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
-        });
+        function setDarkMode(isDark) {
+            document.documentElement.classList.toggle('dark', isDark);
+            document.body.classList.toggle('dark', isDark);
+            localStorage.setItem('darkMode', isDark);
+            
+            // Update button icon
+            const icon = document.querySelector('#dark-mode-toggle i');
+            if (icon) {
+                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+
+        function initDarkMode() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedDarkMode = localStorage.getItem('darkMode');
+            const shouldBeDark = storedDarkMode === null ? prefersDark : storedDarkMode === 'true';
+            
+            setDarkMode(shouldBeDark);
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (localStorage.getItem('darkMode') === null) {
+                    setDarkMode(e.matches);
+                }
+            });
+
+            // Add click event listener to toggle button
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function() {
+                    const isDark = !document.documentElement.classList.contains('dark');
+                    setDarkMode(isDark);
+                });
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDarkMode);
+        } else {
+            initDarkMode();
+        }
     </script>
 </body>
 </html>
