@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html" />
+    <link rel="canonical" href="http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/" />
 
     
 
@@ -15,21 +15,19 @@
 <meta property="og:title" content="Applications of Deep Learning in EEG Signal Processing" />
 <meta name="author" content="jimjing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Exploring how deep learning models can revolutionize EEG signal processing" />
-<meta property="og:description" content="Exploring how deep learning models can revolutionize EEG signal processing" />
-<link rel="canonical" href="http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html" />
-<meta property="og:url" content="http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html" />
+<meta name="description" content="Exploring how to use deep learning models to process and analyze EEG signal data, including signal preprocessing, feature extraction, and classification methods." />
+<meta property="og:description" content="Exploring how to use deep learning models to process and analyze EEG signal data, including signal preprocessing, feature extraction, and classification methods." />
+<link rel="canonical" href="http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/" />
+<meta property="og:url" content="http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/" />
 <meta property="og:site_name" content="Jim Jing" />
-<meta property="og:image" content="http://localhost:4000/jjing-neuro/assets/images/deep-learning-eeg.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-15T22:00:00+01:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/jjing-neuro/assets/images/deep-learning-eeg.jpg" />
+<meta property="article:published_time" content="2024-01-15T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Applications of Deep Learning in EEG Signal Processing" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@jimjing" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jimjing"},"dateModified":"2024-01-15T22:00:00+01:00","datePublished":"2024-01-15T22:00:00+01:00","description":"Exploring how deep learning models can revolutionize EEG signal processing","headline":"Applications of Deep Learning in EEG Signal Processing","image":"http://localhost:4000/jjing-neuro/assets/images/deep-learning-eeg.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html"},"url":"http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jimjing"},"dateModified":"2024-01-15T00:00:00+01:00","datePublished":"2024-01-15T00:00:00+01:00","description":"Exploring how to use deep learning models to process and analyze EEG signal data, including signal preprocessing, feature extraction, and classification methods.","headline":"Applications of Deep Learning in EEG Signal Processing","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/"},"url":"http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,7 +53,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="http://localhost:4000/blog/2024/01/15/deep-learning-eeg.html">
+    <link rel="canonical" href="http://localhost:4000/2024/01/15/deep-learning-eeg/">
     <link rel="alternate" type="application/rss+xml" title="Jim Jing" href="http://localhost:4000/feed.xml" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
@@ -763,15 +761,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             <article class="post">
     <header class="post-header">
         
-            <div class="post-image">
-                <img src="/assets/images/deep-learning-eeg.jpg" alt="Applications of Deep Learning in EEG Signal Processing">
-            </div>
-        
         
         <h1 class="post-title">Applications of Deep Learning in EEG Signal Processing</h1>
         
         <div class="post-meta">
-            <time datetime="2024-01-15T22:00:00+01:00">
+            <time datetime="2024-01-15T00:00:00+01:00">
                 January 15, 2024
             </time>
             
@@ -780,154 +774,266 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         </div>
 
         
-            <div class="post-tags">
-                
-                    <a href="/jjing-neuro/tags/#neuroscience" class="tag">
-                        <i class="fas fa-tag"></i> neuroscience
-                    </a>
-                
-                    <a href="/jjing-neuro/tags/#machine learning" class="tag">
-                        <i class="fas fa-tag"></i> machine learning
-                    </a>
-                
-                    <a href="/jjing-neuro/tags/#deep learning" class="tag">
-                        <i class="fas fa-tag"></i> deep learning
-                    </a>
-                
-                    <a href="/jjing-neuro/tags/#EEG" class="tag">
-                        <i class="fas fa-tag"></i> EEG
-                    </a>
-                
-            </div>
-        
     </header>
 
     <div class="post-content">
         <h1 id="applications-of-deep-learning-in-eeg-signal-processing">Applications of Deep Learning in EEG Signal Processing</h1>
 
-<p>Deep learning has revolutionized many fields of data analysis, and EEG signal processing is no exception. In this post, we’ll explore how deep learning models can be applied to various aspects of EEG data analysis, from preprocessing to feature extraction and classification.</p>
+<p>Deep learning has revolutionized how we process and analyze EEG signals. This article explores various deep learning approaches for EEG analysis.</p>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction-to-deep-learning-for-eeg">Introduction to Deep Learning for EEG</h2>
 
-<p>Electroencephalography (EEG) is a crucial tool in neuroscience research and clinical diagnosis. However, traditional EEG analysis methods often struggle with:</p>
-<ul>
-  <li>Complex noise patterns</li>
-  <li>Non-linear signal characteristics</li>
-  <li>Individual variability</li>
-  <li>Real-time processing requirements</li>
-</ul>
+<p>Deep learning models can automatically learn hierarchical features from raw EEG data, often outperforming traditional methods that rely on hand-crafted features.</p>
 
-<p>Deep learning offers promising solutions to these challenges.</p>
+<h2 id="convolutional-neural-networks-for-eeg">Convolutional Neural Networks for EEG</h2>
 
-<h2 id="signal-preprocessing">Signal Preprocessing</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
 
-<h3 id="automated-artifact-removal">Automated Artifact Removal</h3>
-
-<p>Deep learning models, particularly autoencoders and convolutional neural networks (CNNs), can effectively remove common EEG artifacts:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">eeg_autoencoder</span><span class="p">(</span><span class="n">input_shape</span><span class="p">):</span>
-    <span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">)</span>
-    <span class="c1"># Encoder
-</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">MaxPooling1D</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="c1"># Decoder
-</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">UpSampling1D</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">decoded</span> <span class="o">=</span> <span class="n">Conv1D</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'linear'</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">Model</span><span class="p">(</span><span class="n">input_layer</span><span class="p">,</span> <span class="n">decoded</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">EEGConvNet</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_channels</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EEGConvNet</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        
+        <span class="c1"># Temporal convolution
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">temporal_conv</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s">'same'</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Spatial convolution
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">spatial_conv</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="n">n_channels</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">BatchNorm2d</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Classification head
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">AdaptiveAvgPool2d</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">120</span><span class="p">)),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Flatten</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">32</span> <span class="o">*</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># x shape: (batch, 1, channels, time)
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">temporal_conv</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">spatial_conv</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="feature-extraction">Feature Extraction</h2>
+<h2 id="recurrent-neural-networks-for-eeg">Recurrent Neural Networks for EEG</h2>
 
-<p>Deep learning models can automatically learn relevant features from raw EEG signals:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EEGlstm</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">num_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EEGlstm</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">lstm</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">LSTM</span><span class="p">(</span>
+            <span class="n">input_size</span><span class="o">=</span><span class="n">input_size</span><span class="p">,</span>
+            <span class="n">hidden_size</span><span class="o">=</span><span class="n">hidden_size</span><span class="p">,</span>
+            <span class="n">num_layers</span><span class="o">=</span><span class="n">num_layers</span><span class="p">,</span>
+            <span class="n">batch_first</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">dropout</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+            <span class="n">bidirectional</span><span class="o">=</span><span class="bp">True</span>
+        <span class="p">)</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># x shape: (batch, time, channels)
+</span>        <span class="n">lstm_out</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># Use last time step output
+</span>        <span class="n">last_hidden</span> <span class="o">=</span> <span class="n">lstm_out</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">last_hidden</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="transformer-models-for-eeg">Transformer Models for EEG</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EEGTransformer</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_channels</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">n_timepoints</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EEGTransformer</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        
+        <span class="c1"># Positional encoding
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">pos_encoder</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Parameter</span><span class="p">(</span>
+            <span class="n">torch</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_timepoints</span><span class="p">,</span> <span class="n">n_channels</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Transformer encoder
+</span>        <span class="n">encoder_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">TransformerEncoderLayer</span><span class="p">(</span>
+            <span class="n">d_model</span><span class="o">=</span><span class="n">n_channels</span><span class="p">,</span>
+            <span class="n">nhead</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+            <span class="n">dim_feedforward</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span>
+            <span class="n">dropout</span><span class="o">=</span><span class="mf">0.1</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">transformer</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">TransformerEncoder</span><span class="p">(</span>
+            <span class="n">encoder_layer</span><span class="p">,</span>
+            <span class="n">num_layers</span><span class="o">=</span><span class="mi">4</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Classification head
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_channels</span> <span class="o">*</span> <span class="n">n_timepoints</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># Add positional encoding
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">pos_encoder</span>
+        <span class="c1"># Transform
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transformer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># Classify
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">classifier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="data-preprocessing-for-deep-learning">Data Preprocessing for Deep Learning</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">preprocess_eeg</span><span class="p">(</span><span class="n">raw_eeg</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="mi">250</span><span class="p">):</span>
+    <span class="s">"""Preprocess EEG data for deep learning"""</span>
+    <span class="c1"># Bandpass filter
+</span>    <span class="n">filtered</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="nb">filter</span><span class="p">.</span><span class="n">filter_data</span><span class="p">(</span>
+        <span class="n">raw_eeg</span><span class="p">,</span>
+        <span class="n">sfreq</span><span class="o">=</span><span class="n">sfreq</span><span class="p">,</span>
+        <span class="n">l_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">h_freq</span><span class="o">=</span><span class="mi">40</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Normalize
+</span>    <span class="n">normalized</span> <span class="o">=</span> <span class="p">(</span><span class="n">filtered</span> <span class="o">-</span> <span class="n">filtered</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span> <span class="o">/</span> \
+                 <span class="n">filtered</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="c1"># Segment into epochs
+</span>    <span class="n">epochs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">window_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sfreq</span><span class="p">)</span>  <span class="c1"># 2-second windows
+</span>    <span class="n">stride</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">sfreq</span><span class="p">)</span>     <span class="c1"># 0.5-second stride
+</span>    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">normalized</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">window_size</span><span class="p">,</span> <span class="n">stride</span><span class="p">):</span>
+        <span class="n">epochs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">normalized</span><span class="p">[:,</span> <span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">window_size</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="training-pipeline">Training Pipeline</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">train_eeg_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">train_loader</span><span class="p">,</span> <span class="n">val_loader</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="s">"""Train deep learning model on EEG data"""</span>
+    <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">optim</span><span class="p">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+    <span class="n">scheduler</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">optim</span><span class="p">.</span><span class="n">lr_scheduler</span><span class="p">.</span><span class="n">ReduceLROnPlateau</span><span class="p">(</span>
+        <span class="n">optimizer</span><span class="p">,</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s">'min'</span><span class="p">,</span>
+        <span class="n">factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">patience</span><span class="o">=</span><span class="mi">5</span>
+    <span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+        <span class="c1"># Training
+</span>        <span class="n">model</span><span class="p">.</span><span class="n">train</span><span class="p">()</span>
+        <span class="n">train_loss</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">train_loader</span><span class="p">:</span>
+            <span class="n">optimizer</span><span class="p">.</span><span class="n">zero_grad</span><span class="p">()</span>
+            <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+            <span class="n">loss</span><span class="p">.</span><span class="n">backward</span><span class="p">()</span>
+            <span class="n">optimizer</span><span class="p">.</span><span class="n">step</span><span class="p">()</span>
+            <span class="n">train_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="p">.</span><span class="n">item</span><span class="p">()</span>
+            
+        <span class="c1"># Validation
+</span>        <span class="n">model</span><span class="p">.</span><span class="nb">eval</span><span class="p">()</span>
+        <span class="n">val_loss</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="p">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">val_loader</span><span class="p">:</span>
+                <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+                <span class="n">val_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="p">.</span><span class="n">item</span><span class="p">()</span>
+                <span class="n">_</span><span class="p">,</span> <span class="n">predicted</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">total</span> <span class="o">+=</span> <span class="n">labels</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">correct</span> <span class="o">+=</span> <span class="n">predicted</span><span class="p">.</span><span class="n">eq</span><span class="p">(</span><span class="n">labels</span><span class="p">).</span><span class="nb">sum</span><span class="p">().</span><span class="n">item</span><span class="p">()</span>
+                
+        <span class="c1"># Update learning rate
+</span>        <span class="n">scheduler</span><span class="p">.</span><span class="n">step</span><span class="p">(</span><span class="n">val_loss</span><span class="p">)</span>
+        
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">epochs</span><span class="si">}</span><span class="s">:'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Train Loss: </span><span class="si">{</span><span class="n">train_loss</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="p">)</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Val Loss: </span><span class="si">{</span><span class="n">val_loss</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">val_loader</span><span class="p">)</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Val Accuracy: </span><span class="si">{</span><span class="mf">100.</span><span class="o">*</span><span class="n">correct</span><span class="o">/</span><span class="n">total</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">%'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="best-practices">Best Practices</h2>
 
 <ol>
-  <li>Temporal features using RNNs</li>
-  <li>Spatial features using CNNs</li>
-  <li>Spectral features using transformed inputs</li>
+  <li><strong>Data Augmentation</strong>
+    <ul>
+      <li>Time shifting</li>
+      <li>Adding noise</li>
+      <li>Channel dropout</li>
+      <li>Frequency warping</li>
+    </ul>
+  </li>
+  <li><strong>Model Selection</strong>
+    <ul>
+      <li>CNNs for spatial-temporal patterns</li>
+      <li>RNNs for sequential dependencies</li>
+      <li>Transformers for long-range dependencies</li>
+    </ul>
+  </li>
+  <li><strong>Training Tips</strong>
+    <ul>
+      <li>Use appropriate batch size</li>
+      <li>Apply learning rate scheduling</li>
+      <li>Implement early stopping</li>
+      <li>Use proper validation strategy</li>
+    </ul>
+  </li>
 </ol>
-
-<h3 id="example-architecture">Example Architecture</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">eeg_classifier</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
-        <span class="n">Conv1D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">),</span>
-        <span class="n">BatchNormalization</span><span class="p">(),</span>
-        <span class="n">MaxPooling1D</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
-        <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
-        <span class="n">LSTM</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span>
-        <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
-        <span class="n">GlobalAveragePooling1D</span><span class="p">(),</span>
-        <span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">)</span>
-    <span class="p">])</span>
-    <span class="k">return</span> <span class="n">model</span>
-</code></pre></div></div>
-
-<h2 id="applications">Applications</h2>
-
-<h3 id="1-brain-computer-interfaces-bci">1. Brain-Computer Interfaces (BCI)</h3>
-<ul>
-  <li>Real-time signal classification</li>
-  <li>Adaptive feature learning</li>
-  <li>Robust to signal variations</li>
-</ul>
-
-<h3 id="2-clinical-diagnosis">2. Clinical Diagnosis</h3>
-<ul>
-  <li>Automated abnormality detection</li>
-  <li>Patient-specific modeling</li>
-  <li>Early warning systems</li>
-</ul>
-
-<h3 id="3-cognitive-state-monitoring">3. Cognitive State Monitoring</h3>
-<ul>
-  <li>Attention level tracking</li>
-  <li>Mental workload assessment</li>
-  <li>Emotion recognition</li>
-</ul>
 
 <h2 id="future-directions">Future Directions</h2>
 
 <ol>
+  <li><strong>Self-supervised Learning</strong>
+    <ul>
+      <li>Contrastive learning</li>
+      <li>Masked signal modeling</li>
+      <li>Signal reconstruction</li>
+    </ul>
+  </li>
   <li><strong>Transfer Learning</strong>
     <ul>
-      <li>Pre-trained models for EEG analysis</li>
-      <li>Cross-subject generalization</li>
-      <li>Domain adaptation techniques</li>
+      <li>Cross-subject adaptation</li>
+      <li>Cross-dataset generalization</li>
+      <li>Domain adaptation</li>
     </ul>
   </li>
-  <li><strong>Explainable AI</strong>
+  <li><strong>Interpretability</strong>
     <ul>
-      <li>Interpretable feature learning</li>
-      <li>Attribution methods</li>
-      <li>Clinical decision support</li>
-    </ul>
-  </li>
-  <li><strong>Real-time Processing</strong>
-    <ul>
-      <li>Efficient architectures</li>
-      <li>Edge computing deployment</li>
-      <li>Online learning algorithms</li>
+      <li>Attention visualization</li>
+      <li>Layer-wise relevance propagation</li>
+      <li>Saliency mapping</li>
     </ul>
   </li>
 </ol>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Deep learning approaches offer powerful tools for EEG signal processing, enabling more accurate and automated analysis. As these methods continue to evolve, we can expect even more sophisticated applications in neuroscience research and clinical practice.</p>
 
 <h2 id="references">References</h2>
 
 <ol>
-  <li>Smith, J. et al. (2023). “Deep Learning for EEG Analysis: A Comprehensive Review”</li>
-  <li>Johnson, A. (2023). “Neural Networks in Brain-Computer Interfaces”</li>
-  <li>Brown, B. (2024). “Advances in Automated EEG Processing”</li>
+  <li>Craik, A., et al. (2019). “Deep learning for electroencephalogram (EEG) classification tasks: a review.”</li>
+  <li>Roy, Y., et al. (2019). “Deep learning-based electroencephalography analysis: a systematic review.”</li>
+  <li>Zhang, X., et al. (2021). “Deep learning for EEG-based brain-computer interfaces: A review.”</li>
 </ol>
-
-<h2 id="code-repository">Code Repository</h2>
-
-<p>The complete code examples and implementations are available in our <a href="https://github.com/yourusername/deep-eeg">GitHub repository</a>.</p>
 
     </div>
 
@@ -935,19 +1041,19 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     <h3>Share this:</h3>
     <div class="share-buttons">
         <!-- Twitter -->
-        <a href="https://twitter.com/intent/tweet?text=Applications of Deep Learning in EEG Signal Processing&url=http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html"
+        <a href="https://twitter.com/intent/tweet?text=Applications of Deep Learning in EEG Signal Processing&url=http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fab fa-twitter"></i>
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html&title=Applications of Deep Learning in EEG Signal Processing&summary=Exploring how deep learning models can revolutionize EEG signal processing&source=Jim Jing"
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/&title=Applications of Deep Learning in EEG Signal Processing&summary=Exploring how to use deep learning models to process and analyze EEG signal data, including signal preprocessing, feature extraction, and classification methods.&source=Jim Jing"
            onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;">
             <i class="fab fa-linkedin-in"></i>
         </a>
 
         <!-- Email -->
-        <a href="mailto:?subject=Applications of Deep Learning in EEG Signal Processing&body=Check out this article: http://localhost:4000/jjing-neuro/blog/2024/01/15/deep-learning-eeg.html">
+        <a href="mailto:?subject=Applications of Deep Learning in EEG Signal Processing&body=Check out this article: http://localhost:4000/jjing-neuro/2024/01/15/deep-learning-eeg/">
             <i class="fas fa-envelope"></i>
         </a>
     </div>

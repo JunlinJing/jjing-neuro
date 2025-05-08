@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html" />
+    <link rel="canonical" href="http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/" />
 
     
 
@@ -10,26 +10,24 @@
     <meta name=author content="Jim Jing">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Introduction to Neural Data Analysis with Python | Jim Jing</title>
+<title>Cognitive Modeling: From Theory to Practice | Jim Jing</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Introduction to Neural Data Analysis with Python" />
+<meta property="og:title" content="Cognitive Modeling: From Theory to Practice" />
 <meta name="author" content="jimjing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A step-by-step guide to processing and analyzing neural data using Python" />
-<meta property="og:description" content="A step-by-step guide to processing and analyzing neural data using Python" />
-<link rel="canonical" href="http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html" />
-<meta property="og:url" content="http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html" />
+<meta name="description" content="Introduction to basic concepts, common methods, and practical applications of cognitive modeling, helping readers understand how to formalize cognitive processes." />
+<meta property="og:description" content="Introduction to basic concepts, common methods, and practical applications of cognitive modeling, helping readers understand how to formalize cognitive processes." />
+<link rel="canonical" href="http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/" />
+<meta property="og:url" content="http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/" />
 <meta property="og:site_name" content="Jim Jing" />
-<meta property="og:image" content="http://localhost:4000/jjing-neuro/assets/images/blog/neural-data-python.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-10-25T10:00:00+02:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/jjing-neuro/assets/images/blog/neural-data-python.jpg" />
-<meta property="twitter:title" content="Introduction to Neural Data Analysis with Python" />
+<meta property="article:published_time" content="2023-12-20T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Cognitive Modeling: From Theory to Practice" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@jimjing" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jimjing"},"dateModified":"2023-10-25T10:00:00+02:00","datePublished":"2023-10-25T10:00:00+02:00","description":"A step-by-step guide to processing and analyzing neural data using Python","headline":"Introduction to Neural Data Analysis with Python","image":"http://localhost:4000/jjing-neuro/assets/images/blog/neural-data-python.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html"},"url":"http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"jimjing"},"dateModified":"2023-12-20T00:00:00+01:00","datePublished":"2023-12-20T00:00:00+01:00","description":"Introduction to basic concepts, common methods, and practical applications of cognitive modeling, helping readers understand how to formalize cognitive processes.","headline":"Cognitive Modeling: From Theory to Practice","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/"},"url":"http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,7 +53,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="http://localhost:4000/blog/2023/10/25/neural-data-python.html">
+    <link rel="canonical" href="http://localhost:4000/2023/12/20/cognitive-modeling/">
     <link rel="alternate" type="application/rss+xml" title="Jim Jing" href="http://localhost:4000/feed.xml" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
@@ -763,16 +761,12 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             <article class="post">
     <header class="post-header">
         
-            <div class="post-image">
-                <img src="/assets/images/blog/neural-data-python.jpg" alt="Introduction to Neural Data Analysis with Python">
-            </div>
         
-        
-        <h1 class="post-title">Introduction to Neural Data Analysis with Python</h1>
+        <h1 class="post-title">Cognitive Modeling: From Theory to Practice</h1>
         
         <div class="post-meta">
-            <time datetime="2023-10-25T10:00:00+02:00">
-                October 25, 2023
+            <time datetime="2023-12-20T00:00:00+01:00">
+                December 20, 2023
             </time>
             
                 • <span>jimjing</span>
@@ -780,279 +774,284 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         </div>
 
         
-            <div class="post-tags">
-                
-                    <a href="/jjing-neuro/tags/#data analysis" class="tag">
-                        <i class="fas fa-tag"></i> data analysis
-                    </a>
-                
-                    <a href="/jjing-neuro/tags/#python" class="tag">
-                        <i class="fas fa-tag"></i> python
-                    </a>
-                
-                    <a href="/jjing-neuro/tags/#neuroscience" class="tag">
-                        <i class="fas fa-tag"></i> neuroscience
-                    </a>
-                
-                    <a href="/jjing-neuro/tags/#tutorial" class="tag">
-                        <i class="fas fa-tag"></i> tutorial
-                    </a>
-                
-            </div>
-        
     </header>
 
     <div class="post-content">
-        <h1 id="introduction-to-neural-data-analysis-with-python">Introduction to Neural Data Analysis with Python</h1>
+        <h1 id="cognitive-modeling-from-theory-to-practice">Cognitive Modeling: From Theory to Practice</h1>
 
-<p>Neural data analysis is a crucial skill in modern neuroscience research. This tutorial provides a comprehensive introduction to analyzing neural data using Python, focusing on practical examples and common analysis techniques.</p>
+<p>Cognitive modeling is a powerful approach to understanding human cognition by creating computational models that simulate cognitive processes.</p>
 
-<h2 id="setting-up-your-environment">Setting Up Your Environment</h2>
+<h2 id="introduction-to-cognitive-modeling">Introduction to Cognitive Modeling</h2>
 
-<p>First, let’s set up a Python environment with the necessary packages:</p>
+<p>Cognitive models aim to explain and predict human behavior by implementing theoretical frameworks in computational form. These models help bridge the gap between cognitive theory and empirical data.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Required packages
-</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">mne</span>
-<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="n">signal</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<h2 id="basic-modeling-approaches">Basic Modeling Approaches</h2>
 
-<span class="c1"># Set plotting style
-</span><span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'seaborn'</span><span class="p">)</span>
-<span class="n">sns</span><span class="p">.</span><span class="n">set_context</span><span class="p">(</span><span class="s">"paper"</span><span class="p">)</span>
-</code></pre></div></div>
+<h3 id="1-production-systems">1. Production Systems</h3>
 
-<h2 id="loading-and-preprocessing-data">Loading and Preprocessing Data</h2>
-
-<h3 id="reading-neural-data">Reading Neural Data</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">load_neural_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
-    <span class="s">"""Load neural data from various formats."""</span>
-    <span class="k">if</span> <span class="n">file_path</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.edf'</span><span class="p">):</span>
-        <span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">read_raw_edf</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">preload</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">file_path</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.fif'</span><span class="p">):</span>
-        <span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">read_raw_fif</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">preload</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Unsupported file format"</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">raw</span>
-
-<span class="c1"># Example usage
-</span><span class="n">raw_data</span> <span class="o">=</span> <span class="n">load_neural_data</span><span class="p">(</span><span class="s">'sample_data.edf'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="basic-preprocessing">Basic Preprocessing</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">preprocess_data</span><span class="p">(</span><span class="n">raw</span><span class="p">):</span>
-    <span class="s">"""Basic preprocessing pipeline."""</span>
-    <span class="c1"># Filter data
-</span>    <span class="n">raw</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">l_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h_freq</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
-    
-    <span class="c1"># Remove power line noise
-</span>    <span class="n">raw</span><span class="p">.</span><span class="n">notch_filter</span><span class="p">(</span><span class="n">freqs</span><span class="o">=</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
-    
-    <span class="c1"># Detect and remove bad channels
-</span>    <span class="n">raw</span><span class="p">.</span><span class="n">interpolate_bads</span><span class="p">()</span>
-    
-    <span class="k">return</span> <span class="n">raw</span>
-</code></pre></div></div>
-
-<h2 id="feature-extraction">Feature Extraction</h2>
-
-<h3 id="time-domain-features">Time-domain Features</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">extract_time_features</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="s">"""Extract common time-domain features."""</span>
-    <span class="n">features</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">'mean'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
-        <span class="s">'std'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
-        <span class="s">'max'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
-        <span class="s">'min'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">),</span>
-        <span class="s">'rms'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">features</span>
-</code></pre></div></div>
-
-<h3 id="frequency-domain-features">Frequency-domain Features</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">compute_psd</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="p">):</span>
-    <span class="s">"""Compute power spectral density."""</span>
-    <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">welch</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> 
-                            <span class="n">nperseg</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
-                            <span class="n">scaling</span><span class="o">=</span><span class="s">'density'</span><span class="p">)</span>
-    
-    <span class="c1"># Extract frequency bands
-</span>    <span class="n">bands</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">'delta'</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
-        <span class="s">'theta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
-        <span class="s">'alpha'</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
-        <span class="s">'beta'</span><span class="p">:</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
-        <span class="s">'gamma'</span><span class="p">:</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
-    <span class="p">}</span>
-    
-    <span class="n">power</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">band</span><span class="p">,</span> <span class="p">(</span><span class="n">fmin</span><span class="p">,</span> <span class="n">fmax</span><span class="p">)</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">freqs</span> <span class="o">&gt;=</span> <span class="n">fmin</span><span class="p">,</span> <span class="n">freqs</span> <span class="o">&lt;=</span> <span class="n">fmax</span><span class="p">)</span>
-        <span class="n">power</span><span class="p">[</span><span class="n">band</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">psd</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
-    
-    <span class="k">return</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span>
-</code></pre></div></div>
-
-<h2 id="data-visualization">Data Visualization</h2>
-
-<h3 id="time-series-plotting">Time Series Plotting</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_neural_signals</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">fs</span><span class="p">):</span>
-    <span class="s">"""Plot multiple channels of neural data."""</span>
-    <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">/</span> <span class="n">fs</span>
-    
-    <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">channels</span><span class="p">):</span>
-        <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">ch</span><span class="p">)</span>
-    
-    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Time (s)'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Channel'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Neural Signals'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h3 id="spectral-analysis-visualization">Spectral Analysis Visualization</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_spectrum</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span><span class="p">):</span>
-    <span class="s">"""Plot power spectrum and band powers."""</span>
-    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-    
-    <span class="c1"># Plot PSD
-</span>    <span class="n">ax1</span><span class="p">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'Frequency (Hz)'</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'Power Spectral Density'</span><span class="p">)</span>
-    <span class="n">ax1</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-    
-    <span class="c1"># Plot band powers
-</span>    <span class="n">bands</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">power</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
-    <span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">power</span><span class="p">.</span><span class="n">values</span><span class="p">())</span>
-    <span class="n">ax2</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'Average Power'</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Frequency Band Powers'</span><span class="p">)</span>
-    
-    <span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h2 id="example-analysis-pipeline">Example Analysis Pipeline</h2>
-
-<p>Here’s a complete example of analyzing neural data:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">analyze_neural_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
-    <span class="c1"># Load data
-</span>    <span class="n">raw</span> <span class="o">=</span> <span class="n">load_neural_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-    
-    <span class="c1"># Preprocess
-</span>    <span class="n">raw</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
-    
-    <span class="c1"># Extract data and info
-</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="n">get_data</span><span class="p">()</span>
-    <span class="n">fs</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="n">info</span><span class="p">[</span><span class="s">'sfreq'</span><span class="p">]</span>
-    <span class="n">channels</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="n">ch_names</span>
-    
-    <span class="c1"># Extract features
-</span>    <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-        <span class="n">time_features</span> <span class="o">=</span> <span class="n">extract_time_features</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ch</span><span class="p">])</span>
-        <span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="n">compute_psd</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">ch</span><span class="p">],</span> <span class="n">fs</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ProductionSystem</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">working_memory</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">production_rules</span> <span class="o">=</span> <span class="p">[]</span>
         
-        <span class="n">ch_features</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">'channel'</span><span class="p">:</span> <span class="n">channels</span><span class="p">[</span><span class="n">ch</span><span class="p">],</span>
-            <span class="o">**</span><span class="n">time_features</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">power</span>
-        <span class="p">}</span>
-        <span class="n">features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch_features</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">add_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="s">"""Add a production rule"""</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">production_rules</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s">'condition'</span><span class="p">:</span> <span class="n">condition</span><span class="p">,</span>
+            <span class="s">'action'</span><span class="p">:</span> <span class="n">action</span>
+        <span class="p">})</span>
+        
+    <span class="k">def</span> <span class="nf">match_rules</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Find matching rules based on working memory"""</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">rule</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">production_rules</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">evaluate_condition</span><span class="p">(</span><span class="n">rule</span><span class="p">[</span><span class="s">'condition'</span><span class="p">]):</span>
+                <span class="n">matches</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">rule</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">matches</span>
     
-    <span class="c1"># Convert to DataFrame
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">evaluate_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">condition</span><span class="p">):</span>
+        <span class="s">"""Evaluate if a condition matches working memory"""</span>
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">working_memory</span> <span class="ow">and</span> 
+            <span class="bp">self</span><span class="p">.</span><span class="n">working_memory</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">condition</span><span class="p">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">)</span>
     
-    <span class="c1"># Visualize
-</span>    <span class="n">plot_neural_signals</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
-    <span class="n">plot_spectrum</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">psd</span><span class="p">,</span> <span class="n">power</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">df</span>
+    <span class="k">def</span> <span class="nf">execute_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="s">"""Execute the action of a production rule"""</span>
+        <span class="k">for</span> <span class="n">operation</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">action</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">operation</span> <span class="o">==</span> <span class="s">'add'</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">working_memory</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">operation</span> <span class="o">==</span> <span class="s">'remove'</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="p">.</span><span class="n">working_memory</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 </code></pre></div></div>
+
+<h3 id="2-neural-networks-for-cognitive-modeling">2. Neural Networks for Cognitive Modeling</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">CognitiveNetwork</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CognitiveNetwork</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">encoder</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">LSTM</span><span class="p">(</span>
+            <span class="n">hidden_size</span><span class="p">,</span>
+            <span class="n">hidden_size</span><span class="p">,</span>
+            <span class="n">num_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">batch_first</span><span class="o">=</span><span class="bp">True</span>
+        <span class="p">)</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">decoder</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">ReLU</span><span class="p">(),</span>
+            <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+        <span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="c1"># Encode input
+</span>        <span class="n">encoded</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+        <span class="c1"># Process through memory
+</span>        <span class="k">if</span> <span class="n">hidden</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">memory_out</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">memory_out</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span>
+            
+        <span class="c1"># Decode output
+</span>        <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">decoder</span><span class="p">(</span><span class="n">memory_out</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">hidden</span>
+</code></pre></div></div>
+
+<h2 id="decision-making-models">Decision Making Models</h2>
+
+<h3 id="drift-diffusion-model">Drift Diffusion Model</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">drift_diffusion_model</span><span class="p">(</span><span class="n">drift_rate</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="n">noise_std</span><span class="p">,</span> <span class="n">max_steps</span><span class="p">):</span>
+    <span class="s">"""Simulate decision making using drift diffusion"""</span>
+    <span class="n">evidence</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_steps</span><span class="p">):</span>
+        <span class="c1"># Add evidence and noise
+</span>        <span class="n">evidence</span> <span class="o">+=</span> <span class="n">drift_rate</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_std</span><span class="p">)</span>
+        
+        <span class="c1"># Check if threshold is reached
+</span>        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">evidence</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s">'decision'</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">evidence</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s">'reaction_time'</span><span class="p">:</span> <span class="n">step</span><span class="p">,</span>
+                <span class="s">'final_evidence'</span><span class="p">:</span> <span class="n">evidence</span>
+            <span class="p">}</span>
+    
+    <span class="c1"># No decision reached
+</span>    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'decision'</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s">'reaction_time'</span><span class="p">:</span> <span class="n">max_steps</span><span class="p">,</span>
+        <span class="s">'final_evidence'</span><span class="p">:</span> <span class="n">evidence</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="learning-and-memory-models">Learning and Memory Models</h2>
+
+<h3 id="working-memory-model">Working Memory Model</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">WorkingMemoryModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">activation</span> <span class="o">=</span> <span class="p">{}</span>
+        
+    <span class="k">def</span> <span class="nf">add_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="s">"""Add item to working memory"""</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="c1"># Remove least active item
+</span>            <span class="n">min_item</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">min_item</span><span class="p">)</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">[</span><span class="n">min_item</span><span class="p">]</span>
+            
+        <span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">activation</span>
+        
+    <span class="k">def</span> <span class="nf">decay_activation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decay_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+        <span class="s">"""Apply activation decay"""</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">*=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">decay_rate</span><span class="p">)</span>
+            
+    <span class="k">def</span> <span class="nf">retrieve_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="s">"""Attempt to retrieve item from memory"""</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">items</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">activation</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<h2 id="model-evaluation">Model Evaluation</h2>
+
+<h3 id="parameter-fitting">Parameter Fitting</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fit_model_parameters</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">param_ranges</span><span class="p">,</span> <span class="n">n_iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="s">"""Fit model parameters to empirical data"""</span>
+    <span class="n">best_params</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">best_fit</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'inf'</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iterations</span><span class="p">):</span>
+        <span class="c1"># Sample parameters
+</span>        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">param</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">range_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">range_</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="n">range_</span> <span class="ow">in</span> <span class="n">param_ranges</span><span class="p">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">}</span>
+        
+        <span class="c1"># Run model
+</span>        <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">simulate</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+        
+        <span class="c1"># Calculate fit
+</span>        <span class="n">fit</span> <span class="o">=</span> <span class="n">calculate_fit</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        
+        <span class="c1"># Update best parameters
+</span>        <span class="k">if</span> <span class="n">fit</span> <span class="o">&lt;</span> <span class="n">best_fit</span><span class="p">:</span>
+            <span class="n">best_fit</span> <span class="o">=</span> <span class="n">fit</span>
+            <span class="n">best_params</span> <span class="o">=</span> <span class="n">params</span>
+            
+    <span class="k">return</span> <span class="n">best_params</span><span class="p">,</span> <span class="n">best_fit</span>
+
+<span class="k">def</span> <span class="nf">calculate_fit</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="s">"""Calculate goodness of fit between model predictions and data"""</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions</span> <span class="o">-</span> <span class="n">data</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="applications">Applications</h2>
+
+<ol>
+  <li><strong>Learning and Memory</strong>
+    <ul>
+      <li>Skill acquisition</li>
+      <li>Knowledge representation</li>
+      <li>Memory retrieval</li>
+    </ul>
+  </li>
+  <li><strong>Decision Making</strong>
+    <ul>
+      <li>Choice behavior</li>
+      <li>Response times</li>
+      <li>Risk assessment</li>
+    </ul>
+  </li>
+  <li><strong>Language Processing</strong>
+    <ul>
+      <li>Sentence comprehension</li>
+      <li>Word recognition</li>
+      <li>Language production</li>
+    </ul>
+  </li>
+</ol>
 
 <h2 id="best-practices">Best Practices</h2>
 
 <ol>
-  <li><strong>Data Organization</strong>
+  <li><strong>Model Development</strong>
     <ul>
-      <li>Use consistent file naming</li>
-      <li>Maintain clear directory structure</li>
-      <li>Document preprocessing steps</li>
+      <li>Start simple</li>
+      <li>Incremental complexity</li>
+      <li>Clear assumptions</li>
     </ul>
   </li>
-  <li><strong>Code Quality</strong>
+  <li><strong>Model Validation</strong>
     <ul>
-      <li>Write modular functions</li>
-      <li>Add docstrings and comments</li>
-      <li>Use version control</li>
+      <li>Multiple datasets</li>
+      <li>Cross-validation</li>
+      <li>Parameter recovery</li>
     </ul>
   </li>
-  <li><strong>Analysis Pipeline</strong>
+  <li><strong>Model Comparison</strong>
     <ul>
-      <li>Automate repetitive tasks</li>
-      <li>Save intermediate results</li>
-      <li>Validate results at each step</li>
+      <li>Quantitative metrics</li>
+      <li>Qualitative assessment</li>
+      <li>Theoretical implications</li>
     </ul>
   </li>
 </ol>
 
-<h2 id="common-pitfalls">Common Pitfalls</h2>
+<h2 id="future-directions">Future Directions</h2>
 
 <ol>
-  <li><strong>Data Quality Issues</strong>
+  <li><strong>Integration with Neuroscience</strong>
     <ul>
-      <li>Check for missing values</li>
-      <li>Identify outliers</li>
-      <li>Validate channel locations</li>
+      <li>Neural constraints</li>
+      <li>Brain-behavior mapping</li>
+      <li>Multi-level modeling</li>
     </ul>
   </li>
-  <li><strong>Processing Artifacts</strong>
+  <li><strong>Advanced Methods</strong>
     <ul>
-      <li>Filter edge effects</li>
-      <li>Temporal discontinuities</li>
-      <li>Baseline corrections</li>
+      <li>Bayesian approaches</li>
+      <li>Deep learning integration</li>
+      <li>Real-time modeling</li>
     </ul>
   </li>
-  <li><strong>Statistical Considerations</strong>
+  <li><strong>Applications</strong>
     <ul>
-      <li>Multiple comparisons</li>
-      <li>Independence assumptions</li>
-      <li>Effect size calculations</li>
+      <li>Educational technology</li>
+      <li>Clinical assessment</li>
+      <li>Human-AI interaction</li>
     </ul>
   </li>
 </ol>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>This tutorial covered the basics of neural data analysis using Python. For more advanced topics, check out the MNE-Python documentation and other neuroscience analysis packages.</p>
 
 <h2 id="references">References</h2>
 
 <ol>
-  <li>Gramfort, A. et al. (2013). “MEG and EEG data analysis with MNE-Python”</li>
-  <li>Cohen, M. X. (2014). “Analyzing Neural Time Series Data”</li>
-  <li>Kriegeskorte, N. &amp; Kreiman, G. (2011). “Visual Population Codes”</li>
+  <li>Anderson, J. R. (2009). “How Can the Human Mind Occur in the Physical Universe?”</li>
+  <li>Sun, R. (2008). “The Cambridge Handbook of Computational Psychology”</li>
+  <li>Busemeyer, J. R., &amp; Diederich, A. (2010). “Cognitive Modeling”</li>
 </ol>
-
-<h2 id="additional-resources">Additional Resources</h2>
-
-<ul>
-  <li><a href="https://mne.tools/stable/index.html">MNE-Python Documentation</a></li>
-  <li><a href="https://neurodatascience.github.io/">Neural Data Analysis Tutorials</a></li>
-  <li><a href="https://openneuro.org/">Sample Datasets</a></li>
-</ul>
 
     </div>
 
@@ -1060,19 +1059,19 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     <h3>Share this:</h3>
     <div class="share-buttons">
         <!-- Twitter -->
-        <a href="https://twitter.com/intent/tweet?text=Introduction to Neural Data Analysis with Python&url=http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html"
+        <a href="https://twitter.com/intent/tweet?text=Cognitive Modeling: From Theory to Practice&url=http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fab fa-twitter"></i>
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html&title=Introduction to Neural Data Analysis with Python&summary=A step-by-step guide to processing and analyzing neural data using Python&source=Jim Jing"
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/&title=Cognitive Modeling: From Theory to Practice&summary=Introduction to basic concepts, common methods, and practical applications of cognitive modeling, helping readers understand how to formalize cognitive processes.&source=Jim Jing"
            onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;">
             <i class="fab fa-linkedin-in"></i>
         </a>
 
         <!-- Email -->
-        <a href="mailto:?subject=Introduction to Neural Data Analysis with Python&body=Check out this article: http://localhost:4000/jjing-neuro/blog/2023/10/25/neural-data-python.html">
+        <a href="mailto:?subject=Cognitive Modeling: From Theory to Practice&body=Check out this article: http://localhost:4000/jjing-neuro/2023/12/20/cognitive-modeling/">
             <i class="fas fa-envelope"></i>
         </a>
     </div>
