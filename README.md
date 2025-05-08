@@ -1,6 +1,6 @@
-# Jim Jing's Academic Website
+# Academic Website
 
-This is my personal academic website built with Jekyll, focusing on neuroscience research and artificial intelligence work.
+This is an academic website built with Jekyll, focusing on research and academic work.
 
 ## Website Content
 
@@ -25,11 +25,11 @@ bundle install
 bundle exec jekyll serve
 ```
 
-3. Visit `http://localhost:4000/jjing-neuro/`
+3. Visit `http://localhost:4000`
 
 ## Deployment
 
-The website is automatically deployed via GitHub Pages, accessible at: [https://junlinjing.github.io/jjing-neuro/](https://junlinjing.github.io/jjing-neuro/)
+The website is automatically deployed via GitHub Pages.
 
 ## Tech Stack
 
@@ -56,17 +56,17 @@ Main configuration in `_config.yml`:
 
 ```yaml
 # Basic Information
-title: Jim Jing
-bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
+title: Your Name
+bio: Your Title | Your Field | Your Focus
 
 # Social Media Links
-twitter: JimJing1997
-linkedin: jjunlin
-github: JunlinJing
+twitter: username
+linkedin: username
+github: username
 
 # Academic Links
-researchgate: Junlin-Jing
-orcid: 0009-0006-1290-7445
+researchgate: username
+orcid: xxxx-xxxx-xxxx-xxxx
 ```
 
 ## License
