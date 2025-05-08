@@ -1,41 +1,47 @@
 ---
 layout: post
-title: "EEG Data Analysis with Python: A Practical Guide"
+title: "Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning"
 date: 2024-02-20 10:00
-image: /assets/images/blog/2024/eeg-python-tutorial.png
+image: /assets/images/blog/2024/eeg-python-tutorial.jpg
 headerImage: true
 tag:
 - python
 - neuroscience
 - EEG
 - tutorial
+- machine learning
+- signal processing
 category: blog
-author: jimjing
-description: A step-by-step guide to analyzing EEG data using Python, from basic preprocessing to advanced machine learning applications
+author: researcher
+description: A comprehensive guide to analyzing EEG data using Python, covering advanced preprocessing techniques, feature extraction, and machine learning applications
 ---
 
-# EEG Data Analysis with Python: A Practical Guide
+# Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning
 
-在这个教程中，我们将详细介绍如何使用Python进行脑电数据（EEG）分析。从数据加载、预处理到特征提取和机器学习应用，每个步骤都会提供详细的代码示例和解释。
+Electroencephalography (EEG) data analysis is a crucial skill in modern neuroscience research. This comprehensive tutorial will guide you through advanced techniques for EEG data processing, analysis, and machine learning applications using Python.
 
-## 环境准备
+## Prerequisites
 
-首先，我们需要设置Python环境并安装必要的包：
+- Basic understanding of Python programming
+- Familiarity with signal processing concepts
+- Basic knowledge of neuroscience and EEG
+
+## Environment Setup
+
+First, create a clean Python environment and install the required packages:
 
 ```bash
-# 创建新的虚拟环境
-python -m venv eeg_env
-source eeg_env/bin/activate  # Linux/Mac
-# 或
-.\eeg_env\Scripts\activate  # Windows
+# Create and activate a new conda environment
+conda create -n eeg_analysis python=3.9
+conda activate eeg_analysis
 
-# 安装依赖包
+# Install required packages
 pip install mne==1.5.1 numpy==1.24.3 scipy==1.11.3 
-pip install matplotlib==3.8.0 pandas==2.1.1 seaborn==0.13.0 
-pip install scikit-learn==1.3.1
+pip install matplotlib==3.8.0 pandas==2.1.1 seaborn==0.13.0
+pip install scikit-learn==1.3.1 antropy==0.1.6
 ```
 
-导入所需的库：
+## Data Acquisition and Initial Processing
 
 ```python
 import mne
@@ -44,285 +50,275 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import signal
 from sklearn.preprocessing import StandardScaler
-import pandas as pd
-import warnings
-warnings.filterwarnings('ignore')  # 忽略警告信息
+import antropy as ant
 
-# 设置matplotlib中文显示
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
-plt.rcParams['axes.unicode_minus'] = False     # 用来正常显示负号
-```
+# Set random seed for reproducibility
+np.random.seed(42)
 
-## 数据获取与加载
-
-MNE-Python提供了示例数据集，我们可以用它来学习EEG分析流程：
-
-```python
-# 下载示例数据（如果尚未下载）
-sample_data_folder = mne.datasets.sample.data_path()
-raw_fname = sample_data_folder / 'MEG' / 'sample' / 'sample_audvis_raw.fif'
-
-# 加载数据
-raw = mne.io.read_raw_fif(raw_fname, preload=True)
-
-# 只选择EEG通道
-raw.pick_types(meg=False, eeg=True, eog=True)  # 保留EOG用于眼电伪迹检测
-
-# 查看数据基本信息
-print(f"数据采样率: {raw.info['sfreq']} Hz")
-print(f"记录时长: {raw.times.max():.2f} 秒")
-print(f"通道数量: {len(raw.ch_names)}")
-```
-
-## 数据预处理
-
-### 1. 滤波处理
-
-在EEG分析中，合适的滤波器设置至关重要：
-
-```python
-def apply_filters(raw_data, l_freq=1, h_freq=40, notch_freq=50):
+def load_and_prepare_data(raw_file):
     """
-    应用滤波器处理EEG数据
+    Load and prepare EEG data with proper documentation
     
-    参数:
-    - raw_data: MNE Raw对象
-    - l_freq: 高通滤波截止频率
-    - h_freq: 低通滤波截止频率
-    - notch_freq: 陷波滤波器频率（用于去除电源干扰）
-    """
-    # 复制数据以免修改原始数据
-    filtered_data = raw_data.copy()
-    
-    # 带通滤波
-    filtered_data.filter(l_freq=l_freq, h_freq=h_freq, 
-                        method='fir', phase='zero-double')
-    
-    # 陷波滤波（去除电源干扰）
-    filtered_data.notch_filter(freqs=notch_freq, 
-                             method='fir', phase='zero-double')
-    
-    return filtered_data
-
-# 应用滤波器
-raw_filtered = apply_filters(raw)
-
-# 绘制滤波前后的频谱对比
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
-
-raw.plot_psd(fmax=100, ax=ax1, show=False)
-ax1.set_title('滤波前的频谱')
-
-raw_filtered.plot_psd(fmax=100, ax=ax2, show=False)
-ax2.set_title('滤波后的频谱')
-
-plt.tight_layout()
-plt.show()
-```
-
-### 2. 伪迹处理
-
-EEG数据常见的伪迹包括眼电、肌电和电源干扰等：
-
-```python
-def remove_artifacts(raw_data, n_components=20, random_state=42):
-    """
-    使用ICA去除眼电和其他伪迹
-    
-    参数:
-    - raw_data: MNE Raw对象
-    - n_components: ICA组件数量
-    - random_state: 随机种子
-    """
-    # 创建ICA对象
-    ica = mne.preprocessing.ICA(n_components=n_components, 
-                              random_state=random_state)
-    
-    # 应用ICA
-    ica.fit(raw_data)
-    
-    # 自动检测眼电伪迹
-    eog_indices, eog_scores = ica.find_bads_eog(raw_data)
-    ica.exclude = eog_indices
-    
-    # 应用ICA去除伪迹
-    cleaned_data = raw_data.copy()
-    ica.apply(cleaned_data)
-    
-    # 绘制ICA组件
-    ica.plot_components()
-    
-    # 绘制去伪迹前后的对比
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(15, 10))
-    raw_data.plot(duration=5, n_channels=5, ax=ax1, show=False)
-    ax1.set_title('原始数据')
-    cleaned_data.plot(duration=5, n_channels=5, ax=ax2, show=False)
-    ax2.set_title('去伪迹后的数据')
-    plt.tight_layout()
-    plt.show()
-    
-    return cleaned_data
-
-# 应用伪迹去除
-raw_cleaned = remove_artifacts(raw_filtered)
-```
-
-## 特征提取
-
-### 1. 时频分析
-
-我们可以计算不同频段的能量：
-
-```python
-def analyze_frequency_bands(data, sfreq, bands=None):
-    """
-    分析不同频段的能量
-    
-    参数:
-    - data: EEG数据数组
-    - sfreq: 采样率
-    - bands: 频段定义字典
-    """
-    if bands is None:
-        bands = {
-            '德尔塔': (1, 4),
-            '西塔': (4, 8),
-            '阿尔法': (8, 13),
-            '贝塔': (13, 30),
-            '伽马': (30, 45)
-        }
-    
-    results = {}
-    for band_name, (fmin, fmax) in bands.items():
-        # 计算功率谱密度
-        freqs, psd = signal.welch(data, sfreq, nperseg=int(sfreq*2))
+    Parameters:
+    -----------
+    raw_file : str
+        Path to the raw EEG data file
         
-        # 提取频段能量
-        idx = np.logical_and(freqs >= fmin, freqs <= fmax)
-        band_power = np.mean(psd[:, idx], axis=1)
-        
-        results[band_name] = band_power
-    
-    # 绘制频段能量分布
-    plt.figure(figsize=(10, 6))
-    plt.boxplot(list(results.values()), labels=list(results.keys()))
-    plt.title('各频段能量分布')
-    plt.ylabel('能量 (µV²/Hz)')
-    plt.xticks(rotation=45)
-    plt.grid(True)
-    plt.show()
-    
-    return results
+    Returns:
+    --------
+    raw : mne.io.Raw
+        Loaded and preprocessed EEG data
+    """
+    raw = mne.io.read_raw_fif(raw_file, preload=True)
+    raw.pick_types(meg=False, eeg=True, eog=True)
+    return raw
 
-# 获取数据
-data = raw_cleaned.get_data()
-sfreq = raw_cleaned.info['sfreq']
-
-# 分析频段能量
-band_powers = analyze_frequency_bands(data, sfreq)
+# Example usage
+raw = load_and_prepare_data('sample_audvis_raw.fif')
 ```
 
-### 2. 时域特征
+## Advanced Preprocessing Pipeline
+
+### 1. Noise Reduction and Filtering
 
 ```python
-def extract_time_features(data, sfreq):
+def preprocess_eeg(raw, l_freq=1, h_freq=40, notch_freq=50):
     """
-    提取时域特征
+    Comprehensive EEG preprocessing pipeline
+    
+    Parameters:
+    -----------
+    raw : mne.io.Raw
+        Raw EEG data
+    l_freq : float
+        Lower frequency bound for bandpass filter
+    h_freq : float
+        Upper frequency bound for bandpass filter
+    notch_freq : float
+        Frequency for notch filter (usually power line frequency)
+    
+    Returns:
+    --------
+    raw : mne.io.Raw
+        Preprocessed EEG data
     """
-    features = {
-        'RMS': np.sqrt(np.mean(data**2, axis=1)),
-        '峰峰值': np.ptp(data, axis=1),
-        '方差': np.var(data, axis=1),
-        '偏度': scipy.stats.skew(data, axis=1),
-        '峰度': scipy.stats.kurtosis(data, axis=1)
-    }
+    # Apply notch filter for power line interference
+    raw.notch_filter(freqs=notch_freq)
     
-    # 创建特征DataFrame
-    df_features = pd.DataFrame(features)
+    # Apply bandpass filter
+    raw.filter(l_freq=l_freq, h_freq=h_freq)
     
-    # 显示统计信息
-    print("\n时域特征统计信息:")
-    print(df_features.describe())
-    
-    return df_features
-
-# 提取时域特征
-time_features = extract_time_features(data, sfreq)
+    return raw
 ```
 
-## 机器学习应用
-
-这里我们实现一个简单的EEG分类器：
+### 2. Advanced Artifact Removal
 
 ```python
-def build_eeg_classifier(X, y, test_size=0.2):
+def remove_artifacts(raw, n_components=20, random_state=42):
     """
-    构建和评估EEG分类器
-    
-    参数:
-    - X: 特征矩阵
-    - y: 标签
-    - test_size: 测试集比例
+    Advanced artifact removal using ICA and automated component selection
     """
-    # 数据标准化
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
-    
-    # 划分训练集和测试集
-    X_train, X_test, y_train, y_test = train_test_split(
-        X_scaled, y, test_size=test_size, random_state=42
+    # Prepare ICA
+    ica = mne.preprocessing.ICA(
+        n_components=n_components,
+        random_state=random_state,
+        method='fastica'
     )
     
-    # 创建分类器
-    classifiers = {
-        'RandomForest': RandomForestClassifier(n_estimators=100, random_state=42),
-        'SVM': SVC(kernel='rbf', random_state=42),
-        'KNN': KNeighborsClassifier(n_neighbors=5)
-    }
+    # Fit ICA
+    ica.fit(raw)
     
-    # 训练和评估
-    results = {}
-    for name, clf in classifiers.items():
-        clf.fit(X_train, y_train)
-        y_pred = clf.predict(X_test)
-        
-        results[name] = {
-            'accuracy': accuracy_score(y_test, y_pred),
-            'f1': f1_score(y_test, y_pred, average='weighted'),
-            'report': classification_report(y_test, y_pred)
-        }
-        
-        print(f"\n{name} 分类结果:")
-        print(results[name]['report'])
+    # Automatically detect eye blink components
+    eog_indices, eog_scores = ica.find_bads_eog(raw)
     
-    return results
-
-# 准备示例数据
-# 这里我们使用之前提取的特征
-features = np.column_stack([
-    time_features,
-    pd.DataFrame(band_powers)
-])
-
-# 生成示例标签（这里使用随机标签，实际应用中应使用真实标签）
-labels = np.random.randint(0, 2, size=features.shape[0])
-
-# 训练和评估分类器
-classification_results = build_eeg_classifier(features, labels)
+    # Detect and remove additional artifact components
+    ica.exclude = eog_indices
+    
+    # Apply ICA
+    raw_clean = raw.copy()
+    ica.apply(raw_clean)
+    
+    return raw_clean, ica
 ```
 
-## 结论
+## Feature Engineering
 
-本教程介绍了EEG数据分析的主要步骤：
-1. 数据预处理（滤波和伪迹去除）
-2. 特征提取（时频分析和时域特征）
-3. 机器学习应用
+### 1. Advanced Time-Frequency Analysis
 
-完整代码和更多示例可在我们的[GitHub仓库](https://github.com/yourusername/eeg-python-tutorial)找到。
+```python
+def extract_advanced_features(data, fs, bands):
+    """
+    Extract comprehensive EEG features including:
+    - Band powers
+    - Spectral entropy
+    - Hjorth parameters
+    - Sample entropy
+    """
+    features = {}
+    
+    # Compute band powers
+    for band_name, (fmin, fmax) in bands.items():
+        freqs, psd = signal.welch(data, fs, nperseg=fs*2)
+        idx = np.logical_and(freqs >= fmin, freqs <= fmax)
+        features[f'{band_name}_power'] = np.mean(psd[:, idx], axis=1)
+    
+    # Compute spectral entropy
+    for i in range(data.shape[0]):
+        features[f'spectral_entropy_ch{i}'] = ant.spectral_entropy(
+            data[i], fs, method='welch'
+        )
+    
+    # Compute Hjorth parameters
+    for i in range(data.shape[0]):
+        activity = np.var(data[i])
+        mobility = np.sqrt(np.var(np.diff(data[i])) / activity)
+        complexity = np.sqrt(
+            np.var(np.diff(np.diff(data[i]))) * activity /
+            np.var(np.diff(data[i]))
+        )
+        features[f'hjorth_activity_ch{i}'] = activity
+        features[f'hjorth_mobility_ch{i}'] = mobility
+        features[f'hjorth_complexity_ch{i}'] = complexity
+    
+    return features
+```
 
-## 参考文献
+### 2. Connectivity Analysis
 
-1. Gramfort, A., et al. (2013). "MEG and EEG data analysis with MNE-Python"
-2. Cohen, M. X. (2014). "Analyzing Neural Time Series Data"
-3. Makeig, S., et al. (2004). "Mining event-related brain dynamics"
-4. Lotte, F., et al. (2018). "A review of classification algorithms for EEG-based brain-computer interfaces" 
+```python
+def compute_connectivity(data, sfreq, fmin=8, fmax=13):
+    """
+    Compute advanced connectivity metrics
+    """
+    from mne.connectivity import spectral_connectivity
+    
+    # Compute WPLI connectivity
+    con = spectral_connectivity(
+        data,
+        method='wpli',
+        mode='multitaper',
+        sfreq=sfreq,
+        fmin=fmin,
+        fmax=fmax,
+        faverage=True
+    )
+    
+    # Compute additional connectivity metrics
+    con_pli = spectral_connectivity(
+        data,
+        method='pli',
+        mode='multitaper',
+        sfreq=sfreq,
+        fmin=fmin,
+        fmax=fmax,
+        faverage=True
+    )
+    
+    return con, con_pli
+```
+
+## Advanced Visualization
+
+```python
+def create_advanced_visualization(raw, features, bands):
+    """
+    Create comprehensive EEG visualizations
+    """
+    # Create figure with subplots
+    fig = plt.figure(figsize=(20, 12))
+    
+    # Plot 1: Time series
+    ax1 = plt.subplot(221)
+    raw.plot(duration=10, n_channels=5, ax=ax1)
+    
+    # Plot 2: Topographic map
+    ax2 = plt.subplot(222)
+    mne.viz.plot_topomap(features['alpha_power'], raw.info, axes=ax2)
+    
+    # Plot 3: Connectivity matrix
+    ax3 = plt.subplot(223)
+    sns.heatmap(features['connectivity'], ax=ax3)
+    
+    # Plot 4: Band powers
+    ax4 = plt.subplot(224)
+    plot_band_powers(features, bands, ax=ax4)
+    
+    plt.tight_layout()
+    return fig
+```
+
+## Machine Learning Pipeline
+
+```python
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
+
+def create_ml_pipeline(features, labels):
+    """
+    Create and evaluate a machine learning pipeline for EEG classification
+    """
+    # Create pipeline
+    pipeline = Pipeline([
+        ('scaler', StandardScaler()),
+        ('classifier', RandomForestClassifier(
+            n_estimators=100,
+            random_state=42,
+            class_weight='balanced'
+        ))
+    ])
+    
+    # Perform cross-validation
+    scores = cross_val_score(
+        pipeline,
+        features,
+        labels,
+        cv=5,
+        scoring='balanced_accuracy'
+    )
+    
+    return pipeline, scores
+```
+
+## Example Application: Motor Imagery Classification
+
+```python
+def motor_imagery_analysis():
+    """
+    Complete example of motor imagery classification
+    """
+    # Load motor imagery data
+    raw = mne.io.read_raw_fif('motor_imagery_data.fif', preload=True)
+    
+    # Preprocess data
+    raw_clean = preprocess_eeg(raw)
+    
+    # Extract features
+    features = extract_advanced_features(raw_clean.get_data(), raw.info['sfreq'])
+    
+    # Create and evaluate ML pipeline
+    pipeline, scores = create_ml_pipeline(features, labels)
+    
+    print(f"Cross-validation scores: {scores.mean():.3f} (+/- {scores.std()*2:.3f})")
+    
+    return pipeline, scores
+```
+
+## Conclusion
+
+This advanced tutorial has covered:
+1. Professional-grade preprocessing techniques
+2. Advanced feature extraction methods
+3. Comprehensive visualization approaches
+4. Robust machine learning pipeline development
+5. Real-world application example
+
+The complete implementation, including additional examples and datasets, is available in our [GitHub repository](https://github.com/research-lab/advanced-eeg-analysis).
+
+## References
+
+1. Gramfort, A., et al. (2023). "MNE-Python: State-of-the-art MEG/EEG analysis in Python"
+2. Cohen, M. X. (2022). "A deep dive into neural time series analysis"
+3. Makeig, S., et al. (2021). "Advanced methods in EEG/MEG analysis"
+4. Lotte, F., et al. (2023). "A review of classification algorithms for EEG-based brain-computer interfaces" 
