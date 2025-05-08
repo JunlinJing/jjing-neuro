@@ -52,11 +52,11 @@ kramdown:
 # Social links
 twitter: JimJing1997
 linkedin: jjunlin
-github_username: https://github.com/JunlinJing
+github_username: JunlinJing
 email: jjunlin197@163.com
 
 # Academic links
-googlescholar: citations?user=YOUR_SCHOLAR_ID
+googlescholar: citations?user=XXXXX # Replace with your actual Google Scholar ID
 researchgate: Junlin-Jing
 orcid: 0009-0006-1290-7445
 
@@ -74,11 +74,10 @@ width: large
 
 # Pagination
 pagination:
-  enabled: false
+  enabled: true
   sort_reverse: true
-  title: ":title"
-  per_page: 5
-  permalink: "/:num/"
+  per_page: 10
+  permalink: /page/:num/
 
 # Pages
 projects: true
@@ -99,10 +98,11 @@ animation: true
 # Jekyll plugins
 plugins:
   - jekyll-seo-tag
-  - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
 
 # HTML compression
 compress_html:
