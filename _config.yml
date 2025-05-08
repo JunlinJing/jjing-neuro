@@ -1,9 +1,9 @@
 # main text of home
 title: Jim Jing
-bio: Explore the world, adventure life, and finally become the light 
+bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
 
 # twitter summary info
-description: A blog about brain science and ai technology
+description: An academic website about neuroscience research and artificial intelligence technology
 
 # if it's an external image, update below for true
 # better with square images
@@ -21,7 +21,7 @@ resume-external: false
 resume-url: resume  # 移除开头的斜杠
 
 # GitHub Pages 部署配置
-url: https://walkjim197.github.io
+url: https://junlinjing.github.io
 baseurl: /jjing-neuro
 
 # 本地开发配置（需要时取消注释）
@@ -45,27 +45,27 @@ disqus:
 twitter: JimJing1997
 #instagram: myinstagram
 linkedin: jjunlin/
-github: WalkJim197
+github: JunlinJing
 email: jjunlin197@163.com
 
+# Academic links
+googlescholar: citations?user=YOUR_SCHOLAR_ID
+researchgate: Junlin_Jing
+orcid: 0000-0000-0000-0000
+
+# Website author information
 authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
+  jimjing:
+    name: Jim Jing
+    bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
     external-image: false
-    picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    picture: assets/images/self_picture.jpg
+    twitter: JimJing1997
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: normal
+width: large
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
 pagination:
@@ -75,8 +75,11 @@ pagination:
   per_page: 5
   permalink: "/:num/" # pagination link that will be appended
 
-# if you don't need projects, comment the *projects* configs below
+# Academic pages
 projects: true
+publications: true
+research: true
+teaching: false
 
 # if you don't need "about" or "blog", comment them out below
 about: true

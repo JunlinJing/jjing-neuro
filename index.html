@@ -2,19 +2,152 @@
 layout: page
 title: Home
 ---
+<div class="home-content">
+    <div class="profile-section">
+        <img src="{{ site.baseurl }}/{{ site.picture }}" alt="{{ site.title }}" class="profile-image">
+        <h1 class="name">{{ site.title }}</h1>
+        <h2 class="tagline">{{ site.bio }}</h2>
+    </div>
 
-<div style="text-align:center;margin-top:40px;">
-  <img src="{{ site.baseurl }}/assets/images/self_picture.jpg" alt="Jim Jing" style="width:160px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:20px;">
-  <h1 style="font-size:2.5em;">Jim Jing</h1>
-  <h2 style="font-weight:normal;color:#888;">神经科学研究者 | 人工智能爱好者</h2>
-  <p style="max-width:600px;margin:20px auto 30px;color:#aaa;">
-    研究方向：计算神经科学、认知建模、生物启发人工智能、脑机接口、神经影像数据分析。<br>
-    致力于探索大脑认知机制与智能算法的交叉创新。
-  </p>
-  <div>
-    <a href="mailto:{{ site.email }}" style="margin:0 10px;">Email</a>
-    <a href="https://github.com/{{ site.github }}" style="margin:0 10px;">GitHub</a>
-    <a href="https://www.linkedin.com/in/{{ site.linkedin }}" style="margin:0 10px;">LinkedIn</a>
-    <!-- 可加学术链接 -->
-  </div>
+    <div class="research-interests">
+        <h3>Research Areas</h3>
+        <p>Computational Neuroscience, Cognitive Modeling, Bio-inspired AI, Brain-Computer Interfaces, Neural Imaging Data Analysis</p>
+        <p>Dedicated to advancing our understanding of the brain and developing intelligent computational systems.</p>
+    </div>
+
+    <div class="social-links">
+        {% if site.email %}
+            <a href="mailto:{{ site.email }}" class="social-link">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        {% endif %}
+
+        {% if site.github %}
+            <a href="https://github.com/{{ site.github }}" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        {% endif %}
+
+        {% if site.linkedin %}
+            <a href="https://linkedin.com/in/{{ site.linkedin }}" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        {% endif %}
+    </div>
 </div>
+
+<style>
+    .home-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .profile-section {
+        margin-bottom: 40px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.05);
+    }
+
+    .name {
+        font-size: 2.8em;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .tagline {
+        font-size: 1.4em;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+
+    .research-interests {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .research-interests h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.6em;
+    }
+
+    .research-interests p {
+        color: #34495e;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 25px;
+        color: #2c3e50;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .social-link i {
+        margin-right: 8px;
+        font-size: 1.2em;
+    }
+
+    .social-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        background: #2c3e50;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .home-content {
+            padding: 20px;
+        }
+
+        .name {
+            font-size: 2.2em;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+        }
+
+        .research-interests {
+            padding: 20px;
+        }
+
+        .social-link {
+            padding: 8px 16px;
+        }
+    }
+</style>
