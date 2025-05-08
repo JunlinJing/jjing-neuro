@@ -7,6 +7,7 @@ tag:
   - BCI
   - Neural Engineering
   - Machine Learning
+category: blog
 ---
 
 # Recent Advances in Brain-Computer Interfaces

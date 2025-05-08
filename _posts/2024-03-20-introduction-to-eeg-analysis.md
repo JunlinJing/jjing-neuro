@@ -7,6 +7,7 @@ tag:
   - EEG
   - Python
   - Neuroscience
+category: blog
 ---
 
 # Introduction to EEG Analysis with Python

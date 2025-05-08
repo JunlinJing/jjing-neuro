@@ -7,6 +7,7 @@ tag:
   - Signal Processing
   - Neuroscience
   - Python
+category: blog
 ---
 
 # Advanced Neural Signal Processing Techniques
