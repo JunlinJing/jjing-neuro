@@ -1038,63 +1038,54 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
     
-    <!-- Back to Top Button -->
-    <div class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-    
     <!-- Dark Mode Toggle -->
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
         <i class="fas fa-moon"></i>
     </button>
-    
-    <!-- Scripts -->
-    <script defer src="/jjing-neuro/assets/js/optimization.js"></script>
-    
+
     <!-- Theme Switching -->
     <script>
-        function setDarkMode(isDark) {
-            document.documentElement.classList.toggle('dark', isDark);
-            document.body.classList.toggle('dark', isDark);
-            localStorage.setItem('darkMode', isDark);
-            
-            // Update button icon
+        // Simple theme toggle function
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
             const icon = document.querySelector('#dark-mode-toggle i');
-            if (icon) {
-                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-            }
-        }
-
-        function initDarkMode() {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const storedDarkMode = localStorage.getItem('darkMode');
-            const shouldBeDark = storedDarkMode === null ? prefersDark : storedDarkMode === 'true';
             
-            setDarkMode(shouldBeDark);
-
-            // Listen for system theme changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                if (localStorage.getItem('darkMode') === null) {
-                    setDarkMode(e.matches);
-                }
-            });
-
-            // Add click event listener to toggle button
-            const toggleButton = document.getElementById('dark-mode-toggle');
-            if (toggleButton) {
-                toggleButton.addEventListener('click', function() {
-                    const isDark = !document.documentElement.classList.contains('dark');
-                    setDarkMode(isDark);
-                });
+            // Toggle theme
+            if (isDark) {
+                html.classList.remove('dark');
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
             }
         }
 
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initDarkMode);
-        } else {
-            initDarkMode();
+        // Initialize theme
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                document.querySelector('#dark-mode-toggle i').className = 'fas fa-sun';
+            }
         }
+
+        // Add click event listener
+        document.getElementById('dark-mode-toggle').addEventListener('click', toggleTheme);
+
+        // Initialize theme on page load
+        initTheme();
+
+        // Log initial state
+        console.log('Theme initialized:', {
+            'isDark': document.documentElement.classList.contains('dark'),
+            'savedTheme': localStorage.getItem('theme'),
+            'prefersDark': window.matchMedia('(prefers-color-scheme: dark)').matches
+        });
     </script>
 </body>
 </html>
