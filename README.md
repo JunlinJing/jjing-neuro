@@ -62,7 +62,7 @@ bio: Your Title | Your Field | Your Focus
 # Social Media Links
 twitter: username
 linkedin: username
-github: username
+github: https://github.com/JunlinJing
 
 # Academic Links
 researchgate: username
