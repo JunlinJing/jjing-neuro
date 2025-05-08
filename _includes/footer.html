@@ -1,19 +1,17 @@
-<footer class="footer-main">
+<footer class="footer">
     <div class="footer-content">
-        <div class="copyright">
-            © {{ site.time | date: '%Y' }} {{ site.title }}
-        </div>
-        <a class="rss-link" href="{{ site.baseurl }}/feed.xml" target="_blank" aria-label="RSS Feed">
+        <span class="copyright">© {{ site.time | date: '%Y' }} {{ site.title }}</span>
+        <a href="{{ site.baseurl }}/feed.xml" target="_blank" class="rss-link" aria-label="RSS Feed">
             <i class="fa-solid fa-rss"></i>
         </a>
     </div>
 </footer>
 
 <style>
-.footer-main {
-    padding: 1rem 0;
+.footer {
+    margin-top: 2rem;
+    padding: 1rem;
     text-align: center;
-    background-color: var(--background-color);
     border-top: 1px solid var(--border-color);
 }
 
@@ -22,9 +20,6 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .copyright {
@@ -33,7 +28,6 @@
 
 .rss-link {
     color: var(--text-color);
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
