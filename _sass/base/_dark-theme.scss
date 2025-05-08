@@ -1,0 +1,80 @@
+// Dark theme styles
+html.dark {
+    background-color: #1a1a1a;
+    color: #e4e4e4;
+
+    // Header styles
+    .header-home {
+        background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    // Navigation styles
+    .nav {
+        background-color: rgba(0, 0, 0, 0.2);
+        
+        .nav-link {
+            color: #e4e4e4;
+            background: rgba(255, 255, 255, 0.05);
+            
+            &:hover {
+                background: #4a9eff;
+                color: #ffffff;
+            }
+        }
+    }
+
+    // Content styles
+    .content {
+        background-color: #1a1a1a;
+    }
+
+    // Links
+    a {
+        color: #4a9eff;
+        
+        &:hover {
+            color: #66b3ff;
+        }
+    }
+
+    // Code blocks
+    pre, code {
+        background-color: #2d2d2d;
+        color: #f8f8f2;
+    }
+
+    // Buttons
+    button {
+        background-color: #4a9eff;
+        color: #ffffff;
+        
+        &:hover {
+            background-color: #66b3ff;
+        }
+    }
+
+    // Cards and containers
+    .post-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    // Footer
+    .footer-main {
+        color: #e4e4e4;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    // Dark mode toggle
+    .dark-mode-toggle {
+        background-color: transparent;
+        color: #e4e4e4;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+} 

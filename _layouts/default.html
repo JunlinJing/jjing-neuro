@@ -22,12 +22,21 @@ layout: compress
     
     <!-- Dark Mode -->
     <script>
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'true' || 
-            (localStorage.getItem('darkMode') === null && 
-             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
+        function setDarkMode(isDark) {
+            document.documentElement.classList.toggle('dark', isDark);
+            localStorage.setItem('darkMode', isDark);
+            
+            // Update button icon
+            const icon = document.querySelector('#dark-mode-toggle i');
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
         }
+
+        // Check for saved dark mode preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedDarkMode = localStorage.getItem('darkMode');
+        const shouldBeDark = storedDarkMode === null ? prefersDark : storedDarkMode === 'true';
+        
+        setDarkMode(shouldBeDark);
     </script>
     
     <!-- Scripts -->
@@ -58,8 +67,8 @@ layout: compress
     <script>
         // Dark mode toggle functionality
         document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+            const isDark = !document.documentElement.classList.contains('dark');
+            setDarkMode(isDark);
         });
     </script>
 </body>
