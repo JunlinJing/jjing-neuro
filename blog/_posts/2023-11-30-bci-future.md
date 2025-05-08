@@ -1,17 +1,11 @@
 ---
-layout: post
+layout: "post"
 title: "Current State and Future of Brain-Computer Interface Technology"
-date: 2023-11-30
+date: 2023-11-30 00:00:00 +0000
 description: "Analysis of current developments in brain-computer interface technology, discussing potential breakthrough directions and application scenarios."
-tags: 
-  - Neural Engineering
-  - Brain-Computer Interface
-  - Future Technology
-  - Neuroscience
-author: jimjing
----
-
-# Current State and Future of Brain-Computer Interface Technology
+tags: ["Neural Engineering", "Brain Computer Interface", "Future Technology", "Neuroscience"]
+author: "jimjing"
+---# Current State and Future of Brain-Computer Interface Technology
 
 Brain-Computer Interface (BCI) technology has made remarkable progress in recent years. This article explores current developments and future prospects in this rapidly evolving field.
 
