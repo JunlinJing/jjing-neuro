@@ -14,16 +14,16 @@ layout: default
         
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}">
-                <i class="far fa-calendar-alt"></i> {{ page.date | date: "%Y-%m-%d" }}
+                <i class="far fa-calendar-alt"></i> {{ page.date | date: "%B %-d, %Y" }}
             </time>
             {% if page.author %}
                 • <span><i class="far fa-user"></i> {{ page.author }}</span>
             {% endif %}
-            • <span class="reading-time" title="预计阅读时间">
+            • <span class="reading-time" title="Estimated reading time">
                 <i class="far fa-clock"></i>
                 {% assign words = content | strip_html | number_of_words %}
                 {% assign reading_time = words | divided_by: 350 | plus: 1 %}
-                {{ reading_time }} 分钟阅读
+                {{ reading_time }} min read
             </span>
         </div>
 
@@ -40,7 +40,7 @@ layout: default
 
     <div class="post-wrapper">
         <aside class="table-of-contents" id="toc">
-            <div class="toc-title">目录</div>
+            <div class="toc-title">Table of Contents</div>
             <div id="toc-content"></div>
         </aside>
 
@@ -50,25 +50,25 @@ layout: default
     </div>
 
     <div class="social-share">
-        <div class="share-title">分享文章</div>
+        <div class="share-title">Share this post</div>
         <div class="share-buttons">
             <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" 
-               target="_blank" class="share-button twitter">
+               target="_blank" class="share-button twitter" title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-               target="_blank" class="share-button facebook">
+               target="_blank" class="share-button facebook" title="Share on Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}"
-               target="_blank" class="share-button linkedin">
+               target="_blank" class="share-button linkedin" title="Share on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
     </div>
 
     <div class="related-posts">
-        <h3>相关文章</h3>
+        <h3>Related Posts</h3>
         <ul>
             {% assign maxRelated = 4 %}
             {% assign minCommonTags =  1 %}
@@ -92,7 +92,7 @@ layout: default
                     <li>
                         <a href="{{ site.baseurl }}{{ post.url }}">
                             {{ post.title }}
-                            <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+                            <small>{{ post.date | date: "%B %-d, %Y" }}</small>
                         </a>
                     </li>
                     {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
@@ -154,8 +154,8 @@ layout: default
     display: inline-block;
     padding: 5px 10px;
     margin: 0 5px;
-    background: var(--tag-bg);
-    color: var(--tag-color);
+    background: var(--tag-bg, #f5f5f5);
+    color: var(--tag-color, #333);
     border-radius: 15px;
     text-decoration: none;
     font-size: 0.9em;
@@ -163,7 +163,7 @@ layout: default
 }
 
 .tag:hover {
-    background: var(--tag-bg-hover);
+    background: var(--tag-bg-hover, #e5e5e5);
     transform: translateY(-2px);
 }
 
@@ -302,7 +302,7 @@ layout: default
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // 生成目录
+    // Generate table of contents
     const content = document.querySelector('.post-content');
     const toc = document.getElementById('toc-content');
     const headings = content.querySelectorAll('h2, h3, h4');
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tocList = document.createElement('ul');
         
         headings.forEach((heading, index) => {
-            // 添加ID用于锚点链接
+            // Add ID for anchor links
             heading.id = `heading-${index}`;
             
             const li = document.createElement('li');
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
             li.appendChild(a);
             tocList.appendChild(li);
             
-            // 点击目录项时平滑滚动
+            // Smooth scroll when clicking on TOC items
             a.addEventListener('click', (e) => {
                 e.preventDefault();
                 heading.scrollIntoView({ behavior: 'smooth' });

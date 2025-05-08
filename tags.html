@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 标签
+title: Tags
 permalink: /tags/
 ---
 
 <div class="tags-page">
-    <h1 class="page-title">标签云</h1>
+    <h1 class="page-title">Tag Cloud</h1>
     
     <div class="tag-cloud">
         {% assign tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
@@ -24,7 +24,7 @@ permalink: /tags/
                     {% for post in site.posts %}
                         {% if post.tags contains tag %}
                             <li class="post-item">
-                                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                                <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
                                 <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
                             </li>
                         {% endif %}
