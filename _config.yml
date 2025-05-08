@@ -81,7 +81,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  - jekyll-paginate-v2
+  - jekyll-sitemap
 
 # HTML compression
 compress_html:
@@ -104,6 +104,13 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
+  - .git/
+  - .github/
+  - .gitignore
+  - .DS_Store
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
 
 # RSS Feed configuration
 feed:
