@@ -1,0 +1,68 @@
+<div class="share">
+    <h3>Share this:</h3>
+    <div class="share-buttons">
+        <!-- Twitter -->
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source={{ site.title }}"
+           onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:?subject={{ page.title }}&body=Check out this article: {{ site.url }}{{ site.baseurl }}{{ page.url }}">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.share {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.share h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.share-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-color-secondary);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.share-buttons a:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .share-buttons a {
+    background: var(--bg-color-darker);
+}
+
+[data-theme="dark"] .share-buttons a:hover {
+    background: var(--accent-color);
+}
+</style> 

@@ -37,9 +37,9 @@ layout: default
     </div>
 
     {% include share.html %}
-    {% include author.html %}
-    {% include comments.html %}
-    {% include related.html %}
+    {% if site.disqus %}
+        {% include comments.html %}
+    {% endif %}
 </article>
 
 <style>

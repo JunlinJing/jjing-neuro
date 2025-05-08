@@ -1130,10 +1130,28 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 <div class="home-content">
-    <div class="research-interests">
-        <h3>Research Areas</h3>
-        <p>Computational Neuroscience, Cognitive Modeling, Bio-inspired AI, Brain-Computer Interfaces, Neural Imaging Data Analysis</p>
-        <p>Dedicated to advancing our understanding of the brain and developing intelligent computational systems.</p>
+    <div class="news-section">
+        <h3>News</h3>
+        <div class="news-items">
+            <div class="news-item">
+                <span class="date">March 2024</span>
+                <p><a href="/jjing-neuro/2024/01/15/deep-learning-eeg/">New blog post on "Deep Learning Applications in EEG Signal Processing"</a> is now available.</p>
+                <div class="news-tag">Blog</div>
+            </div>
+            <div class="news-item">
+                <span class="date">February 2024</span>
+                <p>Updated the website with new research focus areas and improved navigation.</p>
+                <div class="news-tag">Update</div>
+            </div>
+            <div class="news-item">
+                <span class="date">January 2024</span>
+                <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                <div class="news-tag">Blog</div>
+            </div>
+        </div>
+        <div class="news-footer">
+            <a href="/jjing-neuro/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
+        </div>
     </div>
 </div>
 
@@ -1144,24 +1162,107 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         padding: 40px 20px;
     }
 
-    .research-interests {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    .news-section {
+        background: var(--bg-color);
         padding: 30px;
         border-radius: 15px;
         margin-bottom: 40px;
-        text-align: left;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
     }
 
-    .research-interests h3 {
-        color: #2c3e50;
-        margin-bottom: 15px;
-        font-size: 1.6em;
+    .news-section:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .research-interests p {
-        color: #34495e;
+    .news-section h3 {
+        color: var(--heading-color);
+        margin-bottom: 25px;
+        font-size: 1.8em;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 10px;
+    }
+
+    .news-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .news-item {
+        padding: 20px;
+        border-left: 3px solid var(--accent-color);
+        background: var(--bg-color-secondary);
+        border-radius: 8px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .news-item:hover {
+        transform: translateX(5px);
+    }
+
+    .news-item .date {
+        font-size: 0.9em;
+        color: var(--meta-color);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .news-item p {
+        color: var(--text-color);
         line-height: 1.6;
-        margin-bottom: 15px;
+        margin: 0;
+    }
+
+    .news-item a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .news-item a:hover {
+        color: var(--link-hover-color);
+    }
+
+    .news-tag {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 4px 8px;
+        background: var(--accent-color);
+        color: white;
+        border-radius: 4px;
+        font-size: 0.8em;
+        font-weight: 500;
+    }
+
+    .news-footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .view-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: var(--accent-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .view-more-btn:hover {
+        background: var(--accent-color-dark);
+        transform: translateY(-2px);
+    }
+
+    .view-more-btn i {
+        font-size: 0.9em;
     }
 
     @media (max-width: 768px) {
@@ -1169,9 +1270,35 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             padding: 20px;
         }
 
-        .research-interests {
+        .news-section {
             padding: 20px;
         }
+
+        .news-item {
+            padding: 15px;
+        }
+
+        .news-tag {
+            position: static;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    }
+
+    [data-theme="dark"] .news-section {
+        background: var(--bg-color-dark);
+    }
+
+    [data-theme="dark"] .news-item {
+        background: var(--bg-color-darker);
+    }
+
+    [data-theme="dark"] .view-more-btn {
+        background: var(--accent-color-dark);
+    }
+
+    [data-theme="dark"] .view-more-btn:hover {
+        background: var(--accent-color);
     }
 </style>
 
