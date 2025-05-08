@@ -3,6 +3,11 @@ html.dark {
     background-color: #1a1a1a;
     color: #e4e4e4;
 
+    body {
+        background-color: #1a1a1a;
+        color: #e4e4e4;
+    }
+
     // Header styles
     .header-home {
         background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
@@ -26,8 +31,9 @@ html.dark {
     }
 
     // Content styles
-    .content {
+    .content, .page-content {
         background-color: #1a1a1a;
+        color: #e4e4e4;
     }
 
     // Links
@@ -62,9 +68,18 @@ html.dark {
     }
 
     // Footer
-    .footer-main {
+    .site-footer {
+        background-color: #1a1a1a;
         color: #e4e4e4;
-        background-color: rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        .copyright, .rss-link {
+            color: #e4e4e4;
+        }
+
+        .rss-link:hover {
+            color: #4a9eff;
+        }
     }
 
     // Dark mode toggle
@@ -75,6 +90,16 @@ html.dark {
         
         &:hover {
             background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    // News section
+    .news-section {
+        background: rgba(255, 255, 255, 0.05);
+        
+        .news-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-left-color: #4a9eff;
         }
     }
 } 
