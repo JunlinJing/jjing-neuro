@@ -485,7 +485,7 @@
         <div class="news-grid">
             <div class="news-column" data-category="website">
                 <h4 class="column-title">Website Updates</h4>
-                <div class="visible-items">
+                <div class="news-items">
                     <div class="news-item">
                         <span class="date">March 2024</span>
                         <p>Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
@@ -506,9 +506,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="hidden-items">
-                    <div class="news-item">
+                    <div class="news-item hidden">
                         <span class="date">January 2024</span>
                         <p>Initial setup of the academic website structure and basic features.</p>
                         <div class="news-tag">Update</div>
@@ -519,11 +517,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></div>
+                <button class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></button>
             </div>
             <div class="news-column" data-category="personal">
                 <h4 class="column-title">Personal Updates</h4>
-                <div class="visible-items">
+                <div class="news-items">
                     <div class="news-item">
                         <span class="date">March 2024</span>
                         <p>Started a new research project on deep learning applications in EEG signal processing.</p>
@@ -544,9 +542,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="hidden-items">
-                    <div class="news-item">
+                    <div class="news-item hidden">
                         <span class="date">December 2023</span>
                         <p>Started exploring new research directions in brain-computer interfaces.</p>
                         <div class="news-tag">Research</div>
@@ -557,7 +553,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></div>
+                <button class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></button>
             </div>
         </div>
         <div class="news-footer">
@@ -620,44 +616,35 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    .visible-items {
+    .news-items {
         margin-bottom: 1rem;
     }
 
-    .hidden-items {
+    .news-item.hidden {
         display: none;
-        margin-bottom: 1rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .hidden-items.visible {
-        display: block;
-        opacity: 1;
     }
 
     .expand-button {
-        background: var(--accent-color);
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: var(--accent-color);
         color: white;
         border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
+        border-radius: 5px;
         cursor: pointer;
-        font-size: 0.9em;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin: 1rem auto;
+        text-align: center;
         transition: all 0.3s ease;
-        width: fit-content;
     }
 
     .expand-button:hover {
-        background: var(--accent-color-dark);
+        background-color: var(--accent-color-dark);
         transform: translateY(-2px);
     }
 
     .expand-button i {
+        margin-left: 5px;
         transition: transform 0.3s ease;
     }
 
@@ -857,18 +844,17 @@ function sortHomeNewsByDate() {
 
 function toggleItems(button) {
     const column = button.closest('.news-column');
-    const hiddenItems = column.querySelector('.hidden-items');
+    const items = column.querySelectorAll('.news-item.hidden');
     const isExpanded = button.classList.contains('expanded');
     
-    if (isExpanded) {
-        hiddenItems.classList.remove('visible');
-        button.classList.remove('expanded');
-        button.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
-    } else {
-        hiddenItems.classList.add('visible');
-        button.classList.add('expanded');
-        button.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
-    }
+    items.forEach(item => {
+        item.style.display = isExpanded ? 'none' : 'block';
+    });
+    
+    button.classList.toggle('expanded');
+    button.innerHTML = isExpanded ? 
+        'Show More <i class="fas fa-chevron-down"></i>' : 
+        'Show Less <i class="fas fa-chevron-up"></i>';
 }
 
 // Call sort function when page loads

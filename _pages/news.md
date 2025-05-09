@@ -274,6 +274,42 @@ body .page-content {
     background: var(--accent-color);
     border-color: var(--accent-color);
 }
+
+.news-items {
+    margin-bottom: 1rem;
+}
+
+.news-item.hidden {
+    display: none;
+}
+
+.expand-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.expand-button:hover {
+    background-color: var(--accent-color-dark);
+    transform: translateY(-2px);
+}
+
+.expand-button i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.expand-button.expanded i {
+    transform: rotate(180deg);
+}
 </style>
 
 <div class="news-controls">
@@ -302,9 +338,9 @@ body .page-content {
     <div class="news-section">
         <h2 class="section-title">
             Website Updates
-            <span class="update-count">(2)</span>
+            <span class="update-count">(3)</span>
         </h2>
-        <div class="visible-items">
+        <div class="news-items">
             <div class="news-item" data-category="website">
                 <div class="news-date">March 2024</div>
                 <div class="news-content">
@@ -315,10 +351,6 @@ body .page-content {
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
                         Share
-                    </button>
-                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                        <i class="fas fa-download"></i>
-                        Download
                     </button>
                 </div>
             </div>
@@ -333,18 +365,9 @@ body .page-content {
                         <i class="fas fa-share-alt"></i>
                         Share
                     </button>
-                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
                 </div>
             </div>
-        </div>
-        <button class="expand-button" onclick="toggleSection(this)">
-            Show More <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="hidden-items">
-            <div class="news-item" data-category="website">
+            <div class="news-item hidden" data-category="website">
                 <div class="news-date">January 2024</div>
                 <div class="news-content">
                     Initial setup of the academic website structure and basic features.
@@ -355,21 +378,20 @@ body .page-content {
                         <i class="fas fa-share-alt"></i>
                         Share
                     </button>
-                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
                 </div>
             </div>
         </div>
+        <button class="expand-button" onclick="toggleSection(this)">
+            Show More <i class="fas fa-chevron-down"></i>
+        </button>
     </div>
 
     <div class="news-section">
         <h2 class="section-title">
             Personal Updates
-            <span class="update-count">(2)</span>
+            <span class="update-count">(3)</span>
         </h2>
-        <div class="visible-items">
+        <div class="news-items">
             <div class="news-item" data-category="personal">
                 <div class="news-date">March 2024</div>
                 <div class="news-content">
@@ -380,10 +402,6 @@ body .page-content {
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
                         Share
-                    </button>
-                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                        <i class="fas fa-download"></i>
-                        Download
                     </button>
                 </div>
             </div>
@@ -398,18 +416,9 @@ body .page-content {
                         <i class="fas fa-share-alt"></i>
                         Share
                     </button>
-                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
                 </div>
             </div>
-        </div>
-        <button class="expand-button" onclick="toggleSection(this)">
-            Show More <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="hidden-items">
-            <div class="news-item" data-category="personal">
+            <div class="news-item hidden" data-category="personal">
                 <div class="news-date">December 2023</div>
                 <div class="news-content">
                     Started exploring new research directions in brain-computer interfaces.
@@ -420,13 +429,12 @@ body .page-content {
                         <i class="fas fa-share-alt"></i>
                         Share
                     </button>
-                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
                 </div>
             </div>
         </div>
+        <button class="expand-button" onclick="toggleSection(this)">
+            Show More <i class="fas fa-chevron-down"></i>
+        </button>
     </div>
 </div>
 
@@ -603,18 +611,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function toggleSection(button) {
     const section = button.closest('.news-section');
-    const hiddenItems = section.querySelector('.hidden-items');
+    const items = section.querySelectorAll('.news-item.hidden');
     const isExpanded = button.classList.contains('expanded');
     
-    if (isExpanded) {
-        hiddenItems.classList.remove('visible');
-        button.classList.remove('expanded');
-        button.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
-    } else {
-        hiddenItems.classList.add('visible');
-        button.classList.add('expanded');
-        button.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
-    }
+    items.forEach(item => {
+        item.style.display = isExpanded ? 'none' : 'block';
+    });
+    
+    button.classList.toggle('expanded');
+    button.innerHTML = isExpanded ? 
+        'Show More <i class="fas fa-chevron-down"></i>' : 
+        'Show Less <i class="fas fa-chevron-up"></i>';
 }
 
 function shareNews(button) {
