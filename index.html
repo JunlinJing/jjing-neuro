@@ -5,32 +5,43 @@ title: Home
 <div class="home-content">
     <div class="news-section">
         <h3>News</h3>
-        <div class="news-items">
-            <div class="news-item">
-                <span class="date">March 2024</span>
-                <p><a href="{{ site.baseurl }}/blog/deep-learning-eeg">New blog post on "Deep Learning Applications in EEG Signal Processing"</a> is now available.</p>
-                <div class="news-tag">Blog</div>
+        <div class="news-grid">
+            <div class="news-column">
+                <h4 class="column-title">Website Updates</h4>
+                <div class="news-item">
+                    <span class="date">March 2024</span>
+                    <p>Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
+                    <div class="news-tag">Update</div>
+                </div>
+                <div class="news-item">
+                    <span class="date">February 2024</span>
+                    <p>Updated the website with new research focus areas and improved navigation.</p>
+                    <div class="news-tag">Update</div>
+                </div>
             </div>
-            <div class="news-item">
-                <span class="date">February 2024</span>
-                <p>Updated the website with new research focus areas and improved navigation.</p>
-                <div class="news-tag">Update</div>
-            </div>
-            <div class="news-item">
-                <span class="date">January 2024</span>
-                <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
-                <div class="news-tag">Blog</div>
+            <div class="news-column">
+                <h4 class="column-title">Personal Updates</h4>
+                <div class="news-item">
+                    <span class="date">March 2024</span>
+                    <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                    <div class="news-tag">Research</div>
+                </div>
+                <div class="news-item">
+                    <span class="date">January 2024</span>
+                    <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                    <div class="news-tag">Blog</div>
+                </div>
             </div>
         </div>
         <div class="news-footer">
-            <a href="{{ site.baseurl }}/blog" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
+            <a href="{{ site.baseurl }}/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </div>
 
 <style>
     .home-content {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
     }
@@ -44,31 +55,50 @@ title: Home
         transition: all 0.3s ease;
     }
 
-    .news-section:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
     .news-section h3 {
         color: var(--heading-color);
         margin-bottom: 25px;
         font-size: 1.8em;
+        text-align: center;
         border-bottom: 2px solid var(--border-color);
         padding-bottom: 10px;
     }
 
-    .news-items {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .news-column {
+        background: var(--bg-color-secondary);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .column-title {
+        color: var(--heading-color);
+        font-size: 1.4em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--accent-color);
+        text-align: center;
     }
 
     .news-item {
-        padding: 20px;
+        padding: 15px;
+        margin-bottom: 15px;
         border-left: 3px solid var(--accent-color);
-        background: var(--bg-color-secondary);
+        background: var(--bg-color);
         border-radius: 8px;
         position: relative;
         transition: all 0.3s ease;
+    }
+
+    .news-item:last-child {
+        margin-bottom: 0;
     }
 
     .news-item:hover {
@@ -87,22 +117,13 @@ title: Home
         color: var(--text-color);
         line-height: 1.6;
         margin: 0;
-    }
-
-    .news-item a {
-        color: var(--link-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .news-item a:hover {
-        color: var(--link-hover-color);
+        font-size: 0.95em;
     }
 
     .news-tag {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 15px;
+        right: 15px;
         padding: 4px 8px;
         background: var(--accent-color);
         color: white;
@@ -134,21 +155,21 @@ title: Home
         transform: translateY(-2px);
     }
 
-    .view-more-btn i {
-        font-size: 0.9em;
-    }
-
     @media (max-width: 768px) {
         .home-content {
             padding: 20px;
         }
 
-        .news-section {
-            padding: 20px;
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .news-column {
+            padding: 15px;
         }
 
         .news-item {
-            padding: 15px;
+            padding: 12px;
         }
 
         .news-tag {
@@ -162,8 +183,12 @@ title: Home
         background: var(--bg-color-dark);
     }
 
-    [data-theme="dark"] .news-item {
+    [data-theme="dark"] .news-column {
         background: var(--bg-color-darker);
+    }
+
+    [data-theme="dark"] .news-item {
+        background: var(--bg-color-dark);
     }
 
     [data-theme="dark"] .view-more-btn {
