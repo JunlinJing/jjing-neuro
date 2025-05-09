@@ -232,7 +232,6 @@ body .page-content {
             <option value="all">All Categories</option>
             <option value="website">Website Updates</option>
             <option value="personal">Personal Updates</option>
-            <option value="research">Research Progress</option>
             <option value="publication">Published Papers</option>
             <option value="conference">Academic Conferences</option>
             <option value="award">Awards & Honors</option>
@@ -301,30 +300,6 @@ body .page-content {
         </button>
         <div class="hidden-items">
             <!-- More news items -->
-        </div>
-    </div>
-    
-    <div class="news-section">
-        <h2 class="section-title">
-            Research Progress
-            <span class="update-count">(3)</span>
-        </h2>
-        <div class="news-item" data-category="research">
-            <div class="news-date">March 2024</div>
-            <div class="news-content">
-                Started working on a new research project focusing on deep learning applications in EEG signal processing.
-            </div>
-            <div class="news-tag">Research</div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share">
-                    <i class="fas fa-share-alt"></i>
-                    Share
-                </button>
-                <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                    <i class="fas fa-download"></i>
-                    Download
-                </button>
-            </div>
         </div>
     </div>
 </div>
