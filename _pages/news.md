@@ -5,22 +5,23 @@ permalink: /news/
 ---
 
 <style>
-.news-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px;
+.page-content .news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 -1rem;
 }
 
-.news-cell {
-    width: 50%;
-    padding: 20px;
-    vertical-align: top;
+.page-content .news-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 1.5rem;
     background: #f8fafc;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.news-title {
+.page-content .news-column-title {
     font-size: 1.8rem;
     color: #1a365d;
     margin-bottom: 1.5rem;
@@ -29,7 +30,7 @@ permalink: /news/
     text-align: center;
 }
 
-.news-item {
+.page-content .news-item {
     margin-bottom: 1.5rem;
     padding: 1.5rem;
     background: white;
@@ -38,7 +39,7 @@ permalink: /news/
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.news-date {
+.page-content .news-date {
     font-size: 1.2rem;
     color: #2c5282;
     font-weight: 600;
@@ -47,60 +48,53 @@ permalink: /news/
     border-bottom: 1px solid #e2e8f0;
 }
 
-.news-content {
+.page-content .news-content {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #2d3748;
 }
 
 @media (max-width: 768px) {
-    .news-table {
-        display: block;
+    .page-content .news-column {
+        flex: 100%;
     }
     
-    .news-cell {
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .news-title {
+    .page-content .news-column-title {
         font-size: 1.5rem;
     }
     
-    .news-item {
+    .page-content .news-item {
         padding: 1rem;
     }
     
-    .news-date {
+    .page-content .news-date {
         font-size: 1.1rem;
     }
     
-    .news-content {
+    .page-content .news-content {
         font-size: 1rem;
     }
 }
 </style>
 
-<table class="news-table">
-    <tr>
-        <td class="news-cell">
-            <h2 class="news-title">Website Updates</h2>
-            <div class="news-item">
-                <div class="news-date">March 2024</div>
-                <div class="news-content">
-                    Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis. The website showcases my academic background, research experience, and technical expertise.
-                </div>
+<div class="news-wrapper">
+    <div class="news-column">
+        <h2 class="news-column-title">Website Updates</h2>
+        <div class="news-item">
+            <div class="news-date">March 2024</div>
+            <div class="news-content">
+                Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis. The website showcases my academic background, research experience, and technical expertise.
             </div>
-        </td>
-        <td class="news-cell">
-            <h2 class="news-title">Personal Updates</h2>
-            <div class="news-item">
-                <div class="news-date">March 2024</div>
-                <div class="news-content">
-                    Started working on a new research project focusing on deep learning applications in EEG signal processing, exploring novel approaches for brain signal analysis and interpretation.
-                </div>
+        </div>
+    </div>
+    
+    <div class="news-column">
+        <h2 class="news-column-title">Personal Updates</h2>
+        <div class="news-item">
+            <div class="news-date">March 2024</div>
+            <div class="news-content">
+                Started working on a new research project focusing on deep learning applications in EEG signal processing, exploring novel approaches for brain signal analysis and interpretation.
             </div>
-        </td>
-    </tr>
-</table> 
+        </div>
+    </div>
+</div> 
