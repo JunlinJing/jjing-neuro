@@ -4,74 +4,52 @@ title: About
 permalink: /about/
 ---
 
+# About Me
+
+I am a neuroscience researcher focusing on brain functional network analysis and neuroimaging. Currently pursuing my Ph.D. in Functional Neuroimaging at Ludwig Maximilian University of Munich, I combine computational methods with neuroimaging techniques to understand brain connectivity patterns and their alterations in various conditions.
+
 ## Contact Information
-- **Phone**: (+49)1744834588
-- **Email**: Junlin.Jing@med.uni-muenchen.de
-- **Location**: Munich, Germany
+
+- **Tel:** (+49)1744834588
+- **Email:** Junlin.Jing@med.uni-muenchen.de
+- **Location:** Munich, Germany
 
 ## Education
 
-### Ph.D. in Functional Neuroimaging
-*Ludwig Maximilian University of Munich, Munich, Germany*  
-Supervised by Prof. Sophia Stöcklein  
-October 2024 - Present
+- **Ph.D. in Functional Neuroimaging** (10/2024-Present)  
+  Ludwig Maximilian University of Munich, Munich, Germany
+  - Supervised by Prof. Sophia Stöcklein
 
-### M.S. in Biomedical Engineering
-*University of Electronic Science and Technology of China, Chengdu, Sichuan*  
-Supervised by Prof. Bharat Biswal  
-September 2021 - July 2024
+- **M.S. in Biomedical Engineering** (09/2021-07/2024)  
+  University of Electronic Science and Technology of China, Chengdu, Sichuan
+  - Supervised by Prof. Bharat Biswal
 
-### Graduate Entrance Examination Preparation, Biomedical Engineering
-*University of Electronic Science and Technology of China, Chengdu, Sichuan*  
-September 2020 - July 2021
+- **Graduate Entrance Examination Preparation, Biomedical Engineering** (09/2020-07/2021)  
+  University of Electronic Science and Technology of China, Chengdu, Sichuan
 
-### B.S. in Electronic Information Science and Technology
-*Southwest Petroleum University, Chengdu, Sichuan*  
-September 2016 - July 2020
+- **B.S. in Electronic Information Science and Technology** (09/2016-07/2020)  
+  Southwest Petroleum University, Chengdu, Sichuan
 
-### High School, Science Track
-*South No.2 Middle School, Nanchong, Sichuan*  
-September 2013 - July 2016
-
-## Publications
-
-1. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2023). Comparative Analysis of Group Information-Guided Independent Component Analysis (GIG-ICA) and Independent Vector Analysis (IVA-GL) for Assessing Brain functional Network Characteristics in Autism Spectrum Disorder (ASD). *Frontiers in Neuroscience*
-
-2. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2024). Exploring Variability in Spatial and Temporal Properties of Brain Functional Networks: A Comparative Analysis of Data-Driven Methods Using Resting-State fMRI Data. *Preprint*
-
-3. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2024). Functional and Structural Connectivity Alterations in Striatal Subregions of Cocaine Use Disorder. *Under Writing*
-
-4. Agoalikum, E., Klugah-Brown, B., Wu, H., **Jing, J.**, & Biswal, B. B. (2023). Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder. *Brain Connectivity*
-
-5. Agoalikum, E., Klugah-Brown, B., Wu, H., Hu, P., **Jing, J.**, & Biswal, B. B. (2023). Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain. *Frontiers in Human Neuroscience*
-
-6. Niu, B., Wu, H., Li, Y., Klugah-Brown, B., Hanna, G., Yao, Y., **Jing, J.**, Baig, T. I., Xia, Y., Yao, D., & Biswal, B. B. (2024). Topological functional network analysis of cortical blood flow in hyperacute ischemic rats. *Brain Structure and Function*
-
-## Conference Presentations
-
-1. K-B. Benjamin, **J. Jing**, et al. Network-Based Analysis of Resting-State reveals Insights into Cocaine Addiction, Predicting Onset, And Identifying Key Regions. *Resting State Brain Connectivity, 2023, Poster*
-
-## Additional Experience
-
-### Datawhale (Open Source AI Learning Community), AI Summer Camp
-*July 2023 - October 2023*
-- Brain PET Image Analysis and Disease Prediction Challenge (Completed tutorials, group project)
-- Biological age assessment and age-related disease risk prediction (Completed tutorials, group project)
-- "Spark Cup" Cognitive Large Model Scene Innovation Competition (Completed design debugging: psychiatric diagnosis and treatment (ChatPSY), Excellent Work Award)
-
-### COSN (Chinese Open Science Network), membership in OpenTransfer group
-*September 2023 - Present*
-- Developing automated translation tools (Group project)
+- **H.S., Science Track** (09/2013-07/2016)  
+  South No.2 Middle School, Nanchong, Sichuan
 
 ## Technical Skills
 
-### Programming
-Python (including PyTorch, Sklearn, Pandas, etc.), MATLAB (including DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
+- **Programming:** Python (including PyTorch, Sklearn, Pandas, etc.), MATLAB (including DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
+- **MRI Experience:** Amblyopia Children and Internet Gaming Disorder participants (more than 20 times)
 
-### MRI Scan Experience
-Amblyopia Children and Internet Gaming Disorder participants (more than 20 times)
+## Additional Experience
+
+- **Datawhale (Open Source AI Learning Community), AI Summer Camp** (07/2023-10/2023)
+  - Brain PET Image Analysis and Disease Prediction Challenge (Completed tutorials, group project)
+  - Biological age assessment and age-related disease risk prediction (Completed tutorials, group project)
+  - "Spark Cup" Cognitive Large Model Scene Innovation Competition (Completed design debugging: psychiatric diagnosis and treatment (ChatPSY), Excellent Work Award)
+
+- **COSN (Chinese Open Science Network), membership in OpenTransfer group** (09/2023-Present)
+  - Developing automated translation tools (Group project)
 
 ## Awards
+
 - University Academic Scholarship, University of Electronic Science and Technology (2022 & 2023)
 - Research Paper Scholarship, Brain Connectivity Lab (2023)
 
