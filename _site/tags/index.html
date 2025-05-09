@@ -53,8 +53,9 @@
     <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
+    <div class="wrapper">
+        <header>
+            <nav class="nav">
     <div class="nav-container">
         <ul class="nav-list">
             
@@ -213,10 +214,10 @@
     }
 </style>
 
-    
-    <!-- Main Content -->
-    <main class="content">
-        <div class="tags-page">
+        </header>
+        
+        <main>
+            <div class="tags-page">
     <h1 class="page-title">Tag Cloud</h1>
     
     <div class="tag-cloud">
@@ -1033,10 +1034,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script> 
-    </main>
-    
-    <!-- Footer -->
-    <!-- Site Footer -->
+        </main>
+        
+        <!-- Site Footer -->
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-center">
@@ -1102,6 +1102,39 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </style>
 
+    </div>
+
+    <style>
+        .header-content {
+            text-align: center;
+            margin-bottom: 2em;
+            padding: 2em 1em;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5em;
+            color: var(--heading-color);
+            margin-bottom: 0.5em;
+        }
+        
+        .bio {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin: 1em 0;
+            line-height: 1.6;
+        }
+        
+        .motto {
+            font-size: 1.1em;
+            color: var(--meta-color);
+            margin: 1.5em 0;
+            font-style: italic;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
     <!-- Theme Switching -->
     <script>

@@ -53,8 +53,9 @@
     <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
+    <div class="wrapper">
+        <header>
+            <nav class="nav">
     <div class="nav-container">
         <ul class="nav-list">
             
@@ -206,252 +207,10 @@
     }
 </style>
 
-    
-    <!-- Main Content -->
-    <main class="content">
+        </header>
         
-
-
-    <header class="header-home animated">
-        <div class="header-wrapper">
+        <main>
             
-                <a class="profile-link" href="/jjing-neuro/about">
-                    <div class="profile-container">
-                        <img class="profile-image" alt="Jim Jing" src="/jjing-neuro/assets/images/self_picture.jpg" />
-                        <div class="profile-overlay"></div>
-                    </div>
-                </a>
-            
-
-            <div class="header-text">
-                <h1 class="name">Jim Jing</h1>
-                <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition</h2>
-
-                <div class="social-links-wrapper">
-                    <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
-
-<div class="social-links">
-    
-
-    
-        <a class="link" data-title="twitter.com/JimJing1997" href="https://twitter.com/JimJing1997" target="_blank" rel="noopener">
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-    
-
-    
-
-    
-        <a class="link" data-title="linkedin.com/in/jjunlin" href="https://www.linkedin.com/in/jjunlin" target="_blank"  rel="noopener">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-    
-
-    
-        <a class="link" data-title="GitHub Profile" href="https://github.com/JunlinJing" target="_blank" rel="noopener">
-            <i class="fa-brands fa-github"></i>
-        </a>
-    
-
-    
-        <a class="link" data-title="jjunlin197@163.com" href="mailto:jjunlin197@163.com"  rel="noopener">
-            <i class="fa-regular fa-envelope"></i>
-        </a>
-    
-</div>
-
-                </div>
-
-                <div class="academic-links">
-                    
-                    <a href="https://scholar.google.com/citations?user=XXXXX" target="_blank" class="academic-link">
-                        <i class="ai ai-google-scholar"></i> Google Scholar
-                    </a>
-                    
-                    
-                    
-                    <a href="https://www.researchgate.net/profile/Junlin-Jing" target="_blank" class="academic-link">
-                        <i class="ai ai-researchgate"></i> ResearchGate
-                    </a>
-                    
-                    
-                    
-                    <a href="https://orcid.org/0009-0006-1290-7445" target="_blank" class="academic-link">
-                        <i class="ai ai-orcid"></i> ORCID
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <style>
-        .header-home {
-            padding: 60px 30px;
-            margin: 0 auto;
-            max-width: 1200px;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 100%);
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-        .header-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .profile-container {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .profile-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(43, 88, 118, 0.3), rgba(78, 67, 118, 0.3));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .profile-container:hover .profile-image {
-            transform: scale(1.1);
-        }
-
-        .profile-container:hover .profile-overlay {
-            opacity: 1;
-        }
-
-        .header-text {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .name {
-            font-size: 3.2em;
-            font-weight: 700;
-            margin: 0;
-            background: linear-gradient(120deg, #2b5876, #4e4376);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.3em;
-            letter-spacing: -0.02em;
-        }
-
-        .tagline {
-            font-size: 1.6em;
-            font-weight: 400;
-            color: #666;
-            margin: 0.5em 0;
-            line-height: 1.6;
-            letter-spacing: 0.02em;
-        }
-
-        .social-links-wrapper {
-            margin: 2em 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5em;
-            flex-wrap: wrap;
-        }
-
-        .social-links-wrapper a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: #666;
-            font-size: 1.3em;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .social-links-wrapper a:hover {
-            background: linear-gradient(120deg, #2b5876, #4e4376);
-            color: white;
-            transform: translateY(-5px) scale(1.1);
-        }
-
-        .academic-links {
-            margin-top: 2em;
-            display: flex;
-            gap: 2em;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .academic-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.8em 1.5em;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #666;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .academic-link i {
-            margin-right: 0.8em;
-            font-size: 1.2em;
-        }
-
-        .academic-link:hover {
-            background: linear-gradient(120deg, #2b5876, #4e4376);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .header-home {
-                padding: 30px 15px;
-                border-radius: 20px;
-            }
-
-            .name {
-                font-size: 2.5em;
-            }
-
-            .tagline {
-                font-size: 1.3em;
-            }
-
-            .academic-links {
-                gap: 1em;
-            }
-
-            .academic-link {
-                padding: 0.6em 1.2em;
-                font-size: 0.9em;
-            }
-        }
-    </style>
-
-
 
 <div class="page-content">
     <h1 id="research">Research</h1>
@@ -598,10 +357,9 @@ a:hover {
 }
 </style>
 
-    </main>
-    
-    <!-- Footer -->
-    <!-- Site Footer -->
+        </main>
+        
+        <!-- Site Footer -->
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-center">
@@ -667,6 +425,39 @@ a:hover {
 }
 </style>
 
+    </div>
+
+    <style>
+        .header-content {
+            text-align: center;
+            margin-bottom: 2em;
+            padding: 2em 1em;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5em;
+            color: var(--heading-color);
+            margin-bottom: 0.5em;
+        }
+        
+        .bio {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin: 1em 0;
+            line-height: 1.6;
+        }
+        
+        .motto {
+            font-size: 1.1em;
+            color: var(--meta-color);
+            margin: 1.5em 0;
+            font-style: italic;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
     <!-- Theme Switching -->
     <script>

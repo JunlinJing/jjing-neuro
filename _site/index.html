@@ -53,8 +53,9 @@
     <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav-home">
+    <div class="wrapper">
+        <header>
+            <nav class="nav-home">
     <div class="nav-container">
         <ul class="nav-list">
             
@@ -206,10 +207,11 @@
     }
 </style>
 
-    
-    <!-- Main Content -->
-    <main class="content">
+        </header>
         
+        <main>
+            
+    
 
 
     <header class="header-home animated">
@@ -225,7 +227,8 @@
 
             <div class="header-text">
                 <h1 class="name">Jim Jing</h1>
-                <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition</h2>
+                <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Amateur Programmer | Science Writer</h2>
+                <p class="motto">Standing on the bridge between AI and neuroscience, gazing into the mysteries of the brain</p>
 
                 <div class="social-links-wrapper">
                     <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
@@ -364,6 +367,18 @@
             letter-spacing: 0.02em;
         }
 
+        .motto {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #888;
+            margin: 1em 0;
+            line-height: 1.8;
+            font-style: italic;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .social-links-wrapper {
             margin: 2em 0;
             display: flex;
@@ -453,36 +468,125 @@
 
 
 
+
 <div class="page-content">
     <div class="home-content">
     <div class="news-section">
-        <h3>News</h3>
-        <div class="news-items">
-            <div class="news-item">
-                <span class="date">March 2024</span>
-                <p><a href="/jjing-neuro/blog/deep-learning-eeg">New blog post on "Deep Learning Applications in EEG Signal Processing"</a> is now available.</p>
-                <div class="news-tag">Blog</div>
+        <h3>Latest News</h3>
+        <div class="news-controls-simple">
+            <select id="homeNewsFilter" onchange="filterHomeNews()">
+                <option value="all">All Categories</option>
+                <option value="website">Website Updates</option>
+                <option value="personal">Personal Updates</option>
+            </select>
+        </div>
+        <div class="news-grid">
+            <div class="news-column" data-category="website">
+                <h4 class="column-title">Website Updates</h4>
+                <div class="visible-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
+                        <div class="news-tag">Update</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">February 2024</span>
+                        <p>Updated website with new research focus areas and improved navigation.</p>
+                        <div class="news-tag">Update</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Research</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">January 2024</span>
+                        <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                        <div class="news-tag">Blog</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></div>
             </div>
-            <div class="news-item">
-                <span class="date">February 2024</span>
-                <p>Updated the website with new research focus areas and improved navigation.</p>
-                <div class="news-tag">Update</div>
-            </div>
-            <div class="news-item">
-                <span class="date">January 2024</span>
-                <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
-                <div class="news-tag">Blog</div>
+            <div class="news-column" data-category="personal">
+                <h4 class="column-title">Personal Updates</h4>
+                <div class="visible-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Research</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">January 2024</span>
+                        <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                        <div class="news-tag">Blog</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Research</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">January 2024</span>
+                        <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                        <div class="news-tag">Blog</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></div>
             </div>
         </div>
         <div class="news-footer">
-            <a href="/jjing-neuro/blog" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
+            <a href="/jjing-neuro/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </div>
 
 <style>
     .home-content {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
     }
@@ -496,31 +600,110 @@
         transition: all 0.3s ease;
     }
 
-    .news-section:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
     .news-section h3 {
         color: var(--heading-color);
         margin-bottom: 25px;
         font-size: 1.8em;
+        text-align: center;
         border-bottom: 2px solid var(--border-color);
         padding-bottom: 10px;
     }
 
-    .news-items {
+    .news-controls-simple {
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    .news-controls-simple select {
+        padding: 8px 15px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-size: 0.9em;
+        cursor: pointer;
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .news-column {
+        background: var(--bg-color-secondary);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .visible-items {
+        margin-bottom: 1rem;
+    }
+
+    .hidden-items {
+        display: none;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .hidden-items.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .expand-button {
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9em;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem auto;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+
+    .expand-button:hover {
+        background: var(--accent-color-dark);
+        transform: translateY(-2px);
+    }
+
+    .expand-button i {
+        transition: transform 0.3s ease;
+    }
+
+    .expand-button.expanded i {
+        transform: rotate(180deg);
+    }
+
+    .column-title {
+        color: var(--heading-color);
+        font-size: 1.4em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--accent-color);
+        text-align: center;
     }
 
     .news-item {
-        padding: 20px;
+        padding: 15px;
+        margin-bottom: 15px;
         border-left: 3px solid var(--accent-color);
-        background: var(--bg-color-secondary);
+        background: var(--bg-color);
         border-radius: 8px;
         position: relative;
         transition: all 0.3s ease;
+    }
+
+    .news-item:last-child {
+        margin-bottom: 0;
     }
 
     .news-item:hover {
@@ -539,28 +722,40 @@
         color: var(--text-color);
         line-height: 1.6;
         margin: 0;
-    }
-
-    .news-item a {
-        color: var(--link-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .news-item a:hover {
-        color: var(--link-hover-color);
+        font-size: 0.95em;
     }
 
     .news-tag {
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        display: inline-block;
         padding: 4px 8px;
         background: var(--accent-color);
         color: white;
         border-radius: 4px;
         font-size: 0.8em;
         font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .news-tools {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .tool-button {
+        background: transparent;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .tool-button:hover {
+        background: var(--accent-color);
+        color: white;
     }
 
     .news-footer {
@@ -586,27 +781,21 @@
         transform: translateY(-2px);
     }
 
-    .view-more-btn i {
-        font-size: 0.9em;
-    }
-
     @media (max-width: 768px) {
         .home-content {
             padding: 20px;
         }
 
-        .news-section {
-            padding: 20px;
+        .news-grid {
+            grid-template-columns: 1fr;
         }
 
-        .news-item {
+        .news-column {
             padding: 15px;
         }
 
-        .news-tag {
-            position: static;
-            display: inline-block;
-            margin-top: 10px;
+        .news-item {
+            padding: 12px;
         }
     }
 
@@ -614,8 +803,12 @@
         background: var(--bg-color-dark);
     }
 
-    [data-theme="dark"] .news-item {
+    [data-theme="dark"] .news-column {
         background: var(--bg-color-darker);
+    }
+
+    [data-theme="dark"] .news-item {
+        background: var(--bg-color-dark);
     }
 
     [data-theme="dark"] .view-more-btn {
@@ -627,6 +820,101 @@
     }
 </style>
 
+<script>
+function filterHomeNews() {
+    const filter = document.getElementById('homeNewsFilter').value;
+    const columns = document.querySelectorAll('.news-column');
+    
+    columns.forEach(column => {
+        if (filter === 'all' || column.dataset.category === filter) {
+            column.style.display = 'block';
+        } else {
+            column.style.display = 'none';
+        }
+    });
+}
+
+function sortHomeNewsByDate() {
+    const columns = document.querySelectorAll('.news-column');
+    
+    columns.forEach(column => {
+        const visibleItems = Array.from(column.querySelector('.visible-items').querySelectorAll('.news-item'));
+        const hiddenItems = Array.from(column.querySelector('.hidden-items').querySelectorAll('.news-item'));
+        const allItems = [...visibleItems, ...hiddenItems];
+        
+        allItems.sort((a, b) => {
+            const dateA = new Date(a.querySelector('.date').textContent);
+            const dateB = new Date(b.querySelector('.date').textContent);
+            return dateB - dateA;
+        });
+        
+        // Show first 2 items in visible section
+        const visibleContainer = column.querySelector('.visible-items');
+        const hiddenContainer = column.querySelector('.hidden-items');
+        
+        visibleContainer.innerHTML = '';
+        hiddenContainer.innerHTML = '';
+        
+        allItems.forEach((item, index) => {
+            if (index < 2) {
+                visibleContainer.appendChild(item);
+            } else {
+                hiddenContainer.appendChild(item);
+            }
+        });
+        
+        // Hide "Show More" button if no hidden items
+        const expandButton = column.querySelector('.expand-button');
+        if (hiddenContainer.children.length === 0) {
+            expandButton.style.display = 'none';
+        } else {
+            expandButton.style.display = 'flex';
+        }
+    });
+}
+
+function toggleItems(button) {
+    const column = button.closest('.news-column');
+    const hiddenItems = column.querySelector('.hidden-items');
+    const isExpanded = button.classList.contains('expanded');
+    
+    if (isExpanded) {
+        hiddenItems.classList.remove('visible');
+        button.classList.remove('expanded');
+        button.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
+    } else {
+        hiddenItems.classList.add('visible');
+        button.classList.add('expanded');
+        button.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
+    }
+}
+
+// Call sort function when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    sortHomeNewsByDate();
+});
+
+function shareNews(button) {
+    const newsItem = button.closest('.news-item');
+    const newsText = newsItem.querySelector('p').textContent;
+    const newsDate = newsItem.querySelector('.date').textContent;
+    
+    if (navigator.share) {
+        navigator.share({
+            title: 'Academic Website News',
+            text: `${newsDate}: ${newsText}`,
+            url: window.location.href
+        }).catch(console.error);
+    } else {
+        // Fallback for browsers that don't support native sharing
+        const textToCopy = `${newsDate}: ${newsText}\n${window.location.href}`;
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => alert('Copied to clipboard'))
+            .catch(console.error);
+    }
+}
+</script>
+
 </div>
 
 <style>
@@ -637,10 +925,9 @@
 }
 </style>
 
-    </main>
-    
-    <!-- Footer -->
-    <!-- Site Footer -->
+        </main>
+        
+        <!-- Site Footer -->
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-center">
@@ -706,6 +993,39 @@
 }
 </style>
 
+    </div>
+
+    <style>
+        .header-content {
+            text-align: center;
+            margin-bottom: 2em;
+            padding: 2em 1em;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5em;
+            color: var(--heading-color);
+            margin-bottom: 0.5em;
+        }
+        
+        .bio {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin: 1em 0;
+            line-height: 1.6;
+        }
+        
+        .motto {
+            font-size: 1.1em;
+            color: var(--meta-color);
+            margin: 1.5em 0;
+            font-style: italic;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
     <!-- Theme Switching -->
     <script>
