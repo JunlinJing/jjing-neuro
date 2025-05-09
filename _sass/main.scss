@@ -1,5 +1,6 @@
 // Base styles
 @import "base/variables";
+@import "base/base";
 @import "base/normalize";
 @import "base/syntax";
 @import "base/general";
@@ -24,6 +25,13 @@
 @import "pages/publications";
 @import "pages/projects";
 @import "pages/blog";
+@import "pages/home-blog-projects";
+@import "pages/page";
+@import "pages/tags";
+@import "pages/news";
 
 // Dark mode
 @import "components/dark-mode";
+
+// Additional imports
+@import "components/disqus";
