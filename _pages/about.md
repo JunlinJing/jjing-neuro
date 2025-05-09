@@ -83,10 +83,20 @@ My previous research focused on machine learning and the application of ICA-deri
 
 
 <style>
+body {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #2c3e50;
+}
+
 h1, h2 {
     color: #2c3e50;
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: left;
+    font-weight: 600;
 }
 
 h2 {
@@ -96,14 +106,28 @@ h2 {
 
 ul {
     padding-left: 20px;
+    text-align: justify;
 }
 
 li {
     margin-bottom: 10px;
-    line-height: 1.6;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 1.5em;
 }
 
 strong {
     color: #34495e;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 </style>
