@@ -64,6 +64,13 @@
                     </li>
                 {% endif %}
             {% endif %}
+
+            <li class="nav-item">
+                <button id="dark-mode-toggle" class="nav-link dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <span>Theme</span>
+                </button>
+            </li>
         </ul>
     </div>
 </nav>
@@ -93,11 +100,15 @@
         display: flex;
         align-items: center;
         padding: 10px 20px;
-        color: #666;
+        color: var(--nav-text);
         text-decoration: none;
         border-radius: 20px;
         transition: all 0.3s ease;
         background: rgba(255, 255, 255, 0.05);
+        border: none;
+        cursor: pointer;
+        font-size: inherit;
+        font-family: inherit;
     }
 
     .nav-link i {
@@ -113,6 +124,11 @@
         background: #4e4376;
         color: white;
         transform: translateY(-2px);
+    }
+
+    .dark-mode-toggle {
+        background: transparent;
+        border: 1px solid var(--border-color);
     }
 
     @media (max-width: 768px) {
