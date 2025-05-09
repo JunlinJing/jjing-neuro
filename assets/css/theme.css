@@ -40,7 +40,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 9999;
     width: 40px;
     height: 40px;
     padding: 0;
@@ -54,11 +54,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.9;
 }
 
 .dark-mode-toggle:hover {
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 1;
 }
 
 .dark-mode-toggle i {
