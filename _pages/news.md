@@ -254,54 +254,62 @@ body .page-content {
     background: var(--bg-color-darker) !important;
 }
 
+/* Pagination Styles */
 .pagination {
     display: flex !important;
     justify-content: center !important;
+    align-items: center !important;
     gap: 0.5rem !important;
     margin: 2rem 0 !important;
-    flex-wrap: wrap !important;
+    padding: 1rem !important;
 }
 
 .pagination-button {
     padding: 0.5rem 1rem !important;
     border: 1px solid var(--border-color) !important;
+    border-radius: 4px !important;
     background: var(--bg-color) !important;
     color: var(--text-color) !important;
-    border-radius: 4px !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
+    font-size: 0.9rem !important;
+    min-width: 40px !important;
     display: flex !important;
     align-items: center !important;
-    gap: 0.5rem !important;
+    justify-content: center !important;
 }
 
 .pagination-button:hover:not(:disabled) {
     background: var(--accent-color) !important;
     color: white !important;
     border-color: var(--accent-color) !important;
+    transform: translateY(-1px) !important;
 }
 
 .pagination-button.active {
     background: var(--accent-color) !important;
     color: white !important;
     border-color: var(--accent-color) !important;
+    font-weight: bold !important;
 }
 
 .pagination-button:disabled {
     opacity: 0.5 !important;
     cursor: not-allowed !important;
+    background: var(--bg-color-secondary) !important;
 }
 
 /* Dark theme support */
 [data-theme="dark"] .pagination-button {
-    background: var(--bg-color-dark);
-    border-color: var(--border-color-dark);
+    background: var(--bg-color-dark) !important;
+    border-color: var(--border-color-dark) !important;
 }
 
 [data-theme="dark"] .pagination-button:hover:not(:disabled),
 [data-theme="dark"] .pagination-button.active {
-    background: var(--accent-color);
-    border-color: var(--accent-color);
+    background: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: white !important;
 }
 
 .news-items {
@@ -570,7 +578,6 @@ function filterNews() {
         }
     });
     
-    // Reset pagination after filtering
     currentPage = 1;
     updatePagination(visibleCount);
     applyPagination();
@@ -602,7 +609,6 @@ function sortNews() {
         items.forEach(item => container.appendChild(item));
     });
     
-    // Reset pagination after sorting
     currentPage = 1;
     const visibleItems = document.querySelectorAll('.news-item[style*="display: block"]').length;
     updatePagination(visibleItems);
@@ -629,7 +635,6 @@ function searchNews() {
         }
     });
     
-    // Reset pagination after search
     currentPage = 1;
     updatePagination(visibleCount);
     applyPagination();
@@ -637,16 +642,15 @@ function searchNews() {
 
 function updatePagination(totalItems) {
     const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-    const paginationContainer = document.querySelector('.pagination');
+    let paginationContainer = document.querySelector('.pagination');
     
     if (!paginationContainer) {
-        const container = document.createElement('div');
-        container.className = 'pagination';
-        document.querySelector('.news-grid').after(container);
+        paginationContainer = document.createElement('div');
+        paginationContainer.className = 'pagination';
+        document.querySelector('.news-grid').after(paginationContainer);
     }
     
-    const pagination = document.querySelector('.pagination');
-    pagination.innerHTML = '';
+    paginationContainer.innerHTML = '';
     
     if (totalPages > 1) {
         // Previous button
@@ -655,7 +659,7 @@ function updatePagination(totalItems) {
         prevButton.className = 'pagination-button';
         prevButton.onclick = () => changePage(currentPage - 1, totalPages);
         prevButton.disabled = currentPage === 1;
-        pagination.appendChild(prevButton);
+        paginationContainer.appendChild(prevButton);
         
         // Page numbers
         for (let i = 1; i <= totalPages; i++) {
@@ -663,7 +667,7 @@ function updatePagination(totalItems) {
             pageButton.textContent = i;
             pageButton.className = `pagination-button ${i === currentPage ? 'active' : ''}`;
             pageButton.onclick = () => changePage(i, totalPages);
-            pagination.appendChild(pageButton);
+            paginationContainer.appendChild(pageButton);
         }
         
         // Next button
@@ -672,7 +676,7 @@ function updatePagination(totalItems) {
         nextButton.className = 'pagination-button';
         nextButton.onclick = () => changePage(currentPage + 1, totalPages);
         nextButton.disabled = currentPage === totalPages;
-        pagination.appendChild(nextButton);
+        paginationContainer.appendChild(nextButton);
     }
 }
 
@@ -682,36 +686,56 @@ function changePage(newPage, totalPages) {
         applyPagination();
         
         // Update pagination buttons
-        document.querySelectorAll('.pagination-button').forEach(button => {
-            if (button.textContent === String(currentPage)) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
-        });
+        const paginationContainer = document.querySelector('.pagination');
+        if (paginationContainer) {
+            const buttons = paginationContainer.querySelectorAll('.pagination-button');
+            buttons.forEach(button => {
+                const pageNum = parseInt(button.textContent);
+                if (!isNaN(pageNum)) {
+                    if (pageNum === currentPage) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                }
+            });
+
+            // Update Previous/Next buttons
+            const prevButton = paginationContainer.querySelector('.pagination-button:first-child');
+            const nextButton = paginationContainer.querySelector('.pagination-button:last-child');
+            
+            if (prevButton) prevButton.disabled = currentPage === 1;
+            if (nextButton) nextButton.disabled = currentPage === totalPages;
+        }
         
-        // Update Previous/Next buttons
-        const [prevButton, ...pageButtons] = document.querySelectorAll('.pagination-button');
-        const nextButton = pageButtons[pageButtons.length - 1];
-        
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages;
-        
-        // Scroll to top of news section
-        document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth' });
+        // Scroll to top of news section smoothly
+        document.querySelector('.news-grid').scrollIntoView({ behavior: 'smooth' });
     }
 }
 
 function applyPagination() {
-    const visibleItems = Array.from(document.querySelectorAll('.news-item[style*="display: block"]'));
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const sections = document.querySelectorAll('.news-section');
     
-    visibleItems.forEach((item, index) => {
-        if (index >= startIndex && index < endIndex) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
+    sections.forEach(section => {
+        const visibleItems = Array.from(section.querySelectorAll('.news-item'));
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+        
+        visibleItems.forEach((item, index) => {
+            if (index >= startIndex && index < endIndex) {
+                item.style.display = 'block';
+                item.classList.remove('hidden');
+            } else {
+                item.style.display = 'none';
+                item.classList.add('hidden');
+            }
+        });
+
+        // Update section count
+        const totalVisible = visibleItems.length;
+        const countSpan = section.querySelector('.update-count');
+        if (countSpan) {
+            countSpan.textContent = `(${totalVisible})`;
         }
     });
 }
@@ -719,6 +743,7 @@ function applyPagination() {
 // Initialize pagination when page loads
 document.addEventListener('DOMContentLoaded', function() {
     const totalItems = document.querySelectorAll('.news-item').length;
+    currentPage = 1;
     updatePagination(totalItems);
     applyPagination();
 });
