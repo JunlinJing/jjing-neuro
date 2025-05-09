@@ -4,54 +4,76 @@ title: About
 permalink: /about/
 ---
 
-# About Me
-
-I am a neuroscience researcher passionate about understanding the brain and developing intelligent systems. My research integrates computational neuroscience, cognitive modeling, and artificial intelligence to explore the mechanisms of human cognition and develop brain-inspired AI systems.
+## Contact Information
+- **Phone**: (+49)1744834588
+- **Email**: Junlin.Jing@med.uni-muenchen.de
+- **Location**: Munich, Germany
 
 ## Education
 
-- **Ph.D. in Neuroscience** (2020-Present)  
-  University of Example
-  - Research focus: Computational models of neural information processing
-  - Advisor: Prof. Example Name
+### Ph.D. in Functional Neuroimaging
+*Ludwig Maximilian University of Munich, Munich, Germany*  
+Supervised by Prof. Sophia Stöcklein  
+October 2024 - Present
 
-- **M.S. in Computer Science** (2018-2020)  
-  Example University
-  - Thesis: "Deep Learning Approaches to Neural Data Analysis"
-  - GPA: 3.95/4.0
+### M.S. in Biomedical Engineering
+*University of Electronic Science and Technology of China, Chengdu, Sichuan*  
+Supervised by Prof. Bharat Biswal  
+September 2021 - July 2024
 
-- **B.S. in Biomedical Engineering** (2014-2018)  
-  Example Institute of Technology
-  - Graduated with Honors
-  - Minor in Mathematics
+### Graduate Entrance Examination Preparation, Biomedical Engineering
+*University of Electronic Science and Technology of China, Chengdu, Sichuan*  
+September 2020 - July 2021
 
-## Research Experience
+### B.S. in Electronic Information Science and Technology
+*Southwest Petroleum University, Chengdu, Sichuan*  
+September 2016 - July 2020
 
-### Graduate Research Assistant (2020-Present)
-**Computational Neuroscience Lab, University of Example**
-- Developing neural network models for understanding sensory processing
-- Analyzing large-scale neural recordings using machine learning
-- Publishing research in top-tier neuroscience journals
+### High School, Science Track
+*South No.2 Middle School, Nanchong, Sichuan*  
+September 2013 - July 2016
 
-### Research Intern (Summer 2019)
-**AI Research Lab, Tech Company**
-- Worked on brain-inspired artificial intelligence algorithms
-- Implemented deep learning models for neural data analysis
-- Collaborated with interdisciplinary team of researchers
+## Publications
 
-## Skills
+1. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2023). Comparative Analysis of Group Information-Guided Independent Component Analysis (GIG-ICA) and Independent Vector Analysis (IVA-GL) for Assessing Brain functional Network Characteristics in Autism Spectrum Disorder (ASD). *Frontiers in Neuroscience*
 
-- **Programming:** Python, MATLAB, R, PyTorch, TensorFlow
-- **Data Analysis:** Neural Data Analysis, Statistical Methods, Machine Learning
-- **Tools:** Git, Linux, High-Performance Computing
-- **Languages:** English (Fluent), Chinese (Native)
+2. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2024). Exploring Variability in Spatial and Temporal Properties of Brain Functional Networks: A Comparative Analysis of Data-Driven Methods Using Resting-State fMRI Data. *Preprint*
 
-## Awards & Honors
+3. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2024). Functional and Structural Connectivity Alterations in Striatal Subregions of Cocaine Use Disorder. *Under Writing*
 
-- Outstanding Graduate Research Award (2022)
-- Best Paper Award at Neuroscience Conference (2021)
-- Graduate Fellowship (2020-2023)
-- Dean's List (2014-2018)
+4. Agoalikum, E., Klugah-Brown, B., Wu, H., **Jing, J.**, & Biswal, B. B. (2023). Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder. *Brain Connectivity*
+
+5. Agoalikum, E., Klugah-Brown, B., Wu, H., Hu, P., **Jing, J.**, & Biswal, B. B. (2023). Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain. *Frontiers in Human Neuroscience*
+
+6. Niu, B., Wu, H., Li, Y., Klugah-Brown, B., Hanna, G., Yao, Y., **Jing, J.**, Baig, T. I., Xia, Y., Yao, D., & Biswal, B. B. (2024). Topological functional network analysis of cortical blood flow in hyperacute ischemic rats. *Brain Structure and Function*
+
+## Conference Presentations
+
+1. K-B. Benjamin, **J. Jing**, et al. Network-Based Analysis of Resting-State reveals Insights into Cocaine Addiction, Predicting Onset, And Identifying Key Regions. *Resting State Brain Connectivity, 2023, Poster*
+
+## Additional Experience
+
+### Datawhale (Open Source AI Learning Community), AI Summer Camp
+*July 2023 - October 2023*
+- Brain PET Image Analysis and Disease Prediction Challenge (Completed tutorials, group project)
+- Biological age assessment and age-related disease risk prediction (Completed tutorials, group project)
+- "Spark Cup" Cognitive Large Model Scene Innovation Competition (Completed design debugging: psychiatric diagnosis and treatment (ChatPSY), Excellent Work Award)
+
+### COSN (Chinese Open Science Network), membership in OpenTransfer group
+*September 2023 - Present*
+- Developing automated translation tools (Group project)
+
+## Technical Skills
+
+### Programming
+Python (including PyTorch, Sklearn, Pandas, etc.), MATLAB (including DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
+
+### MRI Scan Experience
+Amblyopia Children and Internet Gaming Disorder participants (more than 20 times)
+
+## Awards
+- University Academic Scholarship, University of Electronic Science and Technology (2022 & 2023)
+- Research Paper Scholarship, Brain Connectivity Lab (2023)
 
 <style>
 h1, h2 {
