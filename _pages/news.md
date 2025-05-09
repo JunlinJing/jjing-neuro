@@ -307,7 +307,7 @@ body .page-content {
     <div class="news-section">
         <h2 class="section-title">
             Website Updates
-            <span class="update-count">(4)</span>
+            <span class="update-count">(2)</span>
         </h2>
         <div class="news-item" data-category="website">
             <div class="news-date">March 2024</div>
@@ -343,11 +343,46 @@ body .page-content {
                 </button>
             </div>
         </div>
-        <button class="expand-button" onclick="toggleSection(this)">
-            Show More <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="hidden-items">
-            <!-- More news items -->
+    </div>
+
+    <div class="news-section">
+        <h2 class="section-title">
+            Personal Updates
+            <span class="update-count">(2)</span>
+        </h2>
+        <div class="news-item" data-category="personal">
+            <div class="news-date">March 2024</div>
+            <div class="news-content">
+                Started a new research project on deep learning applications in EEG signal processing.
+            </div>
+            <div class="news-tag">Research</div>
+            <div class="news-tools">
+                <button class="tool-button" onclick="shareNews(this)" title="Share">
+                    <i class="fas fa-share-alt"></i>
+                    Share
+                </button>
+                <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
+            </div>
+        </div>
+        <div class="news-item" data-category="personal">
+            <div class="news-date">January 2024</div>
+            <div class="news-content">
+                Published new blog posts covering various aspects of neuroscience and AI.
+            </div>
+            <div class="news-tag">Blog</div>
+            <div class="news-tools">
+                <button class="tool-button" onclick="shareNews(this)" title="Share">
+                    <i class="fas fa-share-alt"></i>
+                    Share
+                </button>
+                <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
+            </div>
         </div>
     </div>
 </div>
