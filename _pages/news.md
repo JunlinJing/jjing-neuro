@@ -6,9 +6,24 @@ permalink: /news/
 
 <style>
 .news-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.news-section {
+    padding: 20px;
+}
+
+.news-section-title {
+    font-size: 1.8rem;
+    color: #2c5282;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
 }
 
 .news-item {
@@ -20,7 +35,7 @@ permalink: /news/
 }
 
 .news-date {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #2c5282;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -45,7 +60,17 @@ permalink: /news/
 
 @media (max-width: 768px) {
     .news-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
         padding: 15px;
+    }
+    
+    .news-section {
+        padding: 15px;
+    }
+    
+    .news-section-title {
+        font-size: 1.5rem;
     }
     
     .news-item {
@@ -63,10 +88,23 @@ permalink: /news/
 </style>
 
 <div class="news-container">
-    <div class="news-item">
-        <div class="news-date">March 2024</div>
-        <div class="news-content">
-            Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis. The website showcases my academic background, research experience, and technical expertise in brain imaging and data analysis.
+    <div class="news-section">
+        <h2 class="news-section-title">Website Updates</h2>
+        <div class="news-item">
+            <div class="news-date">March 2024</div>
+            <div class="news-content">
+                Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis. The website showcases my academic background, research experience, and technical expertise.
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-section">
+        <h2 class="news-section-title">Personal Updates</h2>
+        <div class="news-item">
+            <div class="news-date">March 2024</div>
+            <div class="news-content">
+                Started working on a new research project focusing on deep learning applications in EEG signal processing, exploring novel approaches for brain signal analysis and interpretation.
+            </div>
         </div>
     </div>
 </div> 
