@@ -6,41 +6,84 @@ permalink: /about/
 
 # About Me
 
-I am a neuroscience researcher passionate about understanding the brain and developing intelligent systems. My research experience primarily focuses on neuroimaging and machine learning applications in neurological and psychiatric disorders. I have led three major projects as the first author, examining neurofunctional patterns, predictive modeling, and classification in clinical populations.
+My previous research focused on machine learning and the application of ICA-derived approaches to functional neuroimaging. I'm currently working on the use of machine learning to investigate abnormal functional connectomes in individual patients with neurological and psychiatric disorders.
+
+
 
 ## Education
 
-- **Ph.D., Functional Neuroimaging** (10/2024-Present)  
+- **Ph.D. in Functional Neuroimaging** (2024-Present)  
   Ludwig Maximilian University of Munich, Munich, Germany
-  - Supervised by Prof. Sophia Stöcklein
+  - Supervised by [Prof. Sophia Stöcklein](https://scholar.google.com.hk/citations?user=wNPXkVAAAAAJ&hl=zh-CN&oi=sra)
+  - Research focus: Neuroimaging and Machine Learning
 
-- **M.S., Biomedical Engineering** (09/2021-07/2024)  
+- **M.S. in Biomedical Engineering** (2021-2024)  
   University of Electronic Science and Technology of China, Chengdu, Sichuan
-  - Supervised by Prof. Bharat Biswal
+  - Supervised by [Prof. Bharat Biswal](https://scholar.google.com.hk/citations?user=FJ8WWDYAAAAJ&hl=zh-CN&oi=ao)
+  - Research focus: Brain Connectivity Analysis
 
-- **B.S., Electronic Information Science and Technology** (09/2016-07/2020)  
+- **B.S. in Electronic Information Science and Technology** (2016-2020)  
   Southwest Petroleum University, Chengdu, Sichuan
+  - Focus on Signal Processing and Computing
 
 ## Research Experience
 
-### Brain Age Prediction in Autism
-This project investigates how spatial characteristics of autism patients influence brain age prediction. By analyzing distinct spatial components extracted from neuroimaging data, we aimed to determine patterns associated with atypical neurodevelopment. The study revealed that different blind source separation methods provided complementary insights into functional connectivity, contributing to a more accurate age prediction model. These findings highlight the potential of leveraging spatial brain patterns for early diagnosis and intervention strategies.
+### Master (2021-2024)
+**Brain Connectivity Lab, University of Electronic Science and Technology of China**
+- Led three major projects in neuroimaging and machine learning applications
+- Developed methods for analyzing brain functional networks in clinical populations
+- Published research in top-tier neuroscience journals including Frontiers in Neuroscience
+- Projects include:
+  1. Brain Age Prediction in Autism
+  2. Classification of Alzheimer's Disease Using Resting-State Spatiotemporal Features
+  3. Functional and Structural Brain Division in Cocaine Addiction
 
-### Classification of Alzheimer's Disease Using Resting-State Spatiotemporal Features
-This research focuses on improving classification models for Alzheimer's disease by examining inter-subject variability in functional connectivity. By integrating novel feature extraction techniques, we evaluated the impact of spatial and temporal characteristics on classification accuracy. Our findings suggest that reducing within-group variability enhances classification performance, offering promising directions for refining diagnostic models and understanding neurodegenerative progression.
+#### Technical Skills
+- **Programming**: Python (PyTorch, Sklearn, Pandas, etc.), MATLAB (DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
+- **MRI Experience**: Analyzed data from amblyopia children and internet gaming disorder participants (more than 20 times)
 
-### Functional and Structural Brain Division in Cocaine Addiction
-This project explores how functional and structural brain alterations in cocaine addicts relate to reward circuitry dysfunction. Through clustering-based analysis, we identified distinct segmentation patterns in gray and white matter regions. The study provided evidence of overlapping functional connectivity patterns, contributing to a better understanding of addiction-related neural mechanisms and potential therapeutic targets.
+#### Additional Experience
+- **Datawhale (Open Source AI Learning Community)** (07/2023-10/2023)
+  - Brain PET Image Analysis and Disease Prediction Challenge
+  - Biological age assessment and age-related disease risk prediction
+  - "Spark Cup" Cognitive Large Model Scene Innovation Competition
 
-## Technical Skills
+- **COSN (Chinese Open Science Network)** (09/2023-Present)
+  - Membership in OpenTransfer group
+  - Participating in developing automated translation tools
 
-- **Programming:** Python (including PyTorch, Sklearn, Pandas, etc.), MATLAB (including DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
-- **MRI Scan Experience:** Amblyopia Children and Internet Gaming Disorder participants (more than 20 times)
+## Skills
+
+- **Programming Languages:**
+  - Python (PyTorch, Sklearn, Pandas, etc.)
+  - MATLAB
+  - C++
+  - Linux (Bash)
+
+- **Research Tools:**
+  - Neuroimaging Tools: DPABI, SPM, GIFT
+  - Version Control: Git
+  - Containerization: Docker
+
+- **Research Experience:**
+  - MRI Scanning: Experience with Amblyopia Children and Internet Gaming Disorder participants (20+ scans)
+  - Neuroimaging Analysis:
+    - Functional Connectivity Analysis (Advanced)
+    - Structural Connectivity Analysis (Intermediate)
+    - Diffusion MRI Processing (Basic)
+    - Machine Learning & Deep Learning (Advanced)
+    - Independent Component Analysis (ICA) for brain connectivity (Expert)
+
+- **Languages:** 
+  - Chinese (Native)
+  - English (Fluent)
+  - German (Beginner)
 
 ## Awards & Honors
 
 - University Academic Scholarship, University of Electronic Science and Technology (2022 & 2023)
 - Research Paper Scholarship, Brain Connectivity Lab (2023)
+
 
 <style>
 h1, h2 {
