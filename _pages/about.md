@@ -31,16 +31,13 @@ My previous research focused on machine learning and the application of ICA-deri
 ### Master (2021-2024)
 **Brain Connectivity Lab, University of Electronic Science and Technology of China**
 - Led three major projects in neuroimaging and machine learning applications
-- Developed methods for analyzing brain functional networks in clinical populations
-- Published research in top-tier neuroscience journals including Frontiers in Neuroscience
+- Developed novel pipeline for functional brain network analysis in clinical populations
+- Published research in neuroscience journals including Frontiers in Neuroscience
 - Projects include:
   1. Brain Age Prediction in Autism
   2. Classification of Alzheimer's Disease Using Resting-State Spatiotemporal Features
   3. Functional and Structural Brain Division in Cocaine Addiction
 
-#### Technical Skills
-- **Programming**: Python (PyTorch, Sklearn, Pandas, etc.), MATLAB (DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
-- **MRI Experience**: Analyzed data from amblyopia children and internet gaming disorder participants (more than 20 times)
 
 #### Additional Experience
 - **Datawhale (Open Source AI Learning Community)** (07/2023-10/2023)
@@ -55,13 +52,13 @@ My previous research focused on machine learning and the application of ICA-deri
 ## Skills
 
 - **Programming Languages:**
-  - Python (PyTorch, Sklearn, Pandas, etc.)
+  - Python
   - MATLAB
   - C++
   - Linux (Bash)
 
 - **Research Tools:**
-  - Neuroimaging Tools: DPABI, SPM, GIFT
+  - Neuroimaging Tools: DPABI, SPM, GIFT, FSL, Freesurfer, fMRIPrep, BrainNet
   - Version Control: Git
   - Containerization: Docker
 
