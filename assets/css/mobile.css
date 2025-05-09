@@ -1,0 +1,137 @@
+/* Mobile-specific styles and variables */
+:root {
+    --mobile-padding: 15px;
+    --mobile-header-height: 60px;
+    --mobile-font-size-base: 16px;
+    --mobile-line-height: 1.6;
+    --card-radius: 12px;
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --mobile-card-radius: 8px;
+    --mobile-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --mobile-transition: 0.2s ease;
+}
+
+/* Base mobile styles */
+@media (max-width: 768px) {
+    /* Core elements */
+    html, body {
+        width: 100% !important;
+        min-height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        font-size: var(--mobile-font-size-base) !important;
+        line-height: var(--mobile-line-height) !important;
+        -webkit-text-size-adjust: 100% !important;
+    }
+
+    /* Navigation bar */
+    .nav {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: var(--mobile-header-height) !important;
+        padding: 0 var(--mobile-padding) !important;
+        background: var(--background-color) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        z-index: 1000 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    /* Main content area */
+    .content {
+        padding-top: calc(var(--mobile-header-height) + 20px) !important;
+        padding-left: var(--mobile-padding) !important;
+        padding-right: var(--mobile-padding) !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Navigation links */
+    .nav-link {
+        display: block !important;
+        padding: 15px var(--mobile-padding) !important;
+        margin: 10px 0 !important;
+        font-size: 1.1em !important;
+        font-weight: 500 !important;
+        color: var(--text-color) !important;
+        text-decoration: none !important;
+        border-radius: var(--mobile-card-radius) !important;
+        background: var(--card-background) !important;
+        box-shadow: var(--mobile-shadow) !important;
+        transition: transform var(--mobile-transition) !important;
+    }
+
+    .nav-link:active {
+        transform: scale(0.98) !important;
+    }
+
+    /* Profile image */
+    .profile-image {
+        width: 150px !important;
+        height: 150px !important;
+        border-radius: 50% !important;
+        margin: 20px auto !important;
+        display: block !important;
+        box-shadow: var(--mobile-shadow) !important;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 1.8em !important;
+        margin-bottom: 0.8em !important;
+    }
+
+    h2 {
+        font-size: 1.4em !important;
+        margin-bottom: 0.6em !important;
+    }
+
+    h3 {
+        font-size: 1.2em !important;
+        margin-bottom: 0.5em !important;
+    }
+
+    p {
+        font-size: 1em !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1em !important;
+    }
+
+    /* Form elements */
+    input, select, textarea {
+        font-size: 16px !important;
+        padding: 12px !important;
+        border-radius: var(--mobile-card-radius) !important;
+        width: 100% !important;
+        margin: 8px 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Touch optimizations */
+    * {
+        -webkit-tap-highlight-color: transparent !important;
+        touch-action: manipulation !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a !important;
+        --text-color: #ffffff !important;
+        --card-background: #2d2d2d !important;
+        --border-color: #404040 !important;
+    }
+}
+
+/* Force mobile styles for mobile class */
+.mobile {
+    font-size: var(--mobile-font-size-base) !important;
+    line-height: var(--mobile-line-height) !important;
+} 
