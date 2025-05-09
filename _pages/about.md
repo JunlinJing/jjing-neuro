@@ -6,13 +6,7 @@ permalink: /about/
 
 # About Me
 
-I am a neuroscience researcher focusing on brain functional network analysis and neuroimaging. My research integrates computational methods with neuroimaging data to understand brain connectivity patterns in various neurological conditions.
-
-## Contact Information
-
-- **Email:** Junlin.Jing@med.uni-muenchen.de
-- **Phone:** (+49)1744834588
-- **Location:** Munich, Germany
+I am a neuroscience researcher passionate about understanding the brain and developing intelligent systems. My research focuses on functional neuroimaging and brain connectivity analysis, particularly in understanding brain network characteristics in various neurological conditions.
 
 ## Education
 
@@ -39,18 +33,6 @@ I am a neuroscience researcher focusing on brain functional network analysis and
 
 - **Programming:** Python (including PyTorch, Sklearn, Pandas, etc.), MATLAB (including DPABI, SPM, GIFT, etc.), C++, Linux (Bash), Docker, Git
 - **MRI Experience:** Amblyopia Children and Internet Gaming Disorder participants (more than 20 times)
-
-## Additional Experience
-
-- **Datawhale (Open Source AI Learning Community)** (07/2023-10/2023)  
-  AI Summer Camp
-  - Brain PET Image Analysis and Disease Prediction Challenge
-  - Biological age assessment and age-related disease risk prediction
-  - "Spark Cup" Cognitive Large Model Scene Innovation Competition
-
-- **COSN (Chinese Open Science Network)** (09/2023-Present)  
-  Membership in OpenTransfer group
-  - Developing automated translation tools
 
 ## Awards
 
