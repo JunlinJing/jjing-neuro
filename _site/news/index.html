@@ -520,38 +520,62 @@ body .page-content {
             Website Updates
             <span class="update-count">(2)</span>
         </h2>
-        <div class="news-item" data-category="website">
-            <div class="news-date">March 2024</div>
-            <div class="news-content">
-                Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.
+        <div class="visible-items">
+            <div class="news-item" data-category="website">
+                <div class="news-date">March 2024</div>
+                <div class="news-content">
+                    Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.
+                </div>
+                <div class="news-tag">Update</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
             </div>
-            <div class="news-tag">Update</div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share">
-                    <i class="fas fa-share-alt"></i>
-                    Share
-                </button>
-                <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                    <i class="fas fa-download"></i>
-                    Download
-                </button>
+            <div class="news-item" data-category="website">
+                <div class="news-date">February 2024</div>
+                <div class="news-content">
+                    Updated website with new research focus areas and improved navigation.
+                </div>
+                <div class="news-tag">Update</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="news-item" data-category="website">
-            <div class="news-date">February 2024</div>
-            <div class="news-content">
-                Updated website with new research focus areas and improved navigation.
-            </div>
-            <div class="news-tag">Update</div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share">
-                    <i class="fas fa-share-alt"></i>
-                    Share
-                </button>
-                <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                    <i class="fas fa-download"></i>
-                    Download
-                </button>
+        <button class="expand-button" onclick="toggleSection(this)">
+            Show More <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="hidden-items">
+            <div class="news-item" data-category="website">
+                <div class="news-date">January 2024</div>
+                <div class="news-content">
+                    Initial setup of the academic website structure and basic features.
+                </div>
+                <div class="news-tag">Update</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -561,38 +585,62 @@ body .page-content {
             Personal Updates
             <span class="update-count">(2)</span>
         </h2>
-        <div class="news-item" data-category="personal">
-            <div class="news-date">March 2024</div>
-            <div class="news-content">
-                Started a new research project on deep learning applications in EEG signal processing.
+        <div class="visible-items">
+            <div class="news-item" data-category="personal">
+                <div class="news-date">March 2024</div>
+                <div class="news-content">
+                    Started a new research project on deep learning applications in EEG signal processing.
+                </div>
+                <div class="news-tag">Research</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
             </div>
-            <div class="news-tag">Research</div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share">
-                    <i class="fas fa-share-alt"></i>
-                    Share
-                </button>
-                <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                    <i class="fas fa-download"></i>
-                    Download
-                </button>
+            <div class="news-item" data-category="personal">
+                <div class="news-date">January 2024</div>
+                <div class="news-content">
+                    Published new blog posts covering various aspects of neuroscience and AI.
+                </div>
+                <div class="news-tag">Blog</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="news-item" data-category="personal">
-            <div class="news-date">January 2024</div>
-            <div class="news-content">
-                Published new blog posts covering various aspects of neuroscience and AI.
-            </div>
-            <div class="news-tag">Blog</div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share">
-                    <i class="fas fa-share-alt"></i>
-                    Share
-                </button>
-                <button class="tool-button" onclick="downloadNews(this)" title="Download">
-                    <i class="fas fa-download"></i>
-                    Download
-                </button>
+        <button class="expand-button" onclick="toggleSection(this)">
+            Show More <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="hidden-items">
+            <div class="news-item" data-category="personal">
+                <div class="news-date">December 2023</div>
+                <div class="news-content">
+                    Started exploring new research directions in brain-computer interfaces.
+                </div>
+                <div class="news-tag">Research</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)" title="Download">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
             </div>
         </div>
     </div>
