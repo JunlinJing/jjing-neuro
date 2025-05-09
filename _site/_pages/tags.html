@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4002/_pages/tags" />
+<meta property="og:url" content="https://junlinjing.github.io/_pages/tags" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,12 +31,12 @@
     "@type": "BlogPosting",
     "headline": "Tags",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "http://localhost:4002/_pages/tags",
+    "url": "https://junlinjing.github.io/_pages/tags",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4002"
+        "url": "https://junlinjing.github.io"
     }
 }</script> 
     
@@ -50,7 +50,7 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4002/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
     <!-- Navigation -->
@@ -120,6 +120,12 @@
                     </li>
                 
             
+
+            <li class="nav-item">
+                <button id="dark-mode-toggle" class="nav-link dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </div>
 </nav>
@@ -149,11 +155,15 @@
         display: flex;
         align-items: center;
         padding: 10px 20px;
-        color: #666;
+        color: var(--nav-text);
         text-decoration: none;
         border-radius: 20px;
         transition: all 0.3s ease;
         background: rgba(255, 255, 255, 0.05);
+        border: none;
+        cursor: pointer;
+        font-size: inherit;
+        font-family: inherit;
     }
 
     .nav-link i {
@@ -169,6 +179,21 @@
         background: #4e4376;
         color: white;
         transform: translateY(-2px);
+    }
+
+    .dark-mode-toggle {
+        background: transparent;
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dark-mode-toggle i {
+        margin: 0;
     }
 
     @media (max-width: 768px) {
@@ -496,7 +521,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/real-time-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/real-time-eeg">
                             <aside class="date"><time datetime="15-09-2023">Sep 15 2023</time></aside>
                             <h3 class="title">Building Real-time EEG Signal Processing Pipeline</h3>
                         </a>
@@ -507,7 +532,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/2024/01/deep-learning-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/2024/01/deep-learning-eeg">
                             <aside class="date"><time datetime="15-01-2024">Jan 15 2024</time></aside>
                             <h3 class="title">Applications of Deep Learning in EEG Signal Processing</h3>
                         </a>
@@ -518,7 +543,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/eeg-python-tutorial">
+                        <a class="url" href="https://junlinjing.github.io/blog/eeg-python-tutorial">
                             <aside class="date"><time datetime="20-02-2024">Feb 20 2024</time></aside>
                             <h3 class="title">Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning</h3>
                         </a>
@@ -529,7 +554,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/introduction-to-eeg-analysis">
+                        <a class="url" href="https://junlinjing.github.io/blog/introduction-to-eeg-analysis">
                             <aside class="date"><time datetime="20-03-2024">Mar 20 2024</time></aside>
                             <h3 class="title">Introduction to EEG Analysis with Python</h3>
                         </a>
@@ -551,7 +576,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/real-time-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/real-time-eeg">
                             <aside class="date"><time datetime="15-09-2023">Sep 15 2023</time></aside>
                             <h3 class="title">Building Real-time EEG Signal Processing Pipeline</h3>
                         </a>
@@ -562,7 +587,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/introduction-to-eeg-analysis">
+                        <a class="url" href="https://junlinjing.github.io/blog/introduction-to-eeg-analysis">
                             <aside class="date"><time datetime="20-03-2024">Mar 20 2024</time></aside>
                             <h3 class="title">Introduction to EEG Analysis with Python</h3>
                         </a>
@@ -573,7 +598,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-signal-processing">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-signal-processing">
                             <aside class="date"><time datetime="22-03-2024">Mar 22 2024</time></aside>
                             <h3 class="title">Advanced Neural Signal Processing Techniques</h3>
                         </a>
@@ -595,7 +620,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/real-time-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/real-time-eeg">
                             <aside class="date"><time datetime="15-09-2023">Sep 15 2023</time></aside>
                             <h3 class="title">Building Real-time EEG Signal Processing Pipeline</h3>
                         </a>
@@ -606,7 +631,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/2024/01/deep-learning-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/2024/01/deep-learning-eeg">
                             <aside class="date"><time datetime="15-01-2024">Jan 15 2024</time></aside>
                             <h3 class="title">Applications of Deep Learning in EEG Signal Processing</h3>
                         </a>
@@ -617,7 +642,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-signal-processing">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-signal-processing">
                             <aside class="date"><time datetime="22-03-2024">Mar 22 2024</time></aside>
                             <h3 class="title">Advanced Neural Signal Processing Techniques</h3>
                         </a>
@@ -639,7 +664,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/real-time-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/real-time-eeg">
                             <aside class="date"><time datetime="15-09-2023">Sep 15 2023</time></aside>
                             <h3 class="title">Building Real-time EEG Signal Processing Pipeline</h3>
                         </a>
@@ -661,7 +686,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-data-python">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-data-python">
                             <aside class="date"><time datetime="25-10-2023">Oct 25 2023</time></aside>
                             <h3 class="title">Introduction to Neural Data Analysis with Python</h3>
                         </a>
@@ -683,7 +708,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-data-python">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-data-python">
                             <aside class="date"><time datetime="25-10-2023">Oct 25 2023</time></aside>
                             <h3 class="title">Introduction to Neural Data Analysis with Python</h3>
                         </a>
@@ -694,7 +719,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/eeg-python-tutorial">
+                        <a class="url" href="https://junlinjing.github.io/blog/eeg-python-tutorial">
                             <aside class="date"><time datetime="20-02-2024">Feb 20 2024</time></aside>
                             <h3 class="title">Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning</h3>
                         </a>
@@ -716,7 +741,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-data-python">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-data-python">
                             <aside class="date"><time datetime="25-10-2023">Oct 25 2023</time></aside>
                             <h3 class="title">Introduction to Neural Data Analysis with Python</h3>
                         </a>
@@ -727,7 +752,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/eeg-python-tutorial">
+                        <a class="url" href="https://junlinjing.github.io/blog/eeg-python-tutorial">
                             <aside class="date"><time datetime="20-02-2024">Feb 20 2024</time></aside>
                             <h3 class="title">Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning</h3>
                         </a>
@@ -749,7 +774,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-data-python">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-data-python">
                             <aside class="date"><time datetime="25-10-2023">Oct 25 2023</time></aside>
                             <h3 class="title">Introduction to Neural Data Analysis with Python</h3>
                         </a>
@@ -760,7 +785,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/eeg-python-tutorial">
+                        <a class="url" href="https://junlinjing.github.io/blog/eeg-python-tutorial">
                             <aside class="date"><time datetime="20-02-2024">Feb 20 2024</time></aside>
                             <h3 class="title">Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning</h3>
                         </a>
@@ -782,7 +807,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/cognitive-modeling">
+                        <a class="url" href="https://junlinjing.github.io/blog/cognitive-modeling">
                             <aside class="date"><time datetime="20-12-2023">Dec 20 2023</time></aside>
                             <h3 class="title">Cognitive Modeling: From Theory to Practice</h3>
                         </a>
@@ -804,7 +829,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/cognitive-modeling">
+                        <a class="url" href="https://junlinjing.github.io/blog/cognitive-modeling">
                             <aside class="date"><time datetime="20-12-2023">Dec 20 2023</time></aside>
                             <h3 class="title">Cognitive Modeling: From Theory to Practice</h3>
                         </a>
@@ -815,7 +840,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/2024/01/deep-learning-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/2024/01/deep-learning-eeg">
                             <aside class="date"><time datetime="15-01-2024">Jan 15 2024</time></aside>
                             <h3 class="title">Applications of Deep Learning in EEG Signal Processing</h3>
                         </a>
@@ -837,7 +862,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/cognitive-modeling">
+                        <a class="url" href="https://junlinjing.github.io/blog/cognitive-modeling">
                             <aside class="date"><time datetime="20-12-2023">Dec 20 2023</time></aside>
                             <h3 class="title">Cognitive Modeling: From Theory to Practice</h3>
                         </a>
@@ -848,7 +873,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/brain-computer-interfaces">
+                        <a class="url" href="https://junlinjing.github.io/blog/brain-computer-interfaces">
                             <aside class="date"><time datetime="21-03-2024">Mar 21 2024</time></aside>
                             <h3 class="title">Recent Advances in Brain-Computer Interfaces</h3>
                         </a>
@@ -870,7 +895,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/cognitive-modeling">
+                        <a class="url" href="https://junlinjing.github.io/blog/cognitive-modeling">
                             <aside class="date"><time datetime="20-12-2023">Dec 20 2023</time></aside>
                             <h3 class="title">Cognitive Modeling: From Theory to Practice</h3>
                         </a>
@@ -892,7 +917,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/2024/01/deep-learning-eeg">
+                        <a class="url" href="https://junlinjing.github.io/blog/2024/01/deep-learning-eeg">
                             <aside class="date"><time datetime="15-01-2024">Jan 15 2024</time></aside>
                             <h3 class="title">Applications of Deep Learning in EEG Signal Processing</h3>
                         </a>
@@ -914,7 +939,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/eeg-python-tutorial">
+                        <a class="url" href="https://junlinjing.github.io/blog/eeg-python-tutorial">
                             <aside class="date"><time datetime="20-02-2024">Feb 20 2024</time></aside>
                             <h3 class="title">Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning</h3>
                         </a>
@@ -936,7 +961,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/eeg-python-tutorial">
+                        <a class="url" href="https://junlinjing.github.io/blog/eeg-python-tutorial">
                             <aside class="date"><time datetime="20-02-2024">Feb 20 2024</time></aside>
                             <h3 class="title">Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning</h3>
                         </a>
@@ -958,7 +983,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/introduction-to-eeg-analysis">
+                        <a class="url" href="https://junlinjing.github.io/blog/introduction-to-eeg-analysis">
                             <aside class="date"><time datetime="20-03-2024">Mar 20 2024</time></aside>
                             <h3 class="title">Introduction to EEG Analysis with Python</h3>
                         </a>
@@ -969,7 +994,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/neural-signal-processing">
+                        <a class="url" href="https://junlinjing.github.io/blog/neural-signal-processing">
                             <aside class="date"><time datetime="22-03-2024">Mar 22 2024</time></aside>
                             <h3 class="title">Advanced Neural Signal Processing Techniques</h3>
                         </a>
@@ -991,7 +1016,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/brain-computer-interfaces">
+                        <a class="url" href="https://junlinjing.github.io/blog/brain-computer-interfaces">
                             <aside class="date"><time datetime="21-03-2024">Mar 21 2024</time></aside>
                             <h3 class="title">Recent Advances in Brain-Computer Interfaces</h3>
                         </a>
@@ -1013,7 +1038,7 @@
             
                 
                     <li class="item">
-                        <a class="url" href="http://localhost:4002/blog/brain-computer-interfaces">
+                        <a class="url" href="https://junlinjing.github.io/blog/brain-computer-interfaces">
                             <aside class="date"><time datetime="21-03-2024">Mar 21 2024</time></aside>
                             <h3 class="title">Recent Advances in Brain-Computer Interfaces</h3>
                         </a>
@@ -1108,54 +1133,52 @@
 }
 </style>
 
-    
-    <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
 
     <!-- Theme Switching -->
     <script>
-        // Simple theme toggle function
-        function toggleTheme() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
             const html = document.documentElement;
-            const isDark = html.classList.contains('dark');
             const icon = document.querySelector('#dark-mode-toggle i');
-            
-            // Toggle theme
-            if (isDark) {
-                html.classList.remove('dark');
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
+
+            // Initialize theme
+            function initTheme() {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    html.classList.add('dark');
+                    icon.className = 'fas fa-sun';
+                }
             }
-        }
 
-        // Initialize theme
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.classList.add('dark');
-                document.querySelector('#dark-mode-toggle i').className = 'fas fa-sun';
+            // Toggle theme function
+            function toggleTheme() {
+                const isDark = html.classList.contains('dark');
+                
+                if (isDark) {
+                    html.classList.remove('dark');
+                    icon.className = 'fas fa-moon';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    icon.className = 'fas fa-sun';
+                    localStorage.setItem('theme', 'dark');
+                }
             }
-        }
 
-        // Add click event listener
-        document.getElementById('dark-mode-toggle').addEventListener('click', toggleTheme);
+            // Add click event listener
+            darkModeToggle.addEventListener('click', toggleTheme);
 
-        // Initialize theme on page load
-        initTheme();
+            // Initialize theme on page load
+            initTheme();
 
-        // Log initial state
-        console.log('Theme initialized:', {
-            'isDark': document.documentElement.classList.contains('dark'),
-            'savedTheme': localStorage.getItem('theme'),
-            'prefersDark': window.matchMedia('(prefers-color-scheme: dark)').matches
+            // Log initial state for debugging
+            console.log('Theme initialized:', {
+                'isDark': html.classList.contains('dark'),
+                'savedTheme': localStorage.getItem('theme'),
+                'prefersDark': window.matchMedia('(prefers-color-scheme: dark)').matches
+            });
         });
     </script>
 </body>

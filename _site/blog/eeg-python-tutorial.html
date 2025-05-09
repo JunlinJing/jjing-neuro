@@ -18,13 +18,13 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4002/blog/eeg-python-tutorial" />
+<meta property="og:url" content="https://junlinjing.github.io/blog/eeg-python-tutorial" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
 
-    <meta property="og:image" content="http://localhost:4002//assets/images/blog/2024/eeg-python-tutorial.jpg" />
-    <meta name="twitter:image" content="http://localhost:4002//assets/images/blog/2024/eeg-python-tutorial.jpg" />
+    <meta property="og:image" content="https://junlinjing.github.io//assets/images/blog/2024/eeg-python-tutorial.jpg" />
+    <meta name="twitter:image" content="https://junlinjing.github.io//assets/images/blog/2024/eeg-python-tutorial.jpg" />
 
 
 <!-- Structured Data -->
@@ -34,7 +34,7 @@
     "@type": "BlogPosting",
     "headline": "Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning",
     "description": "A comprehensive guide to analyzing EEG data using Python, covering advanced preprocessing techniques, feature extraction, and machine learning applications",
-    "url": "http://localhost:4002/blog/eeg-python-tutorial",
+    "url": "https://junlinjing.github.io/blog/eeg-python-tutorial",
     
     "datePublished": "2024-02-20T10:00:00+01:00",
     "dateModified": "2024-02-20T10:00:00+01:00",
@@ -42,7 +42,7 @@
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4002"
+        "url": "https://junlinjing.github.io"
     }
 }</script> 
     
@@ -56,7 +56,7 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4002/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
     <!-- Navigation -->
@@ -126,6 +126,12 @@
                     </li>
                 
             
+
+            <li class="nav-item">
+                <button id="dark-mode-toggle" class="nav-link dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </div>
 </nav>
@@ -155,11 +161,15 @@
         display: flex;
         align-items: center;
         padding: 10px 20px;
-        color: #666;
+        color: var(--nav-text);
         text-decoration: none;
         border-radius: 20px;
         transition: all 0.3s ease;
         background: rgba(255, 255, 255, 0.05);
+        border: none;
+        cursor: pointer;
+        font-size: inherit;
+        font-family: inherit;
     }
 
     .nav-link i {
@@ -175,6 +185,21 @@
         background: #4e4376;
         color: white;
         transform: translateY(-2px);
+    }
+
+    .dark-mode-toggle {
+        background: transparent;
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dark-mode-toggle i {
+        margin: 0;
     }
 
     @media (max-width: 768px) {
@@ -212,13 +237,13 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4002/blog/eeg-python-tutorial" />
+<meta property="og:url" content="https://junlinjing.github.io/blog/eeg-python-tutorial" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
 
-    <meta property="og:image" content="http://localhost:4002//assets/images/blog/2024/eeg-python-tutorial.jpg" />
-    <meta name="twitter:image" content="http://localhost:4002//assets/images/blog/2024/eeg-python-tutorial.jpg" />
+    <meta property="og:image" content="https://junlinjing.github.io//assets/images/blog/2024/eeg-python-tutorial.jpg" />
+    <meta name="twitter:image" content="https://junlinjing.github.io//assets/images/blog/2024/eeg-python-tutorial.jpg" />
 
 
 <!-- Structured Data -->
@@ -228,7 +253,7 @@
     "@type": "BlogPosting",
     "headline": "Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning",
     "description": "A comprehensive guide to analyzing EEG data using Python, covering advanced preprocessing techniques, feature extraction, and machine learning applications",
-    "url": "http://localhost:4002/blog/eeg-python-tutorial",
+    "url": "https://junlinjing.github.io/blog/eeg-python-tutorial",
     
     "datePublished": "2024-02-20T10:00:00+01:00",
     "dateModified": "2024-02-20T10:00:00+01:00",
@@ -236,7 +261,7 @@
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4002"
+        "url": "https://junlinjing.github.io"
     }
 }</script> 
     
@@ -640,15 +665,15 @@ pip <span class="nb">install </span>scikit-learn<span class="o">==</span>1.3.1 <
     <div class="social-share">
         <div class="share-title">Share this post</div>
         <div class="share-buttons">
-            <a href="https://twitter.com/intent/tweet?text=Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning&url=http://localhost:4002/blog/eeg-python-tutorial" 
+            <a href="https://twitter.com/intent/tweet?text=Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning&url=https://junlinjing.github.io/blog/eeg-python-tutorial" 
                target="_blank" class="share-button twitter" title="Share on Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4002/blog/eeg-python-tutorial"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://junlinjing.github.io/blog/eeg-python-tutorial"
                target="_blank" class="share-button facebook" title="Share on Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4002/blog/eeg-python-tutorial&title=Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning"
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://junlinjing.github.io/blog/eeg-python-tutorial&title=Advanced EEG Data Analysis with Python: From Preprocessing to Machine Learning"
                target="_blank" class="share-button linkedin" title="Share on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
@@ -1070,54 +1095,52 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </style>
 
-    
-    <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
 
     <!-- Theme Switching -->
     <script>
-        // Simple theme toggle function
-        function toggleTheme() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
             const html = document.documentElement;
-            const isDark = html.classList.contains('dark');
             const icon = document.querySelector('#dark-mode-toggle i');
-            
-            // Toggle theme
-            if (isDark) {
-                html.classList.remove('dark');
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
+
+            // Initialize theme
+            function initTheme() {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    html.classList.add('dark');
+                    icon.className = 'fas fa-sun';
+                }
             }
-        }
 
-        // Initialize theme
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.classList.add('dark');
-                document.querySelector('#dark-mode-toggle i').className = 'fas fa-sun';
+            // Toggle theme function
+            function toggleTheme() {
+                const isDark = html.classList.contains('dark');
+                
+                if (isDark) {
+                    html.classList.remove('dark');
+                    icon.className = 'fas fa-moon';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    icon.className = 'fas fa-sun';
+                    localStorage.setItem('theme', 'dark');
+                }
             }
-        }
 
-        // Add click event listener
-        document.getElementById('dark-mode-toggle').addEventListener('click', toggleTheme);
+            // Add click event listener
+            darkModeToggle.addEventListener('click', toggleTheme);
 
-        // Initialize theme on page load
-        initTheme();
+            // Initialize theme on page load
+            initTheme();
 
-        // Log initial state
-        console.log('Theme initialized:', {
-            'isDark': document.documentElement.classList.contains('dark'),
-            'savedTheme': localStorage.getItem('theme'),
-            'prefersDark': window.matchMedia('(prefers-color-scheme: dark)').matches
+            // Log initial state for debugging
+            console.log('Theme initialized:', {
+                'isDark': html.classList.contains('dark'),
+                'savedTheme': localStorage.getItem('theme'),
+                'prefersDark': window.matchMedia('(prefers-color-scheme: dark)').matches
+            });
         });
     </script>
 </body>
