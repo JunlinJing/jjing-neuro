@@ -271,6 +271,27 @@ function filterHomeNews() {
     });
 }
 
+function sortHomeNewsByDate() {
+    const columns = document.querySelectorAll('.news-column');
+    
+    columns.forEach(column => {
+        const items = Array.from(column.querySelectorAll('.news-item'));
+        
+        items.sort((a, b) => {
+            const dateA = new Date(a.querySelector('.date').textContent);
+            const dateB = new Date(b.querySelector('.date').textContent);
+            return dateB - dateA; // Sort in descending order (newest first)
+        });
+        
+        items.forEach(item => column.appendChild(item));
+    });
+}
+
+// Call sort function when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    sortHomeNewsByDate();
+});
+
 function shareNews(button) {
     const newsItem = button.closest('.news-item');
     const newsText = newsItem.querySelector('p').textContent;

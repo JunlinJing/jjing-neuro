@@ -243,11 +243,9 @@ body .page-content {
     </div>
     <div class="control-item">
         <select id="newsSort" onchange="sortNews()">
-            <option value="date-desc">Latest First</option>
+            <option value="date-desc" selected>Latest First</option>
             <option value="date-asc">Oldest First</option>
-            <option value="title">By Title</option>
-            <option value="views">Most Viewed</option>
-            <option value="likes">Most Liked</option>
+            <option value="category">By Category</option>
         </select>
     </div>
     <div class="control-item">
@@ -333,8 +331,11 @@ function sortNews() {
                 return dateB - dateA;
             } else if (sort === 'date-asc') {
                 return dateA - dateB;
+            } else if (sort === 'category') {
+                const categoryA = a.dataset.category;
+                const categoryB = b.dataset.category;
+                return categoryA.localeCompare(categoryB);
             }
-            // Additional sorting logic can be added as needed
         });
         
         const container = section.querySelector('.news-item').parentNode;
@@ -349,14 +350,22 @@ function searchNews() {
     items.forEach(item => {
         const content = item.querySelector('.news-content').textContent.toLowerCase();
         const date = item.querySelector('.news-date').textContent.toLowerCase();
+        const category = item.dataset.category.toLowerCase();
         
-        if (content.includes(searchText) || date.includes(searchText)) {
+        if (content.includes(searchText) || 
+            date.includes(searchText) || 
+            category.includes(searchText)) {
             item.style.display = 'block';
         } else {
             item.style.display = 'none';
         }
     });
 }
+
+// Initialize sorting when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    sortNews();
+});
 
 function toggleSection(button) {
     const section = button.closest('.news-section');
