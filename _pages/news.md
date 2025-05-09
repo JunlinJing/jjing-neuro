@@ -16,22 +16,27 @@ permalink: /news/
 
 .news-section {
     padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .news-section-title {
     font-size: 1.8rem;
-    color: #2c5282;
+    color: #1a365d;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 3px solid #4299e1;
+    text-align: center;
 }
 
 .news-item {
     margin-bottom: 2.5rem;
     padding: 1.5rem;
-    background: linear-gradient(to right, rgba(66, 153, 225, 0.05), transparent);
+    background: white;
     border-radius: 8px;
     border-left: 4px solid #4299e1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .news-date {
@@ -39,6 +44,8 @@ permalink: /news/
     color: #2c5282;
     font-weight: 600;
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .news-content {
@@ -75,6 +82,7 @@ permalink: /news/
     
     .news-item {
         padding: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .news-date {
