@@ -1,6 +1,7 @@
 # main text of home
 title: Jim Jing
-bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
+bio: Neuroscience Researcher | AI Enthusiast | Amateur Programmer | Science Writer
+motto: "Standing on the bridge between AI and neuroscience, gazing into the mysteries of the brain"
 
 # twitter summary info
 description: A personal academic website focusing on neuroscience research and artificial intelligence
@@ -64,7 +65,7 @@ orcid: 0009-0006-1290-7445
 authors:
   jimjing:
     name: Jim Jing
-    bio: Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition
+    bio: Neuroscience Researcher | AI Enthusiast | Amateur Programmer | Science Writer
     external-image: false
     picture: assets/images/self_picture.jpg
     twitter: JimJing1997
