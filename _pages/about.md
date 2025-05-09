@@ -6,12 +6,12 @@ permalink: /about/
 
 # About Me
 
-I am a neuroscience researcher focusing on brain functional network analysis and neuroimaging. Currently pursuing my Ph.D. in Functional Neuroimaging at Ludwig Maximilian University of Munich, I combine computational methods with neuroimaging techniques to understand brain connectivity patterns and their alterations in various conditions.
+I am a neuroscience researcher focusing on brain functional network analysis and neuroimaging. My research integrates computational methods with neuroimaging data to understand brain connectivity patterns in various neurological conditions.
 
 ## Contact Information
 
-- **Tel:** (+49)1744834588
 - **Email:** Junlin.Jing@med.uni-muenchen.de
+- **Phone:** (+49)1744834588
 - **Location:** Munich, Germany
 
 ## Education
@@ -24,14 +24,16 @@ I am a neuroscience researcher focusing on brain functional network analysis and
   University of Electronic Science and Technology of China, Chengdu, Sichuan
   - Supervised by Prof. Bharat Biswal
 
-- **Graduate Entrance Examination Preparation, Biomedical Engineering** (09/2020-07/2021)  
-  University of Electronic Science and Technology of China, Chengdu, Sichuan
-
 - **B.S. in Electronic Information Science and Technology** (09/2016-07/2020)  
   Southwest Petroleum University, Chengdu, Sichuan
 
-- **H.S., Science Track** (09/2013-07/2016)  
-  South No.2 Middle School, Nanchong, Sichuan
+## Publications
+
+1. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2023). Comparative Analysis of Group Information-Guided Independent Component Analysis (GIG-ICA) and Independent Vector Analysis (IVA-GL) for Assessing Brain functional Network Characteristics in Autism Spectrum Disorder (ASD). (Frontiers in Neuroscience)
+
+2. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2024). Exploring Variability in Spatial and Temporal Properties of Brain Functional Networks: A Comparative Analysis of Data-Driven Methods Using Resting-State fMRI Data. (Preprint)
+
+3. **Junlin Jing**, Benjamin Klugah-Brown, et al., (2024). Functional and Structural Connectivity Alterations in Striatal Subregions of Cocaine Use Disorder. (Under Writing)
 
 ## Technical Skills
 
@@ -40,13 +42,15 @@ I am a neuroscience researcher focusing on brain functional network analysis and
 
 ## Additional Experience
 
-- **Datawhale (Open Source AI Learning Community), AI Summer Camp** (07/2023-10/2023)
-  - Brain PET Image Analysis and Disease Prediction Challenge (Completed tutorials, group project)
-  - Biological age assessment and age-related disease risk prediction (Completed tutorials, group project)
-  - "Spark Cup" Cognitive Large Model Scene Innovation Competition (Completed design debugging: psychiatric diagnosis and treatment (ChatPSY), Excellent Work Award)
+- **Datawhale (Open Source AI Learning Community)** (07/2023-10/2023)  
+  AI Summer Camp
+  - Brain PET Image Analysis and Disease Prediction Challenge
+  - Biological age assessment and age-related disease risk prediction
+  - "Spark Cup" Cognitive Large Model Scene Innovation Competition
 
-- **COSN (Chinese Open Science Network), membership in OpenTransfer group** (09/2023-Present)
-  - Developing automated translation tools (Group project)
+- **COSN (Chinese Open Science Network)** (09/2023-Present)  
+  Membership in OpenTransfer group
+  - Developing automated translation tools
 
 ## Awards
 
