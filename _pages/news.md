@@ -46,6 +46,7 @@ body .page-content {
     border-radius: 12px !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
     padding: 2rem !important;
+    position: relative !important;
 }
 
 .section-title {
@@ -55,6 +56,10 @@ body .page-content {
     padding-bottom: 0.5rem !important;
     border-bottom: 3px solid #4299e1 !important;
     text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
 }
 
 /* News Items */
@@ -65,11 +70,12 @@ body .page-content {
     padding: 1.5rem !important;
     margin-bottom: 1.5rem !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
-    transition: transform 0.2s ease-in-out !important;
+    transition: all 0.3s ease !important;
 }
 
 .news-item:hover {
     transform: translateY(-2px) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
 }
 
 .news-date {
@@ -85,6 +91,47 @@ body .page-content {
     font-size: 1.1rem !important;
     line-height: 1.8 !important;
     color: #2d3748 !important;
+}
+
+/* Expand/Collapse Button */
+.expand-button {
+    background: #4299e1 !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin: 1rem auto !important;
+    transition: all 0.3s ease !important;
+}
+
+.expand-button:hover {
+    background: #2b6cb0 !important;
+    transform: translateY(-1px) !important;
+}
+
+.expand-button i {
+    transition: transform 0.3s ease !important;
+}
+
+.expand-button.expanded i {
+    transform: rotate(180deg) !important;
+}
+
+.hidden-items {
+    display: none !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.hidden-items.visible {
+    display: block !important;
+    opacity: 1 !important;
 }
 
 /* Tools Section */
@@ -103,11 +150,15 @@ body .page-content {
     background: #4299e1 !important;
     color: white !important;
     cursor: pointer !important;
-    transition: background 0.2s ease !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
 }
 
 .tool-button:hover {
     background: #2b6cb0 !important;
+    transform: translateY(-1px) !important;
 }
 
 /* Responsive Design */
@@ -174,55 +225,157 @@ body .page-content {
 
 <div class="news-grid">
     <div class="news-section">
-        <h2 class="section-title">Website Updates</h2>
+        <h2 class="section-title">
+            Website Updates
+            <span class="update-count">(4)</span>
+        </h2>
         <div class="news-item" data-category="website">
             <div class="news-date">March 2024</div>
             <div class="news-content">
-                Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis. The website showcases my academic background, research experience, and technical expertise.
+                Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.
             </div>
             <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)">Share</button>
-                <button class="tool-button" onclick="downloadNews(this)">Download</button>
-                <button class="tool-button" onclick="citeNews(this)">Cite</button>
+                <button class="tool-button" onclick="shareNews(this)">
+                    <i class="fas fa-share-alt"></i>
+                    Share
+                </button>
+                <button class="tool-button" onclick="downloadNews(this)">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
             </div>
         </div>
         <div class="news-item" data-category="website">
             <div class="news-date">February 2024</div>
             <div class="news-content">
-                Updated the website with new research focus areas and improved navigation. Added comprehensive documentation of research methodologies and findings.
+                Updated the website with new research focus areas and improved navigation.
             </div>
             <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)">Share</button>
-                <button class="tool-button" onclick="downloadNews(this)">Download</button>
-                <button class="tool-button" onclick="citeNews(this)">Cite</button>
+                <button class="tool-button" onclick="shareNews(this)">
+                    <i class="fas fa-share-alt"></i>
+                    Share
+                </button>
+                <button class="tool-button" onclick="downloadNews(this)">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
             </div>
         </div>
+        <div class="hidden-items">
+            <div class="news-item" data-category="website">
+                <div class="news-date">January 2024</div>
+                <div class="news-content">
+                    Added new sections for publications and research projects.
+                </div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+            <div class="news-item" data-category="website">
+                <div class="news-date">December 2023</div>
+                <div class="news-content">
+                    Initial website setup and design implementation.
+                </div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="expand-button" onclick="toggleSection(this, 'website')">
+            <span class="button-text">Show More</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
     </div>
     
     <div class="news-section">
-        <h2 class="section-title">Personal Updates</h2>
+        <h2 class="section-title">
+            Personal Updates
+            <span class="update-count">(4)</span>
+        </h2>
         <div class="news-item" data-category="personal">
             <div class="news-date">March 2024</div>
             <div class="news-content">
-                Started working on a new research project focusing on deep learning applications in EEG signal processing, exploring novel approaches for brain signal analysis and interpretation.
+                Started working on a new research project focusing on deep learning applications in EEG signal processing.
             </div>
             <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)">Share</button>
-                <button class="tool-button" onclick="downloadNews(this)">Download</button>
-                <button class="tool-button" onclick="citeNews(this)">Cite</button>
+                <button class="tool-button" onclick="shareNews(this)">
+                    <i class="fas fa-share-alt"></i>
+                    Share
+                </button>
+                <button class="tool-button" onclick="downloadNews(this)">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
             </div>
         </div>
         <div class="news-item" data-category="personal">
-            <div class="news-date">January 2024</div>
+            <div class="news-date">February 2024</div>
             <div class="news-content">
-                Published five new technical blog posts covering various aspects of neuroscience and AI, sharing insights and methodologies with the research community.
+                Published a new paper on neural signal processing methods.
             </div>
             <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)">Share</button>
-                <button class="tool-button" onclick="downloadNews(this)">Download</button>
-                <button class="tool-button" onclick="citeNews(this)">Cite</button>
+                <button class="tool-button" onclick="shareNews(this)">
+                    <i class="fas fa-share-alt"></i>
+                    Share
+                </button>
+                <button class="tool-button" onclick="downloadNews(this)">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
             </div>
         </div>
+        <div class="hidden-items">
+            <div class="news-item" data-category="personal">
+                <div class="news-date">January 2024</div>
+                <div class="news-content">
+                    Presented research findings at the International Neuroscience Conference.
+                </div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+            <div class="news-item" data-category="personal">
+                <div class="news-date">December 2023</div>
+                <div class="news-content">
+                    Received grant funding for upcoming research project.
+                </div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="tool-button" onclick="downloadNews(this)">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="expand-button" onclick="toggleSection(this, 'personal')">
+            <span class="button-text">Show More</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
     </div>
 </div>
 
@@ -270,6 +423,23 @@ function searchNews() {
     });
 }
 
+function toggleSection(button, section) {
+    const newsSection = button.closest('.news-section');
+    const hiddenItems = newsSection.querySelector('.hidden-items');
+    const buttonText = button.querySelector('.button-text');
+    const icon = button.querySelector('i');
+    
+    if (hiddenItems.classList.contains('visible')) {
+        hiddenItems.classList.remove('visible');
+        buttonText.textContent = 'Show More';
+        button.classList.remove('expanded');
+    } else {
+        hiddenItems.classList.add('visible');
+        buttonText.textContent = 'Show Less';
+        button.classList.add('expanded');
+    }
+}
+
 function shareNews(button) {
     const newsItem = button.closest('.news-item');
     const content = newsItem.querySelector('.news-content').textContent;
@@ -301,15 +471,7 @@ function downloadNews(button) {
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
 }
+</script>
 
-function citeNews(button) {
-    const newsItem = button.closest('.news-item');
-    const content = newsItem.querySelector('.news-content').textContent;
-    const date = newsItem.querySelector('.news-date').textContent;
-    
-    const citation = `Author. (${date}). ${content}. Retrieved from ${window.location.href}`;
-    navigator.clipboard.writeText(citation).then(() => {
-        alert('Citation copied to clipboard');
-    });
-}
-</script> 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
