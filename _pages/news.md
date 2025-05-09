@@ -73,6 +73,12 @@ permalink: /news/
                 <p>Website redesign completed with improved accessibility and dark mode support.</p>
                 <div class="news-tag">Update</div>
             </div>
+            <div class="news-item">
+                <div class="news-date">March 2024</div>
+                <div class="news-content">
+                    Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis. The website includes detailed information about my academic background, research experience, and technical expertise.
+                </div>
+            </div>
         </div>
         
         <div class="news-year">
@@ -265,41 +271,35 @@ permalink: /news/
 }
 
 .news-item {
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 3px solid var(--accent-color);
-    background: var(--bg-color-secondary);
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(66, 153, 225, 0.05), transparent);
     border-radius: 8px;
-    position: relative;
+    border-left: 4px solid #4299e1;
+}
+
+.news-date {
+    font-size: 1.5rem;
+    color: #2c5282;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.news-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3748;
+}
+
+.news-link {
+    color: #3182ce;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
-.news-item:hover {
-    transform: translateX(5px);
-}
-
-.news-item .date {
-    font-size: 0.9em;
-    color: var(--meta-color);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.news-item p {
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-}
-
-.news-item a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.news-item a:hover {
-    color: var(--link-hover-color);
+.news-link:hover {
+    border-bottom-color: currentColor;
 }
 
 .news-tag {
@@ -412,7 +412,7 @@ permalink: /news/
     }
 
     .news-item {
-        padding: 15px;
+        padding: 1.5rem;
     }
 
     .news-tag {
@@ -427,6 +427,14 @@ permalink: /news/
 
     .archive-item .date {
         min-width: auto;
+    }
+
+    .news-date {
+        font-size: 1.3rem;
+    }
+    
+    .news-content {
+        font-size: 1rem;
     }
 }
 
