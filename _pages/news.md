@@ -19,9 +19,9 @@ body .page-content {
     margin-bottom: 2rem !important;
     flex-wrap: wrap !important;
     background: var(--bg-color-secondary) !important;
-    padding: 1rem !important;
+    padding: 1.5rem !important;
     border-radius: 12px !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
 }
 
 .control-item {
@@ -37,6 +37,17 @@ body .page-content {
     background: var(--bg-color) !important;
     color: var(--text-color) !important;
     font-size: 0.95rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.control-item select:hover, .control-item input:hover {
+    border-color: #999 !important;
+}
+
+.control-item select:focus, .control-item input:focus {
+    outline: none !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.1) !important;
 }
 
 /* News Grid */
@@ -50,79 +61,92 @@ body .page-content {
 .news-section {
     background: var(--bg-color-secondary) !important;
     border-radius: 12px !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
     padding: 2rem !important;
     position: relative !important;
 }
 
 .section-title {
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
     color: var(--heading-color) !important;
     margin-bottom: 2rem !important;
     padding-bottom: 0.5rem !important;
-    border-bottom: 3px solid var(--accent-color) !important;
-    text-align: center !important;
+    border-bottom: 2px solid var(--border-color) !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 0.5rem !important;
+    justify-content: space-between !important;
+}
+
+.update-count {
+    font-size: 1rem !important;
+    color: var(--meta-color) !important;
+    font-weight: normal !important;
 }
 
 /* News Items */
 .news-item {
     background: var(--bg-color) !important;
     border-radius: 8px !important;
-    border-left: 4px solid var(--accent-color) !important;
+    border-left: 3px solid var(--accent-color) !important;
     padding: 1.5rem !important;
     margin-bottom: 1.5rem !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
     transition: all 0.3s ease !important;
-    position: relative !important;
 }
 
 .news-item:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    transform: translateX(5px) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
 }
 
 .news-date {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     color: var(--meta-color) !important;
-    font-weight: 600 !important;
-    margin-bottom: 1rem !important;
-    padding-bottom: 0.5rem !important;
-    border-bottom: 1px solid var(--border-color) !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.75rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.news-date:before {
+    content: "📅" !important;
+    font-size: 1rem !important;
 }
 
 .news-content {
-    font-size: 1.1rem !important;
-    line-height: 1.8 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
     color: var(--text-color) !important;
+    margin-bottom: 1rem !important;
+}
+
+.news-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-top: 1rem !important;
 }
 
 .news-tag {
-    display: inline-block !important;
-    padding: 4px 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    padding: 0.4rem 0.8rem !important;
     background: #f0f0f0 !important;
     color: #666 !important;
     border-radius: 4px !important;
     font-size: 0.9rem !important;
-    margin-top: 1rem !important;
     border: 1px solid #ddd !important;
 }
 
-/* Tools Section */
 .news-tools {
     display: flex !important;
     gap: 0.5rem !important;
-    margin-top: 1rem !important;
-    padding-top: 1rem !important;
-    border-top: 1px solid var(--border-color) !important;
-    justify-content: flex-end !important;
 }
 
 .tool-button {
-    padding: 6px 12px !important;
+    padding: 0.4rem 0.8rem !important;
     border: 1px solid #ddd !important;
     border-radius: 4px !important;
     background: transparent !important;
@@ -132,12 +156,7 @@ body .page-content {
     display: flex !important;
     align-items: center !important;
     gap: 0.25rem !important;
-}
-
-.tool-button:hover {
-    background: #f5f5f5 !important;
-    color: #333 !important;
-    border-color: #ccc !important;
+    font-size: 0.9rem !important;
 }
 
 /* Expand/Collapse Button */
@@ -208,19 +227,15 @@ body .page-content {
     }
     
     .section-title {
-        font-size: 1.5rem !important;
+        font-size: 1.3rem !important;
     }
     
     .news-date {
-        font-size: 1.1rem !important;
+        font-size: 0.95rem !important;
     }
     
     .news-content {
-        font-size: 1rem !important;
-    }
-    
-    .news-tools {
-        flex-wrap: wrap !important;
+        font-size: 0.95rem !important;
     }
 }
 
@@ -240,41 +255,41 @@ body .page-content {
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    margin: 2rem 0 !important;
+    flex-wrap: wrap !important;
 }
 
 .pagination-button {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border-color);
-    background: var(--bg-color);
-    color: var(--text-color);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border: 1px solid var(--border-color) !important;
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
 }
 
 .pagination-button:hover:not(:disabled) {
-    background: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
+    background: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
 }
 
 .pagination-button.active {
-    background: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
+    background: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
 }
 
 .pagination-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
 }
 
 /* Dark theme support */
@@ -363,10 +378,10 @@ body .page-content {
     <div class="control-item">
         <select id="newsFilter" onchange="filterNews()">
             <option value="all">All Categories</option>
-            <option value="website">Website Updates</option>
-            <option value="personal">Personal Updates</option>
-            <option value="research">Research Progress</option>
-            <option value="blog">Blog Posts</option>
+            <option value="personal">Personal</option>
+            <option value="site">Site</option>
+            <option value="project">Project</option>
+            <option value="blog">Blog</option>
         </select>
     </div>
     <div class="control-item">
@@ -382,18 +397,19 @@ body .page-content {
 </div>
 
 <div class="news-grid">
+    <!-- Personal Updates Section -->
     <div class="news-section">
         <h2 class="section-title">
-            Website Updates
+            Personal Updates
             <span class="update-count">(3)</span>
         </h2>
         <div class="news-items">
-            <div class="news-item" data-category="website">
+            <div class="news-item" data-category="personal">
                 <div class="news-date">March 2024</div>
                 <div class="news-content">
-                    Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.
+                    Received certification in Advanced Neural Networks and Deep Learning from Stanford Online.
                 </div>
-                <div class="news-tag">Update</div>
+                <div class="news-tag">Personal</div>
                 <div class="news-tools">
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
@@ -401,12 +417,13 @@ body .page-content {
                     </button>
                 </div>
             </div>
-            <div class="news-item" data-category="website">
+
+            <div class="news-item" data-category="personal">
                 <div class="news-date">February 2024</div>
                 <div class="news-content">
-                    Updated website with new research focus areas and improved navigation.
+                    Presented research findings at the International Conference on Neural Engineering.
                 </div>
-                <div class="news-tag">Update</div>
+                <div class="news-tag">Personal</div>
                 <div class="news-tools">
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
@@ -414,12 +431,13 @@ body .page-content {
                     </button>
                 </div>
             </div>
-            <div class="news-item hidden" data-category="website">
+
+            <div class="news-item hidden" data-category="personal">
                 <div class="news-date">January 2024</div>
                 <div class="news-content">
-                    Initial setup of the academic website structure and basic features.
+                    Joined the Computational Neuroscience Research Group as a visiting researcher.
                 </div>
-                <div class="news-tag">Update</div>
+                <div class="news-tag">Personal</div>
                 <div class="news-tools">
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
@@ -433,18 +451,19 @@ body .page-content {
         </button>
     </div>
 
+    <!-- Project Updates Section -->
     <div class="news-section">
         <h2 class="section-title">
-            Personal Updates
-            <span class="update-count">(3)</span>
+            Project Updates
+            <span class="update-count">(2)</span>
         </h2>
         <div class="news-items">
-            <div class="news-item" data-category="personal">
+            <div class="news-item" data-category="project">
                 <div class="news-date">March 2024</div>
                 <div class="news-content">
                     Started a new research project on deep learning applications in EEG signal processing.
                 </div>
-                <div class="news-tag">Research</div>
+                <div class="news-tag">Project</div>
                 <div class="news-tools">
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
@@ -452,10 +471,57 @@ body .page-content {
                     </button>
                 </div>
             </div>
-            <div class="news-item" data-category="personal">
-                <div class="news-date">January 2024</div>
+
+            <div class="news-item" data-category="project">
+                <div class="news-date">February 2024</div>
                 <div class="news-content">
-                    Published new blog posts covering various aspects of neuroscience and AI.
+                    Released beta version of BrainConnect toolkit for neural data analysis.
+                </div>
+                <div class="news-tag">Project</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Updates Section -->
+    <div class="news-section">
+        <h2 class="section-title">
+            Site Updates
+            <span class="update-count">(1)</span>
+        </h2>
+        <div class="news-items">
+            <div class="news-item" data-category="site">
+                <div class="news-date">March 2024</div>
+                <div class="news-content">
+                    Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.
+                </div>
+                <div class="news-tag">Site</div>
+                <div class="news-tools">
+                    <button class="tool-button" onclick="shareNews(this)" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Updates Section -->
+    <div class="news-section">
+        <h2 class="section-title">
+            Blog Updates
+            <span class="update-count">(2)</span>
+        </h2>
+        <div class="news-items">
+            <div class="news-item" data-category="blog">
+                <div class="news-date">March 2024</div>
+                <div class="news-content">
+                    Published new article: "Understanding Brain Connectivity Through Graph Neural Networks"
                 </div>
                 <div class="news-tag">Blog</div>
                 <div class="news-tools">
@@ -465,12 +531,13 @@ body .page-content {
                     </button>
                 </div>
             </div>
-            <div class="news-item hidden" data-category="personal">
-                <div class="news-date">December 2023</div>
+
+            <div class="news-item hidden" data-category="blog">
+                <div class="news-date">January 2024</div>
                 <div class="news-content">
-                    Started exploring new research directions in brain-computer interfaces.
+                    Published tutorial series: "Getting Started with Neural Data Analysis"
                 </div>
-                <div class="news-tag">Research</div>
+                <div class="news-tag">Blog</div>
                 <div class="news-tools">
                     <button class="tool-button" onclick="shareNews(this)" title="Share">
                         <i class="fas fa-share-alt"></i>
