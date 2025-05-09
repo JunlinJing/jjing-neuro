@@ -318,12 +318,13 @@ body .page-content {
 
 .news-tag {
     display: inline-block !important;
-    padding: 0.3rem 0.8rem !important;
-    background: var(--accent-color) !important;
-    color: white !important;
+    padding: 4px 10px !important;
+    background: #f0f0f0 !important;
+    color: #666 !important;
     border-radius: 4px !important;
     font-size: 0.9rem !important;
     margin-top: 1rem !important;
+    border: 1px solid #ddd !important;
 }
 
 /* Tools Section */
@@ -337,11 +338,11 @@ body .page-content {
 }
 
 .tool-button {
-    padding: 0.5rem 1rem !important;
-    border: none !important;
-    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
     background: transparent !important;
-    color: var(--text-color) !important;
+    color: #666 !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
     display: flex !important;
@@ -350,30 +351,43 @@ body .page-content {
 }
 
 .tool-button:hover {
-    background: var(--accent-color) !important;
-    color: white !important;
+    background: #f5f5f5 !important;
+    color: #333 !important;
+    border-color: #ccc !important;
 }
 
 /* Expand/Collapse Button */
 .expand-button {
-    background: var(--accent-color) !important;
-    color: white !important;
-    border: none !important;
-    padding: 0.75rem 1.5rem !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-    font-size: 1rem !important;
-    font-weight: 500 !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    margin: 1rem auto !important;
-    transition: all 0.3s ease !important;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .expand-button:hover {
-    background: var(--accent-color-dark) !important;
-    transform: translateY(-1px) !important;
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark theme support */
+[data-theme="dark"] .expand-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+}
+
+[data-theme="dark"] .expand-button:hover {
+    background-color: var(--accent-color-dark);
 }
 
 .expand-button i {
@@ -504,18 +518,21 @@ body .page-content {
     width: 100%;
     padding: 10px;
     margin-top: 15px;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .expand-button:hover {
-    background-color: var(--accent-color-dark);
+    background-color: #e0e0e0;
+    border-color: #ccc;
     transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .expand-button i {
@@ -525,6 +542,36 @@ body .page-content {
 
 .expand-button.expanded i {
     transform: rotate(180deg);
+}
+
+/* Dark theme support for tool buttons */
+[data-theme="dark"] .tool-button {
+    border-color: var(--border-color-dark);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .tool-button:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* News tag styles */
+.news-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #f0f0f0;
+    color: #666;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+}
+
+[data-theme="dark"] .news-tag {
+    background: var(--accent-color);
+    color: white;
+    border: none;
 }
 </style>
 

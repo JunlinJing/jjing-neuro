@@ -629,18 +629,21 @@
         width: 100%;
         padding: 10px;
         margin-top: 15px;
-        background-color: var(--accent-color);
-        color: white;
-        border: none;
+        background-color: #f0f0f0;
+        color: #333;
+        border: 1px solid #ddd;
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
         transition: all 0.3s ease;
+        font-weight: 500;
     }
 
     .expand-button:hover {
-        background-color: var(--accent-color-dark);
+        background-color: #e0e0e0;
+        border-color: #ccc;
         transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .expand-button i {
@@ -696,13 +699,13 @@
 
     .news-tag {
         display: inline-block;
-        padding: 4px 8px;
-        background: var(--accent-color);
-        color: white;
+        padding: 4px 10px;
+        background: #f0f0f0;
+        color: #666;
         border-radius: 4px;
-        font-size: 0.8em;
-        font-weight: 500;
-        margin-top: 10px;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        border: 1px solid #ddd;
     }
 
     .news-tools {
@@ -713,18 +716,22 @@
     }
 
     .tool-button {
-        background: transparent;
-        border: none;
-        color: var(--text-color);
-        cursor: pointer;
-        padding: 4px 8px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
         border-radius: 4px;
+        background: transparent;
+        color: #666;
+        cursor: pointer;
         transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
     }
 
     .tool-button:hover {
-        background: var(--accent-color);
-        color: white;
+        background: #f5f5f5;
+        color: #333;
+        border-color: #ccc;
     }
 
     .news-footer {
@@ -737,17 +744,20 @@
         align-items: center;
         gap: 8px;
         padding: 10px 20px;
-        background: var(--accent-color);
-        color: white;
+        background: #f0f0f0;
+        color: #333;
         text-decoration: none;
         border-radius: 20px;
         font-weight: 500;
+        border: 1px solid #ddd;
         transition: all 0.3s ease;
     }
 
     .view-more-btn:hover {
-        background: var(--accent-color-dark);
+        background: #e0e0e0;
+        border-color: #ccc;
         transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     @media (max-width: 768px) {
@@ -781,11 +791,32 @@
     }
 
     [data-theme="dark"] .view-more-btn {
-        background: var(--accent-color-dark);
+        background: var(--accent-color);
+        color: white;
+        border: none;
     }
 
     [data-theme="dark"] .view-more-btn:hover {
+        background: var(--accent-color-dark);
+    }
+
+    /* Dark theme support for tool buttons */
+    [data-theme="dark"] .tool-button {
+        border-color: var(--border-color-dark);
+        color: var(--text-color);
+    }
+
+    [data-theme="dark"] .tool-button:hover {
         background: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+    }
+
+    /* News tag styles */
+    [data-theme="dark"] .news-tag {
+        background: var(--accent-color);
+        color: white;
+        border: none;
     }
 </style>
 
