@@ -22,6 +22,7 @@
             <div class="header-text">
                 <h1 class="name">{{ site.title }}</h1>
                 <h2 class="tagline">{{ site.bio }}</h2>
+                <p class="motto">{{ site.motto }}</p>
 
                 <div class="social-links-wrapper">
                     {% include social-links.html %}
@@ -127,6 +128,18 @@
             margin: 0.5em 0;
             line-height: 1.6;
             letter-spacing: 0.02em;
+        }
+
+        .motto {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #888;
+            margin: 1em 0;
+            line-height: 1.8;
+            font-style: italic;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .social-links-wrapper {
