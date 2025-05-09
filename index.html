@@ -4,32 +4,60 @@ title: Home
 ---
 <div class="home-content">
     <div class="news-section">
-        <h3>News</h3>
+        <h3>Latest News</h3>
+        <div class="news-controls-simple">
+            <select id="homeNewsFilter" onchange="filterHomeNews()">
+                <option value="all">All Categories</option>
+                <option value="website">Website Updates</option>
+                <option value="personal">Personal Updates</option>
+                <option value="research">Research Progress</option>
+            </select>
+        </div>
         <div class="news-grid">
-            <div class="news-column">
+            <div class="news-column" data-category="website">
                 <h4 class="column-title">Website Updates</h4>
                 <div class="news-item">
                     <span class="date">March 2024</span>
-                    <p>Launched my academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
+                    <p>Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
                     <div class="news-tag">Update</div>
+                    <div class="news-tools">
+                        <button onclick="shareNews(this)" class="tool-button" title="Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="news-item">
                     <span class="date">February 2024</span>
-                    <p>Updated the website with new research focus areas and improved navigation.</p>
+                    <p>Updated website with new research focus areas and improved navigation.</p>
                     <div class="news-tag">Update</div>
+                    <div class="news-tools">
+                        <button onclick="shareNews(this)" class="tool-button" title="Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="news-column">
+            <div class="news-column" data-category="personal">
                 <h4 class="column-title">Personal Updates</h4>
                 <div class="news-item">
                     <span class="date">March 2024</span>
                     <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
                     <div class="news-tag">Research</div>
+                    <div class="news-tools">
+                        <button onclick="shareNews(this)" class="tool-button" title="Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="news-item">
                     <span class="date">January 2024</span>
                     <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
                     <div class="news-tag">Blog</div>
+                    <div class="news-tools">
+                        <button onclick="shareNews(this)" class="tool-button" title="Share">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,6 +90,21 @@ title: Home
         text-align: center;
         border-bottom: 2px solid var(--border-color);
         padding-bottom: 10px;
+    }
+
+    .news-controls-simple {
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    .news-controls-simple select {
+        padding: 8px 15px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-size: 0.9em;
+        cursor: pointer;
     }
 
     .news-grid {
@@ -121,15 +164,36 @@ title: Home
     }
 
     .news-tag {
-        position: absolute;
-        top: 15px;
-        right: 15px;
+        display: inline-block;
         padding: 4px 8px;
         background: var(--accent-color);
         color: white;
         border-radius: 4px;
         font-size: 0.8em;
         font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .news-tools {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .tool-button {
+        background: transparent;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .tool-button:hover {
+        background: var(--accent-color);
+        color: white;
     }
 
     .news-footer {
@@ -171,12 +235,6 @@ title: Home
         .news-item {
             padding: 12px;
         }
-
-        .news-tag {
-            position: static;
-            display: inline-block;
-            margin-top: 10px;
-        }
     }
 
     [data-theme="dark"] .news-section {
@@ -199,3 +257,38 @@ title: Home
         background: var(--accent-color);
     }
 </style>
+
+<script>
+function filterHomeNews() {
+    const filter = document.getElementById('homeNewsFilter').value;
+    const columns = document.querySelectorAll('.news-column');
+    
+    columns.forEach(column => {
+        if (filter === 'all' || column.dataset.category === filter) {
+            column.style.display = 'block';
+        } else {
+            column.style.display = 'none';
+        }
+    });
+}
+
+function shareNews(button) {
+    const newsItem = button.closest('.news-item');
+    const newsText = newsItem.querySelector('p').textContent;
+    const newsDate = newsItem.querySelector('.date').textContent;
+    
+    if (navigator.share) {
+        navigator.share({
+            title: 'Academic Website News',
+            text: `${newsDate}: ${newsText}`,
+            url: window.location.href
+        }).catch(console.error);
+    } else {
+        // Fallback for browsers that don't support native sharing
+        const textToCopy = `${newsDate}: ${newsText}\n${window.location.href}`;
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => alert('Copied to clipboard'))
+            .catch(console.error);
+    }
+}
+</script>
