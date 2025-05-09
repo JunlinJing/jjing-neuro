@@ -224,6 +224,56 @@ body .page-content {
 [data-theme="dark"] .news-item {
     background: var(--bg-color-darker) !important;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.pagination-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.pagination-button.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .pagination-button {
+    background: var(--bg-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+[data-theme="dark"] .pagination-button:hover:not(:disabled),
+[data-theme="dark"] .pagination-button.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
 </style>
 
 <div class="news-controls">
@@ -303,17 +353,27 @@ body .page-content {
 </div>
 
 <script>
+const ITEMS_PER_PAGE = 5;
+let currentPage = 1;
+
 function filterNews() {
     const filter = document.getElementById('newsFilter').value;
     const items = document.querySelectorAll('.news-item');
+    let visibleCount = 0;
     
     items.forEach(item => {
         if (filter === 'all' || item.dataset.category === filter) {
             item.style.display = 'block';
+            visibleCount++;
         } else {
             item.style.display = 'none';
         }
     });
+    
+    // Reset pagination after filtering
+    currentPage = 1;
+    updatePagination(visibleCount);
+    applyPagination();
 }
 
 function sortNews() {
@@ -341,11 +401,18 @@ function sortNews() {
         const container = section.querySelector('.news-item').parentNode;
         items.forEach(item => container.appendChild(item));
     });
+    
+    // Reset pagination after sorting
+    currentPage = 1;
+    const visibleItems = document.querySelectorAll('.news-item[style*="display: block"]').length;
+    updatePagination(visibleItems);
+    applyPagination();
 }
 
 function searchNews() {
     const searchText = document.getElementById('newsSearch').value.toLowerCase();
     const items = document.querySelectorAll('.news-item');
+    let visibleCount = 0;
     
     items.forEach(item => {
         const content = item.querySelector('.news-content').textContent.toLowerCase();
@@ -356,15 +423,104 @@ function searchNews() {
             date.includes(searchText) || 
             category.includes(searchText)) {
             item.style.display = 'block';
+            visibleCount++;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    
+    // Reset pagination after search
+    currentPage = 1;
+    updatePagination(visibleCount);
+    applyPagination();
+}
+
+function updatePagination(totalItems) {
+    const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+    const paginationContainer = document.querySelector('.pagination');
+    
+    if (!paginationContainer) {
+        const container = document.createElement('div');
+        container.className = 'pagination';
+        document.querySelector('.news-grid').after(container);
+    }
+    
+    const pagination = document.querySelector('.pagination');
+    pagination.innerHTML = '';
+    
+    if (totalPages > 1) {
+        // Previous button
+        const prevButton = document.createElement('button');
+        prevButton.innerHTML = '<i class="fas fa-chevron-left"></i> Previous';
+        prevButton.className = 'pagination-button';
+        prevButton.onclick = () => changePage(currentPage - 1, totalPages);
+        prevButton.disabled = currentPage === 1;
+        pagination.appendChild(prevButton);
+        
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.className = `pagination-button ${i === currentPage ? 'active' : ''}`;
+            pageButton.onclick = () => changePage(i, totalPages);
+            pagination.appendChild(pageButton);
+        }
+        
+        // Next button
+        const nextButton = document.createElement('button');
+        nextButton.innerHTML = 'Next <i class="fas fa-chevron-right"></i>';
+        nextButton.className = 'pagination-button';
+        nextButton.onclick = () => changePage(currentPage + 1, totalPages);
+        nextButton.disabled = currentPage === totalPages;
+        pagination.appendChild(nextButton);
+    }
+}
+
+function changePage(newPage, totalPages) {
+    if (newPage >= 1 && newPage <= totalPages) {
+        currentPage = newPage;
+        applyPagination();
+        
+        // Update pagination buttons
+        document.querySelectorAll('.pagination-button').forEach(button => {
+            if (button.textContent === String(currentPage)) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+        
+        // Update Previous/Next buttons
+        const [prevButton, ...pageButtons] = document.querySelectorAll('.pagination-button');
+        const nextButton = pageButtons[pageButtons.length - 1];
+        
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+        
+        // Scroll to top of news section
+        document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function applyPagination() {
+    const visibleItems = Array.from(document.querySelectorAll('.news-item[style*="display: block"]'));
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    
+    visibleItems.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+            item.style.display = 'block';
         } else {
             item.style.display = 'none';
         }
     });
 }
 
-// Initialize sorting when page loads
+// Initialize pagination when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    sortNews();
+    const totalItems = document.querySelectorAll('.news-item').length;
+    updatePagination(totalItems);
+    applyPagination();
 });
 
 function toggleSection(button) {

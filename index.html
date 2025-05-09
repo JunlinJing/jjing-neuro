@@ -15,49 +15,99 @@ title: Home
         <div class="news-grid">
             <div class="news-column" data-category="website">
                 <h4 class="column-title">Website Updates</h4>
-                <div class="news-item">
-                    <span class="date">March 2024</span>
-                    <p>Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
-                    <div class="news-tag">Update</div>
-                    <div class="news-tools">
-                        <button onclick="shareNews(this)" class="tool-button" title="Share">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
+                <div class="visible-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
+                        <div class="news-tag">Update</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">February 2024</span>
+                        <p>Updated website with new research focus areas and improved navigation.</p>
+                        <div class="news-tag">Update</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="news-item">
-                    <span class="date">February 2024</span>
-                    <p>Updated website with new research focus areas and improved navigation.</p>
-                    <div class="news-tag">Update</div>
-                    <div class="news-tools">
-                        <button onclick="shareNews(this)" class="tool-button" title="Share">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
+                <div class="hidden-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Research</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">January 2024</span>
+                        <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                        <div class="news-tag">Blog</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <div class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></div>
             </div>
             <div class="news-column" data-category="personal">
                 <h4 class="column-title">Personal Updates</h4>
-                <div class="news-item">
-                    <span class="date">March 2024</span>
-                    <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
-                    <div class="news-tag">Research</div>
-                    <div class="news-tools">
-                        <button onclick="shareNews(this)" class="tool-button" title="Share">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
+                <div class="visible-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Research</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">January 2024</span>
+                        <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                        <div class="news-tag">Blog</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="news-item">
-                    <span class="date">January 2024</span>
-                    <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
-                    <div class="news-tag">Blog</div>
-                    <div class="news-tools">
-                        <button onclick="shareNews(this)" class="tool-button" title="Share">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
+                <div class="hidden-items">
+                    <div class="news-item">
+                        <span class="date">March 2024</span>
+                        <p>Started working on a new research project focusing on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Research</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">January 2024</span>
+                        <p>Added five new technical blog posts covering various aspects of neuroscience and AI.</p>
+                        <div class="news-tag">Blog</div>
+                        <div class="news-tools">
+                            <button onclick="shareNews(this)" class="tool-button" title="Share">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <div class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></div>
             </div>
         </div>
         <div class="news-footer">
@@ -118,6 +168,51 @@ title: Home
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .visible-items {
+        margin-bottom: 1rem;
+    }
+
+    .hidden-items {
+        display: none;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .hidden-items.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .expand-button {
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem auto;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+
+    .expand-button:hover {
+        background: var(--accent-color-dark);
+        transform: translateY(-2px);
+    }
+
+    .expand-button i {
+        transition: transform 0.3s ease;
+    }
+
+    .expand-button.expanded i {
+        transform: rotate(180deg);
     }
 
     .column-title {
@@ -275,16 +370,55 @@ function sortHomeNewsByDate() {
     const columns = document.querySelectorAll('.news-column');
     
     columns.forEach(column => {
-        const items = Array.from(column.querySelectorAll('.news-item'));
+        const visibleItems = Array.from(column.querySelector('.visible-items').querySelectorAll('.news-item'));
+        const hiddenItems = Array.from(column.querySelector('.hidden-items').querySelectorAll('.news-item'));
+        const allItems = [...visibleItems, ...hiddenItems];
         
-        items.sort((a, b) => {
+        allItems.sort((a, b) => {
             const dateA = new Date(a.querySelector('.date').textContent);
             const dateB = new Date(b.querySelector('.date').textContent);
-            return dateB - dateA; // Sort in descending order (newest first)
+            return dateB - dateA;
         });
         
-        items.forEach(item => column.appendChild(item));
+        // Show first 2 items in visible section
+        const visibleContainer = column.querySelector('.visible-items');
+        const hiddenContainer = column.querySelector('.hidden-items');
+        
+        visibleContainer.innerHTML = '';
+        hiddenContainer.innerHTML = '';
+        
+        allItems.forEach((item, index) => {
+            if (index < 2) {
+                visibleContainer.appendChild(item);
+            } else {
+                hiddenContainer.appendChild(item);
+            }
+        });
+        
+        // Hide "Show More" button if no hidden items
+        const expandButton = column.querySelector('.expand-button');
+        if (hiddenContainer.children.length === 0) {
+            expandButton.style.display = 'none';
+        } else {
+            expandButton.style.display = 'flex';
+        }
     });
+}
+
+function toggleItems(button) {
+    const column = button.closest('.news-column');
+    const hiddenItems = column.querySelector('.hidden-items');
+    const isExpanded = button.classList.contains('expanded');
+    
+    if (isExpanded) {
+        hiddenItems.classList.remove('visible');
+        button.classList.remove('expanded');
+        button.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
+    } else {
+        hiddenItems.classList.add('visible');
+        button.classList.add('expanded');
+        button.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
+    }
 }
 
 // Call sort function when page loads
