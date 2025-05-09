@@ -21,55 +21,66 @@ layout: default
         <div class="news-stats">
             <div class="stat-item">
                 <i class="fas fa-newspaper"></i>
-                <span>总文章数: {{ site.posts | size }}</span>
+                <span>Total Articles: {{ site.posts | size }}</span>
             </div>
             <div class="stat-item">
                 <i class="fas fa-tags"></i>
-                <span>标签数: {{ site.tags | size }}</span>
+                <span>Tags: {{ site.tags | size }}</span>
             </div>
             <div class="stat-item">
                 <i class="fas fa-calendar-alt"></i>
-                <span>最近更新: {{ site.posts.first.date | date: "%Y-%m-%d" }}</span>
+                <span>Last Updated: {{ site.posts.first.date | date: "%Y-%m-%d" }}</span>
             </div>
-            <a href="/feed.xml" class="rss-link" title="订阅RSS">
+            <a href="/feed.xml" class="rss-link" title="Subscribe RSS">
                 <i class="fas fa-rss"></i>
-                <span>RSS订阅</span>
+                <span>RSS Subscribe</span>
             </a>
         </div>
         
         <div class="news-controls">
             <div class="search-box">
-                <input type="text" id="newsSearch" placeholder="搜索新闻..." />
+                <input type="text" id="newsSearch" placeholder="Search news..." />
                 <i class="fas fa-search"></i>
                 <div class="search-history">
-                    <h4>搜索历史</h4>
+                    <h4>Search History</h4>
                     <ul id="searchHistoryList"></ul>
                     <button id="clearHistory" class="clear-history-btn">
                         <i class="fas fa-trash-alt"></i>
-                        清除历史
+                        Clear History
                     </button>
                 </div>
             </div>
             <div class="filter-box">
                 <select id="newsFilter">
-                    <option value="all">全部分类</option>
-                    <option value="website">网站更新</option>
-                    <option value="personal">个人动态</option>
-                    <option value="research">研究进展</option>
-                    <option value="publication">发表论文</option>
+                    <option value="all">All Categories</option>
+                    <option value="website">Website Updates</option>
+                    <option value="personal">Personal Updates</option>
+                    <option value="research">Research Progress</option>
+                    <option value="publication">Published Papers</option>
+                    <option value="conference">Academic Conferences</option>
+                    <option value="award">Awards & Honors</option>
+                    <option value="collaboration">Collaborations</option>
+                    <option value="media">Media Coverage</option>
+                    <option value="teaching">Teaching Activities</option>
+                    <option value="outreach">Outreach</option>
                 </select>
             </div>
             <div class="sort-box">
                 <select id="newsSort">
-                    <option value="date-desc">最新优先</option>
-                    <option value="date-asc">最早优先</option>
-                    <option value="title">按标题</option>
+                    <option value="date-desc">Latest First</option>
+                    <option value="date-asc">Oldest First</option>
+                    <option value="title">By Title</option>
+                    <option value="views-desc">Most Viewed</option>
+                    <option value="likes-desc">Most Liked</option>
+                    <option value="comments-desc">Most Commented</option>
+                    <option value="relevance">By Relevance</option>
+                    <option value="importance">By Importance</option>
                 </select>
             </div>
         </div>
 
         <div class="tag-cloud">
-            <h4>热门标签</h4>
+            <h4>Popular Tags</h4>
             <div class="tags">
                 {% assign all_tags = site.posts | map: "tags" | compact | uniq %}
                 {% for tag in all_tags %}
@@ -81,7 +92,7 @@ layout: default
         <div class="archive-dropdown">
             <button class="archive-btn">
                 <i class="fas fa-archive"></i>
-                历史归档
+                Archive
                 <i class="fas fa-chevron-down"></i>
             </button>
             <div class="archive-content">
@@ -107,7 +118,7 @@ layout: default
         <div class="drawer-header">
             <h3>
                 <i class="fas fa-bookmark"></i>
-                我的收藏
+                My Favorites
             </h3>
             <button class="close-drawer">
                 <i class="fas fa-times"></i>
@@ -123,12 +134,12 @@ layout: default
         <div class="news-toolbar">
             <button id="showFavorites" class="toolbar-btn">
                 <i class="fas fa-bookmark"></i>
-                我的收藏
+                My Favorites
                 <span class="favorites-count">0</span>
             </button>
             <button id="togglePrintMode" class="toolbar-btn">
                 <i class="fas fa-print"></i>
-                打印模式
+                Print Mode
             </button>
         </div>
 
@@ -142,11 +153,23 @@ layout: default
                         <div class="news-item-header">
                             <span class="date">{{ post.date | date: "%B %Y" }}</span>
                             <div class="news-item-tools">
-                                <button class="favorite-btn" data-post-id="{{ post.id | slugify }}" title="收藏文章">
+                                <button class="favorite-btn" data-post-id="{{ post.id | slugify }}" title="Bookmark Article">
                                     <i class="far fa-bookmark"></i>
                                 </button>
-                                <button class="print-btn" onclick="printArticle('{{ post.id | slugify }}')" title="打印文章">
+                                <button class="print-btn" onclick="printArticle('{{ post.id | slugify }}')" title="Print Article">
                                     <i class="fas fa-print"></i>
+                                </button>
+                                <button class="translate-btn" onclick="translateArticle('{{ post.id | slugify }}')" title="Translate Article">
+                                    <i class="fas fa-language"></i>
+                                </button>
+                                <button class="download-btn" onclick="downloadArticle('{{ post.id | slugify }}')" title="Download Article">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="cite-btn" onclick="citeArticle('{{ post.id | slugify }}')" title="Cite Article">
+                                    <i class="fas fa-quote-right"></i>
+                                </button>
+                                <button class="share-btn" onclick="showShareOptions('{{ post.id | slugify }}')" title="Share Article">
+                                    <i class="fas fa-share-alt"></i>
                                 </button>
                             </div>
                         </div>
@@ -158,8 +181,8 @@ layout: default
                                 {{ post.content }}
                             </div>
                             <button class="preview-toggle" onclick="togglePreview(this)">
-                                <span class="show-more">显示更多</span>
-                                <span class="show-less" style="display: none;">收起</span>
+                                <span class="show-more">Show More</span>
+                                <span class="show-less" style="display: none;">Hide</span>
                             </button>
                         </div>
                         <div class="news-tags">
@@ -171,11 +194,11 @@ layout: default
                             <div class="news-meta">
                                 <span class="read-time">
                                     <i class="fas fa-clock"></i>
-                                    {{ post.content | number_of_words | divided_by: 250 | plus: 1 }}分钟阅读
+                                    {{ post.content | number_of_words | divided_by: 250 | plus: 1 }} min read
                                 </span>
                                 <span class="view-count" data-post-id="{{ post.id | slugify }}">
                                     <i class="fas fa-eye"></i>
-                                    <span class="count">0</span>次浏览
+                                    <span class="count">0</span> views
                                 </span>
                                 <button class="like-button" data-post-id="{{ post.id | slugify }}">
                                     <i class="far fa-heart"></i>
@@ -184,11 +207,11 @@ layout: default
                             </div>
                             <div class="action-buttons">
                                 {% if post.url %}
-                                <a href="{{ post.url }}" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                                <a href="{{ post.url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                                 {% endif %}
                                 <button class="comment-toggle" onclick="toggleComments('{{ post.id | slugify }}')">
                                     <i class="far fa-comment"></i>
-                                    评论
+                                    Comments
                                 </button>
                                 <div class="share-buttons">
                                     <button onclick="shareNews('twitter', '{{ post.title }}', '{{ post.url }}')" class="share-btn twitter">
@@ -209,6 +232,12 @@ layout: default
                                     <button onclick="shareNews('wechat', '{{ post.title }}', '{{ post.url }}')" class="share-btn wechat">
                                         <i class="fab fa-weixin"></i>
                                     </button>
+                                    <button onclick="shareNews('zhihu', '{{ post.title }}', '{{ post.url }}')" class="share-btn zhihu">
+                                        <i class="fab fa-zhihu"></i>
+                                    </button>
+                                    <button onclick="shareNews('douban', '{{ post.title }}', '{{ post.url }}')" class="share-btn douban">
+                                        <i class="fab fa-douban"></i>
+                                    </button>
                                     <button class="share-btn more" onclick="showMoreShareOptions(this)">
                                         <i class="fas fa-ellipsis-h"></i>
                                     </button>
@@ -225,7 +254,7 @@ layout: default
 
                         <!-- 添加文章推荐部分 -->
                         <div class="article-recommendations">
-                            <h4>相关推荐</h4>
+                            <h4>Related Articles</h4>
                             <div class="recommendations-list">
                                 {% assign related_posts = site.posts | where_exp:"post", "post.tags contains post.tags.first" | where_exp:"post", "post.url != post.url" | limit:3 %}
                                 {% for related in related_posts %}
@@ -256,7 +285,7 @@ layout: default
                         </div>
                         {% if post.url %}
                         <div class="news-item-footer">
-                            <a href="{{ post.url }}" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ post.url }}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                             <div class="share-buttons">
                                 <button onclick="shareNews('twitter', '{{ post.title }}', '{{ post.url }}')" class="share-btn twitter">
                                     <i class="fab fa-twitter"></i>
@@ -290,7 +319,7 @@ layout: default
 <div id="shareModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
-        <h3>分享到更多平台</h3>
+        <h3>Share to More Platforms</h3>
         <div class="share-grid">
             <button onclick="shareNews('reddit', currentShare.title, currentShare.url)" class="share-btn reddit">
                 <i class="fab fa-reddit"></i>
@@ -302,11 +331,11 @@ layout: default
             </button>
             <button onclick="shareNews('email', currentShare.title, currentShare.url)" class="share-btn email">
                 <i class="fas fa-envelope"></i>
-                邮件
+                Email
             </button>
             <button onclick="copyShareLink(currentShare.url)" class="share-btn copy">
                 <i class="fas fa-link"></i>
-                复制链接
+                Copy Link
             </button>
         </div>
     </div>
@@ -316,7 +345,7 @@ layout: default
 <div id="wechatQRModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
-        <h3>微信扫码分享</h3>
+        <h3>Scan QR Code to Share</h3>
         <div id="wechatQRCode"></div>
     </div>
 </div>
@@ -1199,6 +1228,131 @@ layout: default
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    /* 新增社交分享按钮样式 */
+    .share-btn.zhihu {
+        background: #0066FF;
+    }
+
+    .share-btn.douban {
+        background: #00B51D;
+    }
+
+    /* 引用模态框样式 */
+    .citation-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1100;
+    }
+
+    .citation-modal .modal-content {
+        background: var(--bg-color);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        width: 90%;
+    }
+
+    .citation-formats {
+        margin: 20px 0;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .citation-format {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: var(--bg-color-secondary);
+        border-radius: 8px;
+    }
+
+    .citation-format h4 {
+        margin-bottom: 10px;
+        color: var(--heading-color);
+    }
+
+    .citation-format p {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: var(--bg-color);
+        border-radius: 4px;
+        font-family: monospace;
+    }
+
+    .citation-format button {
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .citation-format button:hover {
+        background: var(--accent-color-dark);
+    }
+
+    /* 文章工具按钮样式 */
+    .news-item-tools {
+        display: flex;
+        gap: 8px;
+    }
+
+    .news-item-tools button {
+        background: none;
+        border: none;
+        color: var(--meta-color);
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .news-item-tools button:hover {
+        color: var(--accent-color);
+        background: var(--bg-color-secondary);
+        transform: scale(1.1);
+    }
+
+    .news-item-tools button.active {
+        color: var(--accent-color);
+    }
+
+    /* 深色模式适配 */
+    [data-theme="dark"] .citation-modal .modal-content {
+        background: var(--bg-color-dark);
+    }
+
+    [data-theme="dark"] .citation-format {
+        background: var(--bg-color-darker);
+    }
+
+    [data-theme="dark"] .citation-format p {
+        background: var(--bg-color-dark);
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .news-item-tools {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .citation-modal .modal-content {
+            width: 95%;
+            margin: 10px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+    }
 </style>
 
 <script>
@@ -1216,9 +1370,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const pagination = document.getElementById(`${category}Pagination`);
         
         pagination.innerHTML = `
-            <button onclick="changePage('${category}', 'prev')" ${currentPage[category] === 1 ? 'disabled' : ''}>上一页</button>
+            <button onclick="changePage('${category}', 'prev')" ${currentPage[category] === 1 ? 'disabled' : ''}>Previous</button>
             <span>${currentPage[category]} / ${totalPages}</span>
-            <button onclick="changePage('${category}', 'next')" ${currentPage[category] === totalPages ? 'disabled' : ''}>下一页</button>
+            <button onclick="changePage('${category}', 'next')" ${currentPage[category] === totalPages ? 'disabled' : ''}>Next</button>
         `;
 
         updateVisibleItems(category);
@@ -1385,6 +1539,12 @@ function shareNews(platform, title, url) {
         case 'wechat':
             showWeChatQR(url);
             return;
+        case 'zhihu':
+            shareUrl = `https://www.zhihu.com/share?url=${encodedUrl}&title=${encodedTitle}`;
+            break;
+        case 'douban':
+            shareUrl = `https://www.douban.com/share/service?url=${encodedUrl}&title=${encodedTitle}`;
+            break;
         // 保留现有的分享平台
         // ... existing code ...
     }
@@ -1410,7 +1570,7 @@ function showWeChatQR(url) {
 
 function copyShareLink(url) {
     navigator.clipboard.writeText(url).then(() => {
-        alert('链接已复制到剪贴板');
+        alert('Link copied to clipboard');
     });
 }
 
@@ -1763,6 +1923,191 @@ document.addEventListener('DOMContentLoaded', function() {
     new LikeSystem();
     new ViewCounter();
     new FavoriteSystem();
+});
+
+// 文章翻译功能
+function translateArticle(postId) {
+    const article = document.querySelector(`.news-item[data-id="${postId}"]`);
+    const content = article.querySelector('.full-content').textContent;
+    
+    // Integration point for translation API
+    const targetLang = prompt('Select target language (en/zh/ja/ko):', 'en');
+    if (!targetLang) return;
+    
+    // Translation process simulation
+    article.style.opacity = '0.5';
+    setTimeout(() => {
+        alert('Translation API configuration required');
+        article.style.opacity = '1';
+    }, 1000);
+}
+
+// 文章下载功能
+function downloadArticle(postId) {
+    const article = document.querySelector(`.news-item[data-id="${postId}"]`);
+    const title = article.querySelector('.news-title').textContent;
+    const content = article.querySelector('.full-content').textContent;
+    
+    // 创建Blob对象
+    const blob = new Blob([`${title}\n\n${content}`], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    
+    // 创建下载链接
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${title}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    
+    // 清理
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+
+// 文章引用功能
+function citeArticle(postId) {
+    const article = document.querySelector(`.news-item[data-id="${postId}"]`);
+    const title = article.querySelector('.news-title').textContent;
+    const date = article.querySelector('.date').textContent;
+    const url = window.location.href;
+    
+    const citationFormats = {
+        APA: `Author. (${date}). ${title}. Retrieved from ${url}`,
+        MLA: `Author. "${title}." ${date}, ${url}`,
+        Chicago: `Author. ${title}. ${date}. ${url}.`,
+        Harvard: `Author ${date}, '${title}', Retrieved from ${url}`
+    };
+    
+    const modal = document.createElement('div');
+    modal.className = 'citation-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <h3>Select Citation Format</h3>
+            <div class="citation-formats">
+                ${Object.entries(citationFormats).map(([format, citation]) => `
+                    <div class="citation-format">
+                        <h4>${format}</h4>
+                        <p>${citation}</p>
+                        <button onclick="copyToClipboard('${citation.replace(/'/g, "\\'")}')">Copy</button>
+                    </div>
+                `).join('')}
+            </div>
+            <button onclick="this.parentElement.parentElement.remove()">Close</button>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+}
+
+// 复制到剪贴板
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard');
+    });
+}
+
+// 扩展排序功能
+const sortFunctions = {
+    'date-desc': (a, b) => b.dataset.date - a.dataset.date,
+    'date-asc': (a, b) => a.dataset.date - b.dataset.date,
+    'title': (a, b) => a.dataset.title.localeCompare(b.dataset.title),
+    'views-desc': (a, b) => {
+        const viewsA = parseInt(a.querySelector('.view-count .count').textContent);
+        const viewsB = parseInt(b.querySelector('.view-count .count').textContent);
+        return viewsB - viewsA;
+    },
+    'likes-desc': (a, b) => {
+        const likesA = parseInt(a.querySelector('.like-count').textContent);
+        const likesB = parseInt(b.querySelector('.like-count').textContent);
+        return likesB - likesA;
+    },
+    'comments-desc': (a, b) => {
+        const commentsA = parseInt(a.querySelector('.comments-count')?.textContent || '0');
+        const commentsB = parseInt(b.querySelector('.comments-count')?.textContent || '0');
+        return commentsB - commentsA;
+    },
+    'relevance': (a, b) => {
+        // 基于标签匹配度和搜索关键词的相关性计算
+        const searchTerm = document.getElementById('newsSearch').value.toLowerCase();
+        const relevanceA = calculateRelevance(a, searchTerm);
+        const relevanceB = calculateRelevance(b, searchTerm);
+        return relevanceB - relevanceA;
+    },
+    'importance': (a, b) => {
+        // 基于多个因素的综合评分
+        const scoreA = calculateImportanceScore(a);
+        const scoreB = calculateImportanceScore(b);
+        return scoreB - scoreA;
+    }
+};
+
+// 计算文章与搜索词的相关性
+function calculateRelevance(article, searchTerm) {
+    if (!searchTerm) return 0;
+    
+    const title = article.querySelector('.news-title').textContent.toLowerCase();
+    const content = article.querySelector('.full-content').textContent.toLowerCase();
+    const tags = Array.from(article.querySelectorAll('.news-tag')).map(tag => tag.textContent.toLowerCase());
+    
+    let score = 0;
+    // 标题匹配权重最高
+    if (title.includes(searchTerm)) score += 10;
+    // 内容匹配
+    if (content.includes(searchTerm)) score += 5;
+    // 标签匹配
+    if (tags.some(tag => tag.includes(searchTerm))) score += 3;
+    
+    return score;
+}
+
+// 计算文章重要性评分
+function calculateImportanceScore(article) {
+    let score = 0;
+    
+    // 浏览量权重
+    const views = parseInt(article.querySelector('.view-count .count').textContent);
+    score += views * 0.5;
+    
+    // 点赞数权重
+    const likes = parseInt(article.querySelector('.like-count').textContent);
+    score += likes * 2;
+    
+    // 评论数权重
+    const comments = parseInt(article.querySelector('.comments-count')?.textContent || '0');
+    score += comments * 3;
+    
+    // 收藏数权重
+    if (article.querySelector('.favorite-btn.active')) {
+        score += 5;
+    }
+    
+    // 发布时间权重（越新越重要）
+    const date = new Date(article.dataset.date.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
+    const now = new Date();
+    const daysDiff = (now - date) / (1000 * 60 * 60 * 24);
+    score += Math.max(0, 30 - daysDiff); // 最近30天内的文章获得额外分数
+    
+    return score;
+}
+
+// 更新排序功能
+document.getElementById('newsSort').addEventListener('change', function(e) {
+    const sortValue = e.target.value;
+    const newsColumns = document.querySelectorAll('.news-column');
+    
+    newsColumns.forEach(column => {
+        const items = Array.from(column.querySelectorAll('.news-item'));
+        items.sort(sortFunctions[sortValue]);
+        
+        const container = column.querySelector('.news-items');
+        items.forEach(item => container.appendChild(item));
+    });
+    
+    // 重置分页
+    currentPage.website = 1;
+    currentPage.personal = 1;
+    initPagination('website');
+    initPagination('personal');
 });
 </script>
 
