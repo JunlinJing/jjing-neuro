@@ -34,7 +34,7 @@ permalink: /publications/
 
 ### 2023
 1. **Network-Based Analysis of Resting-State reveals Insights into Cocaine Addiction, Predicting Onset, And Identifying Key Regions**  
-   K-B. Benjamin, **J. Jing**, Z. Wenchao, B. Bharat  
+   K-B. Benjamin, **Jing J.**, Z. Wenchao, B. Bharat  
    *Resting State Brain Connectivity Conference*, September 18-20, 2023, Dallas, Texas  
    PDF
 
