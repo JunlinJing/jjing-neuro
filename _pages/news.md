@@ -112,6 +112,20 @@ body .page-content {
 .news-points li {
     margin-bottom: 0.2em;
 }
+.news-social-share {
+    display: flex;
+    gap: 0.7em;
+    margin-top: 0.7em;
+    justify-content: flex-end;
+}
+.news-social-share a {
+    color: #888;
+    font-size: 1.25em;
+    transition: color 0.2s;
+}
+.news-social-share a:hover {
+    color: var(--accent-color, #6c63ff);
+}
 .news-tools {
     position: absolute;
     right: 1.2em;
@@ -185,7 +199,7 @@ body .page-content {
     .news-points { font-size: 0.97em; }
 }
 body.dark .news-title {
-    color: #fff;
+    color: #fff !important;
 }
 </style>
 
@@ -224,8 +238,12 @@ body.dark .news-title {
             <li>I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.</li>
             <li>This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.</li>
         </ul>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="site">
@@ -240,8 +258,12 @@ body.dark .news-title {
             <li>This academic website was created on May 8, 2025.</li>
             <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
         </ul>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="project">
@@ -252,8 +274,12 @@ body.dark .news-title {
         <div class="news-title">
             Started a new research project on deep learning applications in EEG signal processing.
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="blog">
@@ -264,8 +290,12 @@ body.dark .news-title {
         <div class="news-title">
             Published new article: "Understanding Brain Connectivity Through Graph Neural Networks"
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="personal">
@@ -276,8 +306,12 @@ body.dark .news-title {
         <div class="news-title">
             Presented research findings at the International Conference on Neural Engineering.
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="project">
@@ -288,8 +322,12 @@ body.dark .news-title {
         <div class="news-title">
             Released beta version of BrainConnect toolkit for neural data analysis.
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="blog">
@@ -300,8 +338,12 @@ body.dark .news-title {
         <div class="news-title">
             Published tutorial series: "Getting Started with Neural Data Analysis"
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
     <div class="news-card" data-category="personal">
@@ -312,8 +354,12 @@ body.dark .news-title {
         <div class="news-title">
             Joined the Computational Neuroscience Research Group as a visiting researcher.
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
         </div>
     </div>
 </div>
@@ -439,6 +485,35 @@ function shareNews(btn) {
             setTimeout(() => { btn.textContent = 'Share'; }, 1200);
         });
     }
+}
+
+document.querySelectorAll('.news-card').forEach(function(card) {
+    var title = card.querySelector('.news-title')?.textContent || document.title;
+    var url = window.location.href;
+    card.querySelector('.share-twitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+    card.querySelector('.share-linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+    card.querySelector('.share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    card.querySelector('.share-xiaohongshu').href = `https://www.xiaohongshu.com/explore?title=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+    card.querySelector('.share-wechat').onclick = function(e) {
+        e.preventDefault();
+        showWeChatQR(url);
+    };
+});
+
+function showWeChatQR(url) {
+    var qr = document.createElement('div');
+    qr.style.position = 'fixed';
+    qr.style.left = '0';
+    qr.style.top = '0';
+    qr.style.width = '100vw';
+    qr.style.height = '100vh';
+    qr.style.background = 'rgba(0,0,0,0.5)';
+    qr.style.display = 'flex';
+    qr.style.alignItems = 'center';
+    qr.style.justifyContent = 'center';
+    qr.style.zIndex = '9999';
+    qr.innerHTML = `<div style='background:#fff;padding:2em 2em 1em 2em;border-radius:12px;text-align:center;position:relative;'><div style='font-size:1.1em;margin-bottom:0.7em;'>微信扫码分享</div><img src='https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(url)}' alt='WeChat QR'><div style='margin-top:0.7em;'><button onclick='this.parentNode.parentNode.parentNode.remove()' style='padding:0.4em 1.2em;border-radius:6px;border:1px solid #bbb;background:#f5f5f5;cursor:pointer;'>关闭</button></div></div>`;
+    document.body.appendChild(qr);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
