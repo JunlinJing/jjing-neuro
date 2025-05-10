@@ -50,94 +50,66 @@ body .page-content {
 }
 .news-card {
     background: var(--bg-color-secondary);
-    border-radius: 16px;
+    border-radius: 14px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.07);
     margin-bottom: 1.5rem;
     padding: 1.5em 1.5em 1.1em 1.5em;
     min-width: 0;
     position: relative;
     transition: box-shadow 0.2s;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .news-card:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.13);
 }
-.news-pill {
-    position: absolute;
-    top: 1.1em;
-    left: 1.1em;
-    padding: 0.18em 1.2em;
-    border-radius: 1.2em;
-    font-size: 1em;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #fff;
-    background: #6c63ff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    z-index: 3;
-    border: none;
-    display: inline-block;
-}
-.news-pill.personal { background: #6c63ff; }
-.news-pill.project { background: #00b894; }
-.news-pill.site { background: #0984e3; }
-.news-pill.blog { background: #fdcb6e; color: #333; }
-.news-meta {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.1em;
-    margin-top: 2.2em;
-    margin-bottom: 0.5em;
-}
-.calendar-icon.enhanced {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 2.2em;
-    height: 2.5em;
-    background: #fff;
-    border-radius: 0.6em;
-    border: 2px solid #bbb;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    font-family: system-ui, sans-serif;
-    overflow: hidden;
-    margin-top: 0.1em;
-}
-.calendar-icon.enhanced .calendar-month {
+.news-tag {
+    display: block;
     width: 100%;
-    background: #6c63ff;
-    color: #fff;
-    font-size: 0.82em;
-    font-weight: bold;
-    text-align: center;
-    padding: 0.22em 0 0.08em 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.calendar-icon.enhanced .calendar-day {
-    color: #222;
-    font-size: 1.22em;
-    font-weight: bold;
-    margin: 0.08em 0 0.08em 0;
-    text-align: center;
-}
-.news-date {
+    border: 1.5px solid #bbb;
+    border-radius: 14px 14px 0 0;
     font-size: 1.08em;
-    color: var(--meta-color);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.1em;
-}
-.news-content {
-    font-size: 1.13em;
-    line-height: 1.7;
-    color: var(--text-color);
-    margin-top: 0.1em;
-    margin-bottom: 0.5em;
-}
-.news-content b, .news-content strong {
     font-weight: bold;
+    text-align: left;
+    line-height: 2.1em;
+    letter-spacing: 1px;
+    color: #333;
+    background: transparent;
+    margin-bottom: 0.7em;
+    padding-left: 1.2em;
+    box-sizing: border-box;
+}
+.news-tag.personal { border-color: #6c63ff; color: #6c63ff; }
+.news-tag.project { border-color: #00b894; color: #00b894; }
+.news-tag.site { border-color: #0984e3; color: #0984e3; }
+.news-tag.blog { border-color: #fdcb6e; color: #b8860b; }
+.news-info {
+    font-size: 0.98em;
+    color: #888;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+.news-info span { display: block; min-width: 120px; }
+.news-title {
+    font-size: 1.13em;
+    font-weight: 600;
     color: #222;
+    margin-bottom: 0.3em;
+    margin-top: 0.1em;
+}
+.news-points {
+    margin: 0.5em 0 0.5em 0;
+    padding-left: 1.2em;
+    font-size: 1.08em;
+    color: var(--text-color);
+    text-align: justify;
+    line-height: 1.7;
+}
+.news-points li {
+    margin-bottom: 0.2em;
 }
 .news-tools {
     display: flex;
@@ -205,10 +177,10 @@ body .page-content {
     .news-controls { flex-direction: column; }
     .news-list { gap: 1rem; }
     .news-card { padding: 1.1em 0.7em 1em 0.7em; }
-    .news-meta { gap: 0.6em; margin-top: 2.5em; }
-    .calendar-icon.enhanced { width: 1.5em; height: 1.6em; font-size: 0.95em; }
-    .news-pill { font-size: 0.92em; padding: 0.13em 0.8em; left: 0.7em; top: 0.7em; }
-    .news-content { font-size: 1em; }
+    .news-tag { font-size: 1em; padding-left: 0.7em; }
+    .news-info { gap: 0.7em; font-size: 0.95em; }
+    .news-title { font-size: 1em; }
+    .news-points { font-size: 0.97em; }
 }
 </style>
 
@@ -235,135 +207,105 @@ body .page-content {
 
 <div class="news-list" id="newsList">
     <div class="news-card" data-category="personal">
-        <span class="news-pill personal">Personal</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="personal">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">May 23, 2025</span>
-                <div class="news-content">
-                    I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
-                    This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
-                    <b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München.
-                </div>
-            </div>
+        <span class="news-tag personal">Personal</span>
+        <div class="news-info">
+            <span><b>Date:</b> May 23, 2025</span>
+            <span><b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München</span>
         </div>
+        <div class="news-title">
+            PhD Basics for International Doctoral Researchers
+        </div>
+        <ul class="news-points">
+            <li>I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.</li>
+            <li>This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.</li>
+        </ul>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="site">
-        <span class="news-pill site">Site</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="site">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">May 8, 2025</span>
-                <div class="news-content">
-                    This academic website was created on May 8, 2025.<br>
-                    Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
-                </div>
-            </div>
+        <span class="news-tag site">Site</span>
+        <div class="news-info">
+            <span><b>Date:</b> May 8, 2025</span>
         </div>
+        <div class="news-title">
+            Website Created
+        </div>
+        <ul class="news-points">
+            <li>This academic website was created on May 8, 2025.</li>
+            <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
+        </ul>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="project">
-        <span class="news-pill project">Project</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="project">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">March 2024</span>
-                <div class="news-content">Started a new research project on deep learning applications in EEG signal processing.</div>
-            </div>
+        <span class="news-tag project">Project</span>
+        <div class="news-info">
+            <span><b>Date:</b> March 2024</span>
+        </div>
+        <div class="news-title">
+            Started a new research project on deep learning applications in EEG signal processing.
         </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="blog">
-        <span class="news-pill blog">Blog</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="blog">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">March 2024</span>
-                <div class="news-content">Published new article: "Understanding Brain Connectivity Through Graph Neural Networks"</div>
-            </div>
+        <span class="news-tag blog">Blog</span>
+        <div class="news-info">
+            <span><b>Date:</b> March 2024</span>
+        </div>
+        <div class="news-title">
+            Published new article: "Understanding Brain Connectivity Through Graph Neural Networks"
         </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="personal">
-        <span class="news-pill personal">Personal</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="personal">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">February 2024</span>
-                <div class="news-content">Presented research findings at the International Conference on Neural Engineering.</div>
-            </div>
+        <span class="news-tag personal">Personal</span>
+        <div class="news-info">
+            <span><b>Date:</b> February 2024</span>
+        </div>
+        <div class="news-title">
+            Presented research findings at the International Conference on Neural Engineering.
         </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="project">
-        <span class="news-pill project">Project</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="project">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">February 2024</span>
-                <div class="news-content">Released beta version of BrainConnect toolkit for neural data analysis.</div>
-            </div>
+        <span class="news-tag project">Project</span>
+        <div class="news-info">
+            <span><b>Date:</b> February 2024</span>
+        </div>
+        <div class="news-title">
+            Released beta version of BrainConnect toolkit for neural data analysis.
         </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="blog">
-        <span class="news-pill blog">Blog</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="blog">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">January 2024</span>
-                <div class="news-content">Published tutorial series: "Getting Started with Neural Data Analysis"</div>
-            </div>
+        <span class="news-tag blog">Blog</span>
+        <div class="news-info">
+            <span><b>Date:</b> January 2024</span>
+        </div>
+        <div class="news-title">
+            Published tutorial series: "Getting Started with Neural Data Analysis"
         </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="personal">
-        <span class="news-pill personal">Personal</span>
-        <div class="news-meta">
-            <span class="calendar-icon enhanced" data-category="personal">
-                <span class="calendar-month"></span>
-                <span class="calendar-day"></span>
-            </span>
-            <div>
-                <span class="news-date">January 2024</span>
-                <div class="news-content">Joined the Computational Neuroscience Research Group as a visiting researcher.</div>
-            </div>
+        <span class="news-tag personal">Personal</span>
+        <div class="news-info">
+            <span><b>Date:</b> January 2024</span>
+        </div>
+        <div class="news-title">
+            Joined the Computational Neuroscience Research Group as a visiting researcher.
         </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
@@ -392,7 +334,7 @@ function filterNews() {
     const search = document.getElementById('newsSearch').value.toLowerCase();
     allNews.forEach(item => {
         const category = item.getAttribute('data-category');
-        const content = item.querySelector('.news-content').textContent.toLowerCase();
+        const content = item.querySelector('.news-title').textContent.toLowerCase();
         if ((filter === 'all' || category === filter) && content.includes(search)) {
             item.style.display = '';
         } else {
@@ -407,8 +349,8 @@ function filterNews() {
 function sortNews() {
     const sort = document.getElementById('newsSort').value;
     allNews.sort((a, b) => {
-        const dateA = new Date(a.querySelector('.news-date').textContent);
-        const dateB = new Date(b.querySelector('.news-date').textContent);
+        const dateA = new Date(a.querySelector('.news-info span').textContent.split(': ')[1]);
+        const dateB = new Date(b.querySelector('.news-info span').textContent.split(': ')[1]);
         return sort === 'date-desc' ? dateB - dateA : dateA - dateB;
     });
     currentPage = 1;
@@ -449,7 +391,7 @@ function updatePagination() {
 
 function updateEnhancedCalendarIcons() {
     document.querySelectorAll('.news-card').forEach(card => {
-        const dateText = card.querySelector('.news-date').textContent.trim();
+        const dateText = card.querySelector('.news-info span').textContent.split(': ')[1];
         const cal = card.querySelector('.calendar-icon.enhanced');
         if (!cal) return;
         // 提取月份和日数字
@@ -469,8 +411,8 @@ function updateEnhancedCalendarIcons() {
         if (cat === 'blog') color = '#fdcb6e';
         cal.querySelector('.calendar-month').style.background = color;
         // Pill标签颜色
-        const pill = card.querySelector('.news-pill');
-        if (pill) pill.style.background = color;
+        const pill = card.querySelector('.news-tag');
+        if (pill) pill.style.borderColor = color;
         if (pill && cat === 'blog') pill.style.color = '#333';
     });
 }
