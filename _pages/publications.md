@@ -10,25 +10,25 @@ permalink: /publications/
 
 ### 2024
 1. **Topological functional network analysis of cortical blood flow in hyperacute ischemic rats**  
-   Niu B., Wu H., Li Y., [...], Biswal B.  
+   Bochao Niu, Hongzhou Wu, Yilu Li, [...], Bharat Biswal  
    *Brain Structure and Function*, December 2024  
-   [DOI](https://doi.org/) | PDF | Code
+   [Full-text available]
 
 ### 2023
 1. **Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder**  
-   **Jing J.**, Klugah-Brown B., Xia S., [...], Biswal B.  
+   **Junlin Jing**, Benjamin Klugah-Brown, Shiyu Xia, [...], Bharat Biswal  
    *Frontiers in Neuroscience*, October 2023  
-   [DOI](https://doi.org/) | PDF | Code
+   [Full-text available]
 
 2. **Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain**  
-   Agoalikum E., Klugah-Brown B., Wu H., [...], Biswal B.  
+   Elijah Agoalikum, Benjamin Klugah-Brown, Hongzhou Wu, [...], Bharat Biswal  
    *Frontiers in Human Neuroscience*, February 2023  
-   [DOI](https://doi.org/) | PDF | Code
+   [Full-text available]
 
 3. **Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder**  
-   Agoalikum E., Klugah-Brown B., Wu H., [...], Biswal B.  
+   Elijah Agoalikum, Benjamin Klugah-Brown, Hongzhou Wu, [...], Bharat Biswal  
    *Brain Connectivity*, January 2023  
-   [DOI](https://doi.org/) | PDF | Code
+   [Private full-text]
 
 ## Conference Papers
 
@@ -52,9 +52,9 @@ permalink: /publications/
 ## Preprints
 
 1. **Capturing Individual Variability in Spatial and Temporal Properties of Resting-State fMRI: A Comparison of Data-Driven Methods**  
-   **Jing J.**, Klugah-Brown B., Wang P., [...], Biswal B.  
+   **Junlin Jing**, Benjamin Klugah-Brown, Pan Wang, [...], Bharat Biswal  
    April 2024  
-   [DOI](https://doi.org/) | PDF | Code
+   [Add file] | [Add published version] | [Add supplementary resources]
 
 ## Book Chapters
 
