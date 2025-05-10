@@ -97,9 +97,17 @@ body .page-content {
 .news-title {
     font-size: 1.13em;
     font-weight: 600;
-    color: #222;
+    color: #fff !important;
     margin-bottom: 0.3em;
     margin-top: 0.1em;
+}
+html.dark .news-title,
+:root.dark .news-title {
+    color: #fff !important;
+}
+html:not(.dark) .news-title,
+:root:not(.dark) .news-title {
+    color: #222 !important;
 }
 .news-points {
     margin: 0.5em 0 0.5em 0;
@@ -201,6 +209,19 @@ body .page-content {
 body.dark .news-card .news-title,
 html[data-theme="dark"] .news-card .news-title {
     color: #fff !important;
+}
+.news-social-share .share-xiaohongshu img {
+    background: none;
+    border-radius: 0;
+    filter: grayscale(1) brightness(0.7);
+    box-shadow: none;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    transition: filter 0.2s;
+}
+.news-social-share .share-xiaohongshu img:hover {
+    filter: none;
 }
 </style>
 
