@@ -263,6 +263,32 @@ html[data-theme="dark"] .news-card .news-title {
     <div class="news-card" data-category="personal">
         <span class="news-tag personal">Personal</span>
         <div class="news-info">
+            <span><b>Date:</b> October 1, 2024</span>
+            <span><b>Location:</b> Munich, Germany</span>
+        </div>
+        <div class="news-title">
+            Joined Functional Neuroimaging Lab at LMU Munich
+        </div>
+        <ul class="news-points">
+            <li>Started Ph.D. research in Functional Neuroimaging under the supervision of Prof. Sophia Stöcklein</li>
+            <li>Research focus on Neuroimaging and Machine Learning applications</li>
+        </ul>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
+                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
+                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="news-card" data-category="personal">
+        <span class="news-tag personal">Personal</span>
+        <div class="news-info">
             <span><b>Date:</b> May 23, 2025</span>
             <span><b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München</span>
         </div>
