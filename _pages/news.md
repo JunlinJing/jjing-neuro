@@ -262,8 +262,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -287,8 +286,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -308,8 +306,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -329,8 +326,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -350,8 +346,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -371,8 +366,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -392,8 +386,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
@@ -413,8 +406,7 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
             <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
                 <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
-                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="currentColor"/>
                 </svg>
             </a>
         </div>
