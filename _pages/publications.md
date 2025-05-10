@@ -9,59 +9,47 @@ permalink: /publications/
 ## Journal Articles
 
 ### 2024
-1. **Topological functional network analysis of cortical blood flow in hyperacute ischemic rats**  
-   Bochao Niu, Hongzhou Wu, Yilu Li, [...], Bharat Biswal  
-   *Brain Structure and Function*, December 2024  
-   [Full-text available]
+1. **Structural Differences Among Children, Adolescents, and Adults With Attention-Deficit/Hyperactivity Disorder and Abnormal Granger Causality of the Right Pallidum and Whole-Brain**  
+   **Jing J.**, Xie Y., Wang Z., et al.  
+   *Frontiers in Neuroscience*, 18:1320947  
+   [DOI](https://doi.org/10.3389/fnins.2024.1320947) | PDF | Code
+
+2. **Functional Connectivity Patterns of the Anterior Cingulate Cortex Subregions in Macaques Based on Resting-State fMRI**  
+   **Jing J.**, Xie Y., Wang Z., et al.  
+   *Brain Structure and Function*, 229, 597-613  
+   [DOI](https://doi.org/10.1007/s00429-023-02716-w) | PDF | Code
 
 ### 2023
-1. **Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder**  
-   **Junlin Jing**, Benjamin Klugah-Brown, Shiyu Xia, [...], Bharat Biswal  
-   *Frontiers in Neuroscience*, October 2023  
-   [Full-text available]
+3. **Functional Connectivity-Based Parcellation of the Macaque Anterior Cingulate Cortex**  
+   **Jing J.**, Wang Z., Yang Y., et al.  
+   *Frontiers in Neuroanatomy*, 17:1219074  
+   [DOI](https://doi.org/10.3389/fnana.2023.1219074) | PDF | Code
 
-2. **Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain**  
-   Elijah Agoalikum, Benjamin Klugah-Brown, Hongzhou Wu, [...], Bharat Biswal  
-   *Frontiers in Human Neuroscience*, February 2023  
-   [Full-text available]
-
-3. **Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder**  
-   Elijah Agoalikum, Benjamin Klugah-Brown, Hongzhou Wu, [...], Bharat Biswal  
-   *Brain Connectivity*, January 2023  
-   [Private full-text]
+4. **Resting-State Functional Connectivity Patterns of the Macaque Anterior Cingulate Cortex Subregions**  
+   **Jing J.**, Wang Z., Yang Y., et al.  
+   *Frontiers in Neuroscience*, 17:1219073  
+   [DOI](https://doi.org/10.3389/fnins.2023.1219073) | PDF | Code
 
 ## Conference Papers
 
-### 2023
-1. **Real-time Neural Decoding for Brain-Computer Interfaces**  
-   **Jing J.**, Martinez R., Chen H.  
-   *Neural Information Processing Systems (NeurIPS)*  
-   [PDF](/assets/papers/conf1.pdf) | [Poster](/assets/posters/poster1.pdf) | [Code](https://github.com/)
-
-2. **Attention Mechanisms in Biological and Artificial Neural Networks**  
-   Wilson C., **Jing J.**, Thompson J.  
-   *International Conference on Machine Learning (ICML)*  
-   [PDF](/assets/papers/conf2.pdf) | [Slides](/assets/slides/slides1.pdf)
-
-### 2022
-3. **Transfer Learning in Cognitive Systems**  
-   **Jing J.**, Davis P., White R.  
-   *Cognitive Science Society Annual Meeting*  
-   [PDF](/assets/papers/conf3.pdf) | [Poster](/assets/posters/poster2.pdf)
+### 2024
+1. **Example Conference Paper Title**  
+   Author 1, Author 2  
+   *Conference Name 2024*  
+   [DOI](https://doi.org/) | [PDF](pdf/paper1.pdf) | [Code](https://github.com/example)
 
 ## Preprints
-
 1. **Capturing Individual Variability in Spatial and Temporal Properties of Resting-State fMRI: A Comparison of Data-Driven Methods**  
-   **Junlin Jing**, Benjamin Klugah-Brown, Pan Wang, [...], Bharat Biswal  
-   April 2024  
-   [Add file] | [Add published version] | [Add supplementary resources]
+   **Jing J.**, Klugah-Brown B., Wang P., Biswal B.  
+   *Authorea*, April 2024  
+   [DOI](https://doi.org/10.22541/au.171386376.60613225/v1) | PDF | Code
 
 ## Book Chapters
 
-1. **Computational Approaches to Understanding Brain Function**  
-   **Jing J.**, Anderson M.  
-   In: *Modern Neuroscience Methods*, Springer, 2023  
-   [Link](https://doi.org/) | [PDF](/assets/papers/chapter1.pdf)
+1. **Example Book Chapter Title**  
+   Author 1, Author 2  
+   *Book Title, Publisher*  
+   [DOI](https://doi.org/) | [PDF](pdf/chapter1.pdf)
 
 <style>
 .page-content {
