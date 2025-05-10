@@ -10,9 +10,9 @@ permalink: /publications/
 
 ### 2024
 1. **Topological functional network analysis of cortical blood flow in hyperacute ischemic rats**  
-   Niu B., Wu H., Li Y., Guo Y., Jiang Y., Xu Y., Jiang Y., **Jing J.**, Biswal B. B.  
-   *Brain Structure and Function*, December 2024  
-   [DOI](https://doi.org/10.1007/s00429-024-02735-3) | PDF | Code
+   Niu B., Wu H., Li Y., Klugah-Brown B., Hanna G., Yao Y., **Jing J.**, Baig T. I., Xia Y., Yao D., Biswal B.  
+   *Brain Structure and Function*, Volume 230, Article 20 (2025)  
+   [DOI](https://doi.org/10.1007/s00429-024-02864-7) | PDF | Code
 
 ### 2023
 1. **Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder**  
