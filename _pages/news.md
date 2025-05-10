@@ -85,6 +85,8 @@ body .page-content {
 .news-tag.project { border-color: #00b894; color: #00b894; }
 .news-tag.site { border-color: #0984e3; color: #0984e3; }
 .news-tag.blog { border-color: #fdcb6e; color: #b8860b; }
+.news-tag.other { border-color: #bbb; color: #333; }
+.news-tag.research { border-color: #00b894; color: #00b894; }
 .news-info {
     font-size: 0.98em;
     color: #888;
@@ -223,10 +225,9 @@ html[data-theme="dark"] .news-card .news-title {
     <div class="control-item">
         <select id="newsFilter" onchange="filterNews()">
             <option value="all">All Categories</option>
+            <option value="other">Other</option>
             <option value="personal">Personal</option>
-            <option value="project">Project</option>
-            <option value="site">Site</option>
-            <option value="blog">Blog</option>
+            <option value="research">Research</option>
         </select>
     </div>
     <div class="control-item">
@@ -241,6 +242,31 @@ html[data-theme="dark"] .news-card .news-title {
 </div>
 
 <div class="news-list" id="newsList">
+    <div class="news-card" data-category="other">
+        <span class="news-tag other">Other</span>
+        <div class="news-info">
+            <span><b>Date:</b> May 8, 2025</span>
+        </div>
+        <div class="news-title">
+            Website Created
+        </div>
+        <ul class="news-points">
+            <li>This academic website was created on May 8, 2025.</li>
+            <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
+        </ul>
+        <div class="news-social-share">
+            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <svg viewBox="0 0 48 48" width="1.2em" height="1.2em" fill="currentColor" style="display:inline-block;vertical-align:middle;">
+                    <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+                    <text x="50%" y="62%" text-anchor="middle" fill="currentColor" font-size="16" font-family="Arial" dy=".3em" font-weight="bold">小红书</text>
+                </svg>
+            </a>
+        </div>
+    </div>
     <div class="news-card" data-category="personal">
         <span class="news-tag personal">Personal</span>
         <div class="news-info">
@@ -267,17 +293,17 @@ html[data-theme="dark"] .news-card .news-title {
             </a>
         </div>
     </div>
-    <div class="news-card" data-category="site">
-        <span class="news-tag site">Site</span>
+    <div class="news-card" data-category="research">
+        <span class="news-tag research">Research</span>
         <div class="news-info">
-            <span><b>Date:</b> May 8, 2025</span>
+            <span><b>Date:</b> March 2024</span>
         </div>
         <div class="news-title">
-            Website Created
+            Started a new research project on deep learning applications in EEG signal processing.
         </div>
         <ul class="news-points">
-            <li>This academic website was created on May 8, 2025.</li>
-            <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
+            <li>Initiated a project to apply deep learning to EEG signal analysis.</li>
+            <li>Exploring novel neural network architectures for brain data.</li>
         </ul>
         <div class="news-social-share">
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
