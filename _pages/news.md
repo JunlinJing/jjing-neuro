@@ -198,7 +198,8 @@ body .page-content {
     .news-title { font-size: 1em; }
     .news-points { font-size: 0.97em; }
 }
-body.dark .news-title {
+body.dark .news-card .news-title,
+html[data-theme="dark"] .news-card .news-title {
     color: #fff !important;
 }
 </style>
@@ -243,7 +244,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="site">
@@ -263,7 +266,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="project">
@@ -279,7 +284,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="blog">
@@ -295,7 +302,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="personal">
@@ -311,7 +320,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="project">
@@ -327,7 +338,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="blog">
@@ -343,7 +356,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
     <div class="news-card" data-category="personal">
@@ -359,7 +374,9 @@ body.dark .news-title {
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank"><img src="https://img.icons8.com/color/24/000000/little-red-book.png" style="vertical-align:middle;width:1.2em;height:1.2em;"></a>
+            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank" style="display:inline-block;vertical-align:middle;">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/xiaohongshu.svg" alt="小红书" style="width:1.2em;height:1.2em;filter:drop-shadow(0 0 0.5px #fff);background:#fff;border-radius:4px;" />
+            </a>
         </div>
     </div>
 </div>
