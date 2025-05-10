@@ -134,6 +134,8 @@ html:not(.dark) .news-title,
     text-align: center;
     line-height: 1;
     box-sizing: content-box;
+    color: #888;
+    transition: color 0.2s;
 }
 .news-social-share .share-xiaohongshu svg {
     width: 1em;
@@ -144,6 +146,11 @@ html:not(.dark) .news-title,
 .news-social-share a:hover {
     color: var(--accent-color, #6c63ff);
 }
+.news-social-share a.share-twitter:hover { color: #1da1f2; }
+.news-social-share a.share-linkedin:hover { color: #0077b5; }
+.news-social-share a.share-facebook:hover { color: #1877f3; }
+.news-social-share a.share-wechat:hover { color: #09bb07; }
+.news-social-share a.share-xiaohongshu:hover { color: #ff2442; }
 .news-tools {
     position: absolute;
     right: 1.2em;
