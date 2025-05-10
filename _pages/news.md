@@ -113,9 +113,10 @@ body .page-content {
     margin-bottom: 0.2em;
 }
 .news-tools {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.1em;
+    position: absolute;
+    right: 1.2em;
+    bottom: 1.1em;
+    margin-top: 0;
 }
 .tool-button {
     padding: 0.32rem 0.8rem;
