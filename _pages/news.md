@@ -207,8 +207,11 @@ body .page-content {
     </div>
     <div class="news-card" data-category="site">
         <span class="news-tag site">Site</span>
-        <div class="news-date">March 2024</div>
-        <div class="news-content">Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</div>
+        <div class="news-date">May 8, 2025</div>
+        <div class="news-content">
+            This academic website was created on May 8, 2025.<br>
+            Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
+        </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
