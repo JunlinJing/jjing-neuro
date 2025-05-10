@@ -60,6 +60,7 @@ body .page-content {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 260px;
 }
 .news-card:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.13);
@@ -176,7 +177,7 @@ body .page-content {
 @media (max-width: 768px) {
     .news-controls { flex-direction: column; }
     .news-list { gap: 1rem; }
-    .news-card { padding: 1.1em 0.7em 1em 0.7em; }
+    .news-card { padding: 1.1em 0.7em 1em 0.7em; min-height: 180px; }
     .news-tag { font-size: 1em; padding-left: 0.7em; }
     .news-info { gap: 0.7em; font-size: 0.95em; }
     .news-title { font-size: 1em; }
