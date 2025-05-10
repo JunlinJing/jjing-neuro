@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4002/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,12 +31,12 @@
     "@type": "BlogPosting",
     "headline": "Home",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "http://localhost:4002/",
+    "url": "http://localhost:4000/",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4002"
+        "url": "http://localhost:4000"
     }
 }</script> 
 
@@ -50,7 +50,7 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4002/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
     <div class="wrapper">
@@ -227,8 +227,8 @@
 
             <div class="header-text">
                 <h1 class="name">Jim Jing</h1>
-                <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Exploring Brain and Cognition</h2>
-                <p class="motto"></p>
+                <h2 class="tagline">Neuroscience Researcher | AI Enthusiast | Science Writer</h2>
+                <p class="motto">Standing on the bridge between AI and neuroscience, gazing into the mysteries of the brain</p>
 
                 <div class="social-links-wrapper">
                     <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
@@ -473,87 +473,36 @@
     <div class="home-content">
     <div class="news-section">
         <h3>Latest News</h3>
-        <div class="news-controls-simple">
-            <select id="homeNewsFilter" onchange="filterHomeNews()">
-                <option value="all">All Categories</option>
-                <option value="website">Website Updates</option>
-                <option value="personal">Personal Updates</option>
-                <option value="research">Research Progress</option>
-                <option value="blog">Blog Posts</option>
-            </select>
-        </div>
         <div class="news-grid">
-            <div class="news-column" data-category="website">
-                <h4 class="column-title">Website Updates</h4>
+            <div class="news-column" data-category="other">
+                <h4 class="column-title">Other Updates</h4>
                 <div class="news-items">
                     <div class="news-item">
-                        <span class="date">March 2024</span>
-                        <p>Launched academic website, featuring research interests in neuroimaging, machine learning, and brain connectivity analysis.</p>
-                        <div class="news-tag">Update</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
+                        <span class="date">May 8, 2025</span>
+                        <p>This academic website was created on May 8, 2025.</p>
+                        <div class="news-tag">Site</div>
                     </div>
                     <div class="news-item">
-                        <span class="date">February 2024</span>
-                        <p>Updated website with new research focus areas and improved navigation.</p>
-                        <div class="news-tag">Update</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="news-item hidden">
-                        <span class="date">January 2024</span>
-                        <p>Initial setup of the academic website structure and basic features.</p>
-                        <div class="news-tag">Update</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
+                        <span class="date">March 2024</span>
+                        <p>Started a new research project on deep learning applications in EEG signal processing.</p>
+                        <div class="news-tag">Project</div>
                     </div>
                 </div>
-                <button class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></button>
             </div>
             <div class="news-column" data-category="personal">
                 <h4 class="column-title">Personal Updates</h4>
                 <div class="news-items">
                     <div class="news-item">
-                        <span class="date">March 2024</span>
-                        <p>Started a new research project on deep learning applications in EEG signal processing.</p>
-                        <div class="news-tag">Research</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
+                        <span class="date">May 23, 2025</span>
+                        <p>I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich.</p>
+                        <div class="news-tag">Personal</div>
                     </div>
                     <div class="news-item">
-                        <span class="date">January 2024</span>
-                        <p>Published new blog posts covering various aspects of neuroscience and AI.</p>
-                        <div class="news-tag">Blog</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="news-item hidden">
-                        <span class="date">December 2023</span>
-                        <p>Started exploring new research directions in brain-computer interfaces.</p>
-                        <div class="news-tag">Research</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
+                        <span class="date">February 2024</span>
+                        <p>Presented research findings at the International Conference on Neural Engineering.</p>
+                        <div class="news-tag">Personal</div>
                     </div>
                 </div>
-                <button class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></button>
             </div>
         </div>
         <div class="news-footer">
@@ -561,6 +510,9 @@
         </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 <style>
     .home-content {
@@ -818,6 +770,20 @@
         color: white;
         border: none;
     }
+
+    .profile-links .profile-icon {
+        color: #888;
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s;
+        font-size: 1.25em;
+    }
+    .profile-links .profile-icon.scholar:hover { color: #4285f4; }
+    .profile-links .profile-icon.researchgate:hover { color: #00ccbb; }
+    .profile-links .profile-icon.orcid:hover { color: #a6ce39; }
 </style>
 
 <script>
