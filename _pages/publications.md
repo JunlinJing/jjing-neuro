@@ -44,13 +44,6 @@ permalink: /publications/
    *Authorea*, 23 April 2024  
    [DOI](https://doi.org/10.22541/au.171386376.60613225/v1) | PDF | Code
 
-## Book Chapters
-
-1. **Example Book Chapter Title**  
-   Author 1, Author 2  
-   *Book Title, Publisher*  
-   [DOI](https://doi.org/) | [PDF](pdf/chapter1.pdf)
-
 <style>
 .page-content {
     max-width: 800px;
