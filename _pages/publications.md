@@ -21,9 +21,9 @@ permalink: /publications/
    [DOI](https://doi.org/10.3389/fnins.2023.1219073) | PDF | Code
 
 2. **Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder**  
-   Agoalikum E. D., **Jing J.**, Klugah-Brown B., Xia S., Wang P., Biswal B. B.  
-   *Brain Connectivity*, September 2023  
-   [DOI](https://doi.org/10.1089/brain.2023.0022) | PDF | Code
+   Agoalikum E., Klugah-Brown B., Wu H., **Jing J.**, Biswal B. B.  
+   *Brain Connectivity*, 12 May 2023  
+   [DOI](https://doi.org/10.1089/brain.2022.0069) | PDF | Code
 
 3. **Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain**  
    Agoalikum E., Klugah-Brown B., Wu H., Hu P., **Jing J.**, Biswal B.  
