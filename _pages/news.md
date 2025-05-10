@@ -70,10 +70,6 @@ body .page-content {
     align-items: center;
     gap: 0.5rem;
 }
-.news-date:before {
-    content: "\1F4C5";
-    font-size: 1rem;
-}
 .news-content {
     font-size: 1.05rem;
     line-height: 1.7;
