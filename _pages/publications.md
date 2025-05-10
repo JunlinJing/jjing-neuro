@@ -34,7 +34,7 @@ permalink: /publications/
 
 ### 2023
 1. **Network-Based Analysis of Resting-State reveals Insights into Cocaine Addiction, Predicting Onset, And Identifying Key Regions**  
-   Klugah-Brown B., **Jing J.**, Wu H., Biswal B. B.  
+   K-B. Benjamin, **J. Jing**, Z. Wenchao, B. Bharat  
    *Organization for Human Brain Mapping Annual Meeting*, July 2023, Montreal, Canada  
    [PDF](pdf/OHBM_2023.pdf) | [Code](https://github.com/jjneuro/ohbm-2023)
 
