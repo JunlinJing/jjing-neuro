@@ -215,7 +215,7 @@ body .page-content {
     </div>
     <div class="news-card" data-category="personal">
         <span class="news-tag personal">Personal</span>
-        <div class="news-date"><span class="calendar-icon"></span>May 2025</div>
+        <div class="news-date"><span class="calendar-icon"></span>May 23, 2025</div>
         <div class="news-content">
             I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
             This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
