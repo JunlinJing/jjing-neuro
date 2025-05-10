@@ -11,38 +11,38 @@ permalink: /publications/
 ### 2024
 1. **Topological functional network analysis of cortical blood flow in hyperacute ischemic rats**  
    Niu B., Wu H., Li Y., Klugah-Brown B., Hanna G., Yao Y., **Jing J.**, Baig T. I., Xia Y., Yao D., Biswal B.  
-   *Brain Structure and Function*, Volume 230, Article 20 (2025)  
-   [DOI](https://doi.org/10.1007/s00429-024-02864-7) | PDF | Code
+   *Brain Structure and Function*, Volume 230, Article 20 (2024)  
+   [DOI](https://doi.org/10.1007/s00429-024-02864-7) | [PDF](pdf/BSF_2024.pdf) | [Code](https://github.com/jjneuro/bsf-2024)
 
 ### 2023
 1. **Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder**  
    **Jing J.**, Klugah-Brown B., Xia S., Sheng M., Biswal B. B.  
    *Frontiers in Neuroscience*, 19 October 2023  
-   [DOI](https://doi.org/10.3389/fnins.2023.1252732) | PDF | Code
+   [DOI](https://doi.org/10.3389/fnins.2023.1252732) | [PDF](pdf/FN_2023.pdf) | [Code](https://github.com/jjneuro/fn-2023)
 
 2. **Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder**  
    Agoalikum E., Klugah-Brown B., Wu H., **Jing J.**, Biswal B. B.  
    *Brain Connectivity*, 12 May 2023  
-   [DOI](https://doi.org/10.1089/brain.2022.0069) | PDF | Code
+   [DOI](https://doi.org/10.1089/brain.2022.0069) | [PDF](pdf/BC_2023.pdf) | [Code](https://github.com/jjneuro/bc-2023)
 
 3. **Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain**  
    Agoalikum E., Klugah-Brown B., Wu H., Hu P., **Jing J.**, Biswal B.  
    *Frontiers in Human Neuroscience*, 14 February 2023  
-   [DOI](https://doi.org/10.3389/fnhum.2023.1076873) | PDF | Code
+   [DOI](https://doi.org/10.3389/fnhum.2023.1076873) | [PDF](pdf/FHN_2023.pdf) | [Code](https://github.com/jjneuro/fhn-2023)
 
 ## Conference Papers
 
-### 2024
-1. **Example Conference Paper Title**  
-   Author 1, Author 2  
-   *Conference Name 2024*  
-   [DOI](https://doi.org/) | [PDF](pdf/paper1.pdf) | [Code](https://github.com/example)
+### 2023
+1. **Network-Based Analysis of Resting-State reveals Insights into Cocaine Addiction, Predicting Onset, And Identifying Key Regions**  
+   Klugah-Brown B., **Jing J.**, Wu H., Biswal B. B.  
+   *Organization for Human Brain Mapping Annual Meeting*, July 2023, Montreal, Canada  
+   [PDF](pdf/OHBM_2023.pdf) | [Code](https://github.com/jjneuro/ohbm-2023)
 
 ## Preprints
 1. **Capturing Individual Variability in Spatial and Temporal Properties of Resting-State fMRI: A Comparison of Data-Driven Methods**  
    **Jing J.**, Wang P., Klugah-Brown B., Michael A. M., Biswal B. B.  
    *Authorea*, 23 April 2024  
-   [DOI](https://doi.org/10.22541/au.171386376.60613225/v1) | PDF | Code
+   [DOI](https://doi.org/10.22541/au.171386376.60613225/v1) | [PDF](pdf/Authorea_2024.pdf) | [Code](https://github.com/jjneuro/authorea-2024)
 
 ## Book Chapters
 
