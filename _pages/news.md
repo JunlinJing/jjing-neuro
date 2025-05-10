@@ -277,8 +277,8 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -303,8 +303,8 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -328,8 +328,8 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -349,8 +349,8 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -370,8 +370,8 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -396,8 +396,8 @@ html[data-theme="dark"] .news-card .news-title {
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
+            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -555,7 +555,7 @@ function showWeChatQR(url) {
     qr.style.alignItems = 'center';
     qr.style.justifyContent = 'center';
     qr.style.zIndex = '9999';
-    qr.innerHTML = `<div style='background:#fff;padding:2em 2em 1em 2em;border-radius:12px;text-align:center;position:relative;'><div style='font-size:1.1em;margin-bottom:0.7em;'>微信扫码分享</div><img src='https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(url)}' alt='WeChat QR'><div style='margin-top:0.7em;'><button onclick='this.parentNode.parentNode.parentNode.remove()' style='padding:0.4em 1.2em;border-radius:6px;border:1px solid #bbb;background:#f5f5f5;cursor:pointer;'>关闭</button></div></div>`;
+    qr.innerHTML = `<div style='background:#fff;padding:2em 2em 1em 2em;border-radius:12px;text-align:center;position:relative;'><div style='font-size:1.1em;margin-bottom:0.7em;'>Scan QR Code to Share</div><img src='https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(url)}' alt='WeChat QR'><div style='margin-top:0.7em;'><button onclick='this.parentNode.parentNode.parentNode.remove()' style='padding:0.4em 1.2em;border-radius:6px;border:1px solid #bbb;background:#f5f5f5;cursor:pointer;'>Close</button></div></div>`;
     document.body.appendChild(qr);
 }
 
