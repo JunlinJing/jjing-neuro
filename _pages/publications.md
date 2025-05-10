@@ -9,26 +9,26 @@ permalink: /publications/
 ## Journal Articles
 
 ### 2024
-1. **Structural Differences Among Children, Adolescents, and Adults With Attention-Deficit/Hyperactivity Disorder and Abnormal Granger Causality of the Right Pallidum and Whole-Brain**  
-   **Jing J.**, Xie Y., Wang Z., et al.  
-   *Frontiers in Neuroscience*, 18:1320947  
-   [DOI](https://doi.org/10.3389/fnins.2024.1320947) | PDF | Code
-
-2. **Functional Connectivity Patterns of the Anterior Cingulate Cortex Subregions in Macaques Based on Resting-State fMRI**  
-   **Jing J.**, Xie Y., Wang Z., et al.  
-   *Brain Structure and Function*, 229, 597-613  
-   [DOI](https://doi.org/10.1007/s00429-023-02716-w) | PDF | Code
+1. **Topological functional network analysis of cortical blood flow in hyperacute ischemic rats**  
+   Niu B., Wu H., Li Y., [...], **Jing J.**, Biswal B.  
+   *Brain Structure and Function*, December 2024  
+   [DOI](https://doi.org/10.1007/s00429-024-02735-3) | PDF | Code
 
 ### 2023
-3. **Functional Connectivity-Based Parcellation of the Macaque Anterior Cingulate Cortex**  
-   **Jing J.**, Wang Z., Yang Y., et al.  
-   *Frontiers in Neuroanatomy*, 17:1219074  
-   [DOI](https://doi.org/10.3389/fnana.2023.1219074) | PDF | Code
-
-4. **Resting-State Functional Connectivity Patterns of the Macaque Anterior Cingulate Cortex Subregions**  
-   **Jing J.**, Wang Z., Yang Y., et al.  
-   *Frontiers in Neuroscience*, 17:1219073  
+1. **Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder**  
+   **Jing J.**, Klugah-Brown B., Xia S., [...], Biswal B.  
+   *Frontiers in Neuroscience*, October 2023  
    [DOI](https://doi.org/10.3389/fnins.2023.1219073) | PDF | Code
+
+2. **Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain**  
+   Agoalikum E., Klugah-Brown B., Wu H., [...], **Jing J.**, Biswal B.  
+   *Frontiers in Human Neuroscience*, February 2023  
+   [DOI](https://doi.org/10.3389/fnhum.2023.1151949) | PDF | Code
+
+3. **Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder**  
+   Agoalikum E., Klugah-Brown B., Wu H., [...], **Jing J.**, Biswal B.  
+   *Brain Connectivity*, January 2023  
+   [DOI](https://doi.org/10.1089/brain.2022.0088) | PDF | Code
 
 ## Conference Papers
 
