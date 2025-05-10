@@ -26,9 +26,9 @@ permalink: /publications/
    [DOI](https://doi.org/10.1089/brain.2023.0022) | PDF | Code
 
 3. **Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain**  
-   Agoalikum E. D., **Jing J.**, Klugah-Brown B., Xia S., Wang P., Biswal B. B.  
-   *Frontiers in Human Neuroscience*, August 2023  
-   [DOI](https://doi.org/10.3389/fnhum.2023.1219074) | PDF | Code
+   Agoalikum E., Klugah-Brown B., **Jing J.**, Wu H., Hu P., Biswal B.  
+   *Frontiers in Human Neuroscience*, 14 February 2023  
+   [DOI](https://doi.org/10.3389/fnhum.2023.1076873) | PDF | Code
 
 ## Conference Papers
 
