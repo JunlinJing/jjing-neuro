@@ -55,7 +55,7 @@ body .page-content {
     background: var(--bg-color-secondary);
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    padding: 2.7em 1.5rem 1rem 1.5rem;
     margin-bottom: 2rem;
     border-left: none;
     position: relative;
@@ -63,18 +63,19 @@ body .page-content {
 .news-tag {
     display: block;
     position: absolute;
-    top: 1.1em;
-    right: 1.5em;
-    width: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 2.1em;
-    border-radius: 0 14px 0 14px;
+    border-radius: 14px 14px 0 0;
     font-size: 1.1em;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     line-height: 2.1em;
     letter-spacing: 1px;
     color: #fff;
     z-index: 2;
+    padding-left: 1.5em;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 .news-tag.personal { background: #6c63ff; }
@@ -168,8 +169,8 @@ body .page-content {
 @media (max-width: 768px) {
     .news-controls { flex-direction: column; }
     .news-list { gap: 1rem; }
-    .news-card { flex-direction: column; padding: 1rem; }
-    .news-tag { width: 100px; font-size: 1em; right: 1em; top: 0.7em; }
+    .news-card { flex-direction: column; padding: 2.7em 1em 1em 1em; }
+    .news-tag { font-size: 1em; padding-left: 1em; }
     .calendar-icon.enhanced { margin-bottom: 0.5em; margin-right: 1em; }
 }
 .calendar-icon.enhanced {
