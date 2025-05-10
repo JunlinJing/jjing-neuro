@@ -35,8 +35,8 @@ permalink: /publications/
 ### 2023
 1. **Network-Based Analysis of Resting-State reveals Insights into Cocaine Addiction, Predicting Onset, And Identifying Key Regions**  
    K-B. Benjamin, **J. Jing**, Z. Wenchao, B. Bharat  
-   *Organization for Human Brain Mapping Annual Meeting*, July 2023, Montreal, Canada  
-   [PDF](pdf/OHBM_2023.pdf) | [Code](https://github.com/jjneuro/ohbm-2023)
+   *Resting State Brain Connectivity Conference*, September 18-20, 2023, Dallas, Texas  
+   [PDF](pdf/RSBC_2023.pdf) | [Code](https://github.com/jjneuro/rsbc-2023)
 
 ## Preprints
 1. **Capturing Individual Variability in Spatial and Temporal Properties of Resting-State fMRI: A Comparison of Data-Driven Methods**  
