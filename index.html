@@ -5,15 +5,6 @@ title: Home
 <div class="home-content">
     <div class="news-section">
         <h3>Latest News</h3>
-        <div class="news-controls-simple">
-            <select id="homeNewsFilter" onchange="filterHomeNews()">
-                <option value="all">All Categories</option>
-                <option value="website">Website Updates</option>
-                <option value="personal">Personal Updates</option>
-                <option value="research">Research Progress</option>
-                <option value="blog">Blog Posts</option>
-            </select>
-        </div>
         <div class="news-grid">
             <div class="news-column" data-category="website">
                 <h4 class="column-title">Website Updates</h4>
@@ -38,18 +29,7 @@ title: Home
                             </button>
                         </div>
                     </div>
-                    <div class="news-item hidden">
-                        <span class="date">January 2024</span>
-                        <p>Initial setup of the academic website structure and basic features.</p>
-                        <div class="news-tag">Update</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
-                <button class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></button>
             </div>
             <div class="news-column" data-category="personal">
                 <h4 class="column-title">Personal Updates</h4>
@@ -74,18 +54,7 @@ title: Home
                             </button>
                         </div>
                     </div>
-                    <div class="news-item hidden">
-                        <span class="date">December 2023</span>
-                        <p>Started exploring new research directions in brain-computer interfaces.</p>
-                        <div class="news-tag">Research</div>
-                        <div class="news-tools">
-                            <button onclick="shareNews(this)" class="tool-button" title="Share">
-                                <i class="fas fa-share-alt"></i>
-                            </button>
-                        </div>
-                    </div>
                 </div>
-                <button class="expand-button" onclick="toggleItems(this)">Show More <i class="fas fa-chevron-down"></i></button>
             </div>
         </div>
         <div class="news-footer">
