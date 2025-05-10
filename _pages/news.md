@@ -49,47 +49,53 @@ body .page-content {
     margin: 2rem 0;
 }
 .news-card {
-    background: var(--bg-color-secondary);
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
     display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    border-left: 4px solid var(--accent-color);
-    transition: box-shadow 0.2s;
+    flex-direction: row;
+    align-items: flex-start;
+    background: var(--bg-color-secondary);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-left: none;
+    position: relative;
 }
-.news-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+.news-card .news-main {
+    flex: 1;
 }
+.news-tag {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 2.1em;
+    border-radius: 14px 0 14px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.1em;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 2;
+}
+.news-tag.personal { background: #6c63ff; }
+.news-tag.project { background: #00b894; }
+.news-tag.site { background: #0984e3; }
+.news-tag.blog { background: #fdcb6e; color: #333; }
 .news-date {
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     color: var(--meta-color);
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    margin-bottom: 0.2em;
 }
 .news-content {
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--text-color);
 }
-.news-tag {
-    display: inline-block;
-    padding: 0.3rem 0.9rem;
-    border-radius: 4px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    margin-right: 0.7rem;
-    background: var(--accent-color);
-    color: #fff;
-    letter-spacing: 0.5px;
-}
-.news-tag.personal { background: #6c63ff; }
-.news-tag.project { background: #00b894; }
-.news-tag.site { background: #0984e3; }
-.news-tag.blog { background: #fdcb6e; color: #333; }
 .news-tools {
     display: flex;
     gap: 0.5rem;
@@ -155,24 +161,39 @@ body .page-content {
 @media (max-width: 768px) {
     .news-controls { flex-direction: column; }
     .news-list { gap: 1rem; }
-    .news-card { padding: 1rem; }
+    .news-card { flex-direction: column; padding: 1rem; }
+    .news-tag { width: 100px; font-size: 1em; }
+    .calendar-icon.enhanced { margin-bottom: 0.5em; }
 }
-.calendar-icon {
-  display: inline-block;
-  width: 1.8em;
-  height: 1.8em;
-  background: #fff;
-  color: #0984e3;
-  border-radius: 0.3em;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.8em;
-  margin-right: 0.5em;
-  font-family: system-ui, sans-serif;
-  border: 1.5px solid #bbb;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-  font-size: 1.1em;
-  vertical-align: middle;
+.calendar-icon.enhanced {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.7em;
+    background: #fff;
+    border-radius: 0.4em;
+    border: 2px solid #bbb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    margin-right: 1em;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+.calendar-icon.enhanced .calendar-month {
+    display: block;
+    background: #6c63ff; /* 默认紫色，JS动态变色 */
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0.15em 0;
+    letter-spacing: 1px;
+}
+.calendar-icon.enhanced .calendar-day {
+    display: block;
+    color: #222;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0.1em;
 }
 </style>
 
@@ -200,25 +221,37 @@ body .page-content {
 <div class="news-list" id="newsList">
     <div class="news-card" data-category="site">
         <span class="news-tag site">Site</span>
-        <div class="news-date"><span class="calendar-icon"></span>May 8, 2025</div>
-        <div class="news-content">
-            This academic website was created on May 8, 2025.<br>
-            Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
+        <div class="calendar-icon enhanced" data-category="site">
+            <span class="calendar-month"></span>
+            <span class="calendar-day"></span>
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-main">
+            <div class="news-date">May 8, 2025</div>
+            <div class="news-content">
+                This academic website was created on May 8, 2025.<br>
+                Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
+            </div>
+            <div class="news-tools">
+                <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+            </div>
         </div>
     </div>
     <div class="news-card" data-category="personal">
         <span class="news-tag personal">Personal</span>
-        <div class="news-date"><span class="calendar-icon"></span>May 23, 2025</div>
-        <div class="news-content">
-            I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
-            This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
-            <b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München.
+        <div class="calendar-icon enhanced" data-category="personal">
+            <span class="calendar-month"></span>
+            <span class="calendar-day"></span>
         </div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        <div class="news-main">
+            <div class="news-date">May 23, 2025</div>
+            <div class="news-content">
+                I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
+                This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
+                <b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München.
+            </div>
+            <div class="news-tools">
+                <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+            </div>
         </div>
     </div>
     <div class="news-card" data-category="project">
@@ -347,20 +380,27 @@ function updatePagination() {
     }
 }
 
-function updateCalendarIcons() {
-    document.querySelectorAll('.news-date').forEach(dateEl => {
-        const cal = dateEl.querySelector('.calendar-icon');
+function updateEnhancedCalendarIcons() {
+    document.querySelectorAll('.news-card').forEach(card => {
+        const dateText = card.querySelector('.news-date').textContent.trim();
+        const cal = card.querySelector('.calendar-icon.enhanced');
         if (!cal) return;
-        const text = dateEl.textContent;
-        let day = '';
-        const match = text.match(/\b(\d{1,2})[\,\s]/);
+        // 提取月份和日数字
+        const match = dateText.match(/([A-Za-z]+)\s(\d{1,2}),\s(\d{4})/);
+        let month = '', day = '';
         if (match) {
-            day = match[1];
-        } else {
-            const monthMatch = text.match(/([A-Za-z]+)/);
-            day = monthMatch ? monthMatch[1][0] : '?';
+            month = match[1];
+            day = match[2];
         }
-        cal.textContent = day;
+        cal.querySelector('.calendar-month').textContent = month;
+        cal.querySelector('.calendar-day').textContent = day;
+        // 彩条颜色与类别呼应
+        const cat = card.getAttribute('data-category');
+        let color = '#6c63ff';
+        if (cat === 'site') color = '#0984e3';
+        if (cat === 'project') color = '#00b894';
+        if (cat === 'blog') color = '#fdcb6e';
+        cal.querySelector('.calendar-month').style.background = color;
     });
 }
 
@@ -368,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
     allNews = Array.from(document.querySelectorAll('.news-card'));
     filterNews();
     sortNews();
-    updateCalendarIcons();
+    updateEnhancedCalendarIcons();
 });
 </script>
 
