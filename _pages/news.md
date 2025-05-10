@@ -60,17 +60,14 @@ body .page-content {
     border-left: none;
     position: relative;
 }
-.news-card .news-main {
-    flex: 1;
-}
 .news-tag {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1.1em;
+    right: 1.5em;
     width: 120px;
     height: 2.1em;
-    border-radius: 14px 0 14px 0;
+    border-radius: 0 14px 0 14px;
     font-size: 1.1em;
     font-weight: bold;
     text-align: center;
@@ -78,11 +75,21 @@ body .page-content {
     letter-spacing: 1px;
     color: #fff;
     z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 .news-tag.personal { background: #6c63ff; }
 .news-tag.project { background: #00b894; }
 .news-tag.site { background: #0984e3; }
 .news-tag.blog { background: #fdcb6e; color: #333; }
+.news-card .calendar-icon.enhanced {
+    margin-right: 2em;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+}
+.news-card .news-main {
+    flex: 1;
+    min-width: 0;
+}
 .news-date {
     display: flex;
     align-items: center;
@@ -162,8 +169,8 @@ body .page-content {
     .news-controls { flex-direction: column; }
     .news-list { gap: 1rem; }
     .news-card { flex-direction: column; padding: 1rem; }
-    .news-tag { width: 100px; font-size: 1em; }
-    .calendar-icon.enhanced { margin-bottom: 0.5em; }
+    .news-tag { width: 100px; font-size: 1em; right: 1em; top: 0.7em; }
+    .calendar-icon.enhanced { margin-bottom: 0.5em; margin-right: 1em; }
 }
 .calendar-icon.enhanced {
     display: inline-block;
