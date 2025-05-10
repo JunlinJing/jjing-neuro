@@ -49,65 +49,100 @@ body .page-content {
     margin: 2rem 0;
 }
 .news-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     background: var(--bg-color-secondary);
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 2.7em 1.5rem 1rem 1.5rem;
-    margin-bottom: 2rem;
-    border-left: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    margin-bottom: 2.2rem;
     position: relative;
+    padding: 2.8em 2em 1.5em 2em;
+    transition: box-shadow 0.2s;
+    min-width: 0;
+}
+.news-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
 }
 .news-tag {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2.1em;
-    border-radius: 14px 14px 0 0;
-    font-size: 1.1em;
+    height: 2.2em;
+    border-radius: 18px 18px 0 0;
+    font-size: 1.18em;
     font-weight: bold;
     text-align: left;
-    line-height: 2.1em;
+    line-height: 2.2em;
     letter-spacing: 1px;
     color: #fff;
     z-index: 2;
-    padding-left: 1.5em;
+    padding-left: 2em;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #6c63ff;
 }
 .news-tag.personal { background: #6c63ff; }
 .news-tag.project { background: #00b894; }
 .news-tag.site { background: #0984e3; }
 .news-tag.blog { background: #fdcb6e; color: #333; }
-.news-card .calendar-icon.enhanced {
-    margin-right: 2em;
-    margin-left: 0.2em;
-    margin-top: 0.2em;
-}
-.news-card .news-main {
-    flex: 1;
-    min-width: 0;
-}
-.news-date {
+.news-meta {
     display: flex;
     align-items: center;
-    font-size: 1rem;
+    gap: 1.1em;
+    margin-bottom: 0.7em;
+}
+.calendar-icon.enhanced {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 2.6em;
+    height: 2.9em;
+    background: #fff;
+    border-radius: 0.5em;
+    border: 2px solid #bbb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin-right: 0.2em;
+    font-family: system-ui, sans-serif;
+    overflow: hidden;
+}
+.calendar-icon.enhanced .calendar-month {
+    width: 100%;
+    background: #6c63ff;
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.18em 0 0.08em 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.calendar-icon.enhanced .calendar-day {
+    color: #222;
+    font-size: 1.45em;
+    font-weight: bold;
+    margin-top: 0.13em;
+    text-align: center;
+}
+.news-date {
+    font-size: 1.05em;
     color: var(--meta-color);
     font-weight: 500;
-    margin-bottom: 0.2em;
+    letter-spacing: 0.5px;
 }
 .news-content {
-    font-size: 1.05rem;
+    font-size: 1.13em;
     line-height: 1.7;
     color: var(--text-color);
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+}
+.news-content b, .news-content strong {
+    font-weight: bold;
+    color: #222;
 }
 .news-tools {
     display: flex;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2em;
 }
 .tool-button {
     padding: 0.35rem 0.8rem;
@@ -120,7 +155,7 @@ body .page-content {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    font-size: 0.92rem;
+    font-size: 0.97rem;
 }
 .tool-button:hover {
     background: var(--accent-color);
@@ -169,39 +204,11 @@ body .page-content {
 @media (max-width: 768px) {
     .news-controls { flex-direction: column; }
     .news-list { gap: 1rem; }
-    .news-card { flex-direction: column; padding: 2.7em 1em 1em 1em; }
+    .news-card { padding: 2.8em 1em 1.2em 1em; }
     .news-tag { font-size: 1em; padding-left: 1em; }
-    .calendar-icon.enhanced { margin-bottom: 0.5em; margin-right: 1em; }
-}
-.calendar-icon.enhanced {
-    display: inline-block;
-    width: 2.5em;
-    height: 2.7em;
-    background: #fff;
-    border-radius: 0.4em;
-    border: 2px solid #bbb;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    text-align: center;
-    margin-right: 1em;
-    vertical-align: middle;
-    position: relative;
-    overflow: hidden;
-}
-.calendar-icon.enhanced .calendar-month {
-    display: block;
-    background: #6c63ff; /* 默认紫色，JS动态变色 */
-    color: #fff;
-    font-size: 0.8em;
-    font-weight: bold;
-    padding: 0.15em 0;
-    letter-spacing: 1px;
-}
-.calendar-icon.enhanced .calendar-day {
-    display: block;
-    color: #222;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-top: 0.1em;
+    .calendar-icon.enhanced { width: 2.1em; height: 2.3em; font-size: 0.95em; }
+    .news-meta { gap: 0.7em; }
+    .news-content { font-size: 1em; }
 }
 </style>
 
@@ -229,37 +236,37 @@ body .page-content {
 <div class="news-list" id="newsList">
     <div class="news-card" data-category="site">
         <span class="news-tag site">Site</span>
-        <div class="calendar-icon enhanced" data-category="site">
-            <span class="calendar-month"></span>
-            <span class="calendar-day"></span>
+        <div class="news-meta">
+            <span class="calendar-icon enhanced" data-category="site">
+                <span class="calendar-month"></span>
+                <span class="calendar-day"></span>
+            </span>
+            <span class="news-date">May 8, 2025</span>
         </div>
-        <div class="news-main">
-            <div class="news-date">May 8, 2025</div>
-            <div class="news-content">
-                This academic website was created on May 8, 2025.<br>
-                Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
-            </div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
-            </div>
+        <div class="news-content">
+            This academic website was created on May 8, 2025.<br>
+            Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
+        </div>
+        <div class="news-tools">
+            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="personal">
         <span class="news-tag personal">Personal</span>
-        <div class="calendar-icon enhanced" data-category="personal">
-            <span class="calendar-month"></span>
-            <span class="calendar-day"></span>
+        <div class="news-meta">
+            <span class="calendar-icon enhanced" data-category="personal">
+                <span class="calendar-month"></span>
+                <span class="calendar-day"></span>
+            </span>
+            <span class="news-date">May 23, 2025</span>
         </div>
-        <div class="news-main">
-            <div class="news-date">May 23, 2025</div>
-            <div class="news-content">
-                I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
-                This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
-                <b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München.
-            </div>
-            <div class="news-tools">
-                <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
-            </div>
+        <div class="news-content">
+            I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
+            This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
+            <b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München.
+        </div>
+        <div class="news-tools">
+            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
     </div>
     <div class="news-card" data-category="project">
