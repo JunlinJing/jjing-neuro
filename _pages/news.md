@@ -267,6 +267,18 @@ html[data-theme="dark"] .news-card .news-title {
 .academic-links a.orcid:hover { color: #a6ce39; }
 </style>
 
+<div class="academic-links">
+    <a href="https://scholar.google.com/citations?user=r7Pq37UAAAAJ" class="google-scholar" title="Google Scholar">
+        <i class="ai ai-google-scholar"></i>
+    </a>
+    <a href="https://www.researchgate.net/profile/Junlin-Jing" class="researchgate" title="ResearchGate">
+        <i class="ai ai-researchgate"></i>
+    </a>
+    <a href="https://orcid.org/0009-0006-1290-7445" class="orcid" title="ORCID">
+        <i class="ai ai-orcid"></i>
+    </a>
+</div>
+
 <div class="news-controls">
     <div class="control-item">
         <select id="newsFilter" onchange="filterNews()">
@@ -470,18 +482,6 @@ html[data-theme="dark"] .news-card .news-title {
 </div>
 
 <div class="pagination"></div>
-
-<div class="academic-links">
-    <a href="https://scholar.google.com/citations?user=r7Pq37UAAAAJ" class="google-scholar" title="Google Scholar">
-        <i class="ai ai-google-scholar"></i>
-    </a>
-    <a href="https://www.researchgate.net/profile/Junlin-Jing" class="researchgate" title="ResearchGate">
-        <i class="ai ai-researchgate"></i>
-    </a>
-    <a href="https://orcid.org/0009-0006-1290-7445" class="orcid" title="ORCID">
-        <i class="ai ai-orcid"></i>
-    </a>
-</div>
 
 <script>
 const ITEMS_PER_PAGE = 5;
