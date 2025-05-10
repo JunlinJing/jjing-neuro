@@ -161,6 +161,23 @@ body .page-content {
     .news-list { gap: 1rem; }
     .news-card { padding: 1rem; }
 }
+.calendar-icon {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  background: #fff;
+  color: #0984e3;
+  border-radius: 0.3em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.8em;
+  margin-right: 0.5em;
+  font-family: system-ui, sans-serif;
+  border: 1.5px solid #bbb;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  font-size: 1.1em;
+  vertical-align: middle;
+}
 </style>
 
 <div class="news-controls">
@@ -185,9 +202,20 @@ body .page-content {
 </div>
 
 <div class="news-list" id="newsList">
+    <div class="news-card" data-category="site">
+        <span class="news-tag site">Site</span>
+        <div class="news-date"><span class="calendar-icon"></span>May 8, 2025</div>
+        <div class="news-content">
+            This academic website was created on May 8, 2025.<br>
+            Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
+        </div>
+        <div class="news-tools">
+            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
+        </div>
+    </div>
     <div class="news-card" data-category="personal">
         <span class="news-tag personal">Personal</span>
-        <div class="news-date">May 2025</div>
+        <div class="news-date"><span class="calendar-icon"></span>May 2025</div>
         <div class="news-content">
             I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.<br>
             This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.<br>
@@ -201,17 +229,6 @@ body .page-content {
         <span class="news-tag project">Project</span>
         <div class="news-date">March 2024</div>
         <div class="news-content">Started a new research project on deep learning applications in EEG signal processing.</div>
-        <div class="news-tools">
-            <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
-        </div>
-    </div>
-    <div class="news-card" data-category="site">
-        <span class="news-tag site">Site</span>
-        <div class="news-date">May 8, 2025</div>
-        <div class="news-content">
-            This academic website was created on May 8, 2025.<br>
-            Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.
-        </div>
         <div class="news-tools">
             <button class="tool-button" onclick="shareNews(this)" title="Share"><i class="fas fa-share-alt"></i>Share</button>
         </div>
@@ -334,10 +351,28 @@ function updatePagination() {
     }
 }
 
+function updateCalendarIcons() {
+    document.querySelectorAll('.news-date').forEach(dateEl => {
+        const cal = dateEl.querySelector('.calendar-icon');
+        if (!cal) return;
+        const text = dateEl.textContent;
+        let day = '';
+        const match = text.match(/\b(\d{1,2})[\,\s]/);
+        if (match) {
+            day = match[1];
+        } else {
+            const monthMatch = text.match(/([A-Za-z]+)/);
+            day = monthMatch ? monthMatch[1][0] : '?';
+        }
+        cal.textContent = day;
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     allNews = Array.from(document.querySelectorAll('.news-card'));
     filterNews();
     sortNews();
+    updateCalendarIcons();
 });
 </script>
 
