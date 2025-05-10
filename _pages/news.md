@@ -234,6 +234,37 @@ html[data-theme="dark"] .news-card .news-title {
 .news-social-share .share-xiaohongshu:hover svg {
     color: #ff2442;
 }
+.academic-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-color-secondary);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.academic-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.academic-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.academic-links a.google-scholar:hover { color: #4285f4; }
+.academic-links a.researchgate:hover { color: #00ccbb; }
+.academic-links a.orcid:hover { color: #a6ce39; }
 </style>
 
 <div class="news-controls">
@@ -440,6 +471,18 @@ html[data-theme="dark"] .news-card .news-title {
 
 <div class="pagination"></div>
 
+<div class="academic-links">
+    <a href="https://scholar.google.com/citations?user=r7Pq37UAAAAJ" class="google-scholar" title="Google Scholar">
+        <i class="ai ai-google-scholar"></i>
+    </a>
+    <a href="https://www.researchgate.net/profile/Junlin-Jing" class="researchgate" title="ResearchGate">
+        <i class="ai ai-researchgate"></i>
+    </a>
+    <a href="https://orcid.org/0009-0006-1290-7445" class="orcid" title="ORCID">
+        <i class="ai ai-orcid"></i>
+    </a>
+</div>
+
 <script>
 const ITEMS_PER_PAGE = 5;
 let currentPage = 1;
@@ -598,4 +641,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> 
