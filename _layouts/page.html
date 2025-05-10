@@ -5,14 +5,24 @@ layout: default
     {% include header.html %}
 {% endif %}
 
+{% if page.url != "/" and page.url != "/jjing-neuro/" %}
 <div class="page-content">
     {{content}}
 </div>
+{% else %}
+<div class="page-content home-page">
+    {{content}}
+</div>
+{% endif %}
 
 <style>
 .page-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.home-page {
+    margin-top: -100px;
 }
 </style>
