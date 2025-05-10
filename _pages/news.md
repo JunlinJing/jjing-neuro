@@ -184,6 +184,9 @@ body .page-content {
     .news-title { font-size: 1em; }
     .news-points { font-size: 0.97em; }
 }
+body.dark .news-title {
+    color: #fff;
+}
 </style>
 
 <div class="news-controls">
@@ -417,6 +420,25 @@ function updateEnhancedCalendarIcons() {
         if (pill) pill.style.borderColor = color;
         if (pill && cat === 'blog') pill.style.color = '#333';
     });
+}
+
+function shareNews(btn) {
+    const card = btn.closest('.news-card');
+    const title = card.querySelector('.news-title')?.textContent || document.title;
+    const url = window.location.href;
+    const text = title + ' - ' + url;
+    if (navigator.share) {
+        navigator.share({
+            title: title,
+            text: title,
+            url: url
+        }).catch(() => {});
+    } else {
+        navigator.clipboard.writeText(text).then(() => {
+            btn.textContent = 'Copied!';
+            setTimeout(() => { btn.textContent = 'Share'; }, 1200);
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
