@@ -85,6 +85,7 @@ body .page-content {
 .news-tag.project { border-color: #00b894; color: #00b894; }
 .news-tag.site { border-color: #0984e3; color: #0984e3; }
 .news-tag.blog { border-color: #fdcb6e; color: #b8860b; }
+.news-tag.research { border-color: #e84393; color: #e84393; }
 .news-info {
     font-size: 0.98em;
     color: #888;
@@ -352,35 +353,19 @@ html[data-theme="dark"] .news-card .news-title {
             </a>
         </div>
     </div>
-    <div class="news-card" data-category="project">
-        <span class="news-tag project">Project</span>
+    <div class="news-card" data-category="research">
+        <span class="news-tag research" style="border-color: #e84393; color: #e84393;">Research</span>
         <div class="news-info">
-            <span><b>Date:</b> February 2024</span>
+            <span><b>Date:</b> April 2024</span>
+            <span><b>Location:</b> Virtual Conference</span>
         </div>
         <div class="news-title">
-            Released beta version of BrainConnect toolkit for neural data analysis.
+            Presented research findings at International Brain-Computer Interface Conference
         </div>
-        <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="分享到微信"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="分享到小红书" target="_blank">
-                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
-                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
-                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
-                </svg>
-            </a>
-        </div>
-    </div>
-    <div class="news-card" data-category="blog">
-        <span class="news-tag blog">Blog</span>
-        <div class="news-info">
-            <span><b>Date:</b> January 2024</span>
-        </div>
-        <div class="news-title">
-            Published tutorial series: "Getting Started with Neural Data Analysis"
-        </div>
+        <ul class="news-points">
+            <li>Presented our latest findings on "Neural Decoding Using Advanced Deep Learning Methods"</li>
+            <li>Received positive feedback and established new collaborations with international research groups</li>
+        </ul>
         <div class="news-social-share">
             <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
