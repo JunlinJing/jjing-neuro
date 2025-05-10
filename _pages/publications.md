@@ -16,9 +16,9 @@ permalink: /publications/
 
 ### 2023
 1. **Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder**  
-   **Jing J.**, Klugah-Brown B., Xia S., Wang P., Biswal B. B.  
-   *Frontiers in Neuroscience*, October 2023  
-   [DOI](https://doi.org/10.3389/fnins.2023.1219073) | PDF | Code
+   **Jing J.**, Klugah-Brown B., Xia S., Sheng M., Biswal B. B.  
+   *Frontiers in Neuroscience*, 19 October 2023  
+   [DOI](https://doi.org/10.3389/fnins.2023.1252732) | PDF | Code
 
 2. **Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder**  
    Agoalikum E., Klugah-Brown B., Wu H., **Jing J.**, Biswal B. B.  
