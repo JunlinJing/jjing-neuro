@@ -64,10 +64,10 @@ body .page-content {
 .news-tag {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 1.2em;
+    width: calc(100% - 2.4em);
     height: 2.3em;
-    border-radius: 16px 16px 0 0;
+    border-radius: 12px 12px 0 0;
     font-size: 1.18em;
     font-weight: bold;
     text-align: left;
@@ -75,7 +75,7 @@ body .page-content {
     letter-spacing: 1px;
     color: #fff;
     z-index: 2;
-    padding-left: 2em;
+    padding-left: 1.2em;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     background: #6c63ff;
     border-bottom: 1.5px solid #e0e0e0;
