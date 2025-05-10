@@ -40,8 +40,8 @@ permalink: /publications/
 
 ## Preprints
 1. **Capturing Individual Variability in Spatial and Temporal Properties of Resting-State fMRI: A Comparison of Data-Driven Methods**  
-   **Jing J.**, Klugah-Brown B., Wang P., Biswal B. B.  
-   *Authorea*, April 2024  
+   **Jing J.**, Wang P., Klugah-Brown B., Michael A. M., Biswal B. B.  
+   *Authorea*, 23 April 2024  
    [DOI](https://doi.org/10.22541/au.171386376.60613225/v1) | PDF | Code
 
 ## Book Chapters
