@@ -6,25 +6,38 @@ title: Home
     <div class="news-section">
         <h3>Latest News</h3>
         <div class="news-grid">
-            {% for category in site.data.news %}
-            <div class="news-column" data-category="{{ category.category }}">
-                <h4 class="column-title">{{ category.title }}</h4>
+            <div class="news-column" data-category="website">
+                <h4 class="column-title">Other Updates</h4>
                 <div class="news-items">
-                    {% for item in category.items limit:3 %}
+                    {% assign website_posts = site.categories.website | sort: 'date' | reverse %}
+                    {% for post in website_posts limit:3 %}
                     <div class="news-item">
-                        <span class="date">{{ item.date }}</span>
-                        <p>{{ item.content }}</p>
-                        <div class="news-tag">{{ item.tag }}</div>
-                        {% if item.url %}
+                        <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                        <p>{{ post.content | strip_html }}</p>
+                        <div class="news-tag">{{ post.tags[0] }}</div>
+                        {% if post.content contains "[Learn more]" %}
                         <div class="news-link">
-                            <a href="{{ item.url }}" target="_blank">Learn more <i class="fas fa-external-link-alt"></i></a>
+                            {% assign link_match = post.content | split: "](https://" | last | split: ")" | first %}
+                            <a href="https://{{ link_match }}" target="_blank">Learn more <i class="fas fa-external-link-alt"></i></a>
                         </div>
                         {% endif %}
                     </div>
                     {% endfor %}
                 </div>
             </div>
-            {% endfor %}
+            <div class="news-column" data-category="personal">
+                <h4 class="column-title">Personal Updates</h4>
+                <div class="news-items">
+                    {% assign personal_posts = site.categories.personal | sort: 'date' | reverse %}
+                    {% for post in personal_posts limit:3 %}
+                    <div class="news-item">
+                        <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                        <p>{{ post.content | strip_html }}</p>
+                        <div class="news-tag">{{ post.tags[0] }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
         <div class="news-footer">
             <a href="{{ site.baseurl }}/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
