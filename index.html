@@ -6,11 +6,11 @@ title: Home
     <div class="news-section">
         <h3>Latest News</h3>
         <div class="news-grid">
-            {% for category in site.data.news %}
-            <div class="news-column" data-category="{{ category.category }}">
-                <h4 class="column-title">{{ category.title }}</h4>
+            <div class="news-column" data-category="other">
+                <h4 class="column-title">Other Updates</h4>
                 <div class="news-items">
-                    {% for item in category.items limit:3 %}
+                    {% assign other_updates = site.data.news | where: "category", "other" | first %}
+                    {% for item in other_updates.items limit:3 %}
                     <div class="news-item">
                         <span class="date">{{ item.date }}</span>
                         <p>{{ item.content }}</p>
@@ -24,7 +24,24 @@ title: Home
                     {% endfor %}
                 </div>
             </div>
-            {% endfor %}
+            <div class="news-column" data-category="personal">
+                <h4 class="column-title">Personal Updates</h4>
+                <div class="news-items">
+                    {% assign personal_updates = site.data.news | where: "category", "personal" | first %}
+                    {% for item in personal_updates.items limit:3 %}
+                    <div class="news-item">
+                        <span class="date">{{ item.date }}</span>
+                        <p>{{ item.content }}</p>
+                        <div class="news-tag">{{ item.tag }}</div>
+                        {% if item.url %}
+                        <div class="news-link">
+                            <a href="{{ item.url }}" target="_blank">Learn more <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
         <div class="news-footer">
             <a href="{{ site.baseurl }}/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
