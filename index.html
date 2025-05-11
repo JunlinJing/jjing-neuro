@@ -13,7 +13,9 @@ title: Home
                     {% for item in other_news %}
                     <div class="news-item">
                         <span class="date">{{ item.date | date: "%B %-d, %Y" }}</span>
-                        {{ item.content }}
+                        <a href="{{ site.baseurl }}{{ item.url }}" class="news-link">
+                            <p>{{ item.content }}</p>
+                        </a>
                         <div class="news-tag">{{ item.category | capitalize }}</div>
                     </div>
                     {% endfor %}
@@ -26,7 +28,9 @@ title: Home
                     {% for item in personal_news %}
                     <div class="news-item">
                         <span class="date">{{ item.date | date: "%B %-d, %Y" }}</span>
-                        {{ item.content }}
+                        <a href="{{ site.baseurl }}{{ item.url }}" class="news-link">
+                            <p>{{ item.content }}</p>
+                        </a>
                         <div class="news-tag">{{ item.category | capitalize }}</div>
                     </div>
                     {% endfor %}
@@ -152,6 +156,7 @@ title: Home
         border-radius: 8px;
         position: relative;
         transition: all 0.3s ease;
+        cursor: pointer;
     }
 
     .news-item:last-child {
@@ -175,17 +180,7 @@ title: Home
         line-height: 1.6;
         margin: 0;
         font-size: 0.95em;
-    }
-
-    .news-item a {
-        color: var(--accent-color);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .news-item a:hover {
-        color: var(--accent-color-dark);
-        text-decoration: underline;
+        transition: color 0.3s ease;
     }
 
     .news-tag {
@@ -324,12 +319,14 @@ title: Home
     .profile-links .profile-icon.researchgate:hover { color: #00ccbb; }
     .profile-links .profile-icon.orcid:hover { color: #a6ce39; }
 
-    [data-theme="dark"] .news-item a {
-        color: var(--accent-color-light, #8c7fff);
+    .news-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
     }
 
-    [data-theme="dark"] .news-item a:hover {
-        color: var(--accent-color, #6c63ff);
+    .news-link:hover p {
+        color: var(--accent-color);
     }
 </style>
 

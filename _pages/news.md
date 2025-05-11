@@ -4,6 +4,8 @@ title: News
 permalink: /news/
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <style>
 body .page-content {
     max-width: 900px !important;
@@ -96,11 +98,10 @@ body .page-content {
 }
 .news-info span { display: block; min-width: 120px; }
 .news-title {
-    font-size: 1.13em;
+    font-size: 1.25em;
     font-weight: 600;
-    color: #fff !important;
-    margin-bottom: 0.3em;
-    margin-top: 0.1em;
+    margin: 0.8em 0;
+    color: var(--heading-color) !important;
 }
 html.dark .news-title,
 :root.dark .news-title {
@@ -110,16 +111,55 @@ html:not(.dark) .news-title,
 :root:not(.dark) .news-title {
     color: #222 !important;
 }
-.news-points {
-    margin: 0.5em 0 0.5em 0;
-    padding-left: 1.2em;
-    font-size: 1.08em;
-    color: var(--text-color);
-    text-align: justify;
+.news-content {
+    margin: 1.2em 0;
+    font-size: 1.05em;
     line-height: 1.7;
+    color: var(--text-color);
+    padding: 0.8em 1.2em;
+    background: var(--bg-color);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
 }
+
+.news-card[data-category="personal"] .news-content {
+    border-left-color: #6c63ff;
+}
+
+.news-card[data-category="site"] .news-content {
+    border-left-color: #0984e3;
+}
+
+.news-card[data-category="research"] .news-content {
+    border-left-color: #e84393;
+}
+
+.news-card[data-category="project"] .news-content {
+    border-left-color: #00b894;
+}
+
+html:not(.dark) .news-content,
+:root:not(.dark) .news-content {
+    color: #333;
+    background: #f8f9fa;
+}
+
+html.dark .news-content,
+:root.dark .news-content {
+    color: #eee;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.news-points {
+    margin: 1em 0;
+    padding-left: 1.5em;
+    list-style-type: disc;
+}
+
 .news-points li {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 .news-social-share {
     display: flex;
@@ -241,11 +281,10 @@ html[data-theme="dark"] .news-card .news-title {
     <div class="control-item">
         <select id="newsFilter" onchange="filterNews()">
             <option value="all">All Categories</option>
-            <option value="personal">Personal</option>
-            <option value="project">Project</option>
-            <option value="site">Site</option>
-            <option value="blog">Blog</option>
-            <option value="research">Research</option>
+            {% assign categories = site.data.news | map: "category" | uniq %}
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category | capitalize }}</option>
+            {% endfor %}
         </select>
     </div>
     <div class="control-item">
@@ -260,25 +299,43 @@ html[data-theme="dark"] .news-card .news-title {
 </div>
 
 <div class="news-list" id="newsList">
-    <div class="news-card" data-category="personal">
-        <span class="news-tag personal">Personal</span>
+    {% assign sorted_news = site.data.news | sort: "date" | reverse %}
+    {% for item in sorted_news %}
+    <div class="news-card" data-category="{{ item.category }}" id="{{ item.title | slugify }}">
+        <span class="news-tag {{ item.category }}">{{ item.category | capitalize }}</span>
         <div class="news-info">
-            <span><b>Date:</b> October 1, 2024</span>
-            <span><b>Location:</b> Munich, Germany</span>
+            <span><b>Date:</b> {{ item.date | date: "%B %-d, %Y" }}</span>
+            {% if item.location %}
+            <span><b>Location:</b> {{ item.location }}</span>
+            {% endif %}
         </div>
+        {% if item.title %}
         <div class="news-title">
-            Joined Functional Neuroimaging Lab at LMU Munich
+            {{ item.title }}
         </div>
+        {% endif %}
+        {% if item.content %}
+        <div class="news-content">
+            {{ item.content }}
+        </div>
+        {% endif %}
+        {% if item.description %}
         <ul class="news-points">
-            <li>Started Ph.D. research in Neuroimaging and Machine Learning under the supervision of Prof. Sophia Stöcklein</li>
-            <li>Will focus on developing advanced computational methods for neuroimaging data analysis</li>
+            {% assign description_lines = item.description | newline_to_br | split: '<br />' %}
+            {% for line in description_lines %}
+            {% assign trimmed_line = line | strip %}
+            {% if trimmed_line != '' %}
+            <li>{{ trimmed_line | remove: '- ' }}</li>
+            {% endif %}
+            {% endfor %}
         </ul>
+        {% endif %}
         <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
+            <a href="https://twitter.com/intent/tweet?text={{ item.title | url_encode }}&url={{ site.url }}{{ page.url }}%23{{ item.title | slugify }}" class="share-twitter" title="Share on Twitter" target="_blank" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}%23{{ item.title | slugify }}&title={{ item.title | url_encode }}" class="share-linkedin" title="Share on LinkedIn" target="_blank" onclick="window.open(this.href, 'linkedin-share', 'width=550,height=435');return false;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}%23{{ item.title | slugify }}" class="share-facebook" title="Share on Facebook" target="_blank" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;"><i class="fab fa-facebook"></i></a>
+            <a href="javascript:void(0);" class="share-wechat" title="Share on WeChat" onclick="showWeChatQR('{{ site.url }}{{ page.url }}%23{{ item.title | slugify }}');"><i class="fab fa-weixin"></i></a>
+            <a href="javascript:void(0);" class="share-xiaohongshu" title="Share on RED" onclick="shareToXiaohongshu('{{ site.url }}{{ page.url }}%23{{ item.title | slugify }}', '{{ item.title }}');">
                 <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
                     <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
                     <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
@@ -286,125 +343,7 @@ html[data-theme="dark"] .news-card .news-title {
             </a>
         </div>
     </div>
-    <div class="news-card" data-category="personal">
-        <span class="news-tag personal">Personal</span>
-        <div class="news-info">
-            <span><b>Date:</b> May 23, 2025</span>
-            <span><b>Location:</b> Ground floor, Leopoldstraße 30, 80802 München</span>
-        </div>
-        <div class="news-title">
-            PhD Basics for International Doctoral Researchers
-        </div>
-        <ul class="news-points">
-            <li>I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.</li>
-            <li>This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.</li>
-        </ul>
-        <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
-                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
-                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
-                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
-                </svg>
-            </a>
-        </div>
-    </div>
-    <div class="news-card" data-category="site">
-        <span class="news-tag site">Site</span>
-        <div class="news-info">
-            <span><b>Date:</b> May 8, 2025</span>
-        </div>
-        <div class="news-title">
-            Website Created
-        </div>
-        <ul class="news-points">
-            <li>This academic website was created on May 8, 2025.</li>
-            <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
-        </ul>
-        <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
-                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
-                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
-                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
-                </svg>
-            </a>
-        </div>
-    </div>
-    <div class="news-card" data-category="project">
-        <span class="news-tag project">Project</span>
-        <div class="news-info">
-            <span><b>Date:</b> March 2024</span>
-        </div>
-        <div class="news-title">
-            Started a new research project on deep learning applications in EEG signal processing.
-        </div>
-        <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
-                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
-                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
-                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
-                </svg>
-            </a>
-        </div>
-    </div>
-    <div class="news-card" data-category="blog">
-        <span class="news-tag blog">Blog</span>
-        <div class="news-info">
-            <span><b>Date:</b> March 2024</span>
-        </div>
-        <div class="news-title">
-            Published new article: "Understanding Brain Connectivity Through Graph Neural Networks"
-        </div>
-        <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
-                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
-                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
-                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
-                </svg>
-            </a>
-        </div>
-    </div>
-    <div class="news-card" data-category="research">
-        <span class="news-tag research" style="border-color: #e84393; color: #e84393;">Research</span>
-        <div class="news-info">
-            <span><b>Date:</b> April 2024</span>
-            <span><b>Location:</b> Virtual Conference</span>
-        </div>
-        <div class="news-title">
-            Presented research findings at International Brain-Computer Interface Conference
-        </div>
-        <ul class="news-points">
-            <li>Presented our latest findings on "Neural Decoding Using Advanced Deep Learning Methods"</li>
-            <li>Received positive feedback and established new collaborations with international research groups</li>
-        </ul>
-        <div class="news-social-share">
-            <a href="#" class="share-twitter" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="share-linkedin" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="share-facebook" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="share-wechat" title="Share on WeChat"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="share-xiaohongshu" title="Share on RED" target="_blank">
-                <svg viewBox="0 0 40 40" width="1em" height="1em" fill="currentColor">
-                    <rect x="0" y="0" width="40" height="40" rx="8" fill="currentColor"/>
-                    <text x="50%" y="56%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" dy=".3em" font-weight="bold" letter-spacing="1">RED</text>
-                </svg>
-            </a>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <div class="pagination"></div>
@@ -511,37 +450,15 @@ function updateEnhancedCalendarIcons() {
     });
 }
 
-function shareNews(btn) {
-    const card = btn.closest('.news-card');
-    const title = card.querySelector('.news-title')?.textContent || document.title;
-    const url = window.location.href;
-    const text = title + ' - ' + url;
-    if (navigator.share) {
-        navigator.share({
-            title: title,
-            text: title,
-            url: url
-        }).catch(() => {});
-    } else {
-        navigator.clipboard.writeText(text).then(() => {
-            btn.textContent = 'Copied!';
-            setTimeout(() => { btn.textContent = 'Share'; }, 1200);
-        });
-    }
+function shareToXiaohongshu(url, title) {
+    // 由于小红书不提供直接分享链接，我们可以复制内容到剪贴板
+    const text = `${title}\n${url}`;
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Content copied! You can now paste it to Xiaohongshu.');
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
 }
-
-document.querySelectorAll('.news-card').forEach(function(card) {
-    var title = card.querySelector('.news-title')?.textContent || document.title;
-    var url = window.location.href;
-    card.querySelector('.share-twitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
-    card.querySelector('.share-linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
-    card.querySelector('.share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    card.querySelector('.share-xiaohongshu').href = `https://www.xiaohongshu.com/explore?title=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
-    card.querySelector('.share-wechat').onclick = function(e) {
-        e.preventDefault();
-        showWeChatQR(url);
-    };
-});
 
 function showWeChatQR(url) {
     var qr = document.createElement('div');
@@ -555,8 +472,23 @@ function showWeChatQR(url) {
     qr.style.alignItems = 'center';
     qr.style.justifyContent = 'center';
     qr.style.zIndex = '9999';
-    qr.innerHTML = `<div style='background:#fff;padding:2em 2em 1em 2em;border-radius:12px;text-align:center;position:relative;'><div style='font-size:1.1em;margin-bottom:0.7em;'>Scan QR Code to Share</div><img src='https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(url)}' alt='WeChat QR'><div style='margin-top:0.7em;'><button onclick='this.parentNode.parentNode.parentNode.remove()' style='padding:0.4em 1.2em;border-radius:6px;border:1px solid #bbb;background:#f5f5f5;cursor:pointer;'>Close</button></div></div>`;
+    qr.innerHTML = `
+        <div style='background:#fff;padding:2em 2em 1em 2em;border-radius:12px;text-align:center;position:relative;'>
+            <div style='font-size:1.1em;margin-bottom:0.7em;'>Scan QR Code to Share</div>
+            <div id="qrcode"></div>
+            <div style='margin-top:0.7em;'>
+                <button onclick='this.parentNode.parentNode.parentNode.remove()' style='padding:0.4em 1.2em;border-radius:6px;border:1px solid #bbb;background:#f5f5f5;cursor:pointer;'>Close</button>
+            </div>
+        </div>
+    `;
     document.body.appendChild(qr);
+    
+    // 使用 QRCode.js 生成二维码
+    new QRCode(qr.querySelector('#qrcode'), {
+        text: url,
+        width: 180,
+        height: 180
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -564,6 +496,15 @@ document.addEventListener('DOMContentLoaded', function() {
     filterNews();
     sortNews();
     updateEnhancedCalendarIcons();
+    document.querySelectorAll('.news-card').forEach(function(card) {
+        const title = card.querySelector('.news-title')?.textContent || document.title;
+        const url = window.location.href;
+        
+        // 更新分享链接
+        card.querySelector('.share-twitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+        card.querySelector('.share-linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+        card.querySelector('.share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    });
 });
 </script>
 
