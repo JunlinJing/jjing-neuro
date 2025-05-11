@@ -1,3 +1,27 @@
+- category: personal
+  title: Personal Updates
+  items:
+    - date: May 23, 2025
+      content: I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich.
+      tag: Personal
+      url: null
+    - date: October 1, 2024
+      content: Joined Functional Neuroimaging Lab at LMU Munich
+      tag: Personal
+      url: null
+    - date: September 2024
+      content: Successfully defended my research proposal on neural decoding algorithms.
+      tag: Achievement
+      url: null
+    - date: August 2024
+      content: Received the Graduate Research Excellence Award.
+      tag: Award
+      url: null
+    - date: July 2024
+      content: Started collaboration with the Neural Engineering group at Technical University.
+      tag: Collaboration
+      url: null
+
 - category: other
   title: Other Updates
   items:
@@ -20,28 +44,4 @@
     - date: December 2023
       content: Contributed to the latest neuroinformatics community standards.
       tag: Community
-      url: null
-
-- category: personal
-  title: Personal Updates
-  items:
-    - date: October 1, 2024
-      content: Joined Functional Neuroimaging Lab at LMU Munich
-      tag: Personal
-      url: null
-    - date: May 23, 2025
-      content: I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich.
-      tag: Personal
-      url: null
-    - date: September 2024
-      content: Successfully defended my research proposal on neural decoding algorithms.
-      tag: Achievement
-      url: null
-    - date: August 2024
-      content: Received the Graduate Research Excellence Award.
-      tag: Award
-      url: null
-    - date: July 2024
-      content: Started collaboration with the Neural Engineering group at Technical University.
-      tag: Collaboration
       url: null 
