@@ -5,38 +5,7 @@ title: Home
 <div class="home-content">
     <div class="news-section">
         <h3>Latest News</h3>
-        <div class="news-grid">
-            <div class="news-column" data-category="other">
-                <h4 class="column-title">Other Updates</h4>
-                <div class="news-items">
-                    {% assign other_news = site.data.news | where_exp: "item", "item.category != 'personal'" | sort: "date" | reverse | slice: 0, 3 %}
-                    {% for item in other_news %}
-                    <div class="news-item">
-                        <span class="date">{{ item.date | date: "%B %-d, %Y" }}</span>
-                        <a href="{{ site.baseurl }}{{ item.url }}" class="news-link">
-                            <p>{{ item.content }}</p>
-                        </a>
-                        <div class="news-tag">{{ item.category | capitalize }}</div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="news-column" data-category="personal">
-                <h4 class="column-title">Personal Updates</h4>
-                <div class="news-items">
-                    {% assign personal_news = site.data.news | where: "category", "personal" | sort: "date" | reverse | slice: 0, 3 %}
-                    {% for item in personal_news %}
-                    <div class="news-item">
-                        <span class="date">{{ item.date | date: "%B %-d, %Y" }}</span>
-                        <a href="{{ site.baseurl }}{{ item.url }}" class="news-link">
-                            <p>{{ item.content }}</p>
-                        </a>
-                        <div class="news-tag">{{ item.category | capitalize }}</div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        {% include latest_news.html %}
         <div class="news-footer">
             <a href="{{ site.baseurl }}/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -156,7 +125,6 @@ title: Home
         border-radius: 8px;
         position: relative;
         transition: all 0.3s ease;
-        cursor: pointer;
     }
 
     .news-item:last-child {
@@ -180,7 +148,6 @@ title: Home
         line-height: 1.6;
         margin: 0;
         font-size: 0.95em;
-        transition: color 0.3s ease;
     }
 
     .news-tag {
@@ -318,16 +285,6 @@ title: Home
     .profile-links .profile-icon.scholar:hover { color: #4285f4; }
     .profile-links .profile-icon.researchgate:hover { color: #00ccbb; }
     .profile-links .profile-icon.orcid:hover { color: #a6ce39; }
-
-    .news-link {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-    }
-
-    .news-link:hover p {
-        color: var(--accent-color);
-    }
 </style>
 
 <script>
@@ -422,4 +379,16 @@ function shareNews(button) {
             .catch(console.error);
     }
 }
+
+// Ensure news content is loaded correctly
+document.addEventListener('DOMContentLoaded', function() {
+    // Delayed execution to ensure all DOM elements are loaded
+    setTimeout(function() {
+        const newsGrid = document.getElementById('homepage-news-grid');
+        if (newsGrid) {
+            // Place for any necessary initialization
+            console.log('Homepage news content loaded successfully');
+        }
+    }, 500);
+});
 </script>

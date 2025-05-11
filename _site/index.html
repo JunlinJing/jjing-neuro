@@ -474,38 +474,66 @@
     <div class="home-content">
     <div class="news-section">
         <h3>Latest News</h3>
-        <div class="news-grid">
-            <div class="news-column" data-category="other">
-                <h4 class="column-title">Other Updates</h4>
-                <div class="news-items">
-                    <div class="news-item">
-                        <span class="date">May 8, 2025</span>
-                        <p>This academic website was created on May 8, 2025.</p>
-                        <div class="news-tag">Site</div>
-                    </div>
-                    <div class="news-item">
-                        <span class="date">March 2024</span>
-                        <p>Started a new research project on deep learning applications in EEG signal processing.</p>
-                        <div class="news-tag">Project</div>
-                    </div>
+        
+
+
+<div class="news-grid" id="homepage-news-grid">
+    <div class="news-column" data-category="other">
+        <h4 class="column-title">Other Updates</h4>
+        <div class="news-items">
+            
+                <div class="news-item">
+                    <span class="date">May 8, 2025</span>
+                    <p>This academic website was created on May 8, 2025.</p>
+                    <div class="news-tag">Site</div>
                 </div>
-            </div>
-            <div class="news-column" data-category="personal">
-                <h4 class="column-title">Personal Updates</h4>
-                <div class="news-items">
-                    <div class="news-item">
-                        <span class="date">October 1, 2024</span>
-                        <p>Joined Functional Neuroimaging Lab at LMU Munich</p>
-                        <div class="news-tag">Personal</div>
-                    </div>
-                    <div class="news-item">
-                        <span class="date">May 23, 2025</span>
-                        <p>I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich.</p>
-                        <div class="news-tag">Personal</div>
-                    </div>
+                <div class="news-item">
+                    <span class="date">March 2024</span>
+                    <p>Started a new research project on deep learning applications in EEG signal processing.</p>
+                    <div class="news-tag">Project</div>
                 </div>
-            </div>
+            
         </div>
+    </div>
+    <div class="news-column" data-category="personal">
+        <h4 class="column-title">Personal Updates</h4>
+        <div class="news-items">
+            
+                <div class="news-item">
+                    <span class="date">October 1, 2024</span>
+                    <p>Joined Functional Neuroimaging Lab at LMU Munich</p>
+                    <div class="news-tag">Personal</div>
+                </div>
+                <div class="news-item">
+                    <span class="date">May 23, 2025</span>
+                    <p>I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich.</p>
+                    <div class="news-tag">Personal</div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+// This script only runs on the homepage and won't affect the news page
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if there's new news data in localStorage
+    const lastFetched = localStorage.getItem('news_last_fetched');
+    const currentTime = new Date().getTime();
+    
+    // Refresh if data is over 1 hour old or doesn't exist
+    if (!lastFetched || (currentTime - parseInt(lastFetched)) > 3600000) {
+        // AJAX request can be added here to fetch latest news data
+        // Since Jekyll is a static site, it actually needs to rebuild to update
+        // This feature is mainly to provide better UX during user browsing
+        
+        // Update last fetch time
+        localStorage.setItem('news_last_fetched', currentTime.toString());
+    }
+});
+</script>
+ 
         <div class="news-footer">
             <a href="/jjing-neuro/news" class="view-more-btn">View More News <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -879,6 +907,18 @@ function shareNews(button) {
             .catch(console.error);
     }
 }
+
+// Ensure news content is loaded correctly
+document.addEventListener('DOMContentLoaded', function() {
+    // Delayed execution to ensure all DOM elements are loaded
+    setTimeout(function() {
+        const newsGrid = document.getElementById('homepage-news-grid');
+        if (newsGrid) {
+            // Place for any necessary initialization
+            console.log('Homepage news content loaded successfully');
+        }
+    }, 500);
+});
 </script>
 
 </div>
