@@ -1,1 +1,26 @@
- 
+- category: personal
+  date: 2025-05-23
+  location: Ground floor, Leopoldstraße 30, 80802 München
+  title: PhD Basics for International Doctoral Researchers
+  content: I will attend the event <a href="https://www.graduatecenter.uni-muenchen.de/doctoral_researchers/index.html">PhD Basics for International Doctoral Researchers</a> at LMU Munich.
+  description: |
+    - I will attend the event <a href="https://www.graduatecenter.uni-muenchen.de/doctoral_researchers/index.html">PhD Basics for International Doctoral Researchers</a> at LMU Munich.
+    - This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.
+
+- category: personal
+  date: 2024-10-01
+  title: Joined Functional Neuroimaging Lab at LMU Munich
+  content: Joined Functional Neuroimaging Lab at LMU Munich
+
+- category: project
+  date: 2024-03-01
+  title: New Research Project
+  content: Started a new research project on deep learning applications in EEG signal processing.
+
+- category: site
+  date: 2025-05-08
+  title: Website Created
+  content: This academic website was created on May 8, 2025.
+  description: |
+    - This academic website was created on May 8, 2025.
+    - Source code and updates are available on <a href="https://github.com">GitHub</a>. 

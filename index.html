@@ -9,31 +9,27 @@ title: Home
             <div class="news-column" data-category="other">
                 <h4 class="column-title">Other Updates</h4>
                 <div class="news-items">
+                    {% assign other_news = site.data.news | where_exp: "item", "item.category != 'personal'" | sort: "date" | reverse | slice: 0, 3 %}
+                    {% for item in other_news %}
                     <div class="news-item">
-                        <span class="date">May 8, 2025</span>
-                        <p>This academic website was created on May 8, 2025.</p>
-                        <div class="news-tag">Site</div>
+                        <span class="date">{{ item.date | date: "%B %-d, %Y" }}</span>
+                        {{ item.content }}
+                        <div class="news-tag">{{ item.category | capitalize }}</div>
                     </div>
-                    <div class="news-item">
-                        <span class="date">March 2024</span>
-                        <p>Started a new research project on deep learning applications in EEG signal processing.</p>
-                        <div class="news-tag">Project</div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="news-column" data-category="personal">
                 <h4 class="column-title">Personal Updates</h4>
                 <div class="news-items">
+                    {% assign personal_news = site.data.news | where: "category", "personal" | sort: "date" | reverse | slice: 0, 3 %}
+                    {% for item in personal_news %}
                     <div class="news-item">
-                        <span class="date">October 1, 2024</span>
-                        <p>Joined Functional Neuroimaging Lab at LMU Munich</p>
-                        <div class="news-tag">Personal</div>
+                        <span class="date">{{ item.date | date: "%B %-d, %Y" }}</span>
+                        {{ item.content }}
+                        <div class="news-tag">{{ item.category | capitalize }}</div>
                     </div>
-                    <div class="news-item">
-                        <span class="date">May 23, 2025</span>
-                        <p>I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich.</p>
-                        <div class="news-tag">Personal</div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -181,6 +177,17 @@ title: Home
         font-size: 0.95em;
     }
 
+    .news-item a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .news-item a:hover {
+        color: var(--accent-color-dark);
+        text-decoration: underline;
+    }
+
     .news-tag {
         display: inline-block;
         padding: 4px 10px;
@@ -316,6 +323,14 @@ title: Home
     .profile-links .profile-icon.scholar:hover { color: #4285f4; }
     .profile-links .profile-icon.researchgate:hover { color: #00ccbb; }
     .profile-links .profile-icon.orcid:hover { color: #a6ce39; }
+
+    [data-theme="dark"] .news-item a {
+        color: var(--accent-color-light, #8c7fff);
+    }
+
+    [data-theme="dark"] .news-item a:hover {
+        color: var(--accent-color, #6c63ff);
+    }
 </style>
 
 <script>
