@@ -6,14 +6,58 @@ permalink: /projects/
 
 # Open Source Projects for Neuroscience
 
-## Featured Projects
+## Active Projects
+
+### 03 | ChatPSY: Mental Health Assessment System
+
+<div class="project-card">
+  <div class="project-header">
+    <span class="project-type">Open Source AI Tool</span>
+    <span class="project-status status-active">Active</span>
+    <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank">GitHub Repository</a>
+  </div>
+
+  <div class="project-tags">
+    <span class="tag">#MentalHealth</span>
+    <span class="tag">#AI</span>
+    <span class="tag">#NLP</span>
+    <span class="tag">#PsychiatricScales</span>
+    <span class="tag">#HealthTech</span>
+  </div>
+
+  <div class="project-description">
+    An open-source AI system designed to assist mental health research and preliminary assessments, implementing standardized psychiatric scales through natural language processing.
+  </div>
+
+  <div class="project-section">
+    <h4>Key Features</h4>
+    <ul>
+      <li><strong>Assessment:</strong> Digital implementation of psychiatric scales</li>
+      <li><strong>Analysis:</strong> Automated scoring and interpretation</li>
+      <li><strong>Education:</strong> Research-based mental health information</li>
+      <li><strong>Guidance:</strong> Evidence-based recommendation system</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h4>Technical Stack</h4>
+    <ul>
+      <li><strong>AI Integration:</strong> Open source LLM implementation</li>
+      <li><strong>Framework:</strong> Langchain for context handling</li>
+      <li><strong>Interface:</strong> Open source Gradio UI</li>
+      <li><strong>Method:</strong> Reproducible prompt engineering</li>
+    </ul>
+  </div>
+</div>
+
+## Projects In Progress
 
 ### 01 | BrainDT (Brain-Database-Toolkit)
 
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Integration Platform</span>
-    <span class="project-status">In Progress</span>
+    <span class="project-status status-in-progress">In Progress</span>
     <a href="https://github.com/JunlinJing/BrainDT" class="project-link" target="_blank">GitHub Repository</a>
   </div>
 
@@ -55,7 +99,7 @@ permalink: /projects/
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Web Tool</span>
-    <span class="project-status">In Progress</span>
+    <span class="project-status status-in-progress">In Progress</span>
     <div class="project-links">
       <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank">GitHub</a>
       <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank">Live Demo</a>
@@ -85,53 +129,14 @@ permalink: /projects/
   </div>
 </div>
 
-### 03 | ChatPSY: Mental Health Assessment System
-
-<div class="project-card">
-  <div class="project-header">
-    <span class="project-type">Open Source AI Tool</span>
-    <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank">GitHub Repository</a>
-  </div>
-
-  <div class="project-tags">
-    <span class="tag">#MentalHealth</span>
-    <span class="tag">#AI</span>
-    <span class="tag">#NLP</span>
-    <span class="tag">#PsychiatricScales</span>
-    <span class="tag">#HealthTech</span>
-  </div>
-
-  <div class="project-description">
-    An open-source AI system designed to assist mental health research and preliminary assessments, implementing standardized psychiatric scales through natural language processing.
-  </div>
-
-  <div class="project-section">
-    <h4>Key Features</h4>
-    <ul>
-      <li><strong>Assessment:</strong> Digital implementation of psychiatric scales</li>
-      <li><strong>Analysis:</strong> Automated scoring and interpretation</li>
-      <li><strong>Education:</strong> Research-based mental health information</li>
-      <li><strong>Guidance:</strong> Evidence-based recommendation system</li>
-    </ul>
-  </div>
-
-  <div class="project-section">
-    <h4>Technical Stack</h4>
-    <ul>
-      <li><strong>AI Integration:</strong> Open source LLM implementation</li>
-      <li><strong>Framework:</strong> Langchain for context handling</li>
-      <li><strong>Interface:</strong> Open source Gradio UI</li>
-      <li><strong>Method:</strong> Reproducible prompt engineering</li>
-    </ul>
-  </div>
-</div>
+## Projects In Development
 
 ### 04 | Neuro Cookbook
 
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Documentation</span>
-    <span class="project-status">In Development</span>
+    <span class="project-status status-in-development">In Development</span>
     <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank">GitHub Repository</a>
   </div>
 
@@ -175,9 +180,11 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #34495e;
-    margin: 1.5em 0 1em;
+    margin: 2em 0 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #3498db;
 }
 
 h3 {
@@ -226,13 +233,26 @@ h4 {
 }
 
 .project-status {
-    background: #fff3e0;
-    color: #f57c00;
     padding: 4px 12px;
     border-radius: 15px;
     font-size: 0.9em;
     font-weight: 500;
     margin-left: 10px;
+}
+
+.status-active {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-in-progress {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-in-development {
+    background: #e3f2fd;
+    color: #1976d2;
 }
 
 .project-links a {
