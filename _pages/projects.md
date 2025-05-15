@@ -4,129 +4,263 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
+# Research Projects
 
 ## Featured Projects
 
 ### BrainDT (Brain-Database-Toolkit)
 
-A comprehensive integration platform that combines the latest neuroscience databases, toolkits, and brain atlases to support neuroscience research.
+<div class="project-card">
+  <div class="project-header">
+    <span class="project-type">Integration Platform</span>
+    <a href="https://github.com/JunlinJing/BrainDT" class="project-link" target="_blank">GitHub Repository</a>
+  </div>
 
-Key Features:
-- Curated collection of neuroimaging datasets (OASIS, ABIDE, etc.)
-- Integration of popular analysis toolkits (GIFT, PAGANI, GRETNA)
-- Brain atlas resources for anatomical reference
-- Detailed documentation and usage guides
+  <div class="project-description">
+    A comprehensive integration platform that combines the latest neuroscience databases, toolkits, and brain atlases to support neuroscience research.
+  </div>
 
-Technical Components:
-- Datasets section covering major neuroimaging databases
-- Toolkits section featuring analysis software and frameworks
-- Atlas section providing anatomical reference resources
-- Regular updates with community contributions
+  <div class="project-section">
+    <h4>Key Features</h4>
+    <ul>
+      <li><strong>Data Integration:</strong> Curated collection of neuroimaging datasets (OASIS, ABIDE, etc.)</li>
+      <li><strong>Analysis Tools:</strong> Integration of popular analysis toolkits (GIFT, PAGANI, GRETNA)</li>
+      <li><strong>Reference Resources:</strong> Brain atlas resources for anatomical reference</li>
+      <li><strong>Documentation:</strong> Detailed documentation and usage guides</li>
+    </ul>
+  </div>
 
-[GitHub](https://github.com/JunlinJing/BrainDT)
+  <div class="project-section">
+    <h4>Technical Components</h4>
+    <ul>
+      <li><strong>Datasets:</strong> Comprehensive coverage of major neuroimaging databases</li>
+      <li><strong>Toolkits:</strong> Analysis software and frameworks for neuroimaging</li>
+      <li><strong>Atlas:</strong> Anatomical reference resources for brain mapping</li>
+      <li><strong>Updates:</strong> Regular maintenance with community contributions</li>
+    </ul>
+  </div>
+</div>
 
 ### Journal Classification System for Neuroscience and Psychiatry
 
-A web-based system for classifying and searching academic journals in neuroscience and psychiatry fields based on the latest Chinese Academy of Sciences journal division data.
-- Comprehensive journal classification data
-- Real-time search functionality
-- Multiple classification criteria (Impact Factor, CiteScore, etc.)
-- User-friendly interface for data exploration
+<div class="project-card">
+  <div class="project-header">
+    <span class="project-type">Web Application</span>
+    <div class="project-links">
+      <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank">GitHub</a>
+      <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank">Live Demo</a>
+    </div>
+  </div>
 
-[GitHub](https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification) | [Live Demo](https://neuroscience-psychiatry-journal-classification.vercel.app)
+  <div class="project-description">
+    A web-based system for classifying and searching academic journals in neuroscience and psychiatry fields based on the latest Chinese Academy of Sciences journal division data.
+  </div>
 
-### ChatPSY: Mental Health Assessment and Consultation System
+  <div class="project-section">
+    <h4>Features</h4>
+    <ul>
+      <li><strong>Data:</strong> Comprehensive journal classification data</li>
+      <li><strong>Search:</strong> Real-time search functionality</li>
+      <li><strong>Metrics:</strong> Multiple classification criteria (Impact Factor, CiteScore)</li>
+      <li><strong>Interface:</strong> User-friendly data exploration tools</li>
+    </ul>
+  </div>
+</div>
 
-An AI-powered mental health consultation system that provides preliminary assessments and guidance using standardized psychiatric scales.
+### ChatPSY: Mental Health Assessment System
 
-Key Features:
-- Detailed introduction and scientific background for user's mental health concerns
-- Standardized psychiatric scale assessments with result interpretation
-- Personalized recommendations based on assessment severity:
-  - Treatment suggestions for mild cases
-  - Professional referral guidance for severe cases
+<div class="project-card">
+  <div class="project-header">
+    <span class="project-type">AI Application</span>
+    <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank">GitHub Repository</a>
+  </div>
 
-Technical Implementation:
-- Integration with LLM API for natural language understanding
-- Langchain for context management and conversation flow
-- Few-shot prompting for specialized medical responses
-- Gradio-based user interface for interactive consultation
+  <div class="project-description">
+    An AI-powered mental health consultation system that provides preliminary assessments and guidance using standardized psychiatric scales.
+  </div>
 
-[GitHub](https://github.com/JunlinJing/ChatPSY_demo)
+  <div class="project-section">
+    <h4>Key Features</h4>
+    <ul>
+      <li><strong>Assessment:</strong> Standardized psychiatric scale evaluations</li>
+      <li><strong>Guidance:</strong> Personalized recommendations based on severity</li>
+      <li><strong>Education:</strong> Scientific background for mental health concerns</li>
+      <li><strong>Support:</strong> Professional referral guidance when needed</li>
+    </ul>
+  </div>
 
-### Neuro Cookbook (In Development)
+  <div class="project-section">
+    <h4>Technical Stack</h4>
+    <ul>
+      <li><strong>AI Integration:</strong> LLM API for natural language understanding</li>
+      <li><strong>Framework:</strong> Langchain for context management</li>
+      <li><strong>Interface:</strong> Gradio-based interactive consultation</li>
+      <li><strong>Method:</strong> Few-shot prompting for medical responses</li>
+    </ul>
+  </div>
+</div>
 
-A comprehensive tutorial collection for neuroscience research tools and methodologies. This project aims to provide practical guides and hands-on tutorials for:
-- Software tools commonly used in neuroscience research
-- Step-by-step guides for data analysis pipelines
-- Best practices for neuroimaging data processing
-- Implementation examples of analysis methods
+### Neuro Cookbook
 
-Planned contents include:
-- Neuroimaging software tutorials (FSL, SPM, FreeSurfer)
-- fMRI data preprocessing and analysis workflows
-- Connectivity analysis methods and tools
-- Statistical analysis in neuroscience research
-- Python/MATLAB scripts for neuroscience applications
+<div class="project-card">
+  <div class="project-header">
+    <span class="project-type">Educational Resource</span>
+    <span class="project-status">In Development</span>
+    <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank">GitHub Repository</a>
+  </div>
 
-[GitHub](https://github.com/JunlinJing/Neuro_cookbook)
+  <div class="project-description">
+    A comprehensive tutorial collection for neuroscience research tools and methodologies, providing practical guides and hands-on tutorials.
+  </div>
+
+  <div class="project-section">
+    <h4>Planned Contents</h4>
+    <ul>
+      <li><strong>Software:</strong> Tutorials for FSL, SPM, FreeSurfer</li>
+      <li><strong>Workflows:</strong> fMRI data preprocessing and analysis</li>
+      <li><strong>Methods:</strong> Connectivity analysis and statistical tools</li>
+      <li><strong>Code:</strong> Python/MATLAB scripts for neuroscience</li>
+    </ul>
+  </div>
+</div>
 
 <style>
 .page-content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 2.5em;
     color: #2c3e50;
+    margin-bottom: 1.5em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.3em;
 }
 
 h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 30px;
+    font-size: 2em;
+    color: #34495e;
+    margin: 1.5em 0 1em;
 }
 
 h3 {
-    margin-top: 25px;
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 1.5em 0 1em;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #34495e;
+    margin: 1em 0 0.5em;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-type {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.project-status {
+    background: #fff3e0;
+    color: #f57c00;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.project-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.project-section {
+    margin: 20px 0;
+}
+
+.project-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-section li {
+    margin: 10px 0;
+    line-height: 1.6;
     color: #34495e;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    line-height: 1.6;
+.project-section li strong {
+    color: #2c3e50;
+    margin-right: 8px;
 }
 
 a {
     color: #3498db;
     text-decoration: none;
-    margin-right: 15px;
+    transition: color 0.2s ease;
 }
 
 a:hover {
+    color: #2980b9;
     text-decoration: underline;
 }
 
-.project-links {
-    margin: 15px 0;
-}
-
-.project-description {
-    margin: 15px 0;
-    line-height: 1.6;
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-links {
+        margin-top: 10px;
+    }
+    
+    .project-links a {
+        margin: 5px 15px 5px 0;
+        display: inline-block;
+    }
 }
 </style> 
