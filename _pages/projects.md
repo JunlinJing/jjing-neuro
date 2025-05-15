@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-# Research Projects
+# Open Source Projects for Neuroscience
 
 ## Featured Projects
 
@@ -12,31 +12,31 @@ permalink: /projects/
 
 <div class="project-card">
   <div class="project-header">
-    <span class="project-type">Integration Platform</span>
+    <span class="project-type">Open Source Integration Platform</span>
     <a href="https://github.com/JunlinJing/BrainDT" class="project-link" target="_blank">GitHub Repository</a>
   </div>
 
   <div class="project-description">
-    A comprehensive integration platform that combines the latest neuroscience databases, toolkits, and brain atlases to support neuroscience research.
+    An open-source platform that integrates and organizes neuroscience research resources, making databases, toolkits, and brain atlases more accessible to researchers.
   </div>
 
   <div class="project-section">
     <h4>Key Features</h4>
     <ul>
-      <li><strong>Data Integration:</strong> Curated collection of neuroimaging datasets (OASIS, ABIDE, etc.)</li>
-      <li><strong>Analysis Tools:</strong> Integration of popular analysis toolkits (GIFT, PAGANI, GRETNA)</li>
-      <li><strong>Reference Resources:</strong> Brain atlas resources for anatomical reference</li>
-      <li><strong>Documentation:</strong> Detailed documentation and usage guides</li>
+      <li><strong>Data Integration:</strong> Organized collection of neuroimaging datasets (OASIS, ABIDE, etc.)</li>
+      <li><strong>Analysis Tools:</strong> Curated list of analysis toolkits (GIFT, PAGANI, GRETNA)</li>
+      <li><strong>Reference Resources:</strong> Centralized access to brain atlas resources</li>
+      <li><strong>Documentation:</strong> User guides and implementation examples</li>
     </ul>
   </div>
 
   <div class="project-section">
-    <h4>Technical Components</h4>
+    <h4>Resource Categories</h4>
     <ul>
-      <li><strong>Datasets:</strong> Comprehensive coverage of major neuroimaging databases</li>
-      <li><strong>Toolkits:</strong> Analysis software and frameworks for neuroimaging</li>
-      <li><strong>Atlas:</strong> Anatomical reference resources for brain mapping</li>
-      <li><strong>Updates:</strong> Regular maintenance with community contributions</li>
+      <li><strong>Datasets:</strong> Open access neuroimaging databases</li>
+      <li><strong>Toolkits:</strong> Open source analysis software and frameworks</li>
+      <li><strong>Atlas:</strong> Public brain mapping resources</li>
+      <li><strong>Community:</strong> Open for contributions and suggestions</li>
     </ul>
   </div>
 </div>
@@ -45,7 +45,7 @@ permalink: /projects/
 
 <div class="project-card">
   <div class="project-header">
-    <span class="project-type">Web Application</span>
+    <span class="project-type">Open Source Web Tool</span>
     <div class="project-links">
       <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank">GitHub</a>
       <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank">Live Demo</a>
@@ -53,16 +53,16 @@ permalink: /projects/
   </div>
 
   <div class="project-description">
-    A web-based system for classifying and searching academic journals in neuroscience and psychiatry fields based on the latest Chinese Academy of Sciences journal division data.
+    An open-source web application that helps researchers navigate and search academic journals in neuroscience and psychiatry, based on the Chinese Academy of Sciences journal classification system.
   </div>
 
   <div class="project-section">
     <h4>Features</h4>
     <ul>
-      <li><strong>Data:</strong> Comprehensive journal classification data</li>
-      <li><strong>Search:</strong> Real-time search functionality</li>
-      <li><strong>Metrics:</strong> Multiple classification criteria (Impact Factor, CiteScore)</li>
-      <li><strong>Interface:</strong> User-friendly data exploration tools</li>
+      <li><strong>Data:</strong> Open access journal classification data</li>
+      <li><strong>Search:</strong> Efficient journal discovery tools</li>
+      <li><strong>Metrics:</strong> Multiple journal impact measures</li>
+      <li><strong>Interface:</strong> Researcher-friendly search experience</li>
     </ul>
   </div>
 </div>
@@ -71,31 +71,31 @@ permalink: /projects/
 
 <div class="project-card">
   <div class="project-header">
-    <span class="project-type">AI Application</span>
+    <span class="project-type">Open Source AI Tool</span>
     <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank">GitHub Repository</a>
   </div>
 
   <div class="project-description">
-    An AI-powered mental health consultation system that provides preliminary assessments and guidance using standardized psychiatric scales.
+    An open-source AI system designed to assist mental health research and preliminary assessments, implementing standardized psychiatric scales through natural language processing.
   </div>
 
   <div class="project-section">
     <h4>Key Features</h4>
     <ul>
-      <li><strong>Assessment:</strong> Standardized psychiatric scale evaluations</li>
-      <li><strong>Guidance:</strong> Personalized recommendations based on severity</li>
-      <li><strong>Education:</strong> Scientific background for mental health concerns</li>
-      <li><strong>Support:</strong> Professional referral guidance when needed</li>
+      <li><strong>Assessment:</strong> Digital implementation of psychiatric scales</li>
+      <li><strong>Analysis:</strong> Automated scoring and interpretation</li>
+      <li><strong>Education:</strong> Research-based mental health information</li>
+      <li><strong>Guidance:</strong> Evidence-based recommendation system</li>
     </ul>
   </div>
 
   <div class="project-section">
     <h4>Technical Stack</h4>
     <ul>
-      <li><strong>AI Integration:</strong> LLM API for natural language understanding</li>
-      <li><strong>Framework:</strong> Langchain for context management</li>
-      <li><strong>Interface:</strong> Gradio-based interactive consultation</li>
-      <li><strong>Method:</strong> Few-shot prompting for medical responses</li>
+      <li><strong>AI Integration:</strong> Open source LLM implementation</li>
+      <li><strong>Framework:</strong> Langchain for context handling</li>
+      <li><strong>Interface:</strong> Open source Gradio UI</li>
+      <li><strong>Method:</strong> Reproducible prompt engineering</li>
     </ul>
   </div>
 </div>
@@ -104,22 +104,22 @@ permalink: /projects/
 
 <div class="project-card">
   <div class="project-header">
-    <span class="project-type">Educational Resource</span>
+    <span class="project-type">Open Source Documentation</span>
     <span class="project-status">In Development</span>
     <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank">GitHub Repository</a>
   </div>
 
   <div class="project-description">
-    A comprehensive tutorial collection for neuroscience research tools and methodologies, providing practical guides and hands-on tutorials.
+    An open-source knowledge base providing practical tutorials and reproducible workflows for neuroscience research tools and methodologies.
   </div>
 
   <div class="project-section">
     <h4>Planned Contents</h4>
     <ul>
-      <li><strong>Software:</strong> Tutorials for FSL, SPM, FreeSurfer</li>
-      <li><strong>Workflows:</strong> fMRI data preprocessing and analysis</li>
-      <li><strong>Methods:</strong> Connectivity analysis and statistical tools</li>
-      <li><strong>Code:</strong> Python/MATLAB scripts for neuroscience</li>
+      <li><strong>Tutorials:</strong> Step-by-step guides for open source tools (FSL, SPM, FreeSurfer)</li>
+      <li><strong>Workflows:</strong> Reproducible neuroimaging pipelines</li>
+      <li><strong>Methods:</strong> Open science practices in neuroscience</li>
+      <li><strong>Code:</strong> Shared scripts and implementations</li>
     </ul>
   </div>
 </div>
