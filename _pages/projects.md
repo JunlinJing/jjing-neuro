@@ -18,6 +18,25 @@ A web-based system for classifying and searching academic journals in neuroscien
 
 [GitHub](https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification) | [Live Demo](https://neuroscience-psychiatry-journal-classification.vercel.app)
 
+### ChatPSY: Mental Health Assessment and Consultation System
+
+An AI-powered mental health consultation system that provides preliminary assessments and guidance using standardized psychiatric scales.
+
+Key Features:
+- Detailed introduction and scientific background for user's mental health concerns
+- Standardized psychiatric scale assessments with result interpretation
+- Personalized recommendations based on assessment severity:
+  - Treatment suggestions for mild cases
+  - Professional referral guidance for severe cases
+
+Technical Implementation:
+- Integration with LLM API for natural language understanding
+- Langchain for context management and conversation flow
+- Few-shot prompting for specialized medical responses
+- Gradio-based user interface for interactive consultation
+
+[GitHub](https://github.com/JunlinJing/ChatPSY_demo)
+
 ### Neuro Cookbook (In Development)
 
 A comprehensive tutorial collection for neuroscience research tools and methodologies. This project aims to provide practical guides and hands-on tutorials for:
