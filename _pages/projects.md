@@ -13,6 +13,7 @@ permalink: /projects/
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Integration Platform</span>
+    <span class="project-status">In Progress</span>
     <a href="https://github.com/JunlinJing/BrainDT" class="project-link" target="_blank">GitHub Repository</a>
   </div>
 
@@ -54,6 +55,7 @@ permalink: /projects/
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Web Tool</span>
+    <span class="project-status">In Progress</span>
     <div class="project-links">
       <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank">GitHub</a>
       <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank">Live Demo</a>
