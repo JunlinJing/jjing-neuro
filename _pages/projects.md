@@ -237,17 +237,16 @@ h4 {
 
 .project-card {
     background: #ffffff;
-    border: 1px solid #e1e4e8;
-    border-radius: 16px;
-    padding: 40px;
-    margin: 35px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
     transition: all 0.3s ease;
 }
 
 .project-card:hover {
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-header {
@@ -281,11 +280,11 @@ h4 {
 }
 
 .project-status {
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-size: 1em;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
     font-weight: 500;
-    white-space: nowrap;
 }
 
 .project-links {
@@ -376,17 +375,20 @@ h4 {
     font-size: 1em;
     cursor: pointer;
     transition: all 0.2s ease;
+    color: #495057;
 }
 
 .filter-btn:hover {
     background: #f8f9fa;
     border-color: #adb5bd;
+    transform: translateY(-1px);
 }
 
 .filter-btn.active {
     background: #0366d6;
     color: #ffffff;
     border-color: #0366d6;
+    box-shadow: 0 2px 4px rgba(3, 102, 214, 0.2);
 }
 
 .project-section {
@@ -454,13 +456,17 @@ h4 {
     }
     
     .filter-group {
-        gap: 12px;
-        margin: 15px 0;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group label {
+        margin-bottom: 10px;
     }
     
     .filter-btn {
-        padding: 8px 16px;
-        font-size: 0.95em;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -541,12 +547,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const activeCategoryFilter = document.querySelector('[data-category].active').dataset.category;
         
         filteredCards = [...projectCards].filter(card => {
-            const matchesStatus = activeStatusFilter === 'all' || 
-                                card.closest('.project-section').dataset.status === activeStatusFilter;
-            const matchesCategory = activeCategoryFilter === 'all' || 
-                                  card.dataset.category === activeCategoryFilter;
+            const matchesStatus = activeStatusFilter === 'all' || card.dataset.status === activeStatusFilter;
+            const matchesCategory = activeCategoryFilter === 'all' || card.dataset.category === activeCategoryFilter;
             return matchesStatus && matchesCategory;
         });
+        
+        projectCards.forEach(card => card.style.display = 'none');
+        filteredCards.forEach(card => card.style.display = 'block');
         
         currentPage = 1;
         updatePagination();
@@ -566,8 +573,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const start = (page - 1) * cardsPerPage;
         const end = start + cardsPerPage;
         
-        projectCards.forEach(card => card.classList.add('hidden'));
-        filteredCards.slice(start, end).forEach(card => card.classList.remove('hidden'));
+        projectCards.forEach(card => card.style.display = 'none');
+        filteredCards.slice(start, end).forEach(card => card.style.display = 'block');
     }
     
     // Event Listeners
