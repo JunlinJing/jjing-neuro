@@ -18,6 +18,23 @@ A web-based system for classifying and searching academic journals in neuroscien
 
 [GitHub](https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification) | [Live Demo](https://neuroscience-psychiatry-journal-classification.vercel.app)
 
+### Neuro Cookbook (In Development)
+
+A comprehensive tutorial collection for neuroscience research tools and methodologies. This project aims to provide practical guides and hands-on tutorials for:
+- Software tools commonly used in neuroscience research
+- Step-by-step guides for data analysis pipelines
+- Best practices for neuroimaging data processing
+- Implementation examples of analysis methods
+
+Planned contents include:
+- Neuroimaging software tutorials (FSL, SPM, FreeSurfer)
+- fMRI data preprocessing and analysis workflows
+- Connectivity analysis methods and tools
+- Statistical analysis in neuroscience research
+- Python/MATLAB scripts for neuroscience applications
+
+[GitHub](https://github.com/JunlinJing/Neuro_cookbook)
+
 ## Technical Skills
 
 ### Programming Languages & Tools
