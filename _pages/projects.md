@@ -115,7 +115,7 @@ permalink: /projects/
     </div>
   </div>
 
-  <div class="project-card" data-status="in-progress" data-category="resources">
+  <div class="project-card" data-status="in-progress" data-category="applications">
     <div class="project-header">
       <div class="project-title">
         <h3>Journal Classification System for Neuroscience and Psychiatry</h3>
