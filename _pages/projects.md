@@ -281,9 +281,9 @@ h4 {
 }
 
 .project-status {
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 0.95em;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1em;
     font-weight: 500;
     white-space: nowrap;
 }
@@ -501,6 +501,21 @@ h4 {
 
 .project-card.hidden {
     display: none;
+}
+
+.status-active {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-in-progress {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-planning {
+    background: #e3f2fd;
+    color: #1976d2;
 }
 </style>
 
