@@ -4,111 +4,215 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
+# Research Projects
 
-## Featured Projects
+<div class="projects-container">
 
-### Journal Classification System for Neuroscience and Psychiatry
+<div class="project-card">
+<div class="project-header">
+### Journal Classification System
+<div class="project-tags">
+<span class="tag">Web Development</span>
+<span class="tag">Data Analysis</span>
+</div>
+</div>
 
 A web-based system for classifying and searching academic journals in neuroscience and psychiatry fields based on the latest Chinese Academy of Sciences journal division data.
+
+**Key Features:**
 - Comprehensive journal classification data
 - Real-time search functionality
 - Multiple classification criteria (Impact Factor, CiteScore, etc.)
 - User-friendly interface for data exploration
 
-[GitHub](https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification) | [Live Demo](https://neuroscience-psychiatry-journal-classification.vercel.app)
+<div class="project-links">
+<a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" class="button" target="_blank">View on GitHub</a>
+<a href="https://neuroscience-psychiatry-journal-classification.vercel.app" class="button primary" target="_blank">Live Demo</a>
+</div>
+</div>
 
-### ChatPSY: Mental Health Assessment and Consultation System
+<div class="project-card">
+<div class="project-header">
+### ChatPSY
+<div class="project-tags">
+<span class="tag">AI</span>
+<span class="tag">Healthcare</span>
+<span class="tag">Python</span>
+</div>
+</div>
 
 An AI-powered mental health consultation system that provides preliminary assessments and guidance using standardized psychiatric scales.
 
-Key Features:
-- Detailed introduction and scientific background for user's mental health concerns
+**Key Features:**
+- Detailed introduction and scientific background for mental health concerns
 - Standardized psychiatric scale assessments with result interpretation
-- Personalized recommendations based on assessment severity:
-  - Treatment suggestions for mild cases
-  - Professional referral guidance for severe cases
+- Personalized recommendations based on assessment severity
+- Professional referral guidance system
 
-Technical Implementation:
-- Integration with LLM API for natural language understanding
-- Langchain for context management and conversation flow
-- Few-shot prompting for specialized medical responses
-- Gradio-based user interface for interactive consultation
+**Technical Stack:**
+- LLM API Integration
+- Langchain Framework
+- Few-shot Learning
+- Gradio UI
 
-[GitHub](https://github.com/JunlinJing/ChatPSY_demo)
+<div class="project-links">
+<a href="https://github.com/JunlinJing/ChatPSY_demo" class="button" target="_blank">View on GitHub</a>
+</div>
+</div>
 
-### Neuro Cookbook (In Development)
+<div class="project-card">
+<div class="project-header">
+### Neuro Cookbook
+<div class="project-tags">
+<span class="tag">Documentation</span>
+<span class="tag">Tutorials</span>
+<span class="tag">Research</span>
+</div>
+</div>
 
-A comprehensive tutorial collection for neuroscience research tools and methodologies. This project aims to provide practical guides and hands-on tutorials for:
-- Software tools commonly used in neuroscience research
-- Step-by-step guides for data analysis pipelines
-- Best practices for neuroimaging data processing
-- Implementation examples of analysis methods
+A comprehensive tutorial collection for neuroscience research tools and methodologies, providing practical guides and hands-on tutorials.
 
-Planned contents include:
-- Neuroimaging software tutorials (FSL, SPM, FreeSurfer)
-- fMRI data preprocessing and analysis workflows
-- Connectivity analysis methods and tools
-- Statistical analysis in neuroscience research
-- Python/MATLAB scripts for neuroscience applications
+**Current Focus:**
+- Neuroimaging software (FSL, SPM, FreeSurfer)
+- fMRI data analysis workflows
+- Connectivity analysis methods
+- Statistical analysis techniques
+- Python/MATLAB implementations
 
-[GitHub](https://github.com/JunlinJing/Neuro_cookbook)
+**Development Status:** In Progress
+
+<div class="project-links">
+<a href="https://github.com/JunlinJing/Neuro_cookbook" class="button" target="_blank">View on GitHub</a>
+</div>
+</div>
+
+</div>
 
 <style>
-.page-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px 0;
 }
 
-h1, h2, h3 {
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #eaeaea;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.project-header {
+    margin-bottom: 20px;
+}
+
+.project-header h3 {
+    margin: 0 0 10px 0;
     color: #2c3e50;
+    font-size: 1.5em;
 }
 
-h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 30px;
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
 }
 
-h3 {
-    margin-top: 25px;
-    color: #34495e;
+.tag {
+    background: #f7f9fc;
+    color: #4a5568;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: #f7f9fc;
+    color: #4a5568;
+    border: 1px solid #eaeaea;
+}
+
+.button.primary {
+    background: #3498db;
+    color: white;
+    border: none;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2.5em;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    margin: 20px auto;
+    border-radius: 2px;
 }
 
 ul {
     padding-left: 20px;
+    margin: 15px 0;
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.6;
+    color: #4a5568;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
-    margin-right: 15px;
+strong {
+    color: #2c3e50;
+    font-weight: 600;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.project-links {
-    margin: 15px 0;
-}
-
-.project-description {
-    margin: 15px 0;
-    line-height: 1.6;
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
 }
 </style> 
