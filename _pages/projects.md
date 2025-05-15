@@ -8,12 +8,20 @@ permalink: /projects/
 
 ## Featured Projects
 
-### BrainDT (Brain-Database-Toolkit)
+### 01 | BrainDT (Brain-Database-Toolkit)
 
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Integration Platform</span>
     <a href="https://github.com/JunlinJing/BrainDT" class="project-link" target="_blank">GitHub Repository</a>
+  </div>
+
+  <div class="project-tags">
+    <span class="tag">#Neuroimaging</span>
+    <span class="tag">#DataIntegration</span>
+    <span class="tag">#Toolkits</span>
+    <span class="tag">#BrainAtlas</span>
+    <span class="tag">#OpenScience</span>
   </div>
 
   <div class="project-description">
@@ -41,7 +49,7 @@ permalink: /projects/
   </div>
 </div>
 
-### Journal Classification System for Neuroscience and Psychiatry
+### 02 | Journal Classification System for Neuroscience and Psychiatry
 
 <div class="project-card">
   <div class="project-header">
@@ -50,6 +58,14 @@ permalink: /projects/
       <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank">GitHub</a>
       <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank">Live Demo</a>
     </div>
+  </div>
+
+  <div class="project-tags">
+    <span class="tag">#JournalMetrics</span>
+    <span class="tag">#AcademicPublishing</span>
+    <span class="tag">#SearchTools</span>
+    <span class="tag">#Neuroscience</span>
+    <span class="tag">#Psychiatry</span>
   </div>
 
   <div class="project-description">
@@ -67,12 +83,20 @@ permalink: /projects/
   </div>
 </div>
 
-### ChatPSY: Mental Health Assessment System
+### 03 | ChatPSY: Mental Health Assessment System
 
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source AI Tool</span>
     <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank">GitHub Repository</a>
+  </div>
+
+  <div class="project-tags">
+    <span class="tag">#MentalHealth</span>
+    <span class="tag">#AI</span>
+    <span class="tag">#NLP</span>
+    <span class="tag">#PsychiatricScales</span>
+    <span class="tag">#HealthTech</span>
   </div>
 
   <div class="project-description">
@@ -100,13 +124,21 @@ permalink: /projects/
   </div>
 </div>
 
-### Neuro Cookbook
+### 04 | Neuro Cookbook
 
 <div class="project-card">
   <div class="project-header">
     <span class="project-type">Open Source Documentation</span>
     <span class="project-status">In Development</span>
     <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank">GitHub Repository</a>
+  </div>
+
+  <div class="project-tags">
+    <span class="tag">#Tutorials</span>
+    <span class="tag">#Neuroimaging</span>
+    <span class="tag">#DataAnalysis</span>
+    <span class="tag">#Documentation</span>
+    <span class="tag">#OpenEducation</span>
   </div>
 
   <div class="project-description">
@@ -150,6 +182,8 @@ h3 {
     font-size: 1.5em;
     color: #2c3e50;
     margin: 1.5em 0 1em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
 }
 
 h4 {
@@ -262,5 +296,27 @@ a:hover {
         margin: 5px 15px 5px 0;
         display: inline-block;
     }
+}
+
+.project-tags {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #f0f7ff;
+    color: #0366d6;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: #e1f0ff;
+    transform: translateY(-1px);
 }
 </style> 
