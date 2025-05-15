@@ -273,9 +273,9 @@ h4 {
 .project-type {
     background: #f8f9fa;
     color: #1976d2;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 0.95em;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1em;
     font-weight: 500;
     white-space: nowrap;
 }
@@ -330,17 +330,18 @@ h4 {
 }
 
 .tag {
-    background: #f0f7ff;
-    color: #0366d6;
+    background: #f3f4f6;
+    color: #4b5563;
     padding: 8px 18px;
     border-radius: 25px;
     font-size: 1em;
     font-weight: 500;
     transition: all 0.2s ease;
+    border: 1px solid #e5e7eb;
 }
 
 .tag:hover {
-    background: #e1f0ff;
+    background: #e5e7eb;
     transform: translateY(-1px);
 }
 
@@ -504,18 +505,21 @@ h4 {
 }
 
 .status-active {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: #dcf5dc;
+    color: #1a5928;
+    border: 1px solid #c3e6c3;
 }
 
 .status-in-progress {
-    background: #fff3e0;
-    color: #f57c00;
+    background: #ffefd5;
+    color: #b35900;
+    border: 1px solid #ffd7a8;
 }
 
 .status-planning {
-    background: #e3f2fd;
-    color: #1976d2;
+    background: #ddf4ff;
+    color: #0969da;
+    border: 1px solid #b6e3ff;
 }
 </style>
 
