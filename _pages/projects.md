@@ -12,7 +12,7 @@ permalink: /projects/
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="active">Active</button>
     <button class="filter-btn" data-filter="in-progress">In Progress</button>
-    <button class="filter-btn" data-filter="in-development">In Development</button>
+    <button class="filter-btn" data-filter="planning">Planning</button>
   </div>
   <div class="filter-group">
     <label>Category:</label>
@@ -25,11 +25,15 @@ permalink: /projects/
 
 <div id="projects-container">
   <div class="project-card" data-status="active" data-category="ai">
-    <h3>03 | ChatPSY: Mental Health Assessment System</h3>
     <div class="project-header">
+      <div class="project-title">
+        <h3>ChatPSY: Mental Health Assessment System</h3>
+      </div>
       <span class="project-type">Open Source AI Tool</span>
       <span class="project-status status-active">Active</span>
-      <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank">GitHub Repository</a>
+      <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
 
     <div class="project-tags">
@@ -66,11 +70,15 @@ permalink: /projects/
   </div>
 
   <div class="project-card" data-status="in-progress" data-category="data">
-    <h3>01 | BrainDT (Brain-Database-Toolkit)</h3>
     <div class="project-header">
+      <div class="project-title">
+        <h3>BrainDT (Brain-Database-Toolkit)</h3>
+      </div>
       <span class="project-type">Open Source Integration Platform</span>
       <span class="project-status status-in-progress">In Progress</span>
-      <a href="https://github.com/JunlinJing/BrainDT" class="project-link" target="_blank">GitHub Repository</a>
+      <a href="https://github.com/JunlinJing/BrainDT" class="github-link" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
 
     <div class="project-tags">
@@ -107,13 +115,19 @@ permalink: /projects/
   </div>
 
   <div class="project-card" data-status="in-progress" data-category="data">
-    <h3>02 | Journal Classification System for Neuroscience and Psychiatry</h3>
     <div class="project-header">
+      <div class="project-title">
+        <h3>Journal Classification System for Neuroscience and Psychiatry</h3>
+      </div>
       <span class="project-type">Open Source Web Tool</span>
       <span class="project-status status-in-progress">In Progress</span>
       <div class="project-links">
-        <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank">GitHub</a>
-        <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank">Live Demo</a>
+        <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank" class="github-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank" class="demo-link">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
       </div>
     </div>
 
@@ -141,11 +155,15 @@ permalink: /projects/
   </div>
 
   <div class="project-card" data-status="in-development" data-category="documentation">
-    <h3>04 | Neuro Cookbook</h3>
     <div class="project-header">
+      <div class="project-title">
+        <h3>Neuro Cookbook</h3>
+      </div>
       <span class="project-type">Open Source Documentation</span>
-      <span class="project-status status-in-development">In Development</span>
-      <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank">GitHub Repository</a>
+      <span class="project-status status-planning">Planning</span>
+      <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
 
     <div class="project-tags">
@@ -265,7 +283,7 @@ h4 {
     color: #f57c00;
 }
 
-.status-in-development {
+.status-planning {
     background: #e3f2fd;
     color: #1976d2;
 }
@@ -519,5 +537,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initial setup
     filterProjects();
+
+    // Update status text display
+    const statusElements = document.querySelectorAll('.project-status');
+    statusElements.forEach(element => {
+        if (element.classList.contains('status-in-development')) {
+            element.textContent = 'Planning';
+        }
+    });
 });
 </script> 
