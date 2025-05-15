@@ -8,8 +8,19 @@ permalink: /projects/
 
 ## Featured Projects
 
+### Journal Classification System for Neuroscience and Psychiatry
+![Journal Classification](/assets/images/placeholder-project1.jpg)
+
+A web-based system for classifying and searching academic journals in neuroscience and psychiatry fields based on the latest Chinese Academy of Sciences journal division data.
+- Comprehensive journal classification data
+- Real-time search functionality
+- Multiple classification criteria (Impact Factor, CiteScore, etc.)
+- User-friendly interface for data exploration
+
+[GitHub](https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification) | [Live Demo](https://neuroscience-psychiatry-journal-classification.vercel.app)
+
 ### BrainDecode: Neural Signal Processing Toolkit
-![BrainDecode](/assets/images/placeholder-project1.jpg)
+![BrainDecode](/assets/images/placeholder-project2.jpg)
 
 An open-source Python library for processing and analyzing neural signals, with a focus on real-time applications.
 - Advanced signal processing algorithms
@@ -20,7 +31,7 @@ An open-source Python library for processing and analyzing neural signals, with 
 [GitHub](https://github.com/) | [Documentation](https://docs.example.com) | [Demo](https://demo.example.com)
 
 ### CogModel: Cognitive Architecture Simulator
-![CogModel](/assets/images/placeholder-project2.jpg)
+![CogModel](/assets/images/placeholder-project3.jpg)
 
 A computational framework for simulating human cognitive processes and testing theoretical models.
 - Modular architecture design
@@ -60,7 +71,26 @@ Interactive visualization tools for neural data analysis and exploration.
 2. [Real-time EEG Processing with Python](/blog/post2)
 3. [Building Cognitive Models: A Practical Guide](/blog/post3)
 
+## Technical Skills
+
+### Programming Languages & Tools
+- **Python**: Scientific computing, data analysis, web development
+- **JavaScript/TypeScript**: Frontend development, data visualization
+- **SQL**: Database management and queries
+- **Git**: Version control and collaboration
+
+### Frameworks & Libraries
+- **Data Analysis**: NumPy, Pandas, SciPy
+- **Machine Learning**: TensorFlow, PyTorch, scikit-learn
+- **Web Development**: React, Next.js, Vercel
+- **Visualization**: Plotly, D3.js, Matplotlib
+
 ## Resources
+
+### Tutorials & Documentation
+- [Data Processing Pipelines](/tutorials/data-processing)
+- [Web Application Development](/tutorials/web-dev)
+- [Scientific Computing](/tutorials/scientific-computing)
 
 ### Tutorials
 - [Getting Started with Neural Data Analysis](/tutorials/neural-data)
