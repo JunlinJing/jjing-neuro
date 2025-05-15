@@ -75,6 +75,45 @@ h3.project-title {
     left: 0;
 }
 
+.methods-section {
+    margin: 3em 0;
+    padding: 0 10px;
+}
+
+.methods-category {
+    margin: 2em 0;
+}
+
+.methods-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.methods-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.methods-list li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin: 0.8em 0;
+    padding-left: 25px;
+    position: relative;
+    color: #34495e;
+}
+
+.methods-list li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 @media (max-width: 768px) {
     .page-content {
         padding: 40px 20px;
@@ -94,9 +133,14 @@ h3.project-title {
     
     .research-intro,
     .project-description,
-    .project-list li {
+    .project-list li,
+    .methods-list li {
         font-size: 1.1em;
         line-height: 1.7;
+    }
+    
+    .methods-title {
+        font-size: 1.3em;
     }
 }
 </style>
@@ -134,22 +178,36 @@ Translating neuroimaging research into clinical practice through:
     <li>Assessment of whole-brain connectivity alterations in various pathological conditions</li>
 </ul>
 
-## Research Methods
+<h2 class="section-title">Research Methods</h2>
 
-- **Neuroimaging Analysis**
-  - Resting-state fMRI processing
-  - Functional connectivity analysis
-  - Advanced machine learning applications
-  
-- **Data Analysis**
-  - Large-scale neuroimaging data processing
-  - Statistical modeling and inference
-  - Pattern recognition in clinical data
-  
-- **Computational Approaches**
-  - Deep learning for neuroimaging
-  - Network analysis and graph theory
-  - Multivariate pattern analysis
+<div class="methods-section">
+    <div class="methods-category">
+        <div class="methods-title">Neuroimaging Analysis</div>
+        <ul class="methods-list">
+            <li>Resting-state fMRI processing</li>
+            <li>Functional connectivity analysis</li>
+            <li>Advanced machine learning applications</li>
+        </ul>
+    </div>
+
+    <div class="methods-category">
+        <div class="methods-title">Data Analysis</div>
+        <ul class="methods-list">
+            <li>Large-scale neuroimaging data processing</li>
+            <li>Statistical modeling and inference</li>
+            <li>Pattern recognition in clinical data</li>
+        </ul>
+    </div>
+
+    <div class="methods-category">
+        <div class="methods-title">Computational Approaches</div>
+        <ul class="methods-list">
+            <li>Deep learning for neuroimaging</li>
+            <li>Network analysis and graph theory</li>
+            <li>Multivariate pattern analysis</li>
+        </ul>
+    </div>
+</div>
 
 <style>
 .page-content {
