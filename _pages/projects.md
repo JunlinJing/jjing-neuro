@@ -189,6 +189,51 @@ permalink: /projects/
       </ul>
     </div>
   </div>
+
+  <div class="project-card" data-status="planning" data-category="books">
+    <div class="project-header">
+      <div class="project-title">
+        <h3>Brain Connectivity: A Popular Science Guide</h3>
+      </div>
+      <span class="project-type">Open Science Book</span>
+      <span class="project-status status-planning">Planning</span>
+    </div>
+
+    <div class="project-tags">
+      <span class="tag">#BrainConnectivity</span>
+      <span class="tag">#Neuroscience</span>
+      <span class="tag">#PopularScience</span>
+      <span class="tag">#Education</span>
+      <span class="tag">#OpenAccess</span>
+    </div>
+
+    <div class="project-description">
+      An accessible guide to understanding brain connectivity, written for both general readers and students interested in neuroscience. The book aims to bridge the gap between scientific research and public understanding of how brain networks function.
+    </div>
+
+    <div class="project-section">
+      <h4>Book Contents</h4>
+      <ul>
+        <li><strong>Introduction:</strong> Purpose and target audience</li>
+        <li><strong>Basic Concepts:</strong> Definition and development of brain connectivity</li>
+        <li><strong>Significance:</strong> Impact on individuals and society</li>
+        <li><strong>Fundamentals:</strong> Basic theories and key discoveries</li>
+        <li><strong>Current Research:</strong> Latest findings and developments</li>
+        <li><strong>Practical Applications:</strong> Relevance to daily life</li>
+        <li><strong>Future Directions:</strong> Enhancing brain connectivity through daily activities</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Accessibility:</strong> Written in clear, engaging language</li>
+        <li><strong>Visual Elements:</strong> Illustrations and diagrams</li>
+        <li><strong>Case Studies:</strong> Real-world examples and applications</li>
+        <li><strong>Interactive:</strong> Practical exercises and activities</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="pagination">
