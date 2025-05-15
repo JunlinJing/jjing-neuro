@@ -18,8 +18,9 @@ permalink: /projects/
     <label>Category:</label>
     <button class="filter-btn active" data-category="all">All</button>
     <button class="filter-btn" data-category="ai">AI Tools</button>
-    <button class="filter-btn" data-category="data">Data Integration</button>
-    <button class="filter-btn" data-category="documentation">Documentation</button>
+    <button class="filter-btn" data-category="resources">Resource Integration</button>
+    <button class="filter-btn" data-category="tutorials">Tutorial Documentation</button>
+    <button class="filter-btn" data-category="books">Books</button>
   </div>
 </div>
 
@@ -69,7 +70,7 @@ permalink: /projects/
     </div>
   </div>
 
-  <div class="project-card" data-status="in-progress" data-category="data">
+  <div class="project-card" data-status="in-progress" data-category="resources">
     <div class="project-header">
       <div class="project-title">
         <h3>BrainDT (Brain-Database-Toolkit)</h3>
@@ -114,7 +115,7 @@ permalink: /projects/
     </div>
   </div>
 
-  <div class="project-card" data-status="in-progress" data-category="data">
+  <div class="project-card" data-status="in-progress" data-category="resources">
     <div class="project-header">
       <div class="project-title">
         <h3>Journal Classification System for Neuroscience and Psychiatry</h3>
@@ -154,7 +155,7 @@ permalink: /projects/
     </div>
   </div>
 
-  <div class="project-card" data-status="in-development" data-category="documentation">
+  <div class="project-card" data-status="planning" data-category="tutorials">
     <div class="project-header">
       <div class="project-title">
         <h3>Neuro Cookbook</h3>
