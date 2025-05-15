@@ -54,20 +54,6 @@ Planned contents include:
 
 [GitHub](https://github.com/JunlinJing/Neuro_cookbook)
 
-## Technical Skills
-
-### Programming Languages & Tools
-- **Python**: Scientific computing, data analysis, web development
-- **JavaScript/TypeScript**: Frontend development, data visualization
-- **SQL**: Database management and queries
-- **Git**: Version control and collaboration
-
-### Frameworks & Libraries
-- **Data Analysis**: NumPy, Pandas, SciPy
-- **Machine Learning**: TensorFlow, PyTorch, scikit-learn
-- **Web Development**: React, Next.js, Vercel
-- **Visualization**: Plotly, D3.js, Matplotlib
-
 <style>
 .page-content {
     max-width: 900px;
