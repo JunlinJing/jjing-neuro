@@ -52,31 +52,6 @@ Developing and implementing cutting-edge approaches for:
   - Network analysis and graph theory
   - Multivariate pattern analysis
 
-## Publications
-
-Recent key publications:
-- Stoecklein S, et al. (2020). Variable functional connectivity architecture of the preterm human brain: Impact of developmental cortical expansion and maturation. Proc Natl Acad Sci U S A 117:1201-1206.
-- Stoecklein VM, et al. (2020). Resting-state fMRI detects alterations in whole brain connectivity related to tumor biology in glioma patients. Neuro Oncol 22:1388-1398.
-- Stoecklein VM, et al. (2023). Perifocal Edema in Patients with Meningioma is Associated with Impaired Whole-Brain Connectivity as Detected by Resting-State fMRI. AJNR Am J Neuroradiol 44:814-819.
-
-## Collaborations
-
-I actively collaborate with:
-- Professor Stoecklein's research group
-- Clinical neurology departments
-- Neuroimaging centers
-- Machine learning research teams
-
-## Join Our Research
-
-We are looking for motivated students and researchers interested in:
-- Advanced neuroimaging analysis
-- Machine learning applications in healthcare
-- Clinical applications of functional connectivity
-- Computational methods in neuroscience
-
-If you're interested in joining our research team, please [contact me](/contact) with your CV and research interests.
-
 <style>
 .page-content {
     max-width: 900px;
