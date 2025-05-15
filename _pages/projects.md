@@ -17,7 +17,7 @@ permalink: /projects/
   <div class="filter-group">
     <label>Category:</label>
     <button class="filter-btn active" data-category="all">All</button>
-    <button class="filter-btn" data-category="ai">AI Tools</button>
+    <button class="filter-btn" data-category="applications">Applications</button>
     <button class="filter-btn" data-category="resources">Resource Integration</button>
     <button class="filter-btn" data-category="tutorials">Tutorial Documentation</button>
     <button class="filter-btn" data-category="books">Books</button>
@@ -25,7 +25,7 @@ permalink: /projects/
 </div>
 
 <div id="projects-container">
-  <div class="project-card" data-status="active" data-category="ai">
+  <div class="project-card" data-status="active" data-category="applications">
     <div class="project-header">
       <div class="project-title">
         <h3>ChatPSY: Mental Health Assessment System</h3>
