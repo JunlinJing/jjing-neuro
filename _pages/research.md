@@ -6,67 +6,74 @@ permalink: /research/
 
 # Research
 
-My research focuses on understanding the computational principles of brain function and developing brain-inspired artificial intelligence systems. I combine theoretical approaches with experimental data analysis to bridge the gap between neuroscience and artificial intelligence.
+My research focuses on machine learning applications in neuroimaging analysis, particularly in the investigation of functional brain connectivity patterns in neurological and psychiatric disorders. I combine advanced computational methods with resting-state functional MRI data to develop novel approaches for personalized diagnosis and treatment evaluation.
 
 ## Current Projects
 
-### Neural Mechanisms of Adaptive Learning
-![Adaptive Learning](/assets/images/placeholder-research1.jpg)
+### Use of Machine Learning for Investigation of Deviant Functional Connectome
 
-Understanding how the brain adapts to changing environments is crucial for both neuroscience and artificial intelligence. This project investigates:
-- Neural signatures of prediction errors and surprise
-- Computational models of metacognition and learning
-- Applications to artificial neural networks
+In recent years, Intrinsic Functional Connectivity Magnetic Resonance Imaging (fcMRI) has become a valuable tool for understanding how different parts of the human brain communicate with each other. This project investigates:
 
-### Brain-Computer Interface Development
-![BCI](/assets/images/placeholder-research2.jpg)
+- Analysis of resting-state functional MRI scans for brain connectivity mapping
+- Development of machine learning approaches for detecting abnormal connectivity patterns
+- Investigation of disease-specific network alterations in neurological and psychiatric disorders
+- Implementation of personalized diagnostic tools based on connectivity biomarkers
 
-Developing next-generation brain-computer interfaces that are more intuitive and adaptive:
-- Real-time neural decoding algorithms
-- Adaptive calibration methods
-- User-centered interface design
-- Applications in assistive technology
+### Clinical Applications of Brain Connectivity Analysis
 
-### Cognitive Architecture Modeling
-![Cognitive Models](/assets/images/placeholder-research3.jpg)
+Translating neuroimaging research into clinical practice through:
+- Development of automated analysis pipelines for clinical fcMRI data
+- Investigation of tumor-related changes in brain connectivity
+- Assessment of whole-brain connectivity alterations in various pathological conditions
+- Validation of connectivity-based biomarkers for disease progression
 
-Building computational models that capture the flexibility and efficiency of human cognition:
-- Working memory and attention mechanisms
-- Decision-making under uncertainty
-- Transfer learning in biological and artificial systems
+### Advanced Methods in Neuroimaging Analysis
+
+Developing and implementing cutting-edge approaches for:
+- Improved preprocessing and artifact removal in fMRI data
+- Novel machine learning algorithms for pattern recognition in brain connectivity
+- Integration of multiple imaging modalities
+- Robust statistical frameworks for clinical applications
 
 ## Research Methods
 
-- **Computational Modeling**
-  - Neural network models
-  - Bayesian inference
-  - Reinforcement learning
+- **Neuroimaging Analysis**
+  - Resting-state fMRI processing
+  - Functional connectivity analysis
+  - Advanced machine learning applications
   
 - **Data Analysis**
-  - Neural data processing
-  - Machine learning
-  - Statistical analysis
+  - Large-scale neuroimaging data processing
+  - Statistical modeling and inference
+  - Pattern recognition in clinical data
   
-- **Experimental Techniques**
-  - EEG/MEG analysis
-  - fMRI data processing
-  - Behavioral experiments
+- **Computational Approaches**
+  - Deep learning for neuroimaging
+  - Network analysis and graph theory
+  - Multivariate pattern analysis
+
+## Publications
+
+Recent key publications:
+- Stoecklein S, et al. (2020). Variable functional connectivity architecture of the preterm human brain: Impact of developmental cortical expansion and maturation. Proc Natl Acad Sci U S A 117:1201-1206.
+- Stoecklein VM, et al. (2020). Resting-state fMRI detects alterations in whole brain connectivity related to tumor biology in glioma patients. Neuro Oncol 22:1388-1398.
+- Stoecklein VM, et al. (2023). Perifocal Edema in Patients with Meningioma is Associated with Impaired Whole-Brain Connectivity as Detected by Resting-State fMRI. AJNR Am J Neuroradiol 44:814-819.
 
 ## Collaborations
 
-I actively collaborate with researchers in:
-- Neuroscience departments
-- Computer science labs
-- Industry research teams
-- Clinical neurology groups
+I actively collaborate with:
+- Professor Stoecklein's research group
+- Clinical neurology departments
+- Neuroimaging centers
+- Machine learning research teams
 
-## Join Our Lab
+## Join Our Research
 
-We are always looking for motivated students and researchers interested in:
-- Computational neuroscience
-- Machine learning
-- Brain-computer interfaces
-- Cognitive modeling
+We are looking for motivated students and researchers interested in:
+- Advanced neuroimaging analysis
+- Machine learning applications in healthcare
+- Clinical applications of functional connectivity
+- Computational methods in neuroscience
 
 If you're interested in joining our research team, please [contact me](/contact) with your CV and research interests.
 
@@ -85,14 +92,6 @@ h1, h2, h3 {
 h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 ul {
