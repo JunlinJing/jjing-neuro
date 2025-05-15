@@ -199,9 +199,9 @@ permalink: /projects/
 
 <style>
 .page-content {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 30px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -238,9 +238,9 @@ h4 {
 .project-card {
     background: #ffffff;
     border: 1px solid #e1e4e8;
-    border-radius: 12px;
-    padding: 30px;
-    margin: 25px 0;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 35px 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
 }
@@ -254,8 +254,8 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 20px;
+    margin-bottom: 35px;
 }
 
 .project-title {
@@ -264,10 +264,10 @@ h4 {
 }
 
 .project-title h3 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin: 0;
     color: #2c3e50;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .project-type {
@@ -324,16 +324,17 @@ h4 {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 25px 0;
+    padding: 0 10px;
 }
 
 .tag {
     background: #f0f7ff;
     color: #0366d6;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 1em;
     font-weight: 500;
     transition: all 0.2s ease;
 }
@@ -345,9 +346,9 @@ h4 {
 
 .project-filters {
     background: #f8f9fa;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 30px 0;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
@@ -355,22 +356,23 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-    margin: 15px 0;
+    gap: 15px;
+    margin: 20px 0;
 }
 
 .filter-group label {
     font-weight: 600;
     color: #2c3e50;
-    min-width: 80px;
+    min-width: 100px;
+    font-size: 1.1em;
 }
 
 .filter-btn {
     background: #ffffff;
     border: 1px solid #dee2e6;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.95em;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -387,13 +389,14 @@ h4 {
 }
 
 .project-section {
-    margin: 25px 0;
+    margin: 35px 0;
+    padding: 0 10px;
 }
 
 .project-section h4 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .project-section ul {
@@ -403,10 +406,11 @@ h4 {
 }
 
 .project-section li {
-    margin: 12px 0;
-    padding-left: 25px;
+    margin: 16px 0;
+    padding-left: 30px;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 1.1em;
 }
 
 .project-section li:before {
@@ -423,30 +427,39 @@ h4 {
 }
 
 .project-description {
-    font-size: 1.1em;
-    line-height: 1.7;
+    font-size: 1.15em;
+    line-height: 1.8;
     color: #2c3e50;
-    margin: 20px 0;
+    margin: 30px 0;
+    padding: 0 10px;
 }
 
 @media (max-width: 768px) {
-    .project-header {
-        flex-direction: column;
-        align-items: flex-start;
+    .page-content {
+        padding: 40px 20px;
     }
     
-    .project-links {
-        margin-top: 15px;
+    .project-card {
+        padding: 30px 25px;
+    }
+    
+    .project-title h3 {
+        font-size: 1.6em;
+    }
+    
+    .project-description {
+        font-size: 1.1em;
+        line-height: 1.7;
     }
     
     .filter-group {
-        flex-direction: column;
-        align-items: flex-start;
+        gap: 12px;
+        margin: 15px 0;
     }
     
     .filter-btn {
-        font-size: 0.9em;
-        padding: 6px 12px;
+        padding: 8px 16px;
+        font-size: 0.95em;
     }
 }
 
