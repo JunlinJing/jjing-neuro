@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4000/research/" />
+<meta property="og:url" content="https://junlinjing.github.io/research/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,12 +31,12 @@
     "@type": "BlogPosting",
     "headline": "Research",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "http://localhost:4000/research/",
+    "url": "https://junlinjing.github.io/research/",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4000"
+        "url": "https://junlinjing.github.io"
     }
 }</script> 
 
@@ -50,7 +50,7 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
     <div class="wrapper">
@@ -214,90 +214,210 @@
 
 
 <div class="page-content">
-    <h1 id="research">Research</h1>
+    <style>
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 
-<p>My research focuses on understanding the computational principles of brain function and developing brain-inspired artificial intelligence systems. I combine theoretical approaches with experimental data analysis to bridge the gap between neuroscience and artificial intelligence.</p>
+h1.page-title {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 1.2em;
+    line-height: 1.4;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.3em;
+}
 
-<h2 id="current-projects">Current Projects</h2>
+.research-intro {
+    font-size: 1.25em;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 3em;
+    padding: 0 10px;
+}
 
-<h3 id="neural-mechanisms-of-adaptive-learning">Neural Mechanisms of Adaptive Learning</h3>
-<p><img src="/assets/images/placeholder-research1.jpg" alt="Adaptive Learning" /></p>
+h2.section-title {
+    font-size: 2.2em;
+    color: #34495e;
+    margin: 2em 0 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #3498db;
+}
 
-<p>Understanding how the brain adapts to changing environments is crucial for both neuroscience and artificial intelligence. This project investigates:</p>
-<ul>
-  <li>Neural signatures of prediction errors and surprise</li>
-  <li>Computational models of metacognition and learning</li>
-  <li>Applications to artificial neural networks</li>
+h3.project-title {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin: 1.5em 0 1em;
+    line-height: 1.4;
+}
+
+.project-description {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #34495e;
+    margin: 1.5em 0;
+    padding: 0 10px;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+.project-list li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin: 1em 0;
+    padding-left: 25px;
+    position: relative;
+    color: #34495e;
+}
+
+.project-list li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.methods-section {
+    margin: 3em 0;
+    padding: 0 10px;
+}
+
+.methods-category {
+    margin: 2em 0;
+}
+
+.methods-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.methods-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.methods-list li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin: 0.8em 0;
+    padding-left: 25px;
+    position: relative;
+    color: #34495e;
+}
+
+.methods-list li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 40px 20px;
+    }
+    
+    h1.page-title {
+        font-size: 2.5em;
+    }
+    
+    h2.section-title {
+        font-size: 2em;
+    }
+    
+    h3.project-title {
+        font-size: 1.6em;
+    }
+    
+    .research-intro,
+    .project-description,
+    .project-list li,
+    .methods-list li {
+        font-size: 1.1em;
+        line-height: 1.7;
+    }
+    
+    .methods-title {
+        font-size: 1.3em;
+    }
+}
+</style>
+
+<h1 class="page-title">Research</h1>
+
+<div class="research-intro">
+My research focuses on machine learning applications in neuroimaging analysis, particularly in the investigation of functional brain connectivity patterns in neurological and psychiatric disorders. I combine advanced computational methods with resting-state functional MRI data to develop novel approaches for personalized diagnosis and treatment evaluation.
+</div>
+
+<h2 class="section-title">Current Projects</h2>
+
+<h3 class="project-title">Use of Machine Learning for Investigation of Deviant Functional Connectome</h3>
+
+<div class="project-description">
+In recent years, Intrinsic Functional Connectivity Magnetic Resonance Imaging (fcMRI) has become a valuable tool for understanding how different parts of the human brain communicate with each other. This project investigates:
+</div>
+
+<ul class="project-list">
+    <li>Analysis of resting-state functional MRI scans for brain connectivity mapping</li>
+    <li>Development of machine learning approaches for detecting abnormal connectivity patterns</li>
+    <li>Investigation of disease-specific network alterations in neurological and psychiatric disorders</li>
+    <li>Implementation of personalized diagnostic tools based on connectivity biomarkers</li>
 </ul>
 
-<h3 id="brain-computer-interface-development">Brain-Computer Interface Development</h3>
-<p><img src="/assets/images/placeholder-research2.jpg" alt="BCI" /></p>
+<h3 class="project-title">Clinical Applications of Brain Connectivity Analysis</h3>
 
-<p>Developing next-generation brain-computer interfaces that are more intuitive and adaptive:</p>
-<ul>
-  <li>Real-time neural decoding algorithms</li>
-  <li>Adaptive calibration methods</li>
-  <li>User-centered interface design</li>
-  <li>Applications in assistive technology</li>
+<div class="project-description">
+Translating neuroimaging research into clinical practice through:
+</div>
+
+<ul class="project-list">
+    <li>Development of automated analysis pipelines for clinical fcMRI data</li>
+    <li>Investigation of tumor-related changes in brain connectivity</li>
+    <li>Assessment of whole-brain connectivity alterations in various pathological conditions</li>
 </ul>
 
-<h3 id="cognitive-architecture-modeling">Cognitive Architecture Modeling</h3>
-<p><img src="/assets/images/placeholder-research3.jpg" alt="Cognitive Models" /></p>
+<h2 class="section-title">Research Methods</h2>
 
-<p>Building computational models that capture the flexibility and efficiency of human cognition:</p>
-<ul>
-  <li>Working memory and attention mechanisms</li>
-  <li>Decision-making under uncertainty</li>
-  <li>Transfer learning in biological and artificial systems</li>
-</ul>
+<div class="methods-section">
+    <div class="methods-category">
+        <div class="methods-title">Neuroimaging Analysis</div>
+        <ul class="methods-list">
+            <li>Resting-state fMRI processing</li>
+            <li>Functional connectivity analysis</li>
+            <li>Advanced machine learning applications</li>
+        </ul>
+    </div>
 
-<h2 id="research-methods">Research Methods</h2>
+    <div class="methods-category">
+        <div class="methods-title">Data Analysis</div>
+        <ul class="methods-list">
+            <li>Large-scale neuroimaging data processing</li>
+            <li>Statistical modeling and inference</li>
+            <li>Pattern recognition in clinical data</li>
+        </ul>
+    </div>
 
-<ul>
-  <li><strong>Computational Modeling</strong>
-    <ul>
-      <li>Neural network models</li>
-      <li>Bayesian inference</li>
-      <li>Reinforcement learning</li>
-    </ul>
-  </li>
-  <li><strong>Data Analysis</strong>
-    <ul>
-      <li>Neural data processing</li>
-      <li>Machine learning</li>
-      <li>Statistical analysis</li>
-    </ul>
-  </li>
-  <li><strong>Experimental Techniques</strong>
-    <ul>
-      <li>EEG/MEG analysis</li>
-      <li>fMRI data processing</li>
-      <li>Behavioral experiments</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="collaborations">Collaborations</h2>
-
-<p>I actively collaborate with researchers in:</p>
-<ul>
-  <li>Neuroscience departments</li>
-  <li>Computer science labs</li>
-  <li>Industry research teams</li>
-  <li>Clinical neurology groups</li>
-</ul>
-
-<h2 id="join-our-lab">Join Our Lab</h2>
-
-<p>We are always looking for motivated students and researchers interested in:</p>
-<ul>
-  <li>Computational neuroscience</li>
-  <li>Machine learning</li>
-  <li>Brain-computer interfaces</li>
-  <li>Cognitive modeling</li>
-</ul>
-
-<p>If you’re interested in joining our research team, please <a href="/contact">contact me</a> with your CV and research interests.</p>
+    <div class="methods-category">
+        <div class="methods-title">Computational Approaches</div>
+        <ul class="methods-list">
+            <li>Deep learning for neuroimaging</li>
+            <li>Network analysis and graph theory</li>
+            <li>Multivariate pattern analysis</li>
+        </ul>
+    </div>
+</div>
 
 <style>
 .page-content {
@@ -314,14 +434,6 @@ h1, h2, h3 {
 h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 ul {

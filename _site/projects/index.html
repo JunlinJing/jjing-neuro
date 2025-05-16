@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:4000/projects/" />
+<meta property="og:url" content="https://junlinjing.github.io/projects/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,12 +31,12 @@
     "@type": "BlogPosting",
     "headline": "Projects",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "http://localhost:4000/projects/",
+    "url": "https://junlinjing.github.io/projects/",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "http://localhost:4000"
+        "url": "https://junlinjing.github.io"
     }
 }</script> 
 
@@ -50,7 +50,7 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
     <div class="wrapper">
@@ -214,172 +214,721 @@
 
 
 <div class="page-content">
-    <h1 id="projects">Projects</h1>
+    <h1 id="open-source-projects-for-neuroscience">Open Source Projects for Neuroscience</h1>
 
-<h2 id="featured-projects">Featured Projects</h2>
+<div class="quote-container">
+  <blockquote>
+    "Open source exists because idealism exists."
+    <span class="quote-author">— Jim Jing</span>
+  </blockquote>
+</div>
 
-<h3 id="braindecode-neural-signal-processing-toolkit">BrainDecode: Neural Signal Processing Toolkit</h3>
-<p><img src="/assets/images/placeholder-project1.jpg" alt="BrainDecode" /></p>
+<div class="project-filters">
+  <div class="filter-group">
+    <label>Status:</label>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="active">Active</button>
+    <button class="filter-btn" data-filter="in-progress">In Progress</button>
+    <button class="filter-btn" data-filter="planning">Planning</button>
+  </div>
+  <div class="filter-group">
+    <label>Category:</label>
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="applications">Applications</button>
+    <button class="filter-btn" data-category="resources">Resource Integration</button>
+    <button class="filter-btn" data-category="tutorials">Tutorial Documentation</button>
+    <button class="filter-btn" data-category="books">Books</button>
+  </div>
+</div>
 
-<p>An open-source Python library for processing and analyzing neural signals, with a focus on real-time applications.</p>
-<ul>
-  <li>Advanced signal processing algorithms</li>
-  <li>Real-time neural decoding</li>
-  <li>Extensive visualization tools</li>
-  <li>Compatible with major BCI platforms</li>
-</ul>
+<div id="projects-container">
+  <div class="project-card" data-status="active" data-category="applications">
+    <div class="project-header">
+      <div class="project-title">
+        <h3>ChatPSY: Mental Health Assessment System</h3>
+      </div>
+      <span class="project-type">Open Source AI Tool</span>
+      <span class="project-status status-active">Active</span>
+      <a href="https://github.com/JunlinJing/ChatPSY_demo" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
 
-<table>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/">GitHub</a></td>
-      <td><a href="https://docs.example.com">Documentation</a></td>
-      <td><a href="https://demo.example.com">Demo</a></td>
-    </tr>
-  </tbody>
-</table>
+    <div class="project-tags">
+      <span class="tag">#MentalHealth</span>
+      <span class="tag">#AI</span>
+      <span class="tag">#NLP</span>
+      <span class="tag">#PsychiatricScales</span>
+      <span class="tag">#HealthTech</span>
+    </div>
 
-<h3 id="cogmodel-cognitive-architecture-simulator">CogModel: Cognitive Architecture Simulator</h3>
-<p><img src="/assets/images/placeholder-project2.jpg" alt="CogModel" /></p>
+    <div class="project-description">
+      An open-source AI system designed to assist mental health research and preliminary assessments, implementing standardized psychiatric scales through natural language processing.
+    </div>
 
-<p>A computational framework for simulating human cognitive processes and testing theoretical models.</p>
-<ul>
-  <li>Modular architecture design</li>
-  <li>Built-in cognitive models</li>
-  <li>Extensible plugin system</li>
-  <li>Comprehensive documentation</li>
-</ul>
+    <div class="project-section">
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Assessment:</strong> Digital implementation of psychiatric scales</li>
+        <li><strong>Analysis:</strong> Automated scoring and interpretation</li>
+        <li><strong>Education:</strong> Research-based mental health information</li>
+        <li><strong>Guidance:</strong> Evidence-based recommendation system</li>
+      </ul>
+    </div>
 
-<table>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/">GitHub</a></td>
-      <td><a href="https://paper.example.com">Paper</a></td>
-      <td><a href="https://tutorial.example.com">Tutorial</a></td>
-    </tr>
-  </tbody>
-</table>
+    <div class="project-section">
+      <h4>Technical Stack</h4>
+      <ul>
+        <li><strong>AI Integration:</strong> Open source LLM implementation</li>
+        <li><strong>Framework:</strong> Langchain for context handling</li>
+        <li><strong>Interface:</strong> Open source Gradio UI</li>
+        <li><strong>Method:</strong> Reproducible prompt engineering</li>
+      </ul>
+    </div>
+  </div>
 
-<h3 id="neurovis-neural-data-visualization">NeuroVis: Neural Data Visualization</h3>
-<p><img src="/assets/images/placeholder-project3.jpg" alt="NeuroVis" /></p>
+  <div class="project-card" data-status="in-progress" data-category="resources">
+    <div class="project-header">
+      <div class="project-title">
+        <h3>BrainDT (Brain-Database-Toolkit)</h3>
+      </div>
+      <span class="project-type">Open Source Integration Platform</span>
+      <span class="project-status status-in-progress">In Progress</span>
+      <a href="https://github.com/JunlinJing/BrainDT" class="github-link" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
 
-<p>Interactive visualization tools for neural data analysis and exploration.</p>
-<ul>
-  <li>Support for multiple data formats</li>
-  <li>Interactive 3D brain visualizations</li>
-  <li>Custom visualization plugins</li>
-  <li>Integration with analysis pipelines</li>
-</ul>
+    <div class="project-tags">
+      <span class="tag">#Neuroimaging</span>
+      <span class="tag">#DataIntegration</span>
+      <span class="tag">#Toolkits</span>
+      <span class="tag">#BrainAtlas</span>
+      <span class="tag">#OpenScience</span>
+    </div>
 
-<table>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/">GitHub</a></td>
-      <td><a href="https://examples.example.com">Examples</a></td>
-      <td><a href="https://gallery.example.com">Gallery</a></td>
-    </tr>
-  </tbody>
-</table>
+    <div class="project-description">
+      An open-source platform that integrates and organizes neuroscience research resources, making databases, toolkits, and brain atlases more accessible to researchers.
+    </div>
 
-<h2 id="open-source-contributions">Open Source Contributions</h2>
+    <div class="project-section">
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Data Integration:</strong> Organized collection of neuroimaging datasets (OASIS, ABIDE, etc.)</li>
+        <li><strong>Analysis Tools:</strong> Curated list of analysis toolkits (GIFT, PAGANI, GRETNA)</li>
+        <li><strong>Reference Resources:</strong> Centralized access to brain atlas resources</li>
+        <li><strong>Documentation:</strong> User guides and implementation examples</li>
+      </ul>
+    </div>
 
-<h3 id="machine-learning-libraries">Machine Learning Libraries</h3>
-<ul>
-  <li><strong>TensorFlow</strong>: Contributed to neural network optimization modules</li>
-  <li><strong>PyTorch</strong>: Developed custom layers for brain-inspired architectures</li>
-  <li><strong>scikit-learn</strong>: Added new feature selection methods</li>
-</ul>
+    <div class="project-section">
+      <h4>Resource Categories</h4>
+      <ul>
+        <li><strong>Datasets:</strong> Open access neuroimaging databases</li>
+        <li><strong>Toolkits:</strong> Open source analysis software and frameworks</li>
+        <li><strong>Atlas:</strong> Public brain mapping resources</li>
+        <li><strong>Community:</strong> Open for contributions and suggestions</li>
+      </ul>
+    </div>
+  </div>
 
-<h3 id="neuroscience-tools">Neuroscience Tools</h3>
-<ul>
-  <li><strong>MNE-Python</strong>: Enhanced MEG/EEG analysis capabilities</li>
-  <li><strong>NiBabel</strong>: Improved neuroimaging data handling</li>
-  <li><strong>PsychoPy</strong>: Added new experimental paradigms</li>
-</ul>
+  <div class="project-card" data-status="in-progress" data-category="applications">
+    <div class="project-header">
+      <div class="project-title">
+        <h3>Journal Classification System for Neuroscience and Psychiatry</h3>
+      </div>
+      <span class="project-type">Open Source Web Tool</span>
+      <span class="project-status status-in-progress">In Progress</span>
+      <div class="project-links">
+        <a href="https://github.com/JunlinJing/neuroscience_psychiatry_journal_classification" target="_blank" class="github-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://neuroscience-psychiatry-journal-classification.vercel.app" target="_blank" class="demo-link">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+      </div>
+    </div>
 
-<h2 id="technical-blog-posts">Technical Blog Posts</h2>
+    <div class="project-tags">
+      <span class="tag">#JournalMetrics</span>
+      <span class="tag">#AcademicPublishing</span>
+      <span class="tag">#SearchTools</span>
+      <span class="tag">#Neuroscience</span>
+      <span class="tag">#Psychiatry</span>
+    </div>
 
-<h3 id="recent-posts">Recent Posts</h3>
-<ol>
-  <li><a href="/blog/post1">Implementing Attention Mechanisms in Neural Networks</a></li>
-  <li><a href="/blog/post2">Real-time EEG Processing with Python</a></li>
-  <li><a href="/blog/post3">Building Cognitive Models: A Practical Guide</a></li>
-</ol>
+    <div class="project-description">
+      An open-source web application that helps researchers navigate and search academic journals in neuroscience and psychiatry, based on the Chinese Academy of Sciences journal classification system.
+    </div>
 
-<h2 id="resources">Resources</h2>
+    <div class="project-section">
+      <h4>Features</h4>
+      <ul>
+        <li><strong>Data:</strong> Open access journal classification data</li>
+        <li><strong>Search:</strong> Efficient journal discovery tools</li>
+        <li><strong>Metrics:</strong> Multiple journal impact measures</li>
+        <li><strong>Interface:</strong> Researcher-friendly search experience</li>
+      </ul>
+    </div>
+  </div>
 
-<h3 id="tutorials">Tutorials</h3>
-<ul>
-  <li><a href="/tutorials/neural-data">Getting Started with Neural Data Analysis</a></li>
-  <li><a href="/tutorials/bci-intro">Introduction to BCI Development</a></li>
-  <li><a href="/tutorials/cognitive-modeling">Advanced Cognitive Modeling</a></li>
-</ul>
+  <div class="project-card" data-status="planning" data-category="tutorials">
+    <div class="project-header">
+      <div class="project-title">
+        <h3>Neuro Cookbook</h3>
+      </div>
+      <span class="project-type">Open Source Documentation</span>
+      <span class="project-status status-planning">Planning</span>
+      <a href="https://github.com/JunlinJing/Neuro_cookbook" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
 
-<h3 id="datasets">Datasets</h3>
-<ul>
-  <li><a href="/datasets/neural">Neural Recording Database</a></li>
-  <li><a href="/datasets/cognitive">Cognitive Task Responses</a></li>
-  <li><a href="/datasets/bci">BCI Performance Benchmarks</a></li>
-</ul>
+    <div class="project-tags">
+      <span class="tag">#Tutorials</span>
+      <span class="tag">#Neuroimaging</span>
+      <span class="tag">#DataAnalysis</span>
+      <span class="tag">#Documentation</span>
+      <span class="tag">#OpenEducation</span>
+    </div>
+
+    <div class="project-description">
+      An open-source knowledge base providing practical tutorials and reproducible workflows for neuroscience research tools and methodologies.
+    </div>
+
+    <div class="project-section">
+      <h4>Planned Contents</h4>
+      <ul>
+        <li><strong>Tutorials:</strong> Step-by-step guides for open source tools (FSL, SPM, FreeSurfer)</li>
+        <li><strong>Workflows:</strong> Reproducible neuroimaging pipelines</li>
+        <li><strong>Methods:</strong> Open science practices in neuroscience</li>
+        <li><strong>Code:</strong> Shared scripts and implementations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-card" data-status="planning" data-category="books">
+    <div class="project-header">
+      <div class="project-title">
+        <h3>Brain Connectivity: A Popular Science Guide</h3>
+      </div>
+      <span class="project-type">Open Science Book</span>
+      <span class="project-status status-planning">Planning</span>
+    </div>
+
+    <div class="project-tags">
+      <span class="tag">#BrainConnectivity</span>
+      <span class="tag">#Neuroscience</span>
+      <span class="tag">#PopularScience</span>
+      <span class="tag">#Education</span>
+      <span class="tag">#OpenAccess</span>
+    </div>
+
+    <div class="project-description">
+      An accessible guide to understanding brain connectivity, written for both general readers and students interested in neuroscience. The book aims to bridge the gap between scientific research and public understanding of how brain networks function.
+    </div>
+
+    <div class="project-section">
+      <h4>Book Contents</h4>
+      <ul>
+        <li><strong>Introduction:</strong> Purpose and target audience</li>
+        <li><strong>Basic Concepts:</strong> Definition and development of brain connectivity</li>
+        <li><strong>Significance:</strong> Impact on individuals and society</li>
+        <li><strong>Fundamentals:</strong> Basic theories and key discoveries</li>
+        <li><strong>Current Research:</strong> Latest findings and developments</li>
+        <li><strong>Practical Applications:</strong> Relevance to daily life</li>
+        <li><strong>Future Directions:</strong> Enhancing brain connectivity through daily activities</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Accessibility:</strong> Written in clear, engaging language</li>
+        <li><strong>Visual Elements:</strong> Illustrations and diagrams</li>
+        <li><strong>Case Studies:</strong> Real-world examples and applications</li>
+        <li><strong>Interactive:</strong> Practical exercises and activities</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <button id="prev-page" class="page-btn" disabled="">Previous</button>
+  <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+  <button id="next-page" class="page-btn">Next</button>
+</div>
 
 <style>
 .page-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 2.5em;
     color: #2c3e50;
+    margin-bottom: 1.5em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.3em;
 }
 
 h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 30px;
+    font-size: 1.8em;
+    color: #34495e;
+    margin: 2em 0 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #3498db;
 }
 
 h3 {
-    margin-top: 25px;
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 1.5em 0 1em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+}
+
+h4 {
+    font-size: 1.2em;
     color: #34495e;
+    margin: 1em 0 0.5em;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
 }
 
-ul {
-    padding-left: 20px;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-li {
-    margin-bottom: 10px;
-    line-height: 1.6;
+.project-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
-    margin-right: 15px;
+.project-title {
+    flex: 1;
+    min-width: 250px;
 }
 
-a:hover {
-    text-decoration: underline;
+.project-title h3 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #2c3e50;
+    line-height: 1.5;
+}
+
+.project-type {
+    background: #f8f9fa;
+    color: #1976d2;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
 }
 
 .project-links {
-    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.github-link, .demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.github-link {
+    background: #24292e;
+    color: #ffffff;
+}
+
+.demo-link {
+    background: #0366d6;
+    color: #ffffff;
+}
+
+.github-link:hover, .demo-link:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+    padding: 0 10px;
+}
+
+.tag {
+    background: #f3f4f6;
+    color: #4b5563;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.tag:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+.project-filters {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 100px;
+    font-size: 1.1em;
+}
+
+.filter-btn {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #495057;
+}
+
+.filter-btn:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: #0366d6;
+    color: #ffffff;
+    border-color: #0366d6;
+    box-shadow: 0 2px 4px rgba(3, 102, 214, 0.2);
+}
+
+.project-section {
+    margin: 35px 0;
+    padding: 0 10px;
+}
+
+.project-section h4 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.project-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-section li {
+    margin: 16px 0;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.project-section li:before {
+    content: "•";
+    color: #0366d6;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.project-section li strong {
+    color: #2c3e50;
+    font-weight: 600;
 }
 
 .project-description {
-    margin: 15px 0;
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin: 30px 0;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 40px 20px;
+    }
+    
+    .project-card {
+        padding: 30px 25px;
+    }
+    
+    .project-title h3 {
+        font-size: 1.6em;
+    }
+    
+    .project-description {
+        font-size: 1.1em;
+        line-height: 1.7;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group label {
+        margin-bottom: 10px;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+    gap: 1em;
+}
+
+.page-btn {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.page-btn:disabled {
+    background: #f8f9fa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.page-btn:not(:disabled):hover {
+    background: #e9ecef;
+}
+
+#page-info {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.project-card {
+    display: block;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.status-active {
+    background: #dcf5dc;
+    color: #1a5928;
+    border: 1px solid #c3e6c3;
+}
+
+.status-in-progress {
+    background: #ffefd5;
+    color: #b35900;
+    border: 1px solid #ffd7a8;
+}
+
+.status-planning {
+    background: #ddf4ff;
+    color: #0969da;
+    border: 1px solid #b6e3ff;
+}
+
+.quote-container {
+    text-align: center;
+    margin: 2em auto 3em;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+blockquote {
+    font-size: 1.4em;
+    font-style: italic;
+    color: #2c3e50;
     line-height: 1.6;
+    position: relative;
+    margin: 0;
+    padding: 0.5em 2em;
+}
+
+blockquote:before,
+blockquote:after {
+    content: '"';
+    font-size: 2em;
+    color: #3498db;
+    position: absolute;
+    opacity: 0.3;
+}
+
+blockquote:before {
+    left: 0;
+    top: -10px;
+}
+
+blockquote:after {
+    right: 0;
+    bottom: -30px;
+}
+
+.quote-author {
+    display: block;
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-top: 1em;
+    font-style: normal;
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsContainer = document.getElementById('projects-container');
+    const projectCards = document.querySelectorAll('.project-card');
+    const statusFilters = document.querySelectorAll('[data-filter]');
+    const categoryFilters = document.querySelectorAll('[data-category]');
+    
+    // Pagination variables
+    const cardsPerPage = 3;
+    let currentPage = 1;
+    let filteredCards = [...projectCards];
+    
+    // Filter functionality
+    function filterProjects() {
+        const activeStatusFilter = document.querySelector('[data-filter].active').dataset.filter;
+        const activeCategoryFilter = document.querySelector('[data-category].active').dataset.category;
+        
+        filteredCards = [...projectCards].filter(card => {
+            const matchesStatus = activeStatusFilter === 'all' || card.dataset.status === activeStatusFilter;
+            const matchesCategory = activeCategoryFilter === 'all' || card.dataset.category === activeCategoryFilter;
+            return matchesStatus && matchesCategory;
+        });
+        
+        projectCards.forEach(card => card.style.display = 'none');
+        filteredCards.forEach(card => card.style.display = 'block');
+        
+        currentPage = 1;
+        updatePagination();
+        showPage(1);
+    }
+    
+    // Pagination functionality
+    function updatePagination() {
+        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+        document.getElementById('total-pages').textContent = totalPages;
+        document.getElementById('current-page').textContent = currentPage;
+        document.getElementById('prev-page').disabled = currentPage === 1;
+        document.getElementById('next-page').disabled = currentPage === totalPages;
+    }
+    
+    function showPage(page) {
+        const start = (page - 1) * cardsPerPage;
+        const end = start + cardsPerPage;
+        
+        projectCards.forEach(card => card.style.display = 'none');
+        filteredCards.slice(start, end).forEach(card => card.style.display = 'block');
+    }
+    
+    // Event Listeners
+    statusFilters.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            statusFilters.forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            filterProjects();
+        });
+    });
+    
+    categoryFilters.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            categoryFilters.forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            filterProjects();
+        });
+    });
+    
+    document.getElementById('prev-page').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+            updatePagination();
+        }
+    });
+    
+    document.getElementById('next-page').addEventListener('click', () => {
+        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+            updatePagination();
+        }
+    });
+    
+    // Initial setup
+    filterProjects();
+
+    // Update status text display
+    const statusElements = document.querySelectorAll('.project-status');
+    statusElements.forEach(element => {
+        if (element.classList.contains('status-in-development')) {
+            element.textContent = 'Planning';
+        }
+    });
+});
+</script>
 
 
 </div>
