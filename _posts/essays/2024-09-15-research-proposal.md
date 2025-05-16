@@ -2,7 +2,7 @@
 layout: post
 title: "Research Proposal Development"
 date: 2024-09-15
-categories: [personal]
+categories: [essays]
 tags: [research, PhD, proposal]
 description: "Developing a comprehensive research proposal for doctoral studies"
 ---

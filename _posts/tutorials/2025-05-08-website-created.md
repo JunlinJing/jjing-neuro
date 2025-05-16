@@ -2,7 +2,7 @@
 layout: post
 title: "Academic Website Launch"
 date: 2025-05-08
-categories: [website]
+categories: [tutorials]
 tags: [website, academic]
 description: "Launching my academic website to share research and insights"
 ---
