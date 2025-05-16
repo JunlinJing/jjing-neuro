@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PhD Basics for International Doctoral Researchers"
-date: 2025-05-23
+date: 2023-05-23
 categories: [personal]
 tags: [PhD, research, academic-life]
 description: "Essential guide for international doctoral researchers"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Repository Setup"
-date: 2024-02-01
+date: 2023-02-01
 categories: [tutorial]
 description: "Setting up and organizing the code repository for research projects"
 ---
