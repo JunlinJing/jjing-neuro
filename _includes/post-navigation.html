@@ -1,0 +1,74 @@
+{% if page.previous or page.next %}
+<nav class="post-navigation">
+    <div class="nav-links">
+        {% if page.previous %}
+        <div class="nav-previous">
+            <a href="{{ site.baseurl }}{{ page.previous.url }}" rel="prev">
+                <span class="nav-subtitle">Previous Post</span>
+                <span class="nav-title">{{ page.previous.title }}</span>
+            </a>
+        </div>
+        {% endif %}
+
+        {% if page.next %}
+        <div class="nav-next">
+            <a href="{{ site.baseurl }}{{ page.next.url }}" rel="next">
+                <span class="nav-subtitle">Next Post</span>
+                <span class="nav-title">{{ page.next.title }}</span>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</nav>
+
+<style>
+.post-navigation {
+    margin: 2em 0;
+    padding: 1em 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.nav-previous, .nav-next {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nav-next {
+    text-align: right;
+}
+
+.nav-subtitle {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+.nav-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-previous a, .nav-next a {
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+    background: #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-previous a:hover, .nav-next a:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+</style>
+{% endif %} 

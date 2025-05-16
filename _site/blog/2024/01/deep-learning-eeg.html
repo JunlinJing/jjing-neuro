@@ -273,23 +273,23 @@
                 • <span><i class="far fa-user"></i> jimjing</span>
             
             
-            <div class="categories">
+            <div class="post-categories">
                 
-                <span class="category">blog</span>
+                <a href="/jjing-neuro/categories#blog" class="category">blog</a>
                 
             </div>
             
             
             
-            <div class="tags">
+            <div class="post-tags">
                 
-                <span class="tag">Deep Learning</span>
+                <a href="/jjing-neuro/tags#Deep Learning" class="tag">Deep Learning</a>
                 
-                <span class="tag">EEG</span>
+                <a href="/jjing-neuro/tags#EEG" class="tag">EEG</a>
                 
-                <span class="tag">Neural Networks</span>
+                <a href="/jjing-neuro/tags#Neural Networks" class="tag">Neural Networks</a>
                 
-                <span class="tag">Signal Processing</span>
+                <a href="/jjing-neuro/tags#Signal Processing" class="tag">Signal Processing</a>
                 
             </div>
             
@@ -593,14 +593,80 @@
         </div>
     </div>
 
-    <div class="post-navigation">
+    
+<nav class="post-navigation">
+    <div class="nav-links">
         
-        <a class="prev" href="/jjing-neuro/blog/cognitive-modeling">&laquo; Cognitive Modeling: From Theory to Practice</a>
+        <div class="nav-previous">
+            <a href="/jjing-neuro/blog/cognitive-modeling/" rel="prev">
+                <span class="nav-subtitle">Previous Post</span>
+                <span class="nav-title">Cognitive Modeling: From Theory to Practice</span>
+            </a>
+        </div>
         
+
         
-        <a class="next" href="/jjing-neuro/blog/code-repository">Code Repository Setup &raquo;</a>
+        <div class="nav-next">
+            <a href="/jjing-neuro/blog/code-repository/" rel="next">
+                <span class="nav-subtitle">Next Post</span>
+                <span class="nav-title">Code Repository Setup</span>
+            </a>
+        </div>
         
     </div>
+</nav>
+
+<style>
+.post-navigation {
+    margin: 2em 0;
+    padding: 1em 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.nav-previous, .nav-next {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nav-next {
+    text-align: right;
+}
+
+.nav-subtitle {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+.nav-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-previous a, .nav-next a {
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+    background: #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-previous a:hover, .nav-next a:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+</style>
+ 
 
     
     <div class="related-posts">
@@ -608,18 +674,24 @@
         <ul>
             
             <li>
-                <a href="/jjing-neuro/blog/phd-basics">PhD Basics for International Doctoral Researchers</a>
-                <small>May 23, 2025</small>
+                <a href="/jjing-neuro/blog/phd-basics/">
+                    PhD Basics for International Doctoral Researchers
+                    <small>May 23, 2025</small>
+                </a>
             </li>
             
             <li>
-                <a href="/jjing-neuro/blog/website-created">Academic Website Launch</a>
-                <small>May 8, 2025</small>
+                <a href="/jjing-neuro/blog/website-created/">
+                    Academic Website Launch
+                    <small>May 8, 2025</small>
+                </a>
             </li>
             
             <li>
-                <a href="/jjing-neuro/blog/joined-lab">Joined Functional Neuroimaging Lab</a>
-                <small>October 1, 2024</small>
+                <a href="/jjing-neuro/blog/joined-lab/">
+                    Joined Functional Neuroimaging Lab
+                    <small>October 1, 2024</small>
+                </a>
             </li>
             
         </ul>
@@ -736,25 +808,27 @@ document.addEventListener('DOMContentLoaded', function() {
     margin-right: 5px;
 }
 
-.post-tags {
-    margin: 20px 0;
+.post-categories, .post-tags {
+    margin-top: 1em;
 }
 
-.tag {
+.category, .tag {
     display: inline-block;
-    padding: 5px 10px;
-    margin: 0 5px;
-    background: var(--tag-bg, #f5f5f5);
-    color: var(--tag-color, #333);
+    padding: 0.3em 0.8em;
+    margin: 0.2em;
     border-radius: 15px;
     text-decoration: none;
     font-size: 0.9em;
-    transition: all 0.3s ease;
 }
 
-.tag:hover {
-    background: var(--tag-bg-hover, #e5e5e5);
-    transform: translateY(-2px);
+.category {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.tag {
+    background: #f5f5f5;
+    color: #616161;
 }
 
 .post-wrapper {

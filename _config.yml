@@ -28,7 +28,7 @@ baseurl: /jjing-neuro
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /blog/:title
+permalink: /:categories/:title/
 future: true
 
 # Posts location
@@ -37,7 +37,7 @@ posts_dir: blog/_posts
 
 # GitHub Pages settings
 github: [metadata]
-lsi: false
+lsi: true
 safe: true
 incremental: false
 gist:
@@ -188,3 +188,23 @@ comments:
     repo_id: # your repo id
     category: # your category
     category_id: # your category id
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Jim Jing"
+      comments: true
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
