@@ -12,9 +12,9 @@ layout: default
 
     <div class="blog-navigation">
         <div class="categories">
-            <button class="category-btn active" data-category="all">All</button>
-            <button class="category-btn" data-category="essay">Essay</button>
-            <button class="category-btn" data-category="tutorial">Tutorial</button>
+            <button class="category-btn active" data-category="all">All Posts</button>
+            <button class="category-btn" data-category="essay">Essays</button>
+            <button class="category-btn" data-category="tutorial">Tutorials</button>
             <button class="category-btn" data-category="neuroscience">Neuroscience</button>
         </div>
         
@@ -25,12 +25,13 @@ layout: default
     </div>
 
     <div class="posts-grid">
-        {% for post in site.posts %}
+        {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+        {% for post in sorted_posts %}
             {% if post.path contains "website/" or post.path contains "personal/" %}
-            <article class="post-card" data-categories="{{ post.categories | join: ' ' }}">
+            <article class="post-card" data-categories="{{ post.categories | join: ' ' | downcase }}">
                 {% if post.image %}
                     <div class="post-image">
-                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
                     </div>
                 {% endif %}
                 
@@ -53,7 +54,11 @@ layout: default
                     </h2>
                     
                     <p class="post-excerpt">
-                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        {% if post.description %}
+                            {{ post.description | truncatewords: 30 }}
+                        {% else %}
+                            {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        {% endif %}
                     </p>
                     
                     <div class="post-footer">
@@ -76,6 +81,10 @@ layout: default
             {% endif %}
         {% endfor %}
     </div>
+
+    <div id="no-results" class="no-results" style="display: none;">
+        <p>No posts found matching your criteria.</p>
+    </div>
 </div>
 
 <style>
@@ -88,16 +97,22 @@ layout: default
 .blog-header {
     text-align: center;
     margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .blog-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
+    color: var(--heading-color);
 }
 
 .blog-header .description {
     color: var(--meta-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .blog-navigation {
@@ -106,53 +121,61 @@ layout: default
     align-items: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
+    background: var(--bg-accent);
+    padding: 1.5rem;
+    border-radius: 12px;
 }
 
 .categories {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
 }
 
 .category-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     background: var(--tag-bg);
     color: var(--text-color);
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .category-btn:hover,
 .category-btn.active {
     background: var(--link-color);
     color: white;
+    transform: translateY(-2px);
 }
 
 .search-container {
     position: relative;
-    min-width: 250px;
+    min-width: 300px;
 }
 
 .search-container input {
     width: 100%;
-    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    padding: 0.8rem 2.5rem 0.8rem 1.2rem;
     border: 2px solid var(--border-color);
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background: white;
 }
 
 .search-container input:focus {
     border-color: var(--link-color);
     outline: none;
+    box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
 }
 
 .search-icon {
     position: absolute;
-    right: 1rem;
+    right: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--meta-color);
@@ -160,21 +183,23 @@ layout: default
 
 .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .post-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .post-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
 }
 
 .post-image {
@@ -195,27 +220,28 @@ layout: default
 }
 
 .post-content {
-    padding: 1.5rem;
+    padding: 1.8rem;
 }
 
 .post-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
     color: var(--meta-color);
 }
 
 .post-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .post-title a {
     color: var(--heading-color);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .post-title a:hover {
@@ -224,35 +250,52 @@ layout: default
 
 .post-excerpt {
     color: var(--text-color);
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 .post-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
-    padding-top: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
     border-top: 1px solid var(--border-color);
 }
 
 .reading-time {
     color: var(--meta-color);
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .tags {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .tag {
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.8rem;
     background: var(--tag-bg);
-    border-radius: 12px;
-    font-size: 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
     color: var(--tag-color);
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: var(--tag-bg-hover);
+    transform: translateY(-1px);
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: var(--meta-color);
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -260,9 +303,14 @@ layout: default
         padding: 1rem;
     }
     
+    .blog-header h1 {
+        font-size: 2.2rem;
+    }
+    
     .blog-navigation {
         flex-direction: column;
         align-items: stretch;
+        padding: 1rem;
     }
     
     .search-container {
@@ -272,6 +320,22 @@ layout: default
     .posts-grid {
         grid-template-columns: 1fr;
     }
+    
+    .post-content {
+        padding: 1.2rem;
+    }
+}
+
+:root {
+    --bg-accent: #f8f9fa;
+    --border-color: #e9ecef;
+    --tag-bg: #f1f3f5;
+    --tag-bg-hover: #e9ecef;
+    --tag-color: #495057;
+    --meta-color: #868e96;
+    --text-color: #495057;
+    --heading-color: #212529;
+    --link-color: #0066cc;
 }
 </style>
 
@@ -280,7 +344,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const posts = document.querySelectorAll('.post-card');
     const categoryButtons = document.querySelectorAll('.category-btn');
+    const noResults = document.getElementById('no-results');
     let currentCategory = 'all';
+    
+    function filterPosts() {
+        const searchTerm = searchInput.value.toLowerCase();
+        let visiblePosts = 0;
+        
+        posts.forEach(post => {
+            const title = post.querySelector('.post-title').textContent.toLowerCase();
+            const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+            const categories = post.dataset.categories.toLowerCase();
+            const tags = Array.from(post.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+            
+            const matchesSearch = title.includes(searchTerm) || 
+                                excerpt.includes(searchTerm) || 
+                                tags.some(tag => tag.includes(searchTerm));
+            const matchesCategory = currentCategory === 'all' || categories.includes(currentCategory);
+            
+            if (matchesSearch && matchesCategory) {
+                post.style.display = 'block';
+                visiblePosts++;
+            } else {
+                post.style.display = 'none';
+            }
+        });
+        
+        noResults.style.display = visiblePosts === 0 ? 'block' : 'none';
+    }
     
     // 搜索功能
     searchInput.addEventListener('input', filterPosts);
@@ -295,19 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    function filterPosts() {
-        const searchTerm = searchInput.value.toLowerCase();
-        
-        posts.forEach(post => {
-            const title = post.querySelector('.post-title').textContent.toLowerCase();
-            const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
-            const categories = post.dataset.categories.toLowerCase();
-            
-            const matchesSearch = title.includes(searchTerm) || excerpt.includes(searchTerm);
-            const matchesCategory = currentCategory === 'all' || categories.includes(currentCategory);
-            
-            post.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
-        });
-    }
+    // 初始过滤
+    filterPosts();
 });
 </script> 
