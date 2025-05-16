@@ -13,10 +13,9 @@ layout: default
     <div class="blog-navigation">
         <div class="categories">
             <button class="category-btn active" data-category="all">All</button>
-            {% assign categories = site.posts | map: "categories" | compact | uniq %}
-            {% for category in categories %}
-                <button class="category-btn" data-category="{{ category }}">{{ category }}</button>
-            {% endfor %}
+            <button class="category-btn" data-category="essay">Essay</button>
+            <button class="category-btn" data-category="tutorial">Tutorial</button>
+            <button class="category-btn" data-category="neuroscience">Neuroscience</button>
         </div>
         
         <div class="search-container">
