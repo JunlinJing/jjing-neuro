@@ -6,6 +6,13 @@ permalink: /projects/
 
 # Open Source Projects for Neuroscience
 
+<div class="quote-container">
+  <blockquote>
+    "Open source exists because idealism exists."
+    <span class="quote-author">— Jim Jing</span>
+  </blockquote>
+</div>
+
 <div class="project-filters">
   <div class="filter-group">
     <label>Status:</label>
@@ -571,6 +578,50 @@ h4 {
     background: #ddf4ff;
     color: #0969da;
     border: 1px solid #b6e3ff;
+}
+
+.quote-container {
+    text-align: center;
+    margin: 2em auto 3em;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+blockquote {
+    font-size: 1.4em;
+    font-style: italic;
+    color: #2c3e50;
+    line-height: 1.6;
+    position: relative;
+    margin: 0;
+    padding: 0.5em 2em;
+}
+
+blockquote:before,
+blockquote:after {
+    content: '"';
+    font-size: 2em;
+    color: #3498db;
+    position: absolute;
+    opacity: 0.3;
+}
+
+blockquote:before {
+    left: 0;
+    top: -10px;
+}
+
+blockquote:after {
+    right: 0;
+    bottom: -30px;
+}
+
+.quote-author {
+    display: block;
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-top: 1em;
+    font-style: normal;
 }
 </style>
 
