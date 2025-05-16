@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Updated code repository"
+title: "Code Repository Setup"
 date: 2024-02-01
-categories: website
-tags: Code
+categories: [tutorial]
+description: "Setting up and organizing the code repository for research projects"
 ---
+
+Setting up and organizing the code repository for research projects.
 
 Updated the code repository for neural signal processing toolbox.
 

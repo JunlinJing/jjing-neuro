@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Started a new research project"
+title: "Research Project Update"
 date: 2024-03-01
-categories: website
-tags: Project
+categories: [neuroscience]
+description: "Updates on current research projects in computational neuroscience"
 ---
 
-Started a new research project on deep learning applications in EEG signal processing. 
+Updates on current research projects in computational neuroscience. 

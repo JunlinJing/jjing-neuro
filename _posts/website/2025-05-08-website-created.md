@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Website Created"
+title: "Academic Website Launch"
 date: 2025-05-08
-categories: website
-tags: Site
+categories: [essay]
+description: "Reflections on creating an academic website"
 ---
 
-This academic website was created on May 8, 2025. 
+Reflections on creating an academic website. 

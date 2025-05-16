@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Research Proposal Defense"
+title: "Research Proposal Development"
 date: 2024-09-01
-categories: personal
-tags: Achievement
+categories: [neuroscience]
+description: "Development process of my PhD research proposal"
 ---
 
-Successfully defended my research proposal on neural decoding algorithms. 
+Development process of my PhD research proposal in computational neuroscience. 
