@@ -2,7 +2,7 @@
 layout: post
 title: "Website Creation: Journey and Overview"
 description: "A behind-the-scenes look at the creation process and features of this academic website"
-date: 2024-06-20
+date: 2025-05-17
 author: Jim Jing
 categories: [essays]
 tags: [website, jekyll, development, academic]
