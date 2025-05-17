@@ -124,14 +124,16 @@
     transition: all 0.2s ease;
 }
 
-/* Style for disabled links (href="#") */
+/* Style for disabled links (href="#") - with higher specificity */
+.publications-container .publication-links a[href="#"],
 .publication-links a[href="#"] {
-    background: #cccccc;
-    color: #888888;
-    cursor: not-allowed;
-    pointer-events: none;
-    opacity: 0.7;
-    box-shadow: none;
+    background-color: #cccccc !important;
+    color: #888888 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    opacity: 0.7 !important;
+    box-shadow: none !important;
+    transform: none !important;
 }
 
 .publication-links a:hover {
@@ -141,10 +143,12 @@
 }
 
 /* Prevent hover effects on disabled links */
+.publications-container .publication-links a[href="#"]:hover,
 .publication-links a[href="#"]:hover {
-    opacity: 0.7;
-    transform: none;
-    box-shadow: none;
+    opacity: 0.7 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: #cccccc !important;
 }
 
 .publication-links a:before {
@@ -185,11 +189,12 @@ html.dark .publication-links a {
     background: #4a9eff;
 }
 
-/* Dark mode disabled links */
+/* Dark mode disabled links - with higher specificity */
+html.dark .publications-container .publication-links a[href="#"],
 html.dark .publication-links a[href="#"] {
-    background: #555555;
-    color: #999999;
-    box-shadow: none;
+    background: #555555 !important;
+    color: #999999 !important;
+    box-shadow: none !important;
 }
 
 html.dark .author-highlight {
