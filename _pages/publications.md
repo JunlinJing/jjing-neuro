@@ -64,6 +64,7 @@ h2 {
 h3 {
     margin-top: 25px;
     color: #34495e;
+    font-size: 1.5em;
 }
 
 ol {
@@ -73,16 +74,34 @@ ol {
 li {
     margin-bottom: 20px;
     line-height: 1.6;
+    font-size: 1.05em;
 }
 
-strong {
+/* 确保所有年份的论文标题显示一致 */
+li strong {
     color: #34495e;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* 确保作者名字一致 */
+li p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 0.6em;
+}
+
+/* 期刊名字格式一致 */
+li em {
+    font-style: italic;
+    color: #444;
 }
 
 a {
     color: #3498db;
     text-decoration: none;
     margin-right: 15px;
+    font-size: 1em;
 }
 
 a:hover {
