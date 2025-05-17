@@ -124,10 +124,27 @@
     transition: all 0.2s ease;
 }
 
+/* Style for disabled links (href="#") */
+.publication-links a[href="#"] {
+    background: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
 .publication-links a:hover {
     opacity: 0.9;
     transform: translateY(-1px);
     text-decoration: none;
+}
+
+/* Prevent hover effects on disabled links */
+.publication-links a[href="#"]:hover {
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
 }
 
 .publication-links a:before {
@@ -166,6 +183,13 @@ html.dark .publication-journal {
 
 html.dark .publication-links a {
     background: #4a9eff;
+}
+
+/* Dark mode disabled links */
+html.dark .publication-links a[href="#"] {
+    background: #555555;
+    color: #999999;
+    box-shadow: none;
 }
 
 html.dark .author-highlight {
