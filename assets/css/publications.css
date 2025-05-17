@@ -35,7 +35,7 @@
 }
 
 .publications-container li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     line-height: 1.6;
     font-size: 1.05em;
 }
@@ -46,7 +46,7 @@
     font-size: 1.1em;
     font-weight: 600;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Author names */
@@ -54,6 +54,7 @@
     font-size: 1.05em;
     line-height: 1.7;
     margin-bottom: 0.6em;
+    margin-top: 0;
 }
 
 /* Journal names */
@@ -66,6 +67,7 @@
 .publication-links {
     margin-top: 8px;
     font-size: 0.95em;
+    margin-bottom: 0;
 }
 
 .publication-links a {
