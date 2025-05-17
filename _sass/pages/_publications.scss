@@ -1,0 +1,99 @@
+// Publications page styling
+.publications-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.publications-container {
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        font-size: 1.8em;
+    }
+
+    h3 {
+        margin-top: 25px;
+        color: #34495e;
+        font-size: 1.5em;
+    }
+
+    ol {
+        padding-left: 20px;
+        counter-reset: publication-counter;
+    }
+
+    li {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1.05em;
+    }
+
+    // Paper titles
+    li strong {
+        color: #34495e;
+        font-size: 1.1em;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    // Author names
+    li p {
+        font-size: 1.05em;
+        line-height: 1.7;
+        margin-bottom: 0.6em;
+    }
+
+    // Journal names
+    li em {
+        font-style: italic;
+        color: #444;
+    }
+
+    // Publication links
+    .publication-links {
+        margin-top: 8px;
+        font-size: 0.95em;
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+            
+            &:before {
+                margin-right: 5px;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+            }
+            
+            &.doi-link:before {
+                content: "\f02e"; // Bookmark icon
+            }
+            
+            &.pdf-link:before {
+                content: "\f1c1"; // PDF file icon
+            }
+            
+            &.code-link:before {
+                content: "\f121"; // Code icon
+            }
+        }
+    }
+} 

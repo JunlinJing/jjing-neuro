@@ -1,0 +1,99 @@
+/* Publications page styling */
+.publications-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.publications-container h1, 
+.publications-container h2, 
+.publications-container h3 {
+    color: #2c3e50;
+}
+
+.publications-container h1 {
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+
+.publications-container h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+.publications-container h3 {
+    margin-top: 25px;
+    color: #34495e;
+    font-size: 1.5em;
+}
+
+.publications-container ol {
+    padding-left: 20px;
+    counter-reset: publication-counter;
+}
+
+.publications-container li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+/* Paper titles */
+.publications-container li strong {
+    color: #34495e;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Author names */
+.publications-container li p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 0.6em;
+}
+
+/* Journal names */
+.publications-container li em {
+    font-style: italic;
+    color: #444;
+}
+
+/* Publication links */
+.publication-links {
+    margin-top: 8px;
+    font-size: 0.95em;
+}
+
+.publication-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.publication-links a:hover {
+    text-decoration: underline;
+}
+
+.publication-links a:before {
+    margin-right: 5px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.publication-links a.doi-link:before {
+    content: "\f02e"; /* Bookmark icon */
+}
+
+.publication-links a.pdf-link:before {
+    content: "\f1c1"; /* PDF file icon */
+}
+
+.publication-links a.code-link:before {
+    content: "\f121"; /* Code icon */
+} 
