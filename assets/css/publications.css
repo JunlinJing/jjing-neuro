@@ -1,8 +1,15 @@
 /* Publications page styling */
-.publications-container {
+.page-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.publications-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 .publications-container h1, 
@@ -13,7 +20,7 @@
 
 .publications-container h1 {
     font-size: 2.5em;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.5em;
     border-bottom: 3px solid #3498db;
     padding-bottom: 0.3em;
 }
@@ -22,14 +29,18 @@
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
     margin-top: 30px;
-    font-size: 2em;
+    font-size: 1.8em;
+    color: #34495e;
+    margin: 2em 0 1em;
 }
 
 .publications-container h3 {
     margin-top: 25px;
     color: #34495e;
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #eee;
 }
 
 /* Publication item layout */
@@ -37,6 +48,16 @@
     display: flex;
     margin-bottom: 40px;
     line-height: 1.6;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .publication-number {
@@ -52,17 +73,18 @@
 
 /* Paper titles */
 .publication-title {
-    color: #34495e;
-    font-size: 1.3em;
+    color: #2c3e50;
+    font-size: 1.4em;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    line-height: 1.4;
 }
 
 /* Author names */
 .publication-authors {
     font-size: 1.1em;
     line-height: 1.7;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     white-space: nowrap;
     overflow-x: auto;
     padding-bottom: 5px;
@@ -75,31 +97,37 @@
 
 /* Journal names */
 .publication-journal {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     font-size: 1.05em;
-}
-
-.publication-journal em {
     font-style: italic;
-    color: #444;
+    color: #555;
 }
 
 /* Publication links */
 .publication-links {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .publication-links a {
-    color: #3498db;
+    color: #ffffff;
     text-decoration: none;
-    margin-right: 20px;
     display: inline-flex;
     align-items: center;
+    background: #3498db;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .publication-links a:hover {
-    text-decoration: underline;
+    opacity: 0.9;
+    transform: translateY(-1px);
+    text-decoration: none;
 }
 
 .publication-links a:before {
@@ -120,9 +148,33 @@
     content: "\f121"; /* Code icon */
 }
 
+/* Dark mode support */
+html.dark .publication-item {
+    background: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+}
+
+html.dark .publication-title {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .publication-journal {
+    color: #aaa;
+}
+
+html.dark .publication-links a {
+    background: #4a9eff;
+}
+
+html.dark .author-highlight {
+    color: #6bb9ff;
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
-    .publications-container {
+    .page-content {
         padding: 40px 20px;
     }
     
@@ -144,5 +196,10 @@
     
     .publication-title {
         font-size: 1.2em;
+    }
+    
+    .publication-item {
+        padding: 18px;
+        margin-bottom: 25px;
     }
 } 
