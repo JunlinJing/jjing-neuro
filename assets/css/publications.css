@@ -1,8 +1,8 @@
 /* Publications page styling */
 .publications-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px 30px;
 }
 
 .publications-container h1, 
@@ -12,27 +12,30 @@
 }
 
 .publications-container h1 {
-    font-size: 2.2em;
-    margin-bottom: 1em;
+    font-size: 2.5em;
+    margin-bottom: 1.2em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.3em;
 }
 
 .publications-container h2 {
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
     margin-top: 30px;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 .publications-container h3 {
     margin-top: 25px;
     color: #34495e;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    margin-bottom: 1em;
 }
 
 /* Publication item layout */
 .publication-item {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     line-height: 1.6;
 }
 
@@ -40,6 +43,7 @@
     flex: 0 0 25px;
     font-weight: bold;
     color: #34495e;
+    font-size: 1.1em;
 }
 
 .publication-content {
@@ -49,16 +53,16 @@
 /* Paper titles */
 .publication-title {
     color: #34495e;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Author names */
 .publication-authors {
-    font-size: 1.05em;
+    font-size: 1.1em;
     line-height: 1.7;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     white-space: nowrap;
     overflow-x: auto;
     padding-bottom: 5px;
@@ -71,7 +75,8 @@
 
 /* Journal names */
 .publication-journal {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.05em;
 }
 
 .publication-journal em {
@@ -81,14 +86,14 @@
 
 /* Publication links */
 .publication-links {
-    margin-top: 8px;
-    font-size: 0.95em;
+    margin-top: 10px;
+    font-size: 1em;
 }
 
 .publication-links a {
     color: #3498db;
     text-decoration: none;
-    margin-right: 15px;
+    margin-right: 20px;
     display: inline-flex;
     align-items: center;
 }
@@ -117,7 +122,27 @@
 
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
+    .publications-container {
+        padding: 40px 20px;
+    }
+    
     .publication-authors {
         white-space: normal;
+    }
+    
+    .publications-container h1 {
+        font-size: 2.2em;
+    }
+    
+    .publications-container h2 {
+        font-size: 1.8em;
+    }
+    
+    .publications-container h3 {
+        font-size: 1.5em;
+    }
+    
+    .publication-title {
+        font-size: 1.2em;
     }
 } 
