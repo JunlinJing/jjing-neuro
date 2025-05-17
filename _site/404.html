@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://junlinjing.github.io/404.html" />
+<meta property="og:url" content="http://localhost:4000/404.html" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,18 +31,20 @@
     "@type": "WebSite",
     "headline": "Jim Jing",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "https://junlinjing.github.io/404.html",
+    "url": "http://localhost:4000/404.html",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "https://junlinjing.github.io"
+        "url": "http://localhost:4000"
     }
 }</script> 
 
     <!-- Styles -->
     <link rel="stylesheet" href="/jjing-neuro/assets/css/theme.css">
     <link rel="stylesheet" href="/jjing-neuro/assets/css/style.css">
+    <link rel="stylesheet" href="/jjing-neuro/assets/css/custom.css">
+    <link rel="stylesheet" href="/jjing-neuro/assets/css/dark-mode-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Favicon -->
@@ -50,7 +52,7 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
 <body>
     <div class="wrapper">
@@ -220,7 +222,7 @@
             <section class="lost-container">
   <h1>Uh oh!</h1>
   <div class="link">
-    <img class="selfie" alt="Jim Jing" src="https://junlinjing.github.io/assets/images/error.gif" />
+    <img class="selfie" alt="Jim Jing" src="http://localhost:4000/assets/images/error.gif" />
   </div>
   <br />
   <br />
@@ -376,6 +378,9 @@
             });
         });
     </script>
+    
+    <!-- 修复重复标题问题的脚本 -->
+    <script src="/jjing-neuro/assets/js/fix-duplicate-titles.js"></script>
 </body>
 </html>
 

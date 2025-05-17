@@ -3,7 +3,7 @@ title: Jim Jing
 bio: Neuroscience Researcher | AI Enthusiast | Science Writer
 motto: "Standing on the bridge between AI and neuroscience, gazing into the mysteries of the brain"
 
-# twitter summary info
+# site description
 description: A personal academic website focusing on neuroscience research and artificial intelligence
 
 # if it's an external image, update below for true
@@ -11,8 +11,7 @@ description: A personal academic website focusing on neuroscience research and a
 external-image: false
 picture: assets/images/self_picture.jpg
 
-# your site color theme, true for dark theme, 
-# false to light theme, auto to switch with system.
+# site color theme - true: dark theme, false: light theme, auto: system settings
 dark-theme: auto
 
 # If you want to include your resume, set to true

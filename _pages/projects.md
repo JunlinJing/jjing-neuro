@@ -265,6 +265,13 @@ h1 {
     padding-bottom: 0.3em;
 }
 
+html.dark h1 {
+    color: #ffffff;
+    border-bottom-color: #4a9eff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    font-size: 2.0em;
+}
+
 h2 {
     font-size: 1.8em;
     color: #34495e;
@@ -279,6 +286,13 @@ h3 {
     margin: 1.5em 0 1em;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5em;
+}
+
+html.dark h3 {
+    color: #ffffff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.4em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 h4 {
@@ -296,9 +310,21 @@ h4 {
     transition: all 0.3s ease;
 }
 
+html.dark .project-card {
+    background: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+    padding: 18px;
+    margin-bottom: 25px;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+html.dark .project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .project-header {
@@ -307,6 +333,12 @@ h4 {
     align-items: center;
     gap: 20px;
     margin-bottom: 35px;
+}
+
+html.dark .project-header {
+    margin-bottom: 20px;
+    gap: 12px;
+    padding-bottom: 15px;
 }
 
 .project-title {
@@ -321,6 +353,13 @@ h4 {
     line-height: 1.5;
 }
 
+html.dark .project-title h3 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.3em;
+    line-height: 1.3;
+}
+
 .project-type {
     background: #f8f9fa;
     color: #1976d2;
@@ -329,6 +368,13 @@ h4 {
     font-size: 1em;
     font-weight: 500;
     white-space: nowrap;
+}
+
+html.dark .project-type {
+    background: #333;
+    color: #6bb9ff;
+    font-size: 0.9em;
+    padding: 6px 16px;
 }
 
 .project-status {
@@ -361,9 +407,22 @@ h4 {
     color: #ffffff;
 }
 
+html.dark .github-link {
+    background: #333;
+    border: 1px solid #444;
+    font-size: 0.9em;
+    padding: 6px 14px;
+}
+
 .demo-link {
     background: #0366d6;
     color: #ffffff;
+}
+
+html.dark .demo-link {
+    background: #4a9eff;
+    font-size: 0.9em;
+    padding: 6px 14px;
 }
 
 .github-link:hover, .demo-link:hover {
@@ -391,9 +450,21 @@ h4 {
     border: 1px solid #e5e7eb;
 }
 
+html.dark .tag {
+    background: #3a3a3a;
+    color: #d0d0d0;
+    border-color: #555;
+    font-size: 0.9em;
+    padding: 6px 14px;
+}
+
 .tag:hover {
     background: #e5e7eb;
     transform: translateY(-1px);
+}
+
+html.dark .tag:hover {
+    background: #444;
 }
 
 .project-filters {
@@ -402,6 +473,12 @@ h4 {
     border-radius: 16px;
     margin: 40px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+html.dark .project-filters {
+    background: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border: 1px solid #444;
 }
 
 .filter-group {
@@ -419,6 +496,10 @@ h4 {
     font-size: 1.1em;
 }
 
+html.dark .filter-group label {
+    color: #ffffff;
+}
+
 .filter-btn {
     background: #ffffff;
     border: 1px solid #dee2e6;
@@ -430,10 +511,21 @@ h4 {
     color: #495057;
 }
 
+html.dark .filter-btn {
+    background: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
 .filter-btn:hover {
     background: #f8f9fa;
     border-color: #adb5bd;
     transform: translateY(-1px);
+}
+
+html.dark .filter-btn:hover {
+    background: #444;
+    border-color: #666;
 }
 
 .filter-btn.active {
@@ -443,15 +535,32 @@ h4 {
     box-shadow: 0 2px 4px rgba(3, 102, 214, 0.2);
 }
 
+html.dark .filter-btn.active {
+    background: #4a9eff;
+    border-color: #4a9eff;
+    box-shadow: 0 2px 6px rgba(74, 158, 255, 0.3);
+}
+
 .project-section {
     margin: 35px 0;
     padding: 0 10px;
+}
+
+html.dark .project-section {
+    margin: 25px 0;
 }
 
 .project-section h4 {
     font-size: 1.4em;
     color: #2c3e50;
     margin-bottom: 20px;
+}
+
+html.dark .project-section h4 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1.15em;
+    margin-bottom: 15px;
 }
 
 .project-section ul {
@@ -468,6 +577,12 @@ h4 {
     font-size: 1.1em;
 }
 
+html.dark .project-section li {
+    color: #d0d0d0;
+    font-size: 1.0em;
+    line-height: 1.65;
+}
+
 .project-section li:before {
     content: "•";
     color: #0366d6;
@@ -476,9 +591,17 @@ h4 {
     left: 0;
 }
 
+html.dark .project-section li:before {
+    color: #4a9eff;
+}
+
 .project-section li strong {
     color: #2c3e50;
     font-weight: 600;
+}
+
+html.dark .project-section li strong {
+    color: #ffffff;
 }
 
 .project-description {
@@ -487,6 +610,13 @@ h4 {
     color: #2c3e50;
     margin: 30px 0;
     padding: 0 10px;
+}
+
+html.dark .project-description {
+    color: #e0e0e0;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 20px 0;
 }
 
 @media (max-width: 768px) {
@@ -539,19 +669,39 @@ h4 {
     transition: all 0.2s ease;
 }
 
+html.dark .page-btn {
+    background: #333;
+    border-color: #555;
+    color: #e0e0e0;
+    font-size: 0.9em;
+}
+
 .page-btn:disabled {
     background: #f8f9fa;
     cursor: not-allowed;
     opacity: 0.6;
 }
 
+html.dark .page-btn:disabled {
+    background: #222;
+    opacity: 0.5;
+}
+
 .page-btn:not(:disabled):hover {
     background: #e9ecef;
+}
+
+html.dark .page-btn:not(:disabled):hover {
+    background: #444;
 }
 
 #page-info {
     color: #2c3e50;
     font-weight: 500;
+}
+
+html.dark #page-info {
+    color: #e0e0e0;
 }
 
 .project-card {
@@ -568,16 +718,40 @@ h4 {
     border: 1px solid #c3e6c3;
 }
 
+html.dark .status-active {
+    background: #1a5928;
+    color: #dcf5dc;
+    border-color: #2a7038;
+    font-size: 0.85em;
+    padding: 5px 10px;
+}
+
 .status-in-progress {
     background: #ffefd5;
     color: #b35900;
     border: 1px solid #ffd7a8;
 }
 
+html.dark .status-in-progress {
+    background: #804000;
+    color: #ffefd5;
+    border-color: #b35900;
+    font-size: 0.85em;
+    padding: 5px 10px;
+}
+
 .status-planning {
     background: #ddf4ff;
     color: #0969da;
     border: 1px solid #b6e3ff;
+}
+
+html.dark .status-planning {
+    background: #054a91;
+    color: #ddf4ff;
+    border-color: #0969da;
+    font-size: 0.85em;
+    padding: 5px 10px;
 }
 
 .quote-container {
@@ -597,6 +771,12 @@ blockquote {
     padding: 0.5em 2em;
 }
 
+html.dark blockquote {
+    color: #e0e0e0;
+    font-size: 1.25em;
+    line-height: 1.5;
+}
+
 blockquote:before,
 blockquote:after {
     content: '"';
@@ -604,6 +784,11 @@ blockquote:after {
     color: #3498db;
     position: absolute;
     opacity: 0.3;
+}
+
+html.dark blockquote:before,
+html.dark blockquote:after {
+    color: #4a9eff;
 }
 
 blockquote:before {
@@ -622,6 +807,10 @@ blockquote:after {
     color: #7f8c8d;
     margin-top: 1em;
     font-style: normal;
+}
+
+html.dark .quote-author {
+    color: #b0b0b0;
 }
 </style>
 

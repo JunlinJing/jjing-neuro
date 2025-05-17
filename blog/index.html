@@ -1,12 +1,28 @@
 ---
 layout: blog
 title: Blog
-description: Exploring neuroscience, brain-computer interfaces, and neural signal processing through practical implementations and research insights.
+description: These words are not merely ink on paper, but footprints of the journey I've traveled.
 ---
+
+<div class="blog-filters">
+    <a href="#" class="filter active" data-filter="all">All Posts</a>
+    <a href="#" class="filter" data-filter="essays">Essays</a>
+    <a href="#" class="filter" data-filter="tutorials">Tutorials</a>
+    <a href="#" class="filter" data-filter="ramblings">Ramblings</a>
+</div>
 
 <div class="blog-list">
     {% for post in site.posts %}
-    <article class="blog-item">
+    {% assign post_category = post.categories | first | downcase %}
+    {% if post.categories.size > 0 %}
+        {% if post.categories[0].size > 0 %}
+            {% assign post_category = post.categories[0] | downcase %}
+        {% endif %}
+    {% elsif post.category %}
+        {% assign post_category = post.category | downcase %}
+    {% endif %}
+    
+    <article class="blog-item" data-category="{{ post_category }}">
         <h2 class="blog-title">
             <a href="{{ site.baseurl }}{{ post.url | remove: '.html' }}">{{ post.title }}</a>
         </h2>
@@ -30,7 +46,64 @@ description: Exploring neuroscience, brain-computer interfaces, and neural signa
     {% endfor %}
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filters = document.querySelectorAll('.filter');
+    const blogItems = document.querySelectorAll('.blog-item');
+    
+    filters.forEach(filter => {
+        filter.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all filters
+            filters.forEach(f => f.classList.remove('active'));
+            
+            // Add active class to clicked filter
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-filter');
+            
+            // Show/hide blog items based on category
+            blogItems.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+</script>
+
 <style>
+.blog-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter {
+    padding: 8px 16px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.filter.active, .filter:hover {
+    background: var(--link-color);
+    color: white;
+}
+
 .blog-list {
     max-width: 800px;
     margin: 0 auto;
@@ -101,6 +174,10 @@ description: Exploring neuroscience, brain-computer interfaces, and neural signa
     
     .blog-item {
         padding: 15px;
+    }
+    
+    .blog-filters {
+        padding: 0 10px;
     }
 }
 </style> 

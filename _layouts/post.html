@@ -2,13 +2,36 @@
 layout: default
 ---
 
+<style>
+/* 强制隐藏重复标题 */
+.post-content > h1:first-of-type {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 隐藏导航栏中的标题 */
+nav + h1, 
+.nav + h1, 
+header + h1, 
+.header + h1, 
+.wrapper > h1:first-of-type,
+main > h1:first-of-type:not(.post-title) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+</style>
+
 <article class="post">
     {% include seo.html %}
     
     <header class="post-header">
         {% if page.image and page.headerImage %}
             <div class="post-image">
-                <img src="{{ page.image }}" alt="{{ page.title }}">
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
             </div>
         {% endif %}
         
@@ -29,11 +52,21 @@ layout: default
             </div>
             {% endif %}
             
-            {% if page.tags %}
+            {% if page.tags or page.tag %}
             <div class="post-tags">
-                {% for tag in page.tags %}
-                <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">{{ tag }}</a>
-                {% endfor %}
+                {% if page.tags %}
+                    {% for tag in page.tags %}
+                    <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">
+                        <i class="fas fa-tag"></i> {{ tag }}
+                    </a>
+                    {% endfor %}
+                {% elsif page.tag %}
+                    {% for tag in page.tag %}
+                    <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">
+                        <i class="fas fa-tag"></i> {{ tag }}
+                    </a>
+                    {% endfor %}
+                {% endif %}
             </div>
             {% endif %}
             
@@ -44,16 +77,6 @@ layout: default
                 {{ reading_time }} min read
             </span>
         </div>
-
-        {% if page.tag %}
-            <div class="post-tags">
-                {% for tag in page.tag %}
-                    <a href="{{ site.baseurl }}/tags/#{{ tag }}" class="tag">
-                        <i class="fas fa-tag"></i> {{ tag }}
-                    </a>
-                {% endfor %}
-            </div>
-        {% endif %}
     </header>
 
     {% if page.toc %}
@@ -179,6 +202,20 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         document.getElementById('toc').style.display = 'none';
     }
+    
+    // 检查页面中的h1标题
+    const pageTitle = document.querySelector('.post-title').textContent.trim();
+    const contentH1s = Array.from(content.querySelectorAll('h1'));
+    
+    contentH1s.forEach(h1 => {
+        // 如果内容中的h1标题与页面标题相同或相似，则隐藏它
+        if (h1.textContent.trim() === pageTitle || 
+            h1.textContent.trim().includes(pageTitle) || 
+            pageTitle.includes(h1.textContent.trim())) {
+            h1.style.display = 'none';
+            console.log('隐藏了重复的标题:', h1.textContent);
+        }
+    });
 });
 </script>
 
@@ -278,40 +315,74 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .social-share {
-    margin: 40px 0;
     text-align: center;
+    margin: 3rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color, #eee);
 }
 
 .share-title {
-    margin-bottom: 15px;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--heading-color, #333);
+    position: relative;
+    display: inline-block;
+}
+
+.share-title:before, .share-title:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: var(--border-color, #eee);
+    top: 50%;
+    width: 50px;
+}
+
+.share-title:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.share-title:after {
+    left: 100%;
+    margin-left: 15px;
 }
 
 .share-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .share-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
     color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease;
 }
 
 .share-button:hover {
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.twitter { background: #1DA1F2; }
-.facebook { background: #4267B2; }
-.linkedin { background: #0077B5; }
+.twitter {
+    background-color: #1DA1F2;
+}
+
+.facebook {
+    background-color: #4267B2;
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
 
 .related-posts {
     margin-top: 40px;
@@ -352,9 +423,62 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .post-navigation {
+    margin: 3rem 0;
+    padding: 0;
+    border-top: 1px solid var(--border-color, #eee);
+    border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.nav-links {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-previous, .nav-next {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem 0;
+}
+
+.nav-next {
+    text-align: right;
+    border-left: 1px solid var(--border-color, #eee);
+}
+
+.nav-subtitle {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--meta-color, #666);
+    margin-bottom: 0.5rem;
+}
+
+.nav-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--heading-color, #333);
+    transition: color 0.3s ease;
+}
+
+.nav-previous a, .nav-next a {
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    padding: 0 1rem;
+}
+
+.nav-previous a:hover .nav-title, 
+.nav-next a:hover .nav-title {
+    color: var(--link-color, #4263eb);
+}
+
+.nav-previous a:hover, 
+.nav-next a:hover {
+    transform: translateY(-2px);
 }
 
 .back-to-top {
@@ -423,6 +547,20 @@ document.addEventListener('DOMContentLoaded', function() {
     .table-of-contents {
         margin: 1rem -1rem;
         border-radius: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+    
+    .nav-next {
+        text-align: left;
+        border-left: none;
+        border-top: 1px solid var(--border-color, #eee);
+    }
+    
+    .share-title:before, .share-title:after {
+        width: 30px;
     }
 }
 </style>

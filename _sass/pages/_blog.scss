@@ -1,0 +1,263 @@
+// Blog page styles
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    letter-spacing: -0.5px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+// Filter tabs
+.blog-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
+  .filter {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    
+    &:hover {
+      background-color: var(--bg-hover);
+      transform: translateY(-2px);
+    }
+    
+    &.active {
+      background-color: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+    }
+  }
+}
+
+// Search bar
+.blog-search {
+  margin: 0 auto 3rem;
+  max-width: 600px;
+  position: relative;
+  
+  input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    background-color: var(--bg-light);
+    transition: all 0.3s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+    }
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+  }
+}
+
+// Blog posts grid
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-item {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-image {
+    height: 200px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  .blog-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .blog-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    
+    a {
+      color: var(--heading-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+  
+  .blog-excerpt {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  .blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    
+    .date {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .read-time {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  
+  .blog-category {
+    background-color: var(--category-bg);
+    color: var(--category-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    
+    &.essays {
+      background-color: rgba(var(--category-essays-rgb), 0.1);
+      color: rgb(var(--category-essays-rgb));
+    }
+    
+    &.tutorials {
+      background-color: rgba(var(--category-tutorials-rgb), 0.1);
+      color: rgb(var(--category-tutorials-rgb));
+    }
+    
+    &.ramblings {
+      background-color: rgba(var(--category-neuroscience-rgb), 0.1);
+      color: rgb(var(--category-neuroscience-rgb));
+    }
+  }
+  
+  .blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    
+    .tag {
+      background-color: var(--tag-bg);
+      color: var(--tag-color);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: var(--tag-bg-hover);
+      }
+    }
+  }
+}
+
+// No results message
+.no-results {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+// Dark mode adjustments
+.dark-theme {
+  .blog-item {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-color-dark);
+  }
+  
+  .blog-filters .filter {
+    background-color: var(--bg-dark-light);
+    border-color: var(--border-color-dark);
+    
+    &:hover:not(.active) {
+      background-color: var(--bg-dark-hover);
+    }
+  }
+  
+  .blog-search input {
+    background-color: var(--bg-dark-light);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+  }
+} 

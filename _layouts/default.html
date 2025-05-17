@@ -12,6 +12,8 @@ layout: compress
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/dark-mode-fixes.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Favicon -->
@@ -21,13 +23,13 @@ layout: compress
     <!-- RSS -->
     {% feed_meta %}
 </head>
-<body>
+<body{% if page.url contains 'about' %} class="about-page"{% endif %}>
     <div class="wrapper">
         <header>
             {% include nav.html %}
         </header>
         
-        <main>
+        <main{% if page.url contains 'about' %} class="about-container"{% endif %}>
             {{ content }}
         </main>
         
@@ -113,5 +115,8 @@ layout: compress
             });
         });
     </script>
+    
+    <!-- 修复重复标题问题的脚本 -->
+    <script src="{{ '/assets/js/fix-duplicate-titles.js' | relative_url }}"></script>
 </body>
 </html>

@@ -1,0 +1,111 @@
+// Colors
+$background: #ffffff;
+$text: #333333;
+$text-muted: #666666;
+$heading: #222222;
+$link: #0066cc;
+$link-hover: #004d99;
+$border: #e5e5e5;
+$code-background: #f5f5f5;
+$code-text: #333333;
+$selection: rgba(0, 102, 204, 0.2);
+
+// Primary colors
+$primary: #0066cc;
+$primary-rgb: 0, 102, 204;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+
+// Category colors
+$category-essays: #5856d6;
+$category-essays-rgb: 88, 86, 214;
+$category-tutorials: #30b46e;
+$category-tutorials-rgb: 48, 180, 110;
+$category-ramblings: #e74c3c;
+$category-ramblings-rgb: 231, 76, 60;
+
+// Light theme variables
+:root {
+  // Base colors
+  --background-color: #{$background};
+  --text-color: #{$text};
+  --text-muted: #{$text-muted};
+  --heading-color: #{$heading};
+  --link-color: #{$link};
+  --link-hover-color: #{$link-hover};
+  --border-color: #{$border};
+  --selection-background: #{$selection};
+  
+  // Primary colors
+  --primary-color: #{$primary};
+  --primary-color-rgb: #{$primary-rgb};
+  --secondary-color: #{$secondary};
+  --success-color: #{$success};
+  --info-color: #{$info};
+  --warning-color: #{$warning};
+  --danger-color: #{$danger};
+  
+  // Category colors
+  --category-essays-rgb: #{$category-essays-rgb};
+  --category-tutorials-rgb: #{$category-tutorials-rgb};
+  --category-ramblings-rgb: #{$category-ramblings-rgb};
+  
+  // UI Elements
+  --bg-light: #f8f9fa;
+  --bg-hover: #f0f0f0;
+  --card-bg: #{$background};
+  --card-bg-dark: #2a2a2a;
+  
+  // Tag styles
+  --tag-bg: #f0f0f0;
+  --tag-color: #555555;
+  --tag-bg-hover: #e0e0e0;
+  
+  // Category styles
+  --category-bg: #f0f0f0;
+  --category-color: #555555;
+  
+  // Dark theme variables
+  --bg-dark-light: #2a2a2a;
+  --bg-dark-hover: #333333;
+  --border-color-dark: #444444;
+  --text-color-dark: #e4e4e4;
+}
+
+// Fonts
+$font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-serif: Georgia, "Times New Roman", serif;
+$font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// Typography
+$font-size-base: 16px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.5;
+
+// Spacing
+$spacing-unit: 30px;
+$spacing-xs: $spacing-unit * 0.25;
+$spacing-sm: $spacing-unit * 0.5;
+$spacing-md: $spacing-unit;
+$spacing-lg: $spacing-unit * 1.5;
+$spacing-xl: $spacing-unit * 2;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070; 

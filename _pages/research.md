@@ -114,6 +114,54 @@ h3.project-title {
     left: 0;
 }
 
+/* 夜间模式样式 */
+html.dark h1.page-title {
+    color: #ffffff;
+    border-bottom-color: #4a9eff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+html.dark .research-intro {
+    color: #e6e6e6;
+    background-color: rgba(45, 45, 45, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-left: 3px solid #4a9eff;
+}
+
+html.dark h2.section-title {
+    color: #ffffff;
+    border-bottom-color: #4a9eff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+html.dark h3.project-title {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+html.dark .project-description {
+    color: #e6e6e6;
+    background-color: rgba(45, 45, 45, 0.5);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+html.dark .project-list li,
+html.dark .methods-list li {
+    color: #e0e0e0;
+}
+
+html.dark .project-list li:before,
+html.dark .methods-list li:before {
+    color: #4a9eff;
+}
+
+html.dark .methods-title {
+    color: #ffffff;
+}
+
 @media (max-width: 768px) {
     .page-content {
         padding: 40px 20px;
@@ -221,9 +269,20 @@ h1, h2, h3 {
     margin-top: 30px;
 }
 
+html.dark h1, 
+html.dark h2, 
+html.dark h3 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
 h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+
+html.dark h2 {
+    border-bottom: 2px solid #444;
 }
 
 ul {
@@ -235,8 +294,16 @@ li {
     line-height: 1.6;
 }
 
+html.dark li {
+    color: #e0e0e0;
+}
+
 strong {
     color: #34495e;
+}
+
+html.dark strong {
+    color: #ffffff;
 }
 
 a {
@@ -244,7 +311,15 @@ a {
     text-decoration: none;
 }
 
+html.dark a {
+    color: #6bb9ff;
+}
+
 a:hover {
     text-decoration: underline;
+}
+
+html.dark a:hover {
+    color: #ffffff;
 }
 </style> 

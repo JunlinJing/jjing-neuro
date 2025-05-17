@@ -91,6 +91,10 @@ body {
     color: #2c3e50;
 }
 
+html.dark body {
+    color: #f0f0f0;
+}
+
 h1, h2 {
     color: #2c3e50;
     margin-top: 30px;
@@ -99,9 +103,19 @@ h1, h2 {
     font-weight: 600;
 }
 
+html.dark h1, 
+html.dark h2 {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
 h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+
+html.dark h2 {
+    border-bottom: 2px solid #444;
 }
 
 ul {
@@ -115,9 +129,17 @@ li {
     text-align: justify;
 }
 
+html.dark li {
+    color: #e0e0e0;
+}
+
 p {
     text-align: justify;
     margin-bottom: 1.5em;
+}
+
+html.dark p {
+    color: #e0e0e0;
 }
 
 strong {
@@ -125,9 +147,25 @@ strong {
     font-weight: 600;
 }
 
+html.dark strong {
+    color: #ffffff;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+html.dark a {
+    color: #6bb9ff;
+}
+
+html.dark a:hover {
+    color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* 这些样式将被覆盖，使用全局的dark模式选择器 */
 }
 </style>

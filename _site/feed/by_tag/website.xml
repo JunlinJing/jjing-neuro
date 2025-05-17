@@ -1,48 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://junlinjing.github.io/jjing-neuro/feed/by_tag/website.xml" rel="self" type="application/atom+xml" /><link href="https://junlinjing.github.io/jjing-neuro/" rel="alternate" type="text/html" /><updated>2025-05-16T18:23:12+02:00</updated><id>https://junlinjing.github.io/jjing-neuro/feed/by_tag/website.xml</id><title type="html">Jim Jing</title><subtitle>A personal academic website focusing on neuroscience research and artificial intelligence</subtitle><entry><title type="html">Academic Website Launch</title><link href="https://junlinjing.github.io/jjing-neuro/blog/website-created/" rel="alternate" type="text/html" title="Academic Website Launch" /><published>2025-05-08T00:00:00+02:00</published><updated>2025-05-08T00:00:00+02:00</updated><id>https://junlinjing.github.io/jjing-neuro/blog/website-created</id><content type="html" xml:base="https://junlinjing.github.io/jjing-neuro/blog/website-created/"><![CDATA[<p>I am excited to announce the launch of my academic website! This platform will serve as a central hub for sharing my research work, publications, and thoughts on neuroscience and artificial intelligence.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/jjing-neuro/feed/by_tag/website.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jjing-neuro/" rel="alternate" type="text/html" /><updated>2025-05-17T11:31:03+02:00</updated><id>http://localhost:4000/jjing-neuro/feed/by_tag/website.xml</id><title type="html">Jim Jing</title><subtitle>A personal academic website focusing on neuroscience research and artificial intelligence</subtitle><entry><title type="html">Website Creation: Journey and Overview</title><link href="http://localhost:4000/jjing-neuro/blog/website-creation-overview/" rel="alternate" type="text/html" title="Website Creation: Journey and Overview" /><published>2025-05-17T00:00:00+02:00</published><updated>2025-05-17T00:00:00+02:00</updated><id>http://localhost:4000/jjing-neuro/blog/website-creation-overview</id><content type="html" xml:base="http://localhost:4000/jjing-neuro/blog/website-creation-overview/"><![CDATA[<h1 id="the-birth-of-an-academic-website">The Birth of an Academic Website</h1>
 
-<h2 id="website-features">Website Features</h2>
+<p>Welcome to my digital home! This website represents both a personal milestone and a platform for sharing my academic pursuits in neuroscience and related fields. In this article, I’ll walk you through how this website came to be, the technologies behind it, and what you can find here.</p>
 
-<h3 id="research-section">Research Section</h3>
+<h2 id="why-create-a-personal-academic-website">Why Create a Personal Academic Website?</h2>
+
+<p>In today’s interconnected academic landscape, having a personal website serves multiple purposes:</p>
+
 <ul>
-  <li>Current research projects</li>
-  <li>Methodology descriptions</li>
-  <li>Collaboration opportunities</li>
-  <li>Research interests</li>
+  <li>Creating a central hub for research, publications, and projects</li>
+  <li>Sharing thoughts and insights through blog posts</li>
+  <li>Establishing a professional online presence</li>
+  <li>Making research more accessible to colleagues and the public</li>
+  <li>Documenting the journey through academia and research</li>
 </ul>
 
-<h3 id="publications">Publications</h3>
+<h2 id="the-technical-foundation">The Technical Foundation</h2>
+
+<p>This website is built using Jekyll, a static site generator that offers a perfect balance between simplicity and flexibility. Some of the key technical aspects include:</p>
+
 <ul>
-  <li>Journal articles</li>
-  <li>Conference papers</li>
-  <li>Preprints</li>
-  <li>Technical reports</li>
+  <li><strong>Jekyll Framework</strong>: Powers the site with its robust templating system</li>
+  <li><strong>GitHub Pages</strong>: Hosts the site, offering seamless integration with the development workflow</li>
+  <li><strong>Responsive Design</strong>: Ensures the site works well on devices of all sizes</li>
+  <li><strong>Dark/Light Mode</strong>: Provides comfortable reading experiences in different lighting conditions</li>
+  <li><strong>Category System</strong>: Organizes content in a structured, easily navigable way</li>
 </ul>
+
+<h2 id="site-structure-and-content">Site Structure and Content</h2>
+
+<p>The website is organized into several key sections, each serving a specific purpose:</p>
+
+<h3 id="home-page">Home Page</h3>
+
+<p>The homepage provides a quick overview of who I am and features recent updates organized by category. It’s designed to give visitors an immediate sense of my work and interests.</p>
+
+<h3 id="about">About</h3>
+
+<p>The About page offers a more detailed introduction to my background, research interests, and academic journey. It’s where you can learn more about me as a researcher and individual.</p>
+
+<h3 id="research">Research</h3>
+
+<p>This section dives into my research focus areas, current projects, and methodologies. It highlights:</p>
+
+<ul>
+  <li>Current research interests in functional connectivity and machine learning</li>
+  <li>Ongoing projects and their significance</li>
+  <li>Research methodologies and analytical approaches</li>
+</ul>
+
+<h3 id="projects">Projects</h3>
+
+<p>The Projects page showcases my open-source initiatives related to neuroscience, including:</p>
+
+<ul>
+  <li><strong>ChatPSY</strong>: A mental health assessment system using AI</li>
+  <li><strong>BrainDT</strong>: A toolkit for integrating brain databases and resources</li>
+  <li><strong>Journal Classification System</strong>: A tool for neuroscience and psychiatry journals</li>
+  <li><strong>Neuro Cookbook</strong>: Documentation for neuroscience research tools</li>
+  <li><strong>Brain Connectivity Guide</strong>: An accessible introduction to brain connectivity</li>
+</ul>
+
+<p>Each project includes details about its purpose, features, and current development status.</p>
 
 <h3 id="blog">Blog</h3>
+
+<p>The blog section is divided into three categories:</p>
+
 <ul>
-  <li>Research updates</li>
-  <li>Technical tutorials</li>
-  <li>Scientific insights</li>
-  <li>Academic experiences</li>
+  <li><strong>Essays</strong>: Reflective pieces on neuroscience, research, and academic life</li>
+  <li><strong>Tutorials</strong>: Step-by-step guides for neuroscience research tools and methods</li>
+  <li><strong>Ramblings</strong>: More casual thoughts and explorations of ideas at the intersection of science and other domains</li>
 </ul>
 
-<h3 id="resources">Resources</h3>
+<h2 id="design-philosophy">Design Philosophy</h2>
+
+<p>When designing this website, I aimed for a balance between academic professionalism and personal expression. Key design principles included:</p>
+
 <ul>
-  <li>Project documentation</li>
-  <li>Code repositories</li>
-  <li>Teaching materials</li>
-  <li>Useful links</li>
+  <li><strong>Clarity</strong>: Clean layouts that prioritize readability</li>
+  <li><strong>Accessibility</strong>: Ensuring content is available to all users</li>
+  <li><strong>Visual Hierarchy</strong>: Guiding attention to the most important elements</li>
+  <li><strong>Consistency</strong>: Maintaining a cohesive look and feel throughout the site</li>
 </ul>
 
-<h2 id="future-plans">Future Plans</h2>
+<p>The dark mode feature was particularly important, as it helps reduce eye strain during late-night reading sessions—a common scenario for many researchers and students.</p>
 
-<p>I plan to regularly update this website with:</p>
+<h2 id="challenges-and-solutions">Challenges and Solutions</h2>
+
+<p>Creating this website wasn’t without challenges. Some of the hurdles included:</p>
+
 <ul>
-  <li>New research findings</li>
-  <li>Project progress updates</li>
-  <li>Technical tutorials</li>
-  <li>Academic insights</li>
-  <li>Conference experiences</li>
+  <li><strong>Responsive Design</strong>: Ensuring content looked good on screens of all sizes</li>
+  <li><strong>Dark Mode Implementation</strong>: Creating a system that respects user preferences while maintaining readability</li>
+  <li><strong>Content Organization</strong>: Developing a logical structure for diverse content types</li>
+  <li><strong>Performance Optimization</strong>: Keeping load times fast while incorporating necessary features</li>
 </ul>
 
-<p>Stay tuned for more updates as I continue to develop and expand this platform!</p>]]></content><author><name>Jim Jing</name></author><category term="website" /><category term="website" /><category term="academic" /><summary type="html"><![CDATA[Launching my academic website to share research and insights]]></summary></entry></feed>
+<p>Each challenge presented a learning opportunity and led to a better final product.</p>
+
+<h2 id="future-developments">Future Developments</h2>
+
+<p>This website is a living project that will continue to evolve. Future plans include:</p>
+
+<ul>
+  <li>Expanding the blog with regular content in all categories</li>
+  <li>Adding an interactive bibliography of my publications</li>
+  <li>Incorporating more visual elements to illustrate research concepts</li>
+  <li>Developing a resources section for fellow researchers</li>
+  <li>Implementing internationalization for multilingual access</li>
+</ul>
+
+<h2 id="visit-and-explore">Visit and Explore</h2>
+
+<p>I invite you to explore the various sections of this website, engage with the content that interests you, and reach out if you have questions or potential collaborations.</p>
+
+<p>This website represents not just a collection of information, but a reflection of my academic journey and a platform for future growth and connection.</p>
+
+<hr />
+
+<p><em>This article serves as both documentation and an invitation—to explore the site, engage with the content, and perhaps find points of connection in our shared interests in neuroscience and beyond.</em></p>]]></content><author><name>Jim Jing</name></author><category term="essays" /><category term="website" /><category term="jekyll" /><category term="development" /><category term="academic" /><summary type="html"><![CDATA[A behind-the-scenes look at the creation process and features of this academic website]]></summary></entry></feed>

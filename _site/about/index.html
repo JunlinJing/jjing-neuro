@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://junlinjing.github.io/about/" />
+<meta property="og:url" content="http://localhost:4000/about/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@JimJing1997" />
 
@@ -31,18 +31,20 @@
     "@type": "BlogPosting",
     "headline": "About",
     "description": "A personal academic website focusing on neuroscience research and artificial intelligence",
-    "url": "https://junlinjing.github.io/about/",
+    "url": "http://localhost:4000/about/",
     
     "author": {
         "@type": "Person",
         "name": "Jim Jing",
-        "url": "https://junlinjing.github.io"
+        "url": "http://localhost:4000"
     }
 }</script> 
 
     <!-- Styles -->
     <link rel="stylesheet" href="/jjing-neuro/assets/css/theme.css">
     <link rel="stylesheet" href="/jjing-neuro/assets/css/style.css">
+    <link rel="stylesheet" href="/jjing-neuro/assets/css/custom.css">
+    <link rel="stylesheet" href="/jjing-neuro/assets/css/dark-mode-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Favicon -->
@@ -50,9 +52,9 @@
     <link rel="apple-touch-icon" href="/jjing-neuro/assets/images/apple-touch-icon.png">
     
     <!-- RSS -->
-    <link type="application/atom+xml" rel="alternate" href="https://junlinjing.github.io/jjing-neuro/feed.xml" title="Jim Jing" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/jjing-neuro/feed.xml" title="Jim Jing" />
 </head>
-<body>
+<body class="about-page">
     <div class="wrapper">
         <header>
             <nav class="nav">
@@ -209,7 +211,7 @@
 
         </header>
         
-        <main>
+        <main class="about-container">
             
 
 
@@ -334,6 +336,10 @@ body {
     color: #2c3e50;
 }
 
+html.dark body {
+    color: #f0f0f0;
+}
+
 h1, h2 {
     color: #2c3e50;
     margin-top: 30px;
@@ -342,9 +348,19 @@ h1, h2 {
     font-weight: 600;
 }
 
+html.dark h1, 
+html.dark h2 {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
 h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+
+html.dark h2 {
+    border-bottom: 2px solid #444;
 }
 
 ul {
@@ -358,9 +374,17 @@ li {
     text-align: justify;
 }
 
+html.dark li {
+    color: #e0e0e0;
+}
+
 p {
     text-align: justify;
     margin-bottom: 1.5em;
+}
+
+html.dark p {
+    color: #e0e0e0;
 }
 
 strong {
@@ -368,10 +392,26 @@ strong {
     font-weight: 600;
 }
 
+html.dark strong {
+    color: #ffffff;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+html.dark a {
+    color: #6bb9ff;
+}
+
+html.dark a:hover {
+    color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* 这些样式将被覆盖，使用全局的dark模式选择器 */
 }
 </style>
 
@@ -540,6 +580,9 @@ strong {
             });
         });
     </script>
+    
+    <!-- 修复重复标题问题的脚本 -->
+    <script src="/jjing-neuro/assets/js/fix-duplicate-titles.js"></script>
 </body>
 </html>
 
