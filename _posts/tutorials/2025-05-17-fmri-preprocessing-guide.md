@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "A Comprehensive Guide to fMRI Data Preprocessing"
-date: 2025-05-17
 description: "A step-by-step tutorial on preprocessing functional MRI data, covering motion correction, slice timing, spatial normalization, and more."
-categories: tutorials
-tags: [fMRI, preprocessing, neuroimaging, tutorial, data analysis]
+date: 2025-05-17
+author: Jim Jing
+categories: [tutorials]
+tags: [fMRI, preprocessing, neuroimaging, tutorial]
 ---
 
 # A Comprehensive Guide to fMRI Data Preprocessing
@@ -202,58 +203,46 @@ mean_img = image.new_img_like(img, data.mean(axis=3))
 std_img = image.new_img_like(img, data.std(axis=3))
 tsnr_img = image.new_img_like(img, data.mean(axis=3) / data.std(axis=3))
 
-# Plot mean image
-fig, axes = plt.subplots(3, 1, figsize=(8, 12))
+fig, axes = plt.subplots(3, 1, figsize=(12, 15))
 plotting.plot_epi(mean_img, axes=axes[0], title='Mean Image')
 plotting.plot_epi(std_img, axes=axes[1], title='Standard Deviation')
-plotting.plot_epi(tsnr_img, axes=axes[2], title='tSNR (mean/std)')
+plotting.plot_epi(tsnr_img, axes=axes[2], title='tSNR')
 plt.tight_layout()
 plt.savefig('quality_control.png')
 ```
 
-## Step 10: Creating Confound Regressors
+## Common Preprocessing Workflows
 
-Prepare nuisance variables for regression in statistical analysis:
+Different research questions may require different preprocessing steps. Here are some common workflows:
 
-```python
-# Extract motion parameters
-motion_params = np.loadtxt('motion_parameters.par')
+1. **Task-based fMRI**:
+   - Slice timing correction
+   - Motion correction
+   - Spatial normalization
+   - Spatial smoothing (5-8mm FWHM)
+   - Temporal filtering (high-pass, >0.01Hz)
 
-# Calculate framewise displacement
-fd = np.abs(np.diff(motion_params[:, :3], axis=0))
-fd = np.sum(fd, axis=1)  # Sum of absolute translations
-fd = np.insert(fd, 0, 0)  # First timepoint has no difference
+2. **Resting-state fMRI**:
+   - Motion correction
+   - Regress out nuisance variables (CSF, WM signals, motion parameters)
+   - Spatial normalization
+   - Spatial smoothing (4-6mm FWHM)
+   - Bandpass filtering (0.01-0.08Hz)
 
-# Create white matter and CSF masks
-wm_mask = image.threshold_img('segmented_wm.nii.gz', threshold=0.9)
-csf_mask = image.threshold_img('segmented_csf.nii.gz', threshold=0.9)
-
-# Extract time series from WM and CSF
-wm_signal = image.mean_img(img, wm_mask)
-csf_signal = image.mean_img(img, csf_mask)
-
-# Combine all confounds and save
-confounds = np.column_stack((motion_params, fd, wm_signal, csf_signal))
-np.savetxt('confounds.txt', confounds, delimiter='\t', 
-           header='tx ty tz rx ry rz FD WM CSF')
-```
+3. **Multi-echo fMRI**:
+   - Combine echoes using optimal combination or ICA-based denoising
+   - Motion correction
+   - Spatial normalization
+   - Minimal or no spatial smoothing
 
 ## Conclusion
 
-Proper preprocessing is essential for valid fMRI analysis. This tutorial covered the fundamental steps, but specific protocols may vary depending on your research question and acquisition parameters. Always:
+Proper preprocessing is essential for reliable fMRI analysis. The choices made during preprocessing can significantly impact your results, so it's crucial to understand each step and make informed decisions based on your specific research question.
 
-1. Document your preprocessing steps
-2. Test your preprocessing pipeline on a subset of data
-3. Include quality control visualizations in your reports
-4. Consider how preprocessing choices may affect your results
+In future tutorials, we'll cover statistical analysis methods for extracting meaningful patterns from your preprocessed fMRI data.
 
-With well-preprocessed data, you're ready to move on to statistical modeling and analysis.
+## References
 
-## Additional Resources
-
-- [FSL Course Materials](https://fsl.fmrib.ox.ac.uk/fslcourse/)
-- [SPM Documentation](https://www.fil.ion.ucl.ac.uk/spm/doc/)
-- [Nilearn Tutorials](https://nilearn.github.io/stable/auto_examples/index.html)
-- [Poldrack et al. (2011). Handbook of Functional MRI Data Analysis](https://www.cambridge.org/core/books/handbook-of-functional-mri-data-analysis/8EDF966A922A5A3A9921FFC1EC8B9035)
-
-Happy preprocessing! 
+1. Poldrack, R. A., Mumford, J. A., & Nichols, T. E. (2011). Handbook of functional MRI data analysis. Cambridge University Press.
+2. Jenkinson, M., Beckmann, C. F., Behrens, T. E., Woolrich, M. W., & Smith, S. M. (2012). FSL. Neuroimage, 62(2), 782-790.
+3. Esteban, O., Markiewicz, C. J., Blair, R. W., et al. (2019). fMRIPrep: a robust preprocessing pipeline for functional MRI. Nature Methods, 16(1), 111-116. 
