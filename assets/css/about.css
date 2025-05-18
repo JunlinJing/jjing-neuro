@@ -1,0 +1,491 @@
+/* About page styling - Enhanced Academic Style */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.7;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+}
+
+h1.page-title {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 1.2em;
+    line-height: 1.4;
+    padding-bottom: 0.5em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    letter-spacing: 0.5px;
+    position: relative;
+    border-bottom: none;
+    background: linear-gradient(to right, #2c3e50 0%, #34495e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1.page-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #8b0000 0%, #006400 100%);
+}
+
+.about-intro {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 2.5em;
+    padding: 20px;
+    text-align: justify;
+    border-left: 3px solid #8b0000;
+    background: linear-gradient(to right, rgba(139, 0, 0, 0.05) 0%, transparent 100%);
+    font-family: "Times New Roman", Times, serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2.section-title {
+    font-size: 2em;
+    color: #34495e;
+    margin: 2.5em 0 1.2em;
+    padding-bottom: 0.5em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    letter-spacing: 0.3px;
+    position: relative;
+    border-bottom: 2px solid #eaeaea;
+    transition: color 0.3s ease;
+}
+
+h2.section-title:hover {
+    color: #8b0000;
+}
+
+h3.experience-title {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin: 1.8em 0 1em;
+    line-height: 1.4;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border-left: 3px solid #006400;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+h3.experience-title:hover {
+    border-left-width: 5px;
+    padding-left: 20px;
+    color: #006400;
+}
+
+h4.institution-title {
+    font-size: 1.3em;
+    color: #34495e;
+    margin: 1.5em 0 0.8em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 600;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.education-item {
+    margin-bottom: 2em;
+    padding-left: 20px;
+    border-left: 1px solid rgba(0, 100, 0, 0.2);
+}
+
+.education-degree {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.education-institution {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.5em;
+}
+
+.education-details {
+    margin-top: 1em;
+}
+
+.education-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0;
+}
+
+.education-details ul li {
+    margin: 0.6em 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.education-details ul li:before {
+    content: "•";
+    color: #8b0000;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin: 2em 0;
+}
+
+.skill-category {
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 0.05) 0%, transparent 100%);
+    padding: 1.2em 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%; /* 保证每个卡片高度一致 */
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-title {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 0.8em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.skill-title:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #8b4513;
+    transition: width 0.3s ease;
+}
+
+.skill-title:hover:after {
+    width: 100%;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.skill-list li {
+    margin: 0.6em 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+    transition: all 0.2s ease;
+}
+
+.skill-list li:before {
+    content: "•";
+    color: #8b4513;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.skill-list li:hover {
+    color: #8b4513;
+    transform: translateX(5px);
+}
+
+.awards-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+.awards-list li {
+    margin: 1em 0;
+    padding: 12px 15px 12px 35px;
+    position: relative;
+    line-height: 1.6;
+    transition: all 0.2s ease;
+    background: linear-gradient(to right, rgba(0, 100, 0, 0.05) 0%, transparent 100%);
+    border-left: 3px solid #006400;
+}
+
+.awards-list li:before {
+    content: "🏆";
+    position: absolute;
+    left: 10px;
+}
+
+.awards-list li:hover {
+    transform: translateX(5px);
+    background: linear-gradient(to right, rgba(0, 100, 0, 0.1) 0%, transparent 100%);
+}
+
+/* 链接样式 */
+a {
+    color: #006400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted #006400;
+}
+
+a:hover {
+    color: #8b0000;
+    border-bottom: 1px solid #8b0000;
+}
+
+/* 夜间模式样式优化 */
+html.dark .page-content {
+    background: linear-gradient(to bottom, #1a1a1a 0%, #222222 100%);
+}
+
+html.dark h1.page-title {
+    background: linear-gradient(to right, #ffffff 0%, #e6e6e6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+html.dark h1.page-title:after {
+    background: linear-gradient(to right, #a52a2a 0%, #2e8b57 100%);
+}
+
+html.dark .about-intro {
+    color: #e6e6e6;
+    background: linear-gradient(to right, rgba(165, 42, 42, 0.1) 0%, transparent 100%);
+    border-left: 3px solid #a52a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+html.dark h2.section-title {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+
+html.dark h2.section-title:hover {
+    color: #a52a2a;
+}
+
+html.dark h3.experience-title {
+    color: #ffffff;
+    border-left: 3px solid #2e8b57;
+}
+
+html.dark h3.experience-title:hover {
+    color: #2e8b57;
+}
+
+html.dark h4.institution-title {
+    color: #e6e6e6;
+    border-bottom-color: #444;
+}
+
+html.dark .education-item, 
+html.dark .experience-item {
+    border-left-color: rgba(46, 139, 87, 0.3);
+}
+
+html.dark .education-degree {
+    color: #e6e6e6;
+}
+
+html.dark .education-institution {
+    color: #cccccc;
+}
+
+html.dark .skill-category {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .skill-title {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+
+html.dark .skill-title:after {
+    background: #a0522d;
+}
+
+html.dark .skill-list li:before {
+    color: #a0522d;
+}
+
+html.dark .skill-list li:hover {
+    color: #a0522d;
+}
+
+html.dark .awards-list li {
+    background: linear-gradient(to right, rgba(46, 139, 87, 0.1) 0%, transparent 100%);
+    border-left: 3px solid #2e8b57;
+    color: #e0e0e0;
+}
+
+html.dark .awards-list li:hover {
+    background: linear-gradient(to right, rgba(46, 139, 87, 0.2) 0%, transparent 100%);
+}
+
+html.dark a {
+    color: #6bb9ff;
+    border-bottom: 1px dotted #6bb9ff;
+}
+
+html.dark a:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* 响应式设计优化 */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 40px 20px;
+    }
+    
+    h1.page-title {
+        font-size: 2.2em;
+    }
+    
+    h2.section-title {
+        font-size: 1.8em;
+        margin: 2em 0 1em;
+    }
+    
+    h3.experience-title {
+        font-size: 1.5em;
+        margin: 1.5em 0 0.8em;
+    }
+    
+    h4.institution-title {
+        font-size: 1.2em;
+    }
+    
+    .education-degree {
+        font-size: 1.1em;
+    }
+    
+    .skills-section {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+    
+    .skill-category {
+        padding: 1.2em;
+        margin-bottom: 1em;
+    }
+    
+    .project-item {
+        padding: 8px 12px;
+    }
+    
+    .awards-list li {
+        padding: 10px 15px 10px 30px;
+    }
+    
+    .awards-list li:before {
+        left: 8px;
+    }
+    
+    .education-item, 
+    .experience-item {
+        padding-left: 15px;
+    }
+}
+
+.experience-item {
+    margin-bottom: 2em;
+    padding-left: 20px;
+    border-left: 1px solid rgba(0, 100, 0, 0.2);
+}
+
+.experience-details {
+    margin-top: 1em;
+}
+
+.experience-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.experience-details ul li {
+    margin: 0.6em 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.experience-details ul li:before {
+    content: "•";
+    color: #006400;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.experience-details ol {
+    margin: 0.5em 0 0.5em 1em;
+    padding-left: 1em;
+}
+
+.experience-details ol li {
+    margin: 0.4em 0;
+    padding-left: 0.5em;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.projects-list {
+    margin: 0.5em 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-item {
+    margin: 0.8em 0;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #006400;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+html.dark .experience-details ul li:before {
+    color: #2e8b57;
+}
+
+html.dark .experience-details ol li {
+    color: #e0e0e0;
+}
+
+html.dark .project-item {
+    background-color: #2d2d2d;
+    border-left: 3px solid #2e8b57;
+}
+
+html.dark .project-item:hover {
+    background-color: #333333;
+}
+
+html.dark .education-details ul li:before {
+    color: #a52a2a;
+} 

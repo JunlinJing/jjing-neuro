@@ -2,170 +2,141 @@
 layout: page
 title: About
 permalink: /about/
+custom_css: about.css
 ---
 
-# About Me
+<h1 class="page-title">About Me</h1>
 
+<div class="about-intro">
 My previous research focused on machine learning and the application of ICA-derived approaches to functional neuroimaging. I'm currently working on the use of machine learning to investigate abnormal functional connectomes in individual patients with neurological and psychiatric disorders.
+</div>
 
+<h2 class="section-title">Education</h2>
 
+<div class="education-item">
+  <div class="education-degree">Ph.D. in Functional Neuroimaging (2024-Present)</div>
+  <div class="education-institution">Ludwig Maximilian University of Munich, Munich, Germany</div>
+  <div class="education-details">
+    <ul>
+      <li>Supervised by <a href="https://scholar.google.com.hk/citations?user=wNPXkVAAAAAJ&hl=zh-CN&oi=sra">Prof. Sophia Stöcklein</a></li>
+      <li>Research focus: Neuroimaging and Machine Learning</li>
+    </ul>
+  </div>
+</div>
 
-## Education
+<div class="education-item">
+  <div class="education-degree">M.S. in Biomedical Engineering (2021-2024)</div>
+  <div class="education-institution">University of Electronic Science and Technology of China, Chengdu, Sichuan</div>
+  <div class="education-details">
+    <ul>
+      <li>Supervised by <a href="https://scholar.google.com.hk/citations?user=FJ8WWDYAAAAJ&hl=zh-CN&oi=ao">Prof. Bharat Biswal</a></li>
+      <li>Research focus: Brain Connectivity Analysis</li>
+    </ul>
+  </div>
+</div>
 
-- **Ph.D. in Functional Neuroimaging** (2024-Present)  
-  Ludwig Maximilian University of Munich, Munich, Germany
-  - Supervised by [Prof. Sophia Stöcklein](https://scholar.google.com.hk/citations?user=wNPXkVAAAAAJ&hl=zh-CN&oi=sra)
-  - Research focus: Neuroimaging and Machine Learning
+<div class="education-item">
+  <div class="education-degree">B.S. in Electronic Information Science and Technology (2016-2020)</div>
+  <div class="education-institution">Southwest Petroleum University, Chengdu, Sichuan</div>
+  <div class="education-details">
+    <ul>
+      <li>Focus on Signal Processing and Computing</li>
+    </ul>
+  </div>
+</div>
 
-- **M.S. in Biomedical Engineering** (2021-2024)  
-  University of Electronic Science and Technology of China, Chengdu, Sichuan
-  - Supervised by [Prof. Bharat Biswal](https://scholar.google.com.hk/citations?user=FJ8WWDYAAAAJ&hl=zh-CN&oi=ao)
-  - Research focus: Brain Connectivity Analysis
+<h2 class="section-title">Research Experience</h2>
 
-- **B.S. in Electronic Information Science and Technology** (2016-2020)  
-  Southwest Petroleum University, Chengdu, Sichuan
-  - Focus on Signal Processing and Computing
+<h3 class="experience-title">Master (2021-2024)</h3>
+<div class="experience-item">
+  <h4 class="institution-title">Brain Connectivity Lab, University of Electronic Science and Technology of China</h4>
+  <div class="experience-details">
+    <ul>
+      <li>Led three major projects in neuroimaging and machine learning applications</li>
+      <li>Developed novel pipeline for functional brain network analysis in clinical populations</li>
+      <li>Published research in neuroscience journals including Frontiers in Neuroscience</li>
+      <li>Projects include:</li>
+    </ul>
+    <div class="projects-list">
+      <div class="project-item">Brain Age Prediction in Autism</div>
+      <div class="project-item">Classification of Alzheimer's Disease Using Resting-State Spatiotemporal Features</div>
+      <div class="project-item">Functional and Structural Brain Division in Cocaine Addiction</div>
+    </div>
+  </div>
+</div>
 
-## Research Experience
+<h3 class="experience-title">Additional Experience</h3>
+<div class="experience-item">
+  <h4 class="institution-title">Datawhale (Open Source AI Learning Community) (07/2023-10/2023)</h4>
+  <div class="experience-details">
+    <ul>
+      <li>Brain PET Image Analysis and Disease Prediction Challenge</li>
+      <li>Biological age assessment and age-related disease risk prediction</li>
+      <li>"Spark Cup" Cognitive Large Model Scene Innovation Competition</li>
+    </ul>
+  </div>
+</div>
 
-### Master (2021-2024)
-**Brain Connectivity Lab, University of Electronic Science and Technology of China**
-- Led three major projects in neuroimaging and machine learning applications
-- Developed novel pipeline for functional brain network analysis in clinical populations
-- Published research in neuroscience journals including Frontiers in Neuroscience
-- Projects include:
-  1. Brain Age Prediction in Autism
-  2. Classification of Alzheimer's Disease Using Resting-State Spatiotemporal Features
-  3. Functional and Structural Brain Division in Cocaine Addiction
+<div class="experience-item">
+  <h4 class="institution-title">COSN (Chinese Open Science Network) (09/2023-Present)</h4>
+  <div class="experience-details">
+    <ul>
+      <li>Membership in OpenTransfer group</li>
+      <li>Participating in developing automated translation tools</li>
+    </ul>
+  </div>
+</div>
 
+<h2 class="section-title">Skills</h2>
 
-#### Additional Experience
-- **Datawhale (Open Source AI Learning Community)** (07/2023-10/2023)
-  - Brain PET Image Analysis and Disease Prediction Challenge
-  - Biological age assessment and age-related disease risk prediction
-  - "Spark Cup" Cognitive Large Model Scene Innovation Competition
+<div class="skills-section">
+  <div class="skill-category">
+    <div class="skill-title">Programming & Tools</div>
+    <ul class="skill-list">
+      <li>Python</li>
+      <li>MATLAB</li>
+      <li>C++</li>
+      <li>Linux (Bash)</li>
+      <li>Version Control: Git</li>
+      <li>Containerization: Docker</li>
+    </ul>
+  </div>
 
-- **COSN (Chinese Open Science Network)** (09/2023-Present)
-  - Membership in OpenTransfer group
-  - Participating in developing automated translation tools
+  <div class="skill-category">
+    <div class="skill-title">Neuroimaging & MRI</div>
+    <ul class="skill-list">
+      <li>DPABI, SPM, GIFT</li>
+      <li>FSL, Freesurfer, fMRIPrep</li>
+      <li>BrainNet Viewer</li>
+      <li>Independent Component Analysis (ICA)</li>
+      <li>MRI Scanning Experience (20+ scans)</li>
+    </ul>
+  </div>
 
-## Skills
+  <div class="skill-category">
+    <div class="skill-title">Analysis Expertise</div>
+    <ul class="skill-list">
+      <li>Functional Connectivity Analysis (Advanced)</li>
+      <li>Structural Connectivity Analysis (Intermediate)</li>
+      <li>Diffusion MRI Processing (Basic)</li>
+      <li>Machine Learning & Deep Learning (Advanced)</li>
+    </ul>
+  </div>
 
-- **Programming Languages:**
-  - Python
-  - MATLAB
-  - C++
-  - Linux (Bash)
+  <div class="skill-category">
+    <div class="skill-title">Languages</div>
+    <ul class="skill-list">
+      <li>Chinese (Native)</li>
+      <li>English (Fluent)</li>
+      <li>German (Beginner)</li>
+    </ul>
+  </div>
+</div>
 
-- **Research Tools:**
-  - Neuroimaging Tools: DPABI, SPM, GIFT, FSL, Freesurfer, fMRIPrep, BrainNet
-  - Version Control: Git
-  - Containerization: Docker
+<h2 class="section-title">Awards & Honors</h2>
 
-- **Research Experience:**
-  - MRI Scanning: Experience with Amblyopia Children and Internet Gaming Disorder participants (20+ scans)
-  - Neuroimaging Analysis:
-    - Functional Connectivity Analysis (Advanced)
-    - Structural Connectivity Analysis (Intermediate)
-    - Diffusion MRI Processing (Basic)
-    - Machine Learning & Deep Learning (Advanced)
-    - Independent Component Analysis (ICA) for brain connectivity (Expert)
-
-- **Languages:** 
-  - Chinese (Native)
-  - English (Fluent)
-  - German (Beginner)
-
-## Awards & Honors
-
-- University Academic Scholarship, University of Electronic Science and Technology (2022 & 2023)
-- Research Paper Scholarship, Brain Connectivity Lab (2023)
-
-
-<style>
-body {
-    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: justify;
-    color: #2c3e50;
-}
-
-html.dark body {
-    color: #f0f0f0;
-}
-
-h1, h2 {
-    color: #2c3e50;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-align: left;
-    font-weight: 600;
-}
-
-html.dark h1, 
-html.dark h2 {
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-html.dark h2 {
-    border-bottom: 2px solid #444;
-}
-
-ul {
-    padding-left: 20px;
-    text-align: justify;
-}
-
-li {
-    margin-bottom: 10px;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-html.dark li {
-    color: #e0e0e0;
-}
-
-p {
-    text-align: justify;
-    margin-bottom: 1.5em;
-}
-
-html.dark p {
-    color: #e0e0e0;
-}
-
-strong {
-    color: #34495e;
-    font-weight: 600;
-}
-
-html.dark strong {
-    color: #ffffff;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-html.dark a {
-    color: #6bb9ff;
-}
-
-html.dark a:hover {
-    color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-    /* 这些样式将被覆盖，使用全局的dark模式选择器 */
-}
-</style>
+<ul class="awards-list">
+  <li>China Scholarship Council (CSC) PhD Scholarship, Germany (2024)</li>
+  <li>University Academic Scholarship, University of Electronic Science and Technology (2022 & 2023)</li>
+  <li>Research Paper Scholarship, Brain Connectivity Lab (2023)</li>
+</ul>
