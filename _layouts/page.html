@@ -15,6 +15,7 @@ layout: default
 </div>
 {% endif %}
 
+{% if page.url != "/about/" and page.url != "/jjing-neuro/about/" and page.url != "/publications/" and page.url != "/jjing-neuro/publications/" and page.url != "/research/" and page.url != "/jjing-neuro/research/" %}
 <style>
 .page-content {
     max-width: 1200px;
@@ -26,3 +27,4 @@ layout: default
     margin-top: -100px;
 }
 </style>
+{% endif %}

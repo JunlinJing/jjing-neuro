@@ -3,7 +3,9 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 30px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.7;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
 }
 
 .publications-container {
@@ -16,48 +18,114 @@
 .publications-container h2, 
 .publications-container h3 {
     color: #2c3e50;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 .publications-container h1 {
-    font-size: 2.5em;
-    margin-bottom: 1.5em;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 0.3em;
+    font-size: 2.8em;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.5em;
+    position: relative;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+    background: linear-gradient(to right, #2c3e50 0%, #34495e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+.publications-container h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #8b0000 0%, #006400 100%);
+}
+
+/* 为不同类型的出版物添加不同的样式 */
 .publications-container h2 {
-    border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
     margin-top: 30px;
-    font-size: 1.8em;
+    font-size: 2em;
     color: #34495e;
-    margin: 2em 0 1em;
+    margin: 2.5em 0 1.2em;
+    position: relative;
+    padding-left: 15px;
+    letter-spacing: 0.3px;
+    border-bottom: 2px solid #eaeaea;
+    transition: color 0.3s ease;
+}
+
+.publications-container h2:hover {
+    color: #8b0000;
+}
+
+/* 为每种类型的出版物添加不同的左边框颜色 */
+.publications-container h2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    height: 60%;
+    width: 4px;
+    transition: all 0.3s ease;
+}
+
+/* 为Journal Articles添加特定样式 */
+.publications-container h2:nth-of-type(1):before {
+    background-color: #8b0000;
+}
+
+/* 为Conference Papers添加特定样式 */
+.publications-container h2:nth-of-type(2):before {
+    background-color: #006400;
+}
+
+/* 为Preprints添加特定样式 */
+.publications-container h2:nth-of-type(3):before {
+    background-color: #8b4513;
 }
 
 .publications-container h3 {
     margin-top: 25px;
     color: #34495e;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: 1em;
     padding-bottom: 0.5em;
-    border-bottom: 2px solid #eee;
+    font-style: italic;
+    border-bottom: 2px solid #eaeaea;
 }
 
 /* Publication item layout */
 .publication-item {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.6;
     background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    transition: all 0.3s ease;
+    padding: 15px 0;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* 为不同类型的出版物项目添加不同的左边框颜色 */
+.journal-article {
+    border-left: 3px solid #8b0000;
+    padding-left: 15px;
+}
+
+.conference-paper {
+    border-left: 3px solid #006400;
+    padding-left: 15px;
+}
+
+.preprint {
+    border-left: 3px solid #8b4513;
+    padding-left: 15px;
 }
 
 .publication-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
 }
 
 .publication-number {
@@ -65,6 +133,8 @@
     font-weight: bold;
     color: #34495e;
     font-size: 1.1em;
+    font-family: "Times New Roman", Times, serif;
+    transition: color 0.3s ease;
 }
 
 .publication-content {
@@ -74,20 +144,22 @@
 /* Paper titles */
 .publication-title {
     color: #2c3e50;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 600;
     margin-bottom: 15px;
     line-height: 1.4;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 /* Author names */
 .publication-authors {
-    font-size: 1.1em;
+    font-size: 1.05em;
     line-height: 1.7;
     margin-bottom: 10px;
     white-space: nowrap;
     overflow-x: auto;
     padding-bottom: 5px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .author-highlight {
@@ -101,12 +173,13 @@
     font-size: 1.05em;
     font-style: italic;
     color: #555;
+    font-family: "Times New Roman", Times, serif;
 }
 
 /* Publication links */
 .publication-links {
     margin-top: 15px;
-    font-size: 1em;
+    font-size: 0.95em;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -118,37 +191,44 @@
     display: inline-flex;
     align-items: center;
     background: #3498db;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 6px 14px;
     font-weight: 500;
     transition: all 0.2s ease;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* 为不同类型的出版物链接添加不同的背景色 */
+.journal-article .publication-links a {
+    background: #8b0000;
+}
+
+.conference-paper .publication-links a {
+    background: #006400;
+}
+
+.preprint .publication-links a {
+    background: #8b4513;
 }
 
 /* Style for disabled links (href="#") - with higher specificity */
 .publications-container .publication-links a[href="#"],
 .publication-links a[href="#"] {
-    background-color: #cccccc !important;
-    color: #888888 !important;
+    background-color: #999999 !important;
+    color: #dddddd !important;
     cursor: not-allowed !important;
     pointer-events: none !important;
     opacity: 0.7 !important;
-    box-shadow: none !important;
-    transform: none !important;
 }
 
 .publication-links a:hover {
     opacity: 0.9;
-    transform: translateY(-1px);
-    text-decoration: none;
 }
 
 /* Prevent hover effects on disabled links */
 .publications-container .publication-links a[href="#"]:hover,
 .publication-links a[href="#"]:hover {
     opacity: 0.7 !important;
-    transform: none !important;
-    box-shadow: none !important;
-    background-color: #cccccc !important;
+    background-color: #999999 !important;
 }
 
 .publication-links a:before {
@@ -158,27 +238,25 @@
 }
 
 .publication-links a.doi-link:before {
-    content: "\f02e"; /* Bookmark icon */
+    content: "\f02e";
 }
 
 .publication-links a.pdf-link:before {
-    content: "\f1c1"; /* PDF file icon */
+    content: "\f1c1";
 }
 
 .publication-links a.code-link:before {
-    content: "\f121"; /* Code icon */
+    content: "\f121";
 }
 
 /* Dark mode support */
 html.dark .publication-item {
-    background: #2d2d2d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border: 1px solid #444;
+    background: transparent;
+    border-bottom: 1px solid #444;
 }
 
 html.dark .publication-title {
     color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 html.dark .publication-journal {
@@ -186,7 +264,20 @@ html.dark .publication-journal {
 }
 
 html.dark .publication-links a {
-    background: #4a9eff;
+    background: #4a6da0;
+}
+
+/* 为暗黑模式下不同类型的出版物链接添加不同的背景色 */
+html.dark .journal-article .publication-links a {
+    background: #a52a2a;
+}
+
+html.dark .conference-paper .publication-links a {
+    background: #2e8b57;
+}
+
+html.dark .preprint .publication-links a {
+    background: #a0522d;
 }
 
 /* Dark mode disabled links - with higher specificity */
@@ -194,11 +285,20 @@ html.dark .publications-container .publication-links a[href="#"],
 html.dark .publication-links a[href="#"] {
     background: #555555 !important;
     color: #999999 !important;
-    box-shadow: none !important;
 }
 
 html.dark .author-highlight {
     color: #6bb9ff;
+}
+
+html.dark .publication-item:hover {
+    background-color: #2d2d2d;
+}
+
+html.dark .publications-container h1,
+html.dark .publications-container h2,
+html.dark .publications-container h3 {
+    border-bottom-color: #444;
 }
 
 /* Mobile responsive adjustments */
@@ -228,7 +328,122 @@ html.dark .author-highlight {
     }
     
     .publication-item {
-        padding: 18px;
-        margin-bottom: 25px;
+        padding: 15px 0 15px 10px;
     }
+}
+
+/* 暗黑模式样式优化 */
+html.dark .page-content {
+    background: linear-gradient(to bottom, #1a1a1a 0%, #222222 100%);
+}
+
+html.dark .publications-container h1 {
+    background: linear-gradient(to right, #ffffff 0%, #e6e6e6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+html.dark .publications-container h1:after {
+    background: linear-gradient(to right, #a52a2a 0%, #2e8b57 100%);
+}
+
+html.dark .publications-container h2 {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+
+html.dark .publications-container h2:hover {
+    color: #a52a2a;
+}
+
+html.dark .publications-container h3 {
+    color: #ffffff;
+    border-bottom-color: #444;
+}
+
+html.dark .publication-item {
+    background: transparent;
+    border-bottom-color: #444;
+}
+
+html.dark .publication-title {
+    color: #ffffff;
+}
+
+html.dark .publication-journal {
+    color: #e0e0e0;
+}
+
+html.dark .publication-links a {
+    color: #ffffff;
+}
+
+html.dark .journal-article .publication-links a {
+    background: #a52a2a;
+}
+
+html.dark .conference-paper .publication-links a {
+    background: #2e8b57;
+}
+
+html.dark .preprint .publication-links a {
+    background: #a0522d;
+}
+
+html.dark .publications-container .publication-links a[href="#"],
+html.dark .publication-links a[href="#"] {
+    background-color: #555555 !important;
+    color: #999999 !important;
+}
+
+html.dark .author-highlight {
+    color: #e6e6e6;
+}
+
+html.dark .publication-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+html.dark .publications-container h1,
+html.dark .publications-container h2,
+html.dark .publications-container h3 {
+    color: #ffffff;
+}
+
+/* 响应式设计优化 */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 40px 20px;
+    }
+    
+    .publication-authors {
+        font-size: 1em;
+    }
+    
+    .publications-container h1 {
+        font-size: 2.2em;
+    }
+    
+    .publications-container h2 {
+        font-size: 1.8em;
+        margin: 2em 0 1em;
+    }
+    
+    .publications-container h3 {
+        font-size: 1.5em;
+    }
+    
+    .publication-title {
+        font-size: 1.2em;
+    }
+    
+    .publication-item {
+        padding: 10px 0;
+    }
+}
+
+/* 暗黑模式样式优化 */
+html.dark .publication-number {
+    color: #6bb9ff;  /* 更改为更亮的蓝色 */
+    text-shadow: 0 0 1px rgba(107, 185, 255, 0.2);  /* 添加轻微发光效果 */
 } 

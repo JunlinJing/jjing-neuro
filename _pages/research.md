@@ -4,199 +4,12 @@ title: Research
 permalink: /research/
 ---
 
-<style>
-.page-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 30px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-h1.page-title {
-    font-size: 3em;
-    color: #2c3e50;
-    margin-bottom: 1.2em;
-    line-height: 1.4;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 0.3em;
-}
-
-.research-intro {
-    font-size: 1.25em;
-    line-height: 1.8;
-    color: #2c3e50;
-    margin-bottom: 3em;
-    padding: 0 10px;
-}
-
-h2.section-title {
-    font-size: 2.2em;
-    color: #34495e;
-    margin: 2em 0 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid #3498db;
-}
-
-h3.project-title {
-    font-size: 1.8em;
-    color: #2c3e50;
-    margin: 1.5em 0 1em;
-    line-height: 1.4;
-}
-
-.project-description {
-    font-size: 1.15em;
-    line-height: 1.8;
-    color: #34495e;
-    margin: 1.5em 0;
-    padding: 0 10px;
-}
-
-.project-list {
-    list-style: none;
-    padding: 0;
-    margin: 1.5em 0;
-}
-
-.project-list li {
-    font-size: 1.15em;
-    line-height: 1.8;
-    margin: 1em 0;
-    padding-left: 25px;
-    position: relative;
-    color: #34495e;
-}
-
-.project-list li:before {
-    content: "•";
-    color: #3498db;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-.methods-section {
-    margin: 3em 0;
-    padding: 0 10px;
-}
-
-.methods-category {
-    margin: 2em 0;
-}
-
-.methods-title {
-    font-size: 1.4em;
-    color: #2c3e50;
-    font-weight: 600;
-    margin-bottom: 1em;
-}
-
-.methods-list {
-    list-style: none;
-    padding: 0;
-    margin: 1em 0;
-}
-
-.methods-list li {
-    font-size: 1.15em;
-    line-height: 1.8;
-    margin: 0.8em 0;
-    padding-left: 25px;
-    position: relative;
-    color: #34495e;
-}
-
-.methods-list li:before {
-    content: "•";
-    color: #3498db;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* 夜间模式样式 */
-html.dark h1.page-title {
-    color: #ffffff;
-    border-bottom-color: #4a9eff;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
-
-html.dark .research-intro {
-    color: #e6e6e6;
-    background-color: rgba(45, 45, 45, 0.6);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    border-left: 3px solid #4a9eff;
-}
-
-html.dark h2.section-title {
-    color: #ffffff;
-    border-bottom-color: #4a9eff;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-html.dark h3.project-title {
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-html.dark .project-description {
-    color: #e6e6e6;
-    background-color: rgba(45, 45, 45, 0.5);
-    padding: 15px;
-    border-radius: 6px;
-}
-
-html.dark .project-list li,
-html.dark .methods-list li {
-    color: #e0e0e0;
-}
-
-html.dark .project-list li:before,
-html.dark .methods-list li:before {
-    color: #4a9eff;
-}
-
-html.dark .methods-title {
-    color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .page-content {
-        padding: 40px 20px;
-    }
-    
-    h1.page-title {
-        font-size: 2.5em;
-    }
-    
-    h2.section-title {
-        font-size: 2em;
-    }
-    
-    h3.project-title {
-        font-size: 1.6em;
-    }
-    
-    .research-intro,
-    .project-description,
-    .project-list li,
-    .methods-list li {
-        font-size: 1.1em;
-        line-height: 1.7;
-    }
-    
-    .methods-title {
-        font-size: 1.3em;
-    }
-}
-</style>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/research.css">
 
 <h1 class="page-title">Research</h1>
 
 <div class="research-intro">
-My research focuses on machine learning applications in neuroimaging analysis, particularly in the investigation of functional brain connectivity patterns in neurological and psychiatric disorders. I combine advanced computational methods with resting-state functional MRI data to develop novel approaches for personalized diagnosis and treatment evaluation.
+My research focuses on machine learning applications in neuroimaging analysis, particularly in the investigation of functional brain connectivity patterns in neurological and psychiatric disorders. I combine advanced computational methods with resting-state functional MRI data to develop novel approaches for personalized diagnosis and treatment evaluation. This work is situated at the intersection of neuroscience, computer science, and clinical medicine, with the goal of advancing our understanding of brain function in health and disease.
 </div>
 
 <h2 class="section-title">Current Projects</h2>
@@ -204,7 +17,7 @@ My research focuses on machine learning applications in neuroimaging analysis, p
 <h3 class="project-title">Use of Machine Learning for Investigation of Deviant Functional Connectome</h3>
 
 <div class="project-description">
-In recent years, Intrinsic Functional Connectivity Magnetic Resonance Imaging (fcMRI) has become a valuable tool for understanding how different parts of the human brain communicate with each other. This project investigates:
+In recent years, Intrinsic Functional Connectivity Magnetic Resonance Imaging (fcMRI) has become a valuable tool for understanding how different parts of the human brain communicate with each other. This project investigates the application of advanced machine learning techniques to identify and characterize abnormal connectivity patterns that may serve as biomarkers for neurological and psychiatric conditions.
 </div>
 
 <ul class="project-list">
@@ -217,13 +30,14 @@ In recent years, Intrinsic Functional Connectivity Magnetic Resonance Imaging (f
 <h3 class="project-title">Clinical Applications of Brain Connectivity Analysis</h3>
 
 <div class="project-description">
-Translating neuroimaging research into clinical practice through:
+This project focuses on translating neuroimaging research into clinical practice by developing tools and methodologies that can be applied in medical settings. The work involves close collaboration with clinicians to ensure that the developed methods address relevant clinical questions and can be integrated into existing diagnostic and treatment workflows.
 </div>
 
 <ul class="project-list">
     <li>Development of automated analysis pipelines for clinical fcMRI data</li>
     <li>Investigation of tumor-related changes in brain connectivity</li>
     <li>Assessment of whole-brain connectivity alterations in various pathological conditions</li>
+    <li>Longitudinal analysis of treatment effects on functional brain networks</li>
 </ul>
 
 <h2 class="section-title">Research Methods</h2>
@@ -232,94 +46,53 @@ Translating neuroimaging research into clinical practice through:
     <div class="methods-category">
         <div class="methods-title">Neuroimaging Analysis</div>
         <ul class="methods-list">
-            <li>Resting-state fMRI processing</li>
-            <li>Functional connectivity analysis</li>
-            <li>Advanced machine learning applications</li>
+            <li>Resting-state fMRI processing and quality control</li>
+            <li>Functional connectivity analysis (seed-based, ROI-to-ROI, voxel-wise)</li>
+            <li>Graph theoretical approaches for network analysis</li>
+            <li>Dynamic functional connectivity assessment</li>
         </ul>
     </div>
 
     <div class="methods-category">
-        <div class="methods-title">Data Analysis</div>
+        <div class="methods-title">Machine Learning Techniques</div>
+        <ul class="methods-list">
+            <li>Supervised learning for classification and prediction</li>
+            <li>Deep learning approaches for neuroimaging data</li>
+            <li>Feature selection and dimensionality reduction</li>
+            <li>Transfer learning and domain adaptation</li>
+        </ul>
+    </div>
+
+    <div class="methods-category">
+        <div class="methods-title">Statistical Analysis</div>
         <ul class="methods-list">
             <li>Large-scale neuroimaging data processing</li>
             <li>Statistical modeling and inference</li>
-            <li>Pattern recognition in clinical data</li>
-        </ul>
-    </div>
-
-    <div class="methods-category">
-        <div class="methods-title">Computational Approaches</div>
-        <ul class="methods-list">
-            <li>Deep learning for neuroimaging</li>
-            <li>Network analysis and graph theory</li>
-            <li>Multivariate pattern analysis</li>
+            <li>Multiple comparison correction</li>
+            <li>Longitudinal data analysis</li>
         </ul>
     </div>
 </div>
 
-<style>
-.page-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
+<h2 class="section-title">Collaborations</h2>
 
-h1, h2, h3 {
-    color: #2c3e50;
-    margin-top: 30px;
-}
+<div class="project-description">
+My research involves collaborations with experts in neuroscience, computer science, and clinical medicine. These interdisciplinary partnerships enable comprehensive approaches to complex questions in brain connectivity research. Current collaborations include:
+</div>
 
-html.dark h1, 
-html.dark h2, 
-html.dark h3 {
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
+<ul class="project-list">
+    <li>The Clinical Hospital of Chengdu Brain Science Institute, MOE Key Laboratory for Neuroinformation, School of Life Science and Technology, University of Electronic Science and Technology of China, Chengdu, China</li>
+    <li>Department of Biomedical Engineering, New Jersey Institute of Technology, Newark, NJ, United States</li>
+    <li>Department of Radiology, LMU University Hospital, LMU Munich, Germany</li>
+</ul>
 
-h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-html.dark h2 {
-    border-bottom: 2px solid #444;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-html.dark li {
-    color: #e0e0e0;
-}
-
-strong {
-    color: #34495e;
-}
-
-html.dark strong {
-    color: #ffffff;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-html.dark a {
-    color: #6bb9ff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-html.dark a:hover {
-    color: #ffffff;
-}
-</style> 
+<div class="research-references">
+    <div class="reference-title">Selected References</div>
+    <ul class="reference-list">
+        <li>Jing J., Klugah-Brown B., Xia S., Sheng M., Biswal B. B. (2023). Comparative analysis of group information-guided independent component analysis and independent vector analysis for assessing brain functional network characteristics in autism spectrum disorder. <em>Frontiers in Neuroscience</em>, 19 October 2023.</li>
+        <li>Jing J., Wang P., Klugah-Brown B., Michael A. M., Biswal B. B. (2024). Capturing Individual Variability in Spatial and Temporal Properties of Resting-State fMRI: A Comparison of Data-Driven Methods. <em>Authorea</em>, 23 April 2024.</li>
+        <li>Niu B., Wu H., Li Y., Klugah-Brown B., Hanna G., Yao Y., Jing J., Baig T. I., Xia Y., Yao D., Biswal B. (2024). Topological functional network analysis of cortical blood flow in hyperacute ischemic rats. <em>Brain Structure and Function</em>, Volume 230, Article 20.</li>
+        <li>Agoalikum E., Klugah-Brown B., Wu H., Jing J., Biswal B. B. (2023). Gender Differences in Dynamic Functional Network Connectivity in Pediatric and Adult Patients with Attention-Deficit/Hyperactivity Disorder. <em>Brain Connectivity</em>, 12 May 2023.</li>
+        <li>Agoalikum E., Klugah-Brown B., Wu H., Hu P., Jing J., Biswal B. (2023). Structural differences among children, adolescents, and adults with attention-deficit/hyperactivity disorder and abnormal Granger causality of the right pallidum and whole-brain. <em>Frontiers in Human Neuroscience</em>, 14 February 2023.</li>
+    </ul>
+</div> 

@@ -64,95 +64,174 @@
                     </li>
                 {% endif %}
             {% endif %}
-
-            <li class="nav-item">
-                <button id="dark-mode-toggle" class="nav-link dark-mode-toggle" aria-label="Toggle Dark Mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </li>
         </ul>
+        <button id="dark-mode-toggle" class="nav-link dark-mode-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
     </div>
 </nav>
 
 <style>
-    .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lora:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
 
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    gap: 2.2rem;
+    font-family: 'Merriweather', 'Lora', 'Roboto Slab', serif;
+    font-size: 1.18em;
+    font-weight: 500;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 0.5rem 1.5rem;
+    flex: 1 1 auto;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    padding: 12px 26px;
+    color: #23305a;
+    text-decoration: none;
+    border-radius: 18px;
+    transition: all 0.18s;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.nav-link i {
+    margin-right: 0.3em;
+    font-size: 1.15em;
+    opacity: 0.92;
+}
+
+.nav-link span {
+    font-size: 1em;
+}
+
+.nav-link:hover, .nav-link:focus {
+    background: #23305a;
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 2px 8px rgba(35,48,90,0.10);
+}
+
+.dark-mode-toggle {
+    background: transparent;
+    border: 1.5px solid #bfc7d1;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.18s;
+    margin-left: 0;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    position: fixed;
+    top: 36px;
+    right: 48px;
+    z-index: 1001;
+}
+
+.dark-mode-toggle i {
+    margin: 0;
+}
+
+.dark-mode-toggle:hover {
+    background: #23305a;
+    color: #fff;
+    border-color: #23305a;
+}
+
+@media (max-width: 1024px) {
     .nav-list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-wrap: wrap;
+        gap: 1.2rem;
+        font-size: 1.05em;
+        padding: 0.5rem 0.5rem;
     }
-
-    .nav-item {
-        margin: 0 5px;
-    }
-
     .nav-link {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        color: var(--nav-text);
-        text-decoration: none;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.05);
-        border: none;
-        cursor: pointer;
-        font-size: inherit;
-        font-family: inherit;
+        padding: 10px 14px;
     }
-
-    .nav-link i {
-        margin-right: 8px;
-        font-size: 1.1em;
-    }
-
-    .nav-link span {
-        font-size: 1em;
-    }
-
-    .nav-link:hover {
-        background: #4e4376;
-        color: white;
-        transform: translateY(-2px);
-    }
-
     .dark-mode-toggle {
-        background: transparent;
-        border: 1px solid var(--border-color);
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        right: 18px;
+        top: 18px;
     }
-
-    .dark-mode-toggle i {
-        margin: 0;
+}
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 4px;
     }
-
-    @media (max-width: 768px) {
-        .nav-list {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .nav-item {
-            width: 100%;
-            margin: 5px 0;
-        }
-
-        .nav-link {
-            justify-content: center;
-        }
+    .nav-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.7rem;
+        border-radius: 14px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        padding: 0.3rem 0.2rem;
+        font-size: 0.98em;
     }
+    .nav-item {
+        flex: 0 0 auto;
+    }
+    .nav-link {
+        padding: 8px 10px;
+        font-size: 0.98em;
+    }
+    .dark-mode-toggle {
+        right: 12px;
+        top: 12px;
+    }
+}
+html.dark .nav-list {
+    background: rgba(35,48,90,0.85);
+    box-shadow: 0 4px 24px rgba(74,158,255,0.10);
+}
+html.dark .nav-link {
+    color: #e0e4ea;
+}
+html.dark .nav-link:hover, html.dark .nav-link:focus {
+    background: #4a9eff;
+    color: #232a3a;
+}
+html.dark .dark-mode-toggle {
+    border-color: #4a9eff;
+    color: #b6d8ff;
+}
+html.dark .dark-mode-toggle:hover {
+    background: #4a9eff;
+    color: #232a3a;
+    border-color: #4a9eff;
+}
 </style>

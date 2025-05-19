@@ -1,0 +1,36 @@
+- category: personal
+  title: Personal Updates
+  items:
+    - date: May 23, 2025
+      timestamp: 20250523
+      content: PhD Basics for International Doctoral Researchers
+      tag: Personal
+      url: /news#personal-20250523
+      external_url: https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025
+      location: Ground floor, Leopoldstraße 30, 80802 München
+      details:
+        - "I will attend the event PhD Basics for International Doctoral Researchers at LMU Munich."
+        - "This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany."
+      
+    - date: October 1, 2024
+      timestamp: 20241001
+      content: Joined Functional Neuroimaging Lab at LMU Munich
+      tag: Personal
+      url: /news#personal-20241001
+      location: Munich, Germany
+      details:
+        - "Started Ph.D. research in Neuroimaging and Machine Learning under the supervision of Prof. Sophia Stöcklein"
+        - "Will focus on developing advanced computational methods for neuroimaging data analysis"
+
+- category: other
+  title: Other Updates
+  items:
+    - date: May 8, 2025
+      timestamp: 20250508
+      content: Website Created
+      tag: Site
+      url: /news#site-20250508
+      external_url: https://github.com/JunlinJing/jjing-neuro
+      details:
+        - "This academic website was created on May 8, 2025."
+        - "Source code and updates are available on GitHub." 

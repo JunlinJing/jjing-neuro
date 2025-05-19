@@ -14,7 +14,25 @@ layout: compress
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/dark-mode-fixes.css' | relative_url }}">
+    
+    <!-- 加载页面特定的CSS文件 -->
+    {% if page.url contains 'publications' %}
     <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
+    {% endif %}
+    
+    {% if page.url contains 'research' %}
+    <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+    {% endif %}
+    
+    {% if page.url contains 'about' %}
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+    {% endif %}
+    
+    <!-- 加载自定义CSS文件 -->
+    {% if page.custom_css %}
+    <link rel="stylesheet" href="{{ '/assets/css/' | append: page.custom_css | relative_url }}">
+    {% endif %}
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Favicon -->

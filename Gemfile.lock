@@ -310,6 +310,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   jemoji
+  listen (~> 3.9)
   tzinfo (>= 1, < 3)
   tzinfo-data
   webrick (~> 1.8)

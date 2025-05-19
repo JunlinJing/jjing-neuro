@@ -220,7 +220,7 @@ html.dark .news-social-share a {
     background-color: #ff2442; 
     color: white;
 }
-.news-social-share a.share-xiaohongshu svg {
+.news-social-share .share-xiaohongshu svg {
     width: 1em;
     height: 1em;
 }
@@ -233,54 +233,6 @@ html.dark .news-social-share a {
     .news-points { margin: 0 1.2rem 1.5rem 1.2rem; font-size: 1.02em; line-height: 1.7; padding-left: 2em; }
     .news-points li::before { left: -1.3em; }
     .news-social-share { margin: 0 1.2rem; padding: 1.2rem 0; }
-}
-
-/* 翻页控件样式 */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.pagination-btn {
-    padding: 8px 15px;
-    border: none;
-    background-color: var(--accent-color, #6c63ff);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.3s ease;
-}
-
-.pagination-btn:hover:not(:disabled) {
-    background-color: var(--accent-color-dark, #5a52d5);
-    transform: translateY(-2px);
-}
-
-.pagination-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.page-numbers {
-    font-size: 1em;
-    color: var(--text-color, #333);
-}
-
-@media (max-width: 768px) {
-    .pagination {
-        gap: 10px;
-    }
-    
-    .pagination-btn {
-        padding: 6px 10px;
-        font-size: 0.9em;
-    }
 }
 </style>
 
@@ -318,11 +270,8 @@ html.dark .news-social-share a {
         </div>
   
         <ul class="news-points">
-    
             <li>I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.</li>
-      
             <li>This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.</li>
-      
         </ul>
     
         <div class="news-social-share">
@@ -343,18 +292,14 @@ html.dark .news-social-share a {
         <span class="news-tag site">Site</span>
         <div class="news-info">
             <span><b>Date:</b> May 8, 2025</span>
-            
         </div>
         <div class="news-title">
             Website Created
         </div>
   
         <ul class="news-points">
-    
             <li>This academic website was created on May 8, 2025.</li>
-      
             <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
-      
         </ul>
     
         <div class="news-social-share">
@@ -382,11 +327,8 @@ html.dark .news-social-share a {
         </div>
   
         <ul class="news-points">
-    
             <li>Started Ph.D. research in Neuroimaging and Machine Learning under the supervision of Prof. Sophia Stöcklein</li>
-      
             <li>Will focus on developing advanced computational methods for neuroimaging data analysis</li>
-      
         </ul>
     
         <div class="news-social-share">
@@ -402,52 +344,27 @@ html.dark .news-social-share a {
             </a>
         </div>
     </div>
-  </div>
-
-  <!-- 添加翻页控件 -->
-  <div class="pagination" id="newsPagination">
-    <button class="pagination-btn prev" onclick="changePage('prev')" disabled>
-      <i class="fas fa-chevron-left"></i> Previous
-    </button>
-    <div class="page-numbers">
-      <span id="currentPage">1</span> / <span id="totalPages">1</span>
-    </div>
-    <button class="pagination-btn next" onclick="changePage('next')" disabled>
-      Next <i class="fas fa-chevron-right"></i>
-    </button>
-  </div>
-
+</div>
 
 <script>
-    // 设置每页显示的新闻条数
-    const itemsPerPage = 10;
-    let currentPage = 1;
-    let filteredCards = [];
-    
     document.addEventListener('DOMContentLoaded', function() {
-        // 初始化
+        // Initialize
         updateNewsCount();
-        initPagination();
     });
 
     function filterNews() {
         const category = document.getElementById('newsFilter').value;
         const cards = document.querySelectorAll('.news-card');
         
-        filteredCards = [];
         cards.forEach(card => {
             if (category === 'all' || card.dataset.category === category) {
-                card.style.display = 'none'; // 先隐藏所有卡片，后面再根据分页显示
-                filteredCards.push(card);
+                card.style.display = 'block';
             } else {
                 card.style.display = 'none';
             }
         });
         
-        // 重置到第一页
-        currentPage = 1;
         updateNewsCount();
-        initPagination();
     }
 
     function sortNews() {
@@ -468,89 +385,29 @@ html.dark .news-social-share a {
         
         // Re-append cards in the sorted order
         cards.forEach(card => newsContainer.appendChild(card));
-        
-        // 更新已过滤的卡片顺序
-        filteredCards = Array.from(document.querySelectorAll('.news-card')).filter(card => 
-            card.style.display !== 'none' || !card.style.display
-        );
-        
-        // 重新初始化分页
-        currentPage = 1;
-        initPagination();
     }
 
     function searchNews() {
         const searchText = document.getElementById('newsSearch').value.toLowerCase();
         const cards = document.querySelectorAll('.news-card');
         
-        filteredCards = [];
         cards.forEach(card => {
             const cardText = card.textContent.toLowerCase();
             if (cardText.includes(searchText)) {
-                card.style.display = 'none'; // 先隐藏所有卡片，后面再根据分页显示
-                filteredCards.push(card);
+                card.style.display = 'block';
             } else {
                 card.style.display = 'none';
             }
         });
         
-        // 重置到第一页
-        currentPage = 1;
         updateNewsCount();
-        initPagination();
     }
 
     function updateNewsCount() {
+        const visibleCards = document.querySelectorAll('.news-card[style="display: block;"], .news-card:not([style*="display"])').length;
         const countElem = document.getElementById('newsCount');
         if (countElem) {
-            countElem.textContent = filteredCards.length;
+            countElem.textContent = visibleCards;
         }
-    }
-    
-    function initPagination() {
-        // 如果没有过滤，就使用所有卡片
-        if (filteredCards.length === 0) {
-            filteredCards = Array.from(document.querySelectorAll('.news-card'));
-        }
-        
-        const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
-        document.getElementById('currentPage').textContent = currentPage;
-        document.getElementById('totalPages').textContent = totalPages;
-        
-        // 更新按钮状态
-        document.querySelector('.pagination-btn.prev').disabled = currentPage === 1;
-        document.querySelector('.pagination-btn.next').disabled = currentPage === totalPages || totalPages === 0;
-        
-        // 显示当前页的卡片
-        displayCurrentPageItems();
-    }
-    
-    function displayCurrentPageItems() {
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = Math.min(startIndex + itemsPerPage, filteredCards.length);
-        
-        // 隐藏所有卡片
-        document.querySelectorAll('.news-card').forEach(card => {
-            card.style.display = 'none';
-        });
-        
-        // 显示当前页的卡片
-        for (let i = startIndex; i < endIndex; i++) {
-            if (filteredCards[i]) {
-                filteredCards[i].style.display = 'block';
-            }
-        }
-    }
-    
-    function changePage(direction) {
-        const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
-        
-        if (direction === 'prev' && currentPage > 1) {
-            currentPage--;
-        } else if (direction === 'next' && currentPage < totalPages) {
-            currentPage++;
-        }
-        
-        initPagination();
     }
 </script>
