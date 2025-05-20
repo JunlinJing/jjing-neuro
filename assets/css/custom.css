@@ -42,73 +42,115 @@ li {
     text-align: justify;
 }
 
-/* 文本正文样式优化 */
+/* 学术风格文本正文样式优化 */
 .post-content {
-    font-size: 1.15em;
-    line-height: 1.8;
+    font-family: 'Merriweather', 'Noto Serif', 'Source Serif Pro', 'PT Serif', Georgia, serif;
+    font-size: 1.05em;
+    line-height: 1.85;
+    color: var(--text-color);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 25px 20px;
 }
 
 .post-content p,
 .page-content p {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.5em;
+    hyphens: auto;
 }
 
-/* 标题样式优化 */
+/* 强化段落首行缩进，增强学术风格 */
+.post-content p {
+    text-indent: 0;
+}
+
+/* 标题样式优化 - 更学术化 */
 .post-content h2 {
-    font-size: 1.9em;
-    margin-top: 1.5em;
-    margin-bottom: 0.8em;
+    font-family: 'Source Serif Pro', 'Playfair Display', Georgia, serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 0.9em;
     color: var(--heading-color);
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.3em;
+    padding-bottom: 0.4em;
+    letter-spacing: -0.01em;
 }
 
 .post-content h3 {
-    font-size: 1.6em;
-    margin-top: 1.3em;
+    font-family: 'Source Serif Pro', 'Playfair Display', Georgia, serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 1.5em;
     margin-bottom: 0.7em;
     color: var(--heading-color);
+    letter-spacing: -0.01em;
 }
 
 .post-content h4 {
-    font-size: 1.4em;
-    margin-top: 1.2em;
+    font-family: 'Source Serif Pro', 'Playfair Display', Georgia, serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 1.3em;
     margin-bottom: 0.6em;
+    letter-spacing: -0.01em;
 }
 
-/* 列表样式优化 */
+/* 列表样式优化 - 学术风格 */
 .post-content ul, 
 .post-content ol {
-    padding-left: 2em;
-    margin-bottom: 1.2em;
+    padding-left: 2.2em;
+    margin-bottom: 1.5em;
+    margin-top: 0.8em;
 }
 
 .post-content li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
+    line-height: 1.7;
 }
 
-/* 引用样式 */
+/* 学术风格引用样式 */
 blockquote {
-    border-left: 4px solid var(--border-color);
-    padding-left: 1em;
-    margin-left: 0;
+    border-left: 3px solid var(--border-color);
+    padding: 0.8em 1.2em;
+    margin: 1.5em 0;
     color: var(--meta-color);
     font-style: italic;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 0 4px 4px 0;
+}
+
+html.dark blockquote {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+blockquote p {
+    margin-bottom: 0.5em !important;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 0.85em;
+    margin-top: 0.6em;
+    opacity: 0.8;
 }
 
 /* 增强页面整体可读性 */
 body {
     font-size: 17px;
-    letter-spacing: 0.015em;
-    word-spacing: 0.03em;
+    letter-spacing: 0.01em;
+    word-spacing: 0.04em;
 }
 
-/* 文章标题样式增强 */
+/* 文章标题样式增强 - 学术风格 */
 .post-title {
-    font-size: 2.6em;
+    font-family: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+    font-size: 2.4em;
+    font-weight: 700;
     line-height: 1.3;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     margin-bottom: 0.8em;
+    text-align: center;
 }
 
 /* 页面内容统一样式 */
@@ -116,17 +158,35 @@ body {
 .project-description,
 .research-intro,
 main p {
-    font-size: 1.08em;
-    line-height: 1.7;
-    margin-bottom: 1.4em;
+    font-family: 'Source Serif Pro', 'Noto Serif', Georgia, serif;
+    font-size: 1.05em;
+    line-height: 1.75;
+    margin-bottom: 1.5em;
 }
 
-/* 表格样式优化 */
+/* 文章元数据样式 */
+.post-meta {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9em;
+    color: var(--meta-color);
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* 表格样式优化 - 学术出版风格 */
 table {
     width: 100%;
-    margin-bottom: 1.4em;
+    margin: 2em 0;
     border-collapse: collapse;
-    font-size: 1.05em;
+    font-size: 0.95em;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+caption {
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    font-size: 0.9em;
 }
 
 th, td {
@@ -140,31 +200,210 @@ th {
     font-weight: 600;
 }
 
-/* 代码块样式 */
+/* 代码块样式 - 优化学术风格 */
 pre {
-    padding: 1em;
+    padding: 1.2em;
     overflow: auto;
-    font-size: 0.98em;
+    font-size: 0.9em;
     line-height: 1.5;
     border-radius: 4px;
+    margin: 1.5em 0;
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
 }
 
 code {
-    font-size: 0.98em;
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.9em;
+    font-feature-settings: "liga" 0;
+    background-color: var(--code-bg);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+pre code {
+    font-size: 1em;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* 数学公式段落的特殊间距 */
+.post-content p:has(mjx-container) {
+    margin-bottom: 1.8em;
+    margin-top: 1.8em;
+}
+
+/* 脚注样式 */
+.footnote {
+    font-size: 0.8em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+.footnotes {
+    font-size: 0.9em;
+    color: var(--meta-color);
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--border-color);
+}
+
+.footnotes ol {
+    padding-left: 1.5em;
+}
+
+.footnotes li {
+    margin-bottom: 0.8em;
+}
+
+/* 标签与分类页面样式 - 学术出版风格 */
+.tag-cloud, .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 2em 0;
+    justify-content: center;
+    font-family: var(--font-sans);
+}
+
+.tag-cloud-item, .category-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4em 1em;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    line-height: 1.3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tag-cloud-item {
+    background: rgba(240, 240, 240, 0.8);
+    color: #555;
+    font-size: calc(0.85em + var(--tag-size, 0) * 0.1em);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tag-cloud-item:hover {
+    background: rgba(230, 230, 230, 0.9);
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+
+.category-item {
+    background: rgba(227, 242, 253, 0.8);
+    color: #1976d2;
+    font-weight: 600;
+    font-size: 0.95em;
+    border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.category-item:hover {
+    background: rgba(208, 232, 252, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    text-decoration: none;
+}
+
+/* 暗色模式下的标签和分类样式 */
+html.dark .tag-cloud-item {
+    background: rgba(40, 40, 40, 0.8);
+    color: #bbb;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+html.dark .tag-cloud-item:hover {
+    background: rgba(50, 50, 50, 0.9);
+    color: #eee;
+}
+
+html.dark .category-item {
+    background: rgba(25, 118, 210, 0.15);
+    color: #90caf9;
+    border-color: rgba(25, 118, 210, 0.2);
+}
+
+html.dark .category-item:hover {
+    background: rgba(25, 118, 210, 0.25);
+}
+
+/* 标签和分类页面的分区标题 */
+.tag-section-title, .category-section-title {
+    font-family: var(--font-headings);
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 2em 0 1em;
+    color: var(--heading-color);
+    text-align: center;
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tag-section, .category-section {
+    margin: 3em 0;
+}
+
+.tag-posts, .category-posts {
+    list-style: none;
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+.tag-posts li, .category-posts li {
+    margin-bottom: 1.2em;
+    padding-bottom: 1.2em;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.tag-posts a, .category-posts a {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.tag-posts a:hover, .category-posts a:hover {
+    color: var(--link-color);
+}
+
+.tag-posts .post-date, .category-posts .post-date {
+    font-family: var(--font-sans);
+    font-size: 0.85em;
+    color: var(--meta-color);
 }
 
 /* 针对移动设备优化 */
 @media (max-width: 768px) {
-    .post-content,
-    .page-content p {
-        font-size: 1.05em;
+    .post-content {
+        font-size: 1em;
+        padding: 20px 15px;
     }
     
     .post-content h2 {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
     
     .post-content h3 {
-        font-size: 1.4em;
+        font-size: 1.3em;
+    }
+    
+    .post-title {
+        font-size: 2em;
+    }
+    
+    .tag-cloud, .category-list {
+        gap: 8px;
+    }
+    
+    .tag-cloud-item, .category-item {
+        padding: 0.3em 0.8em;
+        font-size: 0.9em;
     }
 } 

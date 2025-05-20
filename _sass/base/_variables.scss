@@ -59,6 +59,11 @@ $category-ramblings-rgb: 231, 76, 60;
   --card-bg: #{$background};
   --card-bg-dark: #2a2a2a;
   
+  // Table of contents
+  --toc-bg: #f8f8f8;
+  --toc-border: rgba(0, 0, 0, 0.05);
+  --toc-divider: rgba(0, 0, 0, 0.1);
+  
   // Tag styles
   --tag-bg: #f0f0f0;
   --tag-color: #555555;
@@ -73,6 +78,12 @@ $category-ramblings-rgb: 231, 76, 60;
   --bg-dark-hover: #333333;
   --border-color-dark: #444444;
   --text-color-dark: #e4e4e4;
+  --heading-color-dark: #ffffff;
+  --link-color-dark: #6989ff;
+  --toc-bg-dark: #1a1a1a;
+  --toc-border-dark: rgba(255, 255, 255, 0.1);
+  --toc-divider-dark: rgba(255, 255, 255, 0.1);
+  --tag-bg-dark: #2a2a2a;
 }
 
 // Fonts

@@ -11,21 +11,41 @@
     --footer-text: #666666;
     --code-bg: #f5f5f5;
     --code-text: #333333;
+    --card-background: #ffffff;
+    --table-header-bg: #f5f5f5;
+    --table-odd-row: #ffffff;
+    --table-even-row: #f9f9f9;
+    --font-serif: 'Merriweather', 'Source Serif Pro', 'PT Serif', Georgia, serif;
+    --font-sans: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Fira Code', 'Source Code Pro', Consolas, monospace;
+    --font-headings: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
 }
 
 /* Dark theme */
 :root.dark {
-    --background-color: #1a1a1a;
-    --text-color: #e4e4e4;
-    --link-color: #66b3ff;
-    --border-color: #404040;
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --link-color: #78b6ff;
+    --border-color: #333333;
     --heading-color: #ffffff;
-    --nav-bg: #1a1a1a;
-    --nav-text: #e4e4e4;
-    --footer-bg: #242424;
-    --footer-text: #b3b3b3;
-    --code-bg: #2d2d2d;
-    --code-text: #e4e4e4;
+    --nav-bg: #151515;
+    --nav-text: #d0d0d0;
+    --footer-bg: #151515;
+    --footer-text: #999999;
+    --code-bg: #282828;
+    --code-text: #f0f0f0;
+    --card-background: #1e1e1e;
+    --about-text: #d5d5d5;
+    --strong-text: #ffffff;
+    --meta-color: #b0b0b0;
+    --highlight-color: #4a9eff;
+    --table-header-bg: #252525;
+    --table-odd-row: #1a1a1a;
+    --table-even-row: #222222;
+    --font-serif: 'Merriweather', 'Source Serif Pro', 'PT Serif', Georgia, serif;
+    --font-sans: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Fira Code', 'Source Code Pro', Consolas, monospace;
+    --font-headings: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
 }
 
 /* Base styles */
@@ -33,6 +53,10 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--font-serif);
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    word-spacing: 0.04em;
 }
 
 /* Dark mode toggle button */
@@ -80,6 +104,11 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
+    font-family: var(--font-headings);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
 }
 
 pre, code {
@@ -87,14 +116,17 @@ pre, code {
     color: var(--code-text);
     padding: 0.2em 0.4em;
     border-radius: 3px;
+    font-family: var(--font-mono);
 }
 
 .site-nav {
     background-color: var(--nav-bg);
     color: var(--nav-text);
+    font-family: var(--font-sans);
 }
 
 .site-footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
+    font-family: var(--font-sans);
 } 

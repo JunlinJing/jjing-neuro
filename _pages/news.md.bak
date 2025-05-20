@@ -220,7 +220,7 @@ html.dark .news-social-share a {
     background-color: #ff2442; 
     color: white;
 }
-.news-social-share .share-xiaohongshu svg {
+.news-social-share a.share-xiaohongshu svg {
     width: 1em;
     height: 1em;
 }
@@ -233,6 +233,54 @@ html.dark .news-social-share a {
     .news-points { margin: 0 1.2rem 1.5rem 1.2rem; font-size: 1.02em; line-height: 1.7; padding-left: 2em; }
     .news-points li::before { left: -1.3em; }
     .news-social-share { margin: 0 1.2rem; padding: 1.2rem 0; }
+}
+
+/* 翻页控件样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.pagination-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--accent-color, #6c63ff);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: var(--accent-color-dark, #5a52d5);
+    transform: translateY(-2px);
+}
+
+.pagination-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-numbers {
+    font-size: 1em;
+    color: var(--text-color, #333);
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        gap: 10px;
+    }
+    
+    .pagination-btn {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
 }
 </style>
 
@@ -270,8 +318,11 @@ html.dark .news-social-share a {
         </div>
   
         <ul class="news-points">
+    
             <li>I will attend the event <a href="https://www.portal.graduatecenter.lmu.de/gc/de/phd_basics_internationals_2025" target="_blank">PhD Basics for International Doctoral Researchers</a> at LMU Munich.</li>
+      
             <li>This peer-to-peer event addresses the particular challenges most international doctoral candidates must overcome, including communication with supervisors and adapting to academic culture in Germany.</li>
+      
         </ul>
     
         <div class="news-social-share">
@@ -292,14 +343,18 @@ html.dark .news-social-share a {
         <span class="news-tag site">Site</span>
         <div class="news-info">
             <span><b>Date:</b> May 8, 2025</span>
+            
         </div>
         <div class="news-title">
             Website Created
         </div>
   
         <ul class="news-points">
+    
             <li>This academic website was created on May 8, 2025.</li>
+      
             <li>Source code and updates are available on <a href="https://github.com/JunlinJing/jjing-neuro" target="_blank">GitHub</a>.</li>
+      
         </ul>
     
         <div class="news-social-share">
@@ -327,8 +382,11 @@ html.dark .news-social-share a {
         </div>
   
         <ul class="news-points">
+    
             <li>Started Ph.D. research in Neuroimaging and Machine Learning under the supervision of Prof. Sophia Stöcklein</li>
+      
             <li>Will focus on developing advanced computational methods for neuroimaging data analysis</li>
+      
         </ul>
     
         <div class="news-social-share">
@@ -344,7 +402,8 @@ html.dark .news-social-share a {
             </a>
         </div>
     </div>
-</div>
+  </div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

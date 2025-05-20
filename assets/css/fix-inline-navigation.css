@@ -1,0 +1,84 @@
+/* 修复内联式文章导航链接样式 */
+
+/* 红色边框去除 - 改用更兼容的选择器 */
+.post-content > p {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* 内联导航链接容器样式 */
+.post-content > p:last-of-type {
+    margin: 2em 0 1em;
+    padding: 0;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 内联导航链接样式 */
+.post-content a[href*="Previous Post"],
+.post-content a[href*="Next Post"] {
+    font-family: var(--font-serif);
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.8em 1em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    margin: 0.5em 0;
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 1.5;
+    background-color: rgba(245, 248, 252, 0.5);
+    border-left: 3px solid transparent;
+}
+
+.post-content a[href*="Previous Post"]:hover,
+.post-content a[href*="Next Post"]:hover {
+    background-color: rgba(245, 248, 252, 0.8);
+    color: var(--link-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* 定制Previous和Next样式 */
+.post-content a[href*="Previous Post"] {
+    border-left: 3px solid rgba(0, 37, 84, 0.1);
+}
+
+.post-content a[href*="Previous Post"]:hover {
+    border-left-color: var(--link-color);
+}
+
+.post-content a[href*="Next Post"] {
+    border-left: 3px solid rgba(0, 37, 84, 0.1);
+}
+
+.post-content a[href*="Next Post"]:hover {
+    border-left-color: var(--link-color);
+}
+
+/* 暗色模式样式 */
+html.dark .post-content a[href*="Previous Post"],
+html.dark .post-content a[href*="Next Post"] {
+    background-color: rgba(30, 30, 40, 0.3);
+    border-left-color: rgba(74, 158, 255, 0.15);
+}
+
+html.dark .post-content a[href*="Previous Post"]:hover,
+html.dark .post-content a[href*="Next Post"]:hover {
+    background-color: rgba(40, 40, 50, 0.4);
+    border-left-color: var(--highlight-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 媒体查询 - 移动设备适配 */
+@media (max-width: 768px) {
+    .post-content a[href*="Previous Post"],
+    .post-content a[href*="Next Post"] {
+        padding: 0.6em 0.8em;
+        font-size: 1em;
+    }
+} 

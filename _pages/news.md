@@ -404,50 +404,26 @@ html.dark .news-social-share a {
     </div>
   </div>
 
-  <!-- 添加翻页控件 -->
-  <div class="pagination" id="newsPagination">
-    <button class="pagination-btn prev" onclick="changePage('prev')" disabled>
-      <i class="fas fa-chevron-left"></i> Previous
-    </button>
-    <div class="page-numbers">
-      <span id="currentPage">1</span> / <span id="totalPages">1</span>
-    </div>
-    <button class="pagination-btn next" onclick="changePage('next')" disabled>
-      Next <i class="fas fa-chevron-right"></i>
-    </button>
-  </div>
-
 
 <script>
-    // 设置每页显示的新闻条数
-    const itemsPerPage = 10;
-    let currentPage = 1;
-    let filteredCards = [];
-    
     document.addEventListener('DOMContentLoaded', function() {
-        // 初始化
+        // Initialize
         updateNewsCount();
-        initPagination();
     });
 
     function filterNews() {
         const category = document.getElementById('newsFilter').value;
         const cards = document.querySelectorAll('.news-card');
         
-        filteredCards = [];
         cards.forEach(card => {
             if (category === 'all' || card.dataset.category === category) {
-                card.style.display = 'none'; // 先隐藏所有卡片，后面再根据分页显示
-                filteredCards.push(card);
+                card.style.display = 'block';
             } else {
                 card.style.display = 'none';
             }
         });
         
-        // 重置到第一页
-        currentPage = 1;
         updateNewsCount();
-        initPagination();
     }
 
     function sortNews() {
@@ -468,89 +444,29 @@ html.dark .news-social-share a {
         
         // Re-append cards in the sorted order
         cards.forEach(card => newsContainer.appendChild(card));
-        
-        // 更新已过滤的卡片顺序
-        filteredCards = Array.from(document.querySelectorAll('.news-card')).filter(card => 
-            card.style.display !== 'none' || !card.style.display
-        );
-        
-        // 重新初始化分页
-        currentPage = 1;
-        initPagination();
     }
 
     function searchNews() {
         const searchText = document.getElementById('newsSearch').value.toLowerCase();
         const cards = document.querySelectorAll('.news-card');
         
-        filteredCards = [];
         cards.forEach(card => {
             const cardText = card.textContent.toLowerCase();
             if (cardText.includes(searchText)) {
-                card.style.display = 'none'; // 先隐藏所有卡片，后面再根据分页显示
-                filteredCards.push(card);
+                card.style.display = 'block';
             } else {
                 card.style.display = 'none';
             }
         });
         
-        // 重置到第一页
-        currentPage = 1;
         updateNewsCount();
-        initPagination();
     }
 
     function updateNewsCount() {
+        const visibleCards = document.querySelectorAll('.news-card[style="display: block;"], .news-card:not([style*="display"])').length;
         const countElem = document.getElementById('newsCount');
         if (countElem) {
-            countElem.textContent = filteredCards.length;
+            countElem.textContent = visibleCards;
         }
-    }
-    
-    function initPagination() {
-        // 如果没有过滤，就使用所有卡片
-        if (filteredCards.length === 0) {
-            filteredCards = Array.from(document.querySelectorAll('.news-card'));
-        }
-        
-        const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
-        document.getElementById('currentPage').textContent = currentPage;
-        document.getElementById('totalPages').textContent = totalPages;
-        
-        // 更新按钮状态
-        document.querySelector('.pagination-btn.prev').disabled = currentPage === 1;
-        document.querySelector('.pagination-btn.next').disabled = currentPage === totalPages || totalPages === 0;
-        
-        // 显示当前页的卡片
-        displayCurrentPageItems();
-    }
-    
-    function displayCurrentPageItems() {
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = Math.min(startIndex + itemsPerPage, filteredCards.length);
-        
-        // 隐藏所有卡片
-        document.querySelectorAll('.news-card').forEach(card => {
-            card.style.display = 'none';
-        });
-        
-        // 显示当前页的卡片
-        for (let i = startIndex; i < endIndex; i++) {
-            if (filteredCards[i]) {
-                filteredCards[i].style.display = 'block';
-            }
-        }
-    }
-    
-    function changePage(direction) {
-        const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
-        
-        if (direction === 'prev' && currentPage > 1) {
-            currentPage--;
-        } else if (direction === 'next' && currentPage < totalPages) {
-            currentPage++;
-        }
-        
-        initPagination();
     }
 </script>

@@ -88,8 +88,14 @@ main > h1:first-of-type:not(.post-title) {
 
     <div class="post-wrapper">
         <aside class="table-of-contents" id="toc">
-            <div class="toc-title">Table of Contents</div>
-            <div id="toc-content"></div>
+            <div class="toc-header">
+                <div class="toc-title">Table of Contents</div>
+                <button id="toc-toggle" class="toc-toggle" aria-label="Toggle Table of Contents">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            <div class="toc-divider"></div>
+            <div id="toc-content" class="toc-content"></div>
         </aside>
 
         <div class="post-content">
@@ -168,55 +174,7 @@ document.querySelectorAll('.post-content img').forEach(img => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Generate table of contents
-    const content = document.querySelector('.post-content');
-    const toc = document.getElementById('toc-content');
-    const headings = content.querySelectorAll('h2, h3, h4');
-    
-    if (headings.length > 0) {
-        const tocList = document.createElement('ul');
-        
-        headings.forEach((heading, index) => {
-            // Add ID for anchor links
-            heading.id = `heading-${index}`;
-            
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            
-            a.href = `#${heading.id}`;
-            a.textContent = heading.textContent;
-            a.style.paddingLeft = `${(heading.tagName.charAt(1) - 2) * 15}px`;
-            
-            li.appendChild(a);
-            tocList.appendChild(li);
-            
-            // Smooth scroll when clicking on TOC items
-            a.addEventListener('click', (e) => {
-                e.preventDefault();
-                heading.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        
-        toc.appendChild(tocList);
-    } else {
-        document.getElementById('toc').style.display = 'none';
-    }
-    
-    // 检查页面中的h1标题
-    const pageTitle = document.querySelector('.post-title').textContent.trim();
-    const contentH1s = Array.from(content.querySelectorAll('h1'));
-    
-    contentH1s.forEach(h1 => {
-        // 如果内容中的h1标题与页面标题相同或相似，则隐藏它
-        if (h1.textContent.trim() === pageTitle || 
-            h1.textContent.trim().includes(pageTitle) || 
-            pageTitle.includes(h1.textContent.trim())) {
-            h1.style.display = 'none';
-            console.log('隐藏了重复的标题:', h1.textContent);
-        }
-    });
-});
+// 注意：目录导航相关代码已移至 assets/js/toc-functionality.js
 </script>
 
 <style>
@@ -228,13 +186,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .post-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-family: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
 }
 
 .post-image {
-    margin: -20px -20px 30px;
+    margin: -20px -20px 35px;
     overflow: hidden;
     border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .post-image img {
@@ -244,42 +204,104 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .post-title {
-    font-size: 2.5em;
-    margin: 20px 0;
+    font-size: 2.4em;
+    margin: 25px 0 20px;
     color: var(--heading-color);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    font-family: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
 }
 
 .post-meta {
     color: var(--meta-color);
     font-size: 0.9em;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
 }
 
 .post-meta i {
     margin-right: 5px;
 }
 
+.post-meta > * {
+    margin: 0 6px;
+}
+
 .post-categories, .post-tags {
-    margin-top: 1em;
+    margin-top: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 .category, .tag {
-    display: inline-block;
-    padding: 0.3em 0.8em;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4em 0.9em;
     margin: 0.2em;
-    border-radius: 15px;
+    border-radius: 6px;
     text-decoration: none;
     font-size: 0.9em;
+    font-family: var(--font-sans);
+    transition: all 0.2s ease;
+    line-height: 1.2;
 }
 
 .category {
     background: #e3f2fd;
     color: #1976d2;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.category:hover {
+    background: #d0e8fc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
 }
 
 .tag {
     background: #f5f5f5;
     color: #616161;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tag:hover {
+    background: #eeeeee;
+    color: #424242;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+}
+
+.tag i {
+    margin-right: 4px;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+html.dark .category {
+    background: rgba(25, 118, 210, 0.15);
+    color: #90caf9;
+    border-color: rgba(25, 118, 210, 0.2);
+}
+
+html.dark .category:hover {
+    background: rgba(25, 118, 210, 0.2);
+}
+
+html.dark .tag {
+    background: rgba(97, 97, 97, 0.15);
+    color: #bdbdbd;
+    border-color: rgba(97, 97, 97, 0.2);
+}
+
+html.dark .tag:hover {
+    background: rgba(97, 97, 97, 0.2);
+    color: #e0e0e0;
 }
 
 .post-wrapper {
@@ -315,61 +337,42 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .social-share {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
     text-align: center;
-    margin: 3rem 0;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--border-color, #eee);
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .share-title {
-    font-size: 1.2rem;
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 15px;
     font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--heading-color, #333);
-    position: relative;
-    display: inline-block;
-}
-
-.share-title:before, .share-title:after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background: var(--border-color, #eee);
-    top: 50%;
-    width: 50px;
-}
-
-.share-title:before {
-    right: 100%;
-    margin-right: 15px;
-}
-
-.share-title:after {
-    left: 100%;
-    margin-left: 15px;
 }
 
 .share-buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 15px;
 }
 
 .share-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    transition: all 0.3s ease;
-    color: white;
+    color: #fff;
+    font-size: 1.1em;
+    transition: all 0.2s ease;
+    background-color: #555;
 }
 
 .share-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .twitter {
@@ -385,123 +388,95 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .related-posts {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid var(--border-color);
+    margin-top: 50px;
+    padding: 25px;
+    background: rgba(0,0,0,0.02);
+    border-radius: 8px;
+    font-family: 'Source Serif Pro', 'Noto Serif', Georgia, serif;
+}
+
+html.dark .related-posts {
+    background: rgba(255,255,255,0.02);
 }
 
 .related-posts h3 {
-    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: var(--heading-color);
 }
 
 .related-posts ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .related-posts li {
-    margin: 15px 0;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.related-posts li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .related-posts a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 8px;
+    color: var(--link-color);
     text-decoration: none;
-    color: var(--text-color);
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: color 0.2s ease;
 }
 
 .related-posts a:hover {
-    background-color: var(--hover-bg, #f5f5f5);
+    color: var(--highlight-color);
+    text-decoration: underline;
 }
 
 .related-posts small {
+    display: block;
     color: var(--meta-color);
-}
-
-.post-navigation {
-    margin: 3rem 0;
-    padding: 0;
-    border-top: 1px solid var(--border-color, #eee);
-    border-bottom: 1px solid var(--border-color, #eee);
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.nav-previous, .nav-next {
-    flex: 1;
-    min-width: 250px;
-    padding: 1.5rem 0;
-}
-
-.nav-next {
-    text-align: right;
-    border-left: 1px solid var(--border-color, #eee);
-}
-
-.nav-subtitle {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--meta-color, #666);
-    margin-bottom: 0.5rem;
-}
-
-.nav-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--heading-color, #333);
-    transition: color 0.3s ease;
-}
-
-.nav-previous a, .nav-next a {
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-    padding: 0 1rem;
-}
-
-.nav-previous a:hover .nav-title, 
-.nav-next a:hover .nav-title {
-    color: var(--link-color, #4263eb);
-}
-
-.nav-previous a:hover, 
-.nav-next a:hover {
-    transform: translateY(-2px);
+    font-size: 0.85em;
+    margin-top: 4px;
 }
 
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--link-color);
-    color: white;
-    width: 40px;
-    height: 40px;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--card-background);
+    color: var(--text-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2em;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+    z-index: 99;
 }
 
 .back-to-top.show {
-    opacity: 1;
+    opacity: 0.9;
     visibility: visible;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .reading-progress-bar {
@@ -531,36 +506,110 @@ document.addEventListener('DOMContentLoaded', function() {
         padding: 15px;
     }
 
+    .post-wrapper {
+        flex-direction: column;
+    }
+    
     .post-title {
         font-size: 2em;
     }
-
-    .post-content {
-        font-size: 1em;
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
     }
+}
 
-    .post-meta {
-        flex-direction: column;
-        align-items: center;
-    }
+.post-navigation {
+    margin: 3em 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5em 0;
+    font-family: var(--font-serif);
+}
 
-    .table-of-contents {
-        margin: 1rem -1rem;
-        border-radius: 0;
-    }
+.post-navigation .nav-links {
+    display: flex;
+    justify-content: space-between;
+}
 
-    .nav-links {
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+    max-width: 48%;
+}
+
+.post-navigation a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.8em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.post-navigation a:hover {
+    background: rgba(0, 0, 0, 0.03);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+html.dark .post-navigation a:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.post-navigation .nav-subtitle {
+    display: block;
+    font-size: 0.8em;
+    font-family: var(--font-sans);
+    color: var(--meta-color);
+    margin-bottom: 0.4em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.post-navigation .nav-title {
+    font-family: var(--font-headings);
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: var(--heading-color);
+}
+
+.post-navigation .nav-previous a {
+    padding-left: 1em;
+    border-left: 3px solid transparent;
+}
+
+.post-navigation .nav-next a {
+    padding-right: 1em;
+    border-right: 3px solid transparent;
+    text-align: right;
+}
+
+.post-navigation .nav-previous a:hover {
+    border-left-color: var(--link-color);
+}
+
+.post-navigation .nav-next a:hover {
+    border-right-color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+    .post-navigation .nav-links {
         flex-direction: column;
     }
     
-    .nav-next {
-        text-align: left;
-        border-left: none;
-        border-top: 1px solid var(--border-color, #eee);
+    .post-navigation .nav-previous,
+    .post-navigation .nav-next {
+        max-width: 100%;
+        margin-bottom: 1em;
     }
     
-    .share-title:before, .share-title:after {
-        width: 30px;
+    .post-navigation .nav-next {
+        margin-top: 1em;
     }
 }
 </style>

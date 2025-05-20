@@ -2,22 +2,30 @@
 
 /* 基础文本颜色 */
 :root.dark {
-    --text-color: #f0f0f0; /* 更亮的文本颜色 */
+    --text-color: #e0e0e0; /* 更适中的文本颜色 */
     --heading-color: #ffffff; /* 纯白色标题 */
-    --link-color: #6bb9ff; /* 更亮的链接颜色 */
-    --code-text: #ffffff; /* 代码文本更亮 */
-    --about-text: #e0e0e0; /* About页面专用文本颜色 */
+    --link-color: #78b6ff; /* 更易于阅读的链接颜色 */
+    --code-text: #f0f0f0; /* 代码文本 */
+    --about-text: #d5d5d5; /* About页面专用文本颜色 */
     --strong-text: #ffffff; /* 加粗文本颜色 */
     --meta-color: #b0b0b0; /* 元信息颜色 */
     --highlight-color: #4a9eff; /* 高亮文本颜色 */
-    --research-text: #e6e6e6; /* 研究页面文本颜色 */
+    --research-text: #d5d5d5; /* 研究页面文本颜色 */
     --research-heading: #ffffff; /* 研究页面标题颜色 */
+    --background-color: #121212; /* 更深的背景色 */
+    --card-background: #1e1e1e; /* 卡片背景色 */
+    --border-color: #333333; /* 边框颜色 */
+    --code-bg: #282828; /* 代码块背景色 */
+    --nav-bg: #151515; /* 导航栏背景色 */
+    --table-header-bg: #252525; /* 表格头部背景色 */
+    --table-odd-row: #1a1a1a; /* 表格奇数行背景色 */
+    --table-even-row: #222222; /* 表格偶数行背景色 */
 }
 
-/* 增强夜间模式下的About页面可读性 */
+/* 增强夜间模式下的整体可读性 */
 html.dark body {
     color: var(--text-color);
-    background-color: #222;
+    background-color: var(--background-color);
 }
 
 /* 夜间模式标题文字 */
@@ -28,7 +36,7 @@ html.dark h4,
 html.dark h5, 
 html.dark h6 {
     color: var(--heading-color);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 /* 夜间模式强调文本 */
@@ -52,7 +60,7 @@ html.dark a {
 }
 
 html.dark a:hover {
-    color: #ffffff;
+    color: #99ccff;
     text-decoration: underline;
 }
 
@@ -60,7 +68,7 @@ html.dark a:hover {
 html.dark .content,
 html.dark .post-content,
 html.dark .page-content {
-    background-color: #2a2a2a;
+    background-color: var(--card-background);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -76,9 +84,9 @@ html.dark ol li {
 /* 代码块增强 */
 html.dark pre,
 html.dark code {
-    background-color: #333;
+    background-color: var(--code-bg);
     color: var(--code-text);
-    border: 1px solid #444;
+    border: 1px solid var(--border-color);
 }
 
 /* 博客页面特定样式 */
@@ -88,7 +96,7 @@ html.dark .blog-title a {
 }
 
 html.dark .blog-excerpt {
-    color: #e0e0e0;
+    color: #d0d0d0;
 }
 
 html.dark .blog-meta {
@@ -96,42 +104,44 @@ html.dark .blog-meta {
 }
 
 html.dark .blog-item {
-    background-color: #2d2d2d;
-    border: 1px solid #444;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 html.dark .filter {
-    background-color: #3a3a3a;
-    color: #e0e0e0;
+    background-color: #2a2a2a;
+    color: #d0d0d0;
 }
 
 html.dark .filter.active {
-    background-color: #4a9eff;
+    background-color: var(--highlight-color);
     color: #ffffff;
 }
 
 html.dark .filter:hover:not(.active) {
-    background-color: #4a4a4a;
+    background-color: #3a3a3a;
 }
 
 html.dark .tag {
-    background-color: #444;
+    background-color: #333;
     color: #ddd;
 }
 
 html.dark .tag:hover {
-    background-color: #555;
+    background-color: #444;
 }
 
 /* 导航栏增强 */
 html.dark nav {
-    background-color: #1a1a1a;
-    border-bottom: 1px solid #444;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 html.dark nav a {
-    color: #e0e0e0;
+    color: #d0d0d0;
+    transition: color 0.2s ease;
 }
 
 html.dark nav a:hover,
@@ -139,18 +149,23 @@ html.dark nav a.active {
     color: #ffffff;
 }
 
+html.dark nav .active {
+    background-color: rgba(74, 158, 255, 0.15);
+    border-radius: 4px;
+}
+
 /* 研究页面特定样式 */
 html.dark main p {
     color: var(--research-text);
     line-height: 1.8;
     font-size: 1.05rem;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
 html.dark .research-item,
 html.dark .project-item {
-    background-color: rgba(42, 42, 42, 0.7);
-    border: 1px solid #444;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
@@ -162,12 +177,12 @@ html.dark .project-title {
     color: var(--research-heading);
     font-size: 1.6rem;
     margin-bottom: 15px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 /* 为研究页面的段落提供更多对比度 */
 html.dark main > p {
-    background-color: rgba(40, 40, 40, 0.6);
+    background-color: rgba(35, 35, 35, 0.7);
     padding: 15px;
     border-radius: 6px;
     margin-bottom: 25px;
@@ -197,4 +212,168 @@ html.dark main hr {
     height: 2px;
     background: linear-gradient(to right, transparent, var(--highlight-color), transparent);
     margin: 30px 0;
+}
+
+/* 改善表格在夜间模式下的可读性 */
+html.dark table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+html.dark th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+html.dark td {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    background-color: var(--table-odd-row);
+}
+
+html.dark tr:nth-child(even) td {
+    background-color: var(--table-even-row);
+}
+
+/* 改善引用块的可读性 */
+html.dark blockquote {
+    background-color: rgba(30, 30, 35, 0.7);
+    border-left: 4px solid var(--highlight-color);
+    padding: 15px;
+    margin: 20px 0;
+    color: #c0c0c0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* 标题下划线 */
+html.dark h2 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+/* 改善页脚样式 */
+html.dark footer {
+    background-color: var(--nav-bg);
+    color: #999;
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 增强代码块边距和圆角 */
+html.dark pre {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    overflow-x: auto;
+}
+
+/* 代码块语法高亮改进 */
+html.dark code span.keyword,
+html.dark code span.function {
+    color: #bb86fc;
+}
+
+html.dark code span.string {
+    color: #ff7597;
+}
+
+html.dark code span.comment {
+    color: #6c7589;
+}
+
+html.dark code span.number {
+    color: #ffbd2e;
+}
+
+/* 改进图片显示效果 */
+html.dark img {
+    opacity: 0.9;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    max-width: 100%;
+}
+
+html.dark figure {
+    margin: 20px 0;
+}
+
+html.dark figcaption {
+    color: #b0b0b0;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 改善按钮样式 */
+html.dark button,
+html.dark .button,
+html.dark input[type="submit"] {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+html.dark button:hover,
+html.dark .button:hover,
+html.dark input[type="submit"]:hover {
+    background-color: #3a3a3a;
+    border-color: var(--highlight-color);
+}
+
+/* 改善输入框样式 */
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark input[type="password"],
+html.dark textarea,
+html.dark select {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+html.dark input[type="text"]:focus,
+html.dark input[type="email"]:focus,
+html.dark input[type="password"]:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+    border-color: var(--highlight-color);
+    outline: none;
+    box-shadow: 0 0 3px rgba(74, 158, 255, 0.3);
+}
+
+/* 滚动条样式 */
+html.dark ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 5px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border-radius: 5px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
 } 
