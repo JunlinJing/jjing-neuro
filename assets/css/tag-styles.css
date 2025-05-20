@@ -1,0 +1,139 @@
+/* 文章页面标签样式优化 */
+
+/* 文章标签基础样式 */
+.post-content a.tag,
+a.tag,
+.tag {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.85em;
+    padding: 0.35em 0.9em;
+    margin: 0.15em;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background-color: var(--tag-bg);
+    color: var(--tag-color);
+    border: 1px solid var(--tag-border);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* 标签悬停效果 */
+.post-content a.tag:hover,
+a.tag:hover,
+.tag:hover {
+    background-color: rgba(230, 240, 250, 0.95);
+    color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+/* 标签图标样式 */
+.tag i {
+    font-size: 0.85em;
+    margin-right: 0.4em;
+    opacity: 0.7;
+}
+
+/* 文章页面中的分类样式 */
+.post-content a.category,
+a.category,
+.category {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.85em;
+    padding: 0.4em 1em;
+    margin: 0.15em;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    background-color: var(--category-bg);
+    color: var(--category-color);
+    border: 1px solid var(--category-border);
+}
+
+/* 分类悬停效果 */
+.post-content a.category:hover,
+a.category:hover,
+.category:hover {
+    background-color: rgba(215, 230, 248, 0.95);
+    color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+/* tutorials标签特殊样式 */
+.tag[href*="tutorials"],
+a.tag[href*="tutorials"],
+.post-content a.tag[href*="tutorials"] {
+    background-color: rgba(230, 241, 255, 0.9);
+    color: var(--primary-color);
+    border-color: rgba(74, 111, 165, 0.2);
+}
+
+.tag[href*="tutorials"]:hover,
+a.tag[href*="tutorials"]:hover,
+.post-content a.tag[href*="tutorials"]:hover {
+    background-color: rgba(220, 235, 255, 0.95);
+    color: var(--primary-dark);
+    border-color: rgba(51, 113, 181, 0.3);
+}
+
+/* 暗色模式样式使用变量(已经在theme.css中声明) */
+html.dark .post-content a.tag:hover,
+html.dark a.tag:hover,
+html.dark .tag:hover {
+    background-color: rgba(55, 65, 85, 0.7);
+    color: var(--link-hover-color);
+    border-color: rgba(74, 111, 165, 0.35);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+html.dark .post-content a.category:hover,
+html.dark a.category:hover,
+html.dark .category:hover {
+    background-color: rgba(50, 70, 100, 0.6);
+    color: var(--link-hover-color);
+    border-color: rgba(62, 95, 138, 0.35);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* tutorials标签暗色模式特殊样式 */
+html.dark .tag[href*="tutorials"],
+html.dark a.tag[href*="tutorials"],
+html.dark .post-content a.tag[href*="tutorials"] {
+    background-color: rgba(40, 70, 120, 0.5);
+    color: var(--link-color);
+    border-color: rgba(70, 128, 192, 0.3);
+}
+
+html.dark .tag[href*="tutorials"]:hover,
+html.dark a.tag[href*="tutorials"]:hover,
+html.dark .post-content a.tag[href*="tutorials"]:hover {
+    background-color: rgba(50, 80, 130, 0.6);
+    color: var(--link-hover-color);
+    border-color: rgba(70, 128, 192, 0.4);
+}
+
+/* 标签样式的响应式调整 */
+@media (max-width: 768px) {
+    .post-content a.tag,
+    a.tag,
+    .tag,
+    .post-content a.category,
+    a.category,
+    .category {
+        font-size: 0.8em;
+        padding: 0.3em 0.8em;
+    }
+    
+    .tag i {
+        font-size: 0.8em;
+    }
+} 

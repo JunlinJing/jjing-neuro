@@ -14,6 +14,41 @@ layout: compress
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@400;600&family=Fira+Code:wght@400;500&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
+    <!-- 全局样式优化 -->
+    <style>
+    :root {
+        /* 确保颜色变量统一 */
+        --primary-color: #4a6fa5;
+        --primary-light: #6989bd;
+        --primary-dark: #385277;
+        --secondary-color: #5a7d9a;
+        --accent-color: #4a9eff;
+        
+        /* 统一字体系列 */
+        --serif-stack: 'Merriweather', 'Source Serif Pro', 'PT Serif', 'Noto Serif', Georgia, serif;
+        --sans-stack: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        --display-stack: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+        --mono-stack: 'Fira Code', 'Source Code Pro', monospace;
+    }
+    
+    /* 确保字体变量在暗色模式下保持一致 */
+    html.dark {
+        --primary-color: #78a9da;
+        --primary-light: #9fc3ea;
+        --primary-dark: #5786b3;
+    }
+    
+    /* 页面平滑过渡 */
+    body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* 确保所有链接行为一致 */
+    a {
+        transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    </style>
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -21,6 +56,7 @@ layout: compress
     <link rel="stylesheet" href="{{ '/assets/css/toc-styles.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/dark-mode-fixes.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/fix-inline-navigation.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/tag-styles.css' | relative_url }}">
     
     <!-- 加载页面特定的CSS文件 -->
     {% if page.url contains 'publications' %}

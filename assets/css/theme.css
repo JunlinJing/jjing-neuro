@@ -2,7 +2,8 @@
 :root {
     --background-color: #ffffff;
     --text-color: #333333;
-    --link-color: #0066cc;
+    --link-color: #4a6fa5;
+    --link-hover-color: #385277;
     --border-color: #e0e0e0;
     --heading-color: #222222;
     --nav-bg: #ffffff;
@@ -19,13 +20,25 @@
     --font-sans: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     --font-mono: 'Fira Code', 'Source Code Pro', Consolas, monospace;
     --font-headings: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+    --primary-color: #4a6fa5;
+    --primary-light: #6989bd;
+    --primary-dark: #385277;
+    --secondary-color: #5a7d9a;
+    --accent-color: #4a9eff;
+    --tag-bg: rgba(240, 245, 250, 0.9);
+    --tag-color: #4a6fa5;
+    --tag-border: rgba(74, 111, 165, 0.15);
+    --category-bg: rgba(226, 235, 248, 0.9);
+    --category-color: #3e5f8a;
+    --category-border: rgba(62, 95, 138, 0.15);
 }
 
 /* Dark theme */
 :root.dark {
     --background-color: #121212;
     --text-color: #e0e0e0;
-    --link-color: #78b6ff;
+    --link-color: #78a9da;
+    --link-hover-color: #9fc3ea;
     --border-color: #333333;
     --heading-color: #ffffff;
     --nav-bg: #151515;
@@ -39,13 +52,22 @@
     --strong-text: #ffffff;
     --meta-color: #b0b0b0;
     --highlight-color: #4a9eff;
+    --research-text: #d5d5d5;
+    --research-heading: #ffffff;
     --table-header-bg: #252525;
     --table-odd-row: #1a1a1a;
     --table-even-row: #222222;
-    --font-serif: 'Merriweather', 'Source Serif Pro', 'PT Serif', Georgia, serif;
-    --font-sans: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    --font-mono: 'Fira Code', 'Source Code Pro', Consolas, monospace;
-    --font-headings: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+    --primary-color: #78a9da;
+    --primary-light: #9fc3ea;
+    --primary-dark: #5786b3;
+    --secondary-color: #6a95b8;
+    --accent-color: #4a9eff;
+    --tag-bg: rgba(45, 55, 70, 0.6);
+    --tag-color: #a3c5e8;
+    --tag-border: rgba(74, 111, 165, 0.25);
+    --category-bg: rgba(40, 60, 90, 0.5);
+    --category-color: #9bb7e0;
+    --category-border: rgba(62, 95, 138, 0.25);
 }
 
 /* Base styles */
